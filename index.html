@@ -19,28 +19,38 @@
     <h1>英語<span>日日</span>聽</h1>
     <nav><a href="archive.html">全部情境</a></nav>
   </header>
+  <section id="onboard" class="onboard" hidden>
+    <b>第一次來？</b> 每天 5 句：先按「聽全部」只用耳朵聽兩三次 → 聽不懂的句子按「顯示英文」→ 最後看中譯確認 → 五句都聽過就能按「完成」。
+    <button id="onboardOk" type="button">知道了</button>
+  </section>
   <div class="meta">
     <span id="dayLabel">今天</span>
     <span class="nav"><button id="prev" aria-label="前一天">‹</button> <button id="next" aria-label="後一天">›</button></span>
   </div>
   <article class="card">
-    <div class="hero" id="hero"><img id="heroImg" alt=""></div>
+    <div class="hero" id="hero"><img id="heroImg" alt=""><span id="stamp" class="stamp" aria-hidden="true">完成</span></div>
     <div class="title">
       <span class="cat" id="cat"></span>
       <h2 id="titleZh">載入中…</h2>
       <div class="en" id="titleEn"></div>
       <p class="scene" id="scene"></p>
+      <p class="roles" id="roles"></p>
     </div>
     <div class="controls">
-      <button id="playAll">▶ 聽全部</button>
-      <button id="rate" aria-pressed="false">1×</button>
-      <button id="showEn">看英文</button>
-      <button id="showZh">看中譯</button>
+      <button id="playAll" type="button">▶ 聽全部</button>
+      <button id="rate" type="button" aria-pressed="false">1× 正常</button>
+      <button id="shadow" type="button" aria-pressed="false">跟讀</button>
+      <button id="showEn" type="button">看英文</button>
+      <button id="showZh" type="button">看中譯</button>
     </div>
+    <p id="shadowHint" class="hint-inline" hidden>跟讀模式：每句播完會留同樣長度的空檔，請跟著大聲唸一次。</p>
     <ol class="lines" id="lines"></ol>
-    <div class="done"><span id="stats"></span><button id="doneBtn">完成今日</button></div>
+    <p id="keyPhrase" class="keyphrase" hidden></p>
+    <div class="done"><span id="stats"></span><button id="doneBtn" type="button" disabled>聽完 5 句後可完成</button></div>
+    <p id="missed" class="hint-inline missed" hidden></p>
   </article>
-  <p class="hint">怎麼練：先按「聽全部」只用耳朵聽 2–3 次 → 點單句可重播 → 聽不出來再按「看英文」→ 最後看中譯確認。點任一句文字也能單獨揭曉。</p>
+  <section id="review" class="review" hidden></section>
+  <p class="hint">怎麼練：先按「聽全部」只用耳朵聽 2–3 次 → 點單句可重播、切 0.75× 慢速 → 聽不出來再按「顯示英文」→ 最後看中譯確認 → 開「跟讀」跟著唸一遍。</p>
   <footer>英語日日聽 · 大乃老師 · 插畫由 AI 生成 · 語音為合成人聲</footer>
 </div>
 <script type="module" src="js/app.js"></script>

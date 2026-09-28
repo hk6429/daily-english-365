@@ -12,15 +12,18 @@
     <h1>英語<span>日日</span>聽</h1>
     <nav><a href="./">回今天</a></nav>
   </header>
-  <p class="hint">365 個情境依主題分組，點任一張卡片即可練習。</p>
+  <p class="hint">365 個情境依主題分組，點任一張卡片即可練習。每天輪到不同主題，「第 N 天」是它在一年中出現的日子；紅框＝已完成。</p>
   <div id="groups"></div>
 </div>
 <script type="module">
-import { todayIndex } from './js/day.js';
+import { todayIndex, buildOrder, dayOfScene } from './js/day.js';
 import { bgFor, setPageBg } from './js/cats.js';
+import { loadDone, isDoneScene } from './js/progress.js';
 setPageBg('bg/generic.webp');
 const scenes = await (await fetch('data/scenes.json')).json();
+const order = buildOrder(scenes);
 const today = todayIndex();
+const done = loadDone();
 const groups = new Map();
 for (const x of scenes) { if (!groups.has(x.category)) groups.set(x.category, []); groups.get(x.category).push(x); }
 const root = document.getElementById('groups');
@@ -30,10 +33,11 @@ for (const [cat, list] of groups) {
   g.querySelector('.banner').style.backgroundImage = `url("${bgFor(cat)}")`;
   const grid = g.querySelector('.grid');
   for (const x of list) {
-    const a = document.createElement('a'); a.href = `./?d=${x.id}`;
-    a.className = x.id === today ? 'today' : '';
+    const day = dayOfScene(order, x.id);
+    const a = document.createElement('a'); a.href = `./?d=${day}`;
+    a.className = (day === today ? 'today ' : '') + (isDoneScene(done, x.id) ? 'is-done' : '');
     const id3 = String(x.id).padStart(3, '0');
-    a.innerHTML = `<span class="thumb"><img loading="lazy" alt="" src="img/${id3}.webp" onerror="this.parentNode.classList.add('missing');this.remove()"></span><span class="txt"><small>第 ${x.id} 天</small><b></b><i></i></span>`;
+    a.innerHTML = `<span class="thumb"><img loading="lazy" alt="" src="img/${id3}.webp" onerror="this.parentNode.classList.add('missing');this.remove()"></span><span class="txt"><small>第 ${day} 天</small><b></b><i></i></span>`;
     a.querySelector('b').textContent = x.title_zh; a.querySelector('i').textContent = x.title_en;
     grid.appendChild(a);
   }

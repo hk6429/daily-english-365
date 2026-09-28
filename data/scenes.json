@@ -32,7 +32,13 @@
     "en": "No problem, it's faster that way.",
     "zh": "沒問題，那樣比較快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "司機",
+   "B": "乘客"
+  },
+  "key_phrase": "Can you take the highway",
+  "key_phrase_zh": "可以走高速公路嗎"
  },
  {
   "id": 2,
@@ -64,10 +70,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks a lot.",
-    "zh": "了解，謝謝。"
+    "en": "Okay, I'll tap my card now.",
+    "zh": "好，那我現在刷卡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "公車司機"
+  },
+  "key_phrase": "How much is the fare",
+  "key_phrase_zh": "車資多少錢"
  },
  {
   "id": 3,
@@ -99,10 +111,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, let's go this way.",
-    "zh": "太好了，我們走這邊。"
+    "en": "Okay, let's follow the red signs.",
+    "zh": "好，我們跟著紅色指標走。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "站務員"
+  },
+  "key_phrase": "How many stops is that",
+  "key_phrase_zh": "要坐幾站"
  },
  {
   "id": 4,
@@ -134,10 +152,16 @@
    },
    {
     "speaker": "A",
-    "en": "Here you go, thank you.",
-    "zh": "給你，謝謝。"
+    "en": "Here's the money. I'll need a receipt, too.",
+    "zh": "錢給你，我也需要收據。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "售票員"
+  },
+  "key_phrase": "One ticket to Taichung, please",
+  "key_phrase_zh": "麻煩一張到台中的票"
  },
  {
   "id": 5,
@@ -159,8 +183,8 @@
    },
    {
     "speaker": "A",
-    "en": "Which car number is on my ticket?",
-    "zh": "我的票是幾號車廂？"
+    "en": "Where should I wait for car seven?",
+    "zh": "七號車廂要在哪裡等？"
    },
    {
     "speaker": "B",
@@ -169,10 +193,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'll head over there.",
-    "zh": "謝謝，我過去那邊。"
+    "en": "Okay, I'll walk to the front then.",
+    "zh": "好，那我往前面走。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "站務員"
+  },
+  "key_phrase": "Car seven, near the front",
+  "key_phrase_zh": "七號車廂，靠前面"
  },
  {
   "id": 6,
@@ -207,7 +237,13 @@
     "en": "Sure, it's right here.",
     "zh": "好的，就在這邊。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "地勤人員"
+  },
+  "key_phrase": "Can I see your passport and ticket",
+  "key_phrase_zh": "可以看一下您的護照和機票嗎"
  },
  {
   "id": 7,
@@ -239,10 +275,16 @@
    },
    {
     "speaker": "A",
-    "en": "That's perfect, go ahead through.",
-    "zh": "沒問題，請通過。"
+    "en": "That's fine. Go ahead and walk through.",
+    "zh": "可以，請直接走過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "安檢人員"
+  },
+  "key_phrase": "Please take off your jacket and shoes",
+  "key_phrase_zh": "請脫掉外套和鞋子"
  },
  {
   "id": 8,
@@ -264,20 +306,26 @@
    },
    {
     "speaker": "A",
-    "en": "You're in seat 14C, group two.",
+    "en": "You're in seat fourteen-C, group two.",
     "zh": "您是十四C座位，第二組登機。"
    },
    {
     "speaker": "B",
-    "en": "Which way to the jet bridge?",
-    "zh": "登機橋在哪個方向？"
+    "en": "Great. Can I board now?",
+    "zh": "好的，我現在可以登機了嗎？"
    },
    {
     "speaker": "A",
-    "en": "Straight ahead and to the right.",
-    "zh": "直走再右轉。"
+    "en": "Not yet. Group two boards in about five minutes.",
+    "zh": "還不行，第二組大約五分鐘後登機。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "空服員"
+  },
+  "key_phrase": "Sure, it's on my phone",
+  "key_phrase_zh": "當然，在我手機上"
  },
  {
   "id": 9,
@@ -312,7 +360,13 @@
     "en": "Great, I'll take that one.",
     "zh": "太好了，我要租那台。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have any with baskets",
+  "key_phrase_zh": "有附籃子的嗎"
  },
  {
   "id": 10,
@@ -344,10 +398,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you so much for your help.",
-    "zh": "真的很謝謝你的幫忙。"
+    "en": "Great, I'll walk there then.",
+    "zh": "太好了，那我用走的過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "路人"
+  },
+  "key_phrase": "Is it within walking distance",
+  "key_phrase_zh": "用走的到得了嗎"
  },
  {
   "id": 11,
@@ -382,7 +442,13 @@
     "en": "Okay, I'll head up there now.",
     "zh": "好的，我現在上去那邊。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "停車場管理員"
+  },
+  "key_phrase": "How much is parking per hour",
+  "key_phrase_zh": "停車一小時多少錢"
  },
  {
   "id": 12,
@@ -394,8 +460,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Fill it up with regular, please.",
-    "zh": "麻煩加滿普通汽油。"
+    "en": "Ninety-five, fill it up, please.",
+    "zh": "九五無鉛，加滿，麻煩了。"
    },
    {
     "speaker": "B",
@@ -404,8 +470,8 @@
    },
    {
     "speaker": "A",
-    "en": "I will pay by card, please.",
-    "zh": "我要刷卡，麻煩了。"
+    "en": "By card, please.",
+    "zh": "刷卡，麻煩了。"
    },
    {
     "speaker": "B",
@@ -417,7 +483,13 @@
     "en": "Yes, that would be great.",
     "zh": "好啊，那太好了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "加油站員工"
+  },
+  "key_phrase": "Would you like your windshield cleaned too",
+  "key_phrase_zh": "需要幫您擦一下擋風玻璃嗎"
  },
  {
   "id": 13,
@@ -434,25 +506,31 @@
    },
    {
     "speaker": "B",
-    "en": "Can you tell me your exact location?",
-    "zh": "可以告訴我確切位置嗎？"
+    "en": "Are you safely pulled over on the shoulder?",
+    "zh": "你有安全停到路肩上嗎？"
    },
    {
     "speaker": "A",
-    "en": "I'm near exit twelve, in the right lane.",
-    "zh": "我在十二號出口附近，右車道。"
+    "en": "Yes, I'm on the shoulder near exit twelve.",
+    "zh": "有，我停在十二號出口附近的路肩。"
    },
    {
     "speaker": "B",
-    "en": "A tow truck will arrive in twenty minutes.",
-    "zh": "拖吊車二十分鐘後會到。"
+    "en": "Good. A tow truck will be there in twenty minutes.",
+    "zh": "很好，拖吊車二十分鐘後會到。"
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'll wait here with my hazards on.",
-    "zh": "謝謝，我會開著警示燈在這裡等。"
+    "en": "Okay, I'll wait behind the guardrail with my hazards on.",
+    "zh": "好，我會打開警示燈，到護欄外面等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "道路救援員"
+  },
+  "key_phrase": "car just broke down on the highway",
+  "key_phrase_zh": "車子剛在高速公路上拋錨"
  },
  {
   "id": 14,
@@ -487,7 +565,13 @@
     "en": "Great, I'll get my ticket ready.",
     "zh": "太好了，我先準備好票。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "船務人員"
+  },
+  "key_phrase": "What time does the next ferry leave",
+  "key_phrase_zh": "下一班渡輪幾點開"
  },
  {
   "id": 15,
@@ -519,10 +603,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, thank you for your help.",
-    "zh": "太好了，謝謝你的幫忙。"
+    "en": "Great. I'll bring it back with a full tank.",
+    "zh": "好，我會加滿油再還車。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "租車行員工"
+  },
+  "key_phrase": "reservation for a compact car",
+  "key_phrase_zh": "預約一台小型車"
  },
  {
   "id": 16,
@@ -534,8 +624,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Are you my driver for the ride I booked?",
-    "zh": "你是我叫的那台車嗎？"
+    "en": "Hi, are you my ride?",
+    "zh": "嗨，你是我叫的車嗎？"
    },
    {
     "speaker": "B",
@@ -544,8 +634,8 @@
    },
    {
     "speaker": "A",
-    "en": "That's me, thanks for picking me up.",
-    "zh": "沒錯，謝謝你來接我。"
+    "en": "It's Kevin. Thanks for picking me up.",
+    "zh": "我是Kevin，謝謝你來接我。"
    },
    {
     "speaker": "B",
@@ -557,7 +647,13 @@
     "en": "Sounds good, I'm heading to the mall.",
     "zh": "好的，我要去購物中心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "司機"
+  },
+  "key_phrase": "Yes, can you confirm your name",
+  "key_phrase_zh": "是的，可以確認一下您的姓名嗎"
  },
  {
   "id": 17,
@@ -584,7 +680,7 @@
    },
    {
     "speaker": "B",
-    "en": "Yes, route 20 runs every ten minutes.",
+    "en": "Yes, route twenty runs every ten minutes.",
     "zh": "是的，二十號公車每十分鐘一班。"
    },
    {
@@ -592,7 +688,13 @@
     "en": "Okay, I'll just wait here then.",
     "zh": "好，那我就在這裡等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Wait, wait! I missed the bus",
+  "key_phrase_zh": "等等，等一下！我錯過公車了"
  },
  {
   "id": 18,
@@ -610,7 +712,7 @@
    {
     "speaker": "B",
     "en": "Can I see your baggage claim ticket?",
-    "zh": "可以看一下您的行李託運單嗎？"
+    "zh": "可以看一下您的行李條嗎？"
    },
    {
     "speaker": "A",
@@ -627,7 +729,13 @@
     "en": "Thank you, I really appreciate it.",
     "zh": "謝謝，真的很感激。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "地勤人員"
+  },
+  "key_phrase": "Can I see your baggage claim ticket",
+  "key_phrase_zh": "可以看一下您的行李託運單嗎"
  },
  {
   "id": 19,
@@ -662,7 +770,13 @@
     "en": "Thanks, I have a meeting in twenty minutes.",
     "zh": "謝謝，我二十分鐘後有會議。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "司機"
+  },
+  "key_phrase": "Is there another route we could take",
+  "key_phrase_zh": "有其他路線可以走嗎"
  },
  {
   "id": 20,
@@ -697,7 +811,13 @@
     "en": "I'll take care of it tonight.",
     "zh": "我今晚就去處理。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "警察"
+  },
+  "key_phrase": "I'll take care of it tonight",
+  "key_phrase_zh": "我今晚就去處理"
  },
  {
   "id": 21,
@@ -732,7 +852,13 @@
     "en": "Got it, thanks for explaining.",
     "zh": "了解，謝謝說明。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "站務員"
+  },
+  "key_phrase": "Can I add five hundred dollars",
+  "key_phrase_zh": "可以加值五百元嗎"
  },
  {
   "id": 22,
@@ -767,7 +893,13 @@
     "en": "Thanks, I'll run for it.",
     "zh": "謝謝，我用跑的過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "站務員"
+  },
+  "key_phrase": "Thanks, I'll run for it",
+  "key_phrase_zh": "謝謝，我用跑的過去"
  },
  {
   "id": 23,
@@ -802,7 +934,13 @@
     "en": "Perfect, I'll try to get some sleep.",
     "zh": "太好了，我來睡一下。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "司機"
+  },
+  "key_phrase": "What time do we arrive downtown",
+  "key_phrase_zh": "幾點會到市區"
  },
  {
   "id": 24,
@@ -815,7 +953,7 @@
    {
     "speaker": "A",
     "en": "Can I borrow your scooter this afternoon?",
-    "zh": "今天下午可以借你的機車嗎？"
+    "zh": "今天下午可以跟你借機車嗎？"
    },
    {
     "speaker": "B",
@@ -837,7 +975,13 @@
     "en": "Great, I'll bring it back by six.",
     "zh": "太好了，我六點前會還你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "騎士"
+  },
+  "key_phrase": "Can I borrow your scooter this afternoon",
+  "key_phrase_zh": "今天下午可以借你的機車嗎"
  },
  {
   "id": 25,
@@ -872,7 +1016,13 @@
     "en": "Okay, now it's green, let's go.",
     "zh": "好，現在綠燈了，走吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "行人甲",
+   "B": "行人乙"
+  },
+  "key_phrase": "How long until it turns green",
+  "key_phrase_zh": "還要多久才會變綠燈"
  },
  {
   "id": 26,
@@ -907,7 +1057,13 @@
     "en": "Sounds good, I'll wait there.",
     "zh": "好的，我在那邊等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "洗車員"
+  },
+  "key_phrase": "How much for a full car wash",
+  "key_phrase_zh": "全套洗車要多少錢"
  },
  {
   "id": 27,
@@ -942,7 +1098,13 @@
     "en": "Okay, I'm booking it right now.",
     "zh": "好，我現在就訂了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "The morning one, it's cheaper too",
+  "key_phrase_zh": "早上那班，也比較便宜"
  },
  {
   "id": 28,
@@ -959,8 +1121,8 @@
    },
    {
     "speaker": "B",
-    "en": "Yes, it's delayed due to weather conditions.",
-    "zh": "對，因為天氣狀況延誤了。"
+    "en": "Yes, I'm afraid it's because of the weather.",
+    "zh": "對，恐怕是因為天氣的關係。"
    },
    {
     "speaker": "A",
@@ -974,10 +1136,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks for letting me know.",
-    "zh": "謝謝你告訴我。"
+    "en": "Okay, I'll grab a coffee while I wait.",
+    "zh": "好，那我等的時候去買杯咖啡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "地勤人員"
+  },
+  "key_phrase": "What's the new departure time",
+  "key_phrase_zh": "新的起飛時間是幾點"
  },
  {
   "id": 29,
@@ -1012,7 +1180,13 @@
     "en": "Sounds good, see you then.",
     "zh": "好，到時候見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Sounds good, see you then",
+  "key_phrase_zh": "好，到時候見"
  },
  {
   "id": 30,
@@ -1047,7 +1221,13 @@
     "en": "Let's grab your bags and head to the car.",
     "zh": "我們拿行李去停車場吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "It was long, but comfortable",
+  "key_phrase_zh": "有點久，但滿舒服的"
  },
  {
   "id": 31,
@@ -1082,7 +1262,13 @@
     "en": "No, that's all. Thanks!",
     "zh": "沒有了，就這樣，謝謝！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Iced, please, with oat milk",
+  "key_phrase_zh": "冰的，麻煩用燕麥奶"
  },
  {
   "id": 32,
@@ -1114,10 +1300,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's under Chen. Thank you.",
-    "zh": "陳先生，謝謝你。"
+    "en": "It's under Chen. See you Saturday.",
+    "zh": "登記姓陳，星期六見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "餐廳人員"
+  },
+  "key_phrase": "What time works for you",
+  "key_phrase_zh": "您方便的時間是幾點呢"
  },
  {
   "id": 33,
@@ -1149,10 +1341,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, this looks nice.",
-    "zh": "太棒了，這裡看起來很不錯。"
+    "en": "Nice, we can see the whole street.",
+    "zh": "不錯，可以看到整條街。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Let me check for you",
+  "key_phrase_zh": "我幫您確認一下"
  },
  {
   "id": 34,
@@ -1184,10 +1382,16 @@
    },
    {
     "speaker": "A",
-    "en": "Great choice, coming right up.",
-    "zh": "很好的選擇，馬上為您準備。"
+    "en": "Great choice. I'll put that in for you.",
+    "zh": "很好的選擇，我幫您送單。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Are you ready to order",
+  "key_phrase_zh": "請問可以點餐了嗎"
  },
  {
   "id": 35,
@@ -1219,10 +1423,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll order that then.",
+    "en": "Great, I'll order that then.",
     "zh": "太好了，那我就點這個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Let me check with the kitchen",
+  "key_phrase_zh": "我去廚房確認一下"
  },
  {
   "id": 36,
@@ -1254,23 +1464,29 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, I appreciate it.",
-    "zh": "謝謝，真的很感激。"
+    "en": "That's okay. I'll wait for the new one.",
+    "zh": "沒關係，我等新的那碗。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Excuse me, this soup is cold",
+  "key_phrase_zh": "不好意思，這碗湯是冷的"
  },
  {
   "id": 37,
   "category": "餐飲",
   "title_en": "Asking for the Check",
-  "title_zh": "結帳買單",
+  "title_zh": "餐廳結帳",
   "scene_zh": "用餐完畢，客人向服務生要帳單",
   "image_prompt_en": "A chibi customer raises a hand and gestures a writing motion at a chibi waiter carrying a small bill folder near a finished dinner table.",
   "lines": [
    {
     "speaker": "A",
     "en": "Could we get the check, please?",
-    "zh": "可以幫我們買單嗎？"
+    "zh": "可以幫我們結帳嗎？"
    },
    {
     "speaker": "B",
@@ -1292,7 +1508,13 @@
     "en": "Great, here's my card.",
     "zh": "太好了，這是我的卡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Do you accept credit cards",
+  "key_phrase_zh": "你們可以刷信用卡嗎"
  },
  {
   "id": 38,
@@ -1309,38 +1531,44 @@
    },
    {
     "speaker": "B",
-    "en": "Sounds good to me.",
-    "zh": "我覺得可以。"
+    "en": "Actually, I only had a salad. Can we pay separately?",
+    "zh": "其實我只點了沙拉，可以分開付嗎？"
    },
    {
     "speaker": "A",
-    "en": "Can we pay separately, actually?",
-    "zh": "其實我們可以分開付嗎？"
+    "en": "Sure, that's fair.",
+    "zh": "當然，這樣比較公平。"
    },
    {
     "speaker": "B",
-    "en": "Sure, that works too.",
-    "zh": "當然，那樣也可以。"
+    "en": "Thanks. I'll get the drinks, though.",
+    "zh": "謝謝，不過飲料我請。"
    },
    {
     "speaker": "A",
-    "en": "Great, I'll pay for the drinks.",
-    "zh": "太好了，我付飲料的錢。"
+    "en": "Deal. Let's ask for separate checks.",
+    "zh": "就這麼說定，我們請店員分開結帳吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "ask for separate checks",
+  "key_phrase_zh": "要求分開結帳"
  },
  {
   "id": 39,
   "category": "餐飲",
   "title_en": "Leaving a Tip",
   "title_zh": "支付小費",
-  "scene_zh": "在餐廳結帳時決定給服務生多少小費",
+  "scene_zh": "在美國的餐廳結帳時，決定給服務生多少小費。",
   "image_prompt_en": "A chibi customer places extra coins and a small bill on top of a payment tray next to a smiling chibi waiter.",
   "lines": [
    {
     "speaker": "A",
-    "en": "Is tipping included in the bill?",
-    "zh": "帳單裡有含小費嗎？"
+    "en": "Is the tip included?",
+    "zh": "小費有含在裡面嗎？"
    },
    {
     "speaker": "B",
@@ -1362,7 +1590,13 @@
     "en": "You took great care of us.",
     "zh": "你把我們照顧得很好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "No, tipping is optional here",
+  "key_phrase_zh": "沒有，這裡的小費是自由給的"
  },
  {
   "id": 40,
@@ -1384,8 +1618,8 @@
    },
    {
     "speaker": "A",
-    "en": "That's fine, I'll wait outside.",
-    "zh": "沒關係，我在外面等。"
+    "en": "That's fine. I'll wait over there.",
+    "zh": "沒關係，我在那邊等。"
    },
    {
     "speaker": "B",
@@ -1394,10 +1628,16 @@
    },
    {
     "speaker": "A",
-    "en": "Sounds good, thanks so much.",
-    "zh": "好的，非常謝謝。"
+    "en": "Great, I'll keep an ear out.",
+    "zh": "好，我會注意聽。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "like this order to go",
+  "key_phrase_zh": "這份餐我要外帶"
  },
  {
   "id": 41,
@@ -1415,7 +1655,7 @@
    {
     "speaker": "B",
     "en": "I'm sorry to hear that.",
-    "zh": "很抱歉聽到這個狀況。"
+    "zh": "真的很抱歉。"
    },
    {
     "speaker": "A",
@@ -1429,10 +1669,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks for fixing this so fast.",
-    "zh": "謝謝這麼快幫我處理。"
+    "en": "Great. I'll order from you again.",
+    "zh": "太好了，下次還會跟你們訂。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "外送客服"
+  },
+  "key_phrase": "I'm sorry to hear that",
+  "key_phrase_zh": "很抱歉聽到這個狀況"
  },
  {
   "id": 42,
@@ -1444,13 +1690,13 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Can I get a combo meal, number three?",
-    "zh": "我要點三號套餐。"
+    "en": "Can I get a number three combo?",
+    "zh": "我要一份三號套餐。"
    },
    {
     "speaker": "B",
-    "en": "Would you like that in a large size?",
-    "zh": "要幫您升級大份的嗎？"
+    "en": "Would you like to make that a large?",
+    "zh": "要升級成大份的嗎？"
    },
    {
     "speaker": "A",
@@ -1464,10 +1710,16 @@
    },
    {
     "speaker": "A",
-    "en": "Will do, thanks a lot.",
-    "zh": "好的，非常謝謝。"
+    "en": "Will do. I'll have my card ready.",
+    "zh": "好的，我先把卡準備好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Please pull up to the next window",
+  "key_phrase_zh": "請開到下一個窗口"
  },
  {
   "id": 43,
@@ -1494,15 +1746,21 @@
    },
    {
     "speaker": "B",
-    "en": "Would you like extra boba?",
+    "en": "Would you like to add boba?",
     "zh": "要加珍珠嗎？"
    },
    {
     "speaker": "A",
-    "en": "Yes, add boba on top.",
-    "zh": "好，加珍珠。"
+    "en": "Yes, please, add some boba.",
+    "zh": "好，麻煩加珍珠。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "brown sugar milk tea",
+  "key_phrase_zh": "黑糖奶茶"
  },
  {
   "id": 44,
@@ -1529,15 +1787,21 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, extra spicy coming up.",
-    "zh": "沒問題，馬上給您加辣的。"
+    "en": "Sure, I'll make them spicy.",
+    "zh": "沒問題，我幫你弄辣一點。"
    },
    {
     "speaker": "A",
     "en": "Great, here's the cash.",
     "zh": "好，這是現金。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "攤販"
+  },
+  "key_phrase": "How much for three skewers",
+  "key_phrase_zh": "三串多少錢"
  },
  {
   "id": 45,
@@ -1572,25 +1836,31 @@
     "en": "To go, I'm in a hurry.",
     "zh": "外帶，我趕時間。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Would you like bacon or sausage",
+  "key_phrase_zh": "要培根還是香腸"
  },
  {
   "id": 46,
   "category": "餐飲",
-  "title_en": "Ordering at a Bar",
-  "title_zh": "酒吧點飲料",
-  "scene_zh": "在酒吧向調酒師點一杯飲品",
-  "image_prompt_en": "A chibi bartender mixes a colorful drink behind a bar counter lined with bottles while a chibi customer sits on a stool.",
+  "title_en": "Ordering at a Cafe Counter",
+  "title_zh": "咖啡廳點特調",
+  "scene_zh": "在咖啡廳吧台向店員點一杯特調飲品。",
+  "image_prompt_en": "a chibi customer sitting on a stool at a bright cafe counter while a chibi barista prepares a passion fruit soda with ice and mint in a tall glass, pastries in a display case, coffee machine behind, no alcohol [REGEN]",
   "lines": [
    {
     "speaker": "A",
-    "en": "What do you recommend tonight?",
-    "zh": "今晚有什麼推薦的嗎？"
+    "en": "What do you recommend today?",
+    "zh": "今天有什麼推薦的嗎？"
    },
    {
     "speaker": "B",
-    "en": "Our mojito is really popular.",
-    "zh": "我們的莫西多很受歡迎。"
+    "en": "Our passion fruit soda is really popular.",
+    "zh": "我們的百香果氣泡飲很受歡迎。"
    },
    {
     "speaker": "A",
@@ -1599,15 +1869,21 @@
    },
    {
     "speaker": "B",
-    "en": "Coming right up, anything to snack on?",
-    "zh": "馬上來，要點些小吃嗎？"
+    "en": "Coming right up. Anything to snack on?",
+    "zh": "馬上來，要點些小點心嗎？"
    },
    {
     "speaker": "A",
     "en": "Just the drink for now, thanks.",
     "zh": "先來一杯就好，謝謝。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "passion fruit soda is really popular",
+  "key_phrase_zh": "我們的百香果汽水很受歡迎"
  },
  {
   "id": 47,
@@ -1642,7 +1918,13 @@
     "en": "Perfect, plenty of time then.",
     "zh": "太好了，那時間很充裕。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "How long does the buffet run",
+  "key_phrase_zh": "自助餐開放到幾點"
  },
  {
   "id": 48,
@@ -1677,7 +1959,13 @@
     "en": "That sounds perfect, I'll take it.",
     "zh": "聽起來很棒，我要那個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Do you have vegetarian options",
+  "key_phrase_zh": "你們有素食的選項嗎"
  },
  {
   "id": 49,
@@ -1712,7 +2000,13 @@
     "en": "We'll definitely come back again.",
     "zh": "我們一定會再來的。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "主廚"
+  },
+  "key_phrase": "Please tell him it was amazing",
+  "key_phrase_zh": "請告訴他真的很棒"
  },
  {
   "id": 50,
@@ -1747,7 +2041,13 @@
     "en": "Great, this will be tomorrow's lunch.",
     "zh": "太好了，這是明天的午餐。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Could you box this up for me",
+  "key_phrase_zh": "可以幫我打包這個嗎"
  },
  {
   "id": 51,
@@ -1782,7 +2082,13 @@
     "en": "Perfect, I'll give it a try.",
     "zh": "太好了，我來試試看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Not at all, it's mild",
+  "key_phrase_zh": "完全不會，口味很溫和"
  },
  {
   "id": 52,
@@ -1814,10 +2120,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, that's exactly what we need.",
-    "zh": "太好了，這正是我們需要的。"
+    "en": "Great, she can sit right here.",
+    "zh": "太好了，她可以坐這裡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "No worries, here's the chair",
+  "key_phrase_zh": "別擔心，座椅在這裡"
  },
  {
   "id": 53,
@@ -1850,9 +2162,15 @@
    {
     "speaker": "A",
     "en": "Sure, it's under Lin.",
-    "zh": "好，林先生。"
+    "zh": "好，登記姓林。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "How long is the wait right now",
+  "key_phrase_zh": "現在大概要等多久"
  },
  {
   "id": 54,
@@ -1887,7 +2205,13 @@
     "en": "Thanks, that's perfect.",
     "zh": "謝謝，這樣剛剛好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Do you have any lemon for it",
+  "key_phrase_zh": "有檸檬片可以加嗎"
  },
  {
   "id": 55,
@@ -1910,7 +2234,7 @@
    {
     "speaker": "A",
     "en": "It's under Wang, party of two.",
-    "zh": "王先生，兩位。"
+    "zh": "登記姓王，兩位。"
    },
    {
     "speaker": "B",
@@ -1922,7 +2246,13 @@
     "en": "Thanks, sorry for the short notice.",
     "zh": "謝謝，臨時取消不好意思。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "餐廳人員"
+  },
+  "key_phrase": "All set, it's been cancelled",
+  "key_phrase_zh": "好了，已經幫您取消了"
  },
  {
   "id": 56,
@@ -1957,13 +2287,19 @@
     "en": "Thanks, that sounds much better.",
     "zh": "謝謝，這樣好多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "Can you make it mild, please",
+  "key_phrase_zh": "可以幫我做成微辣嗎"
  },
  {
   "id": 57,
   "category": "餐飲",
   "title_en": "Sharing a Dish",
-  "title_zh": "分享點菜",
+  "title_zh": "兩人合點一份",
   "scene_zh": "兩位朋友討論要不要共點一份餐點分著吃",
   "image_prompt_en": "Two chibi friends sit across a table sharing one large pizza on a stand, both reaching for a slice happily.",
   "lines": [
@@ -1979,55 +2315,67 @@
    },
    {
     "speaker": "A",
-    "en": "Can we get an extra plate?",
-    "zh": "可以再給我們一個盤子嗎？"
+    "en": "Let's ask for an extra plate.",
+    "zh": "我們跟店員多要一個盤子吧。"
    },
    {
     "speaker": "B",
-    "en": "Sure, coming right up.",
-    "zh": "當然，馬上來。"
+    "en": "Good idea. Excuse me, could we get an extra plate?",
+    "zh": "好主意。不好意思，可以多給我們一個盤子嗎？"
    },
    {
     "speaker": "A",
     "en": "Great, let's dig in.",
     "zh": "太好了，我們開動吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Should we just split one pizza",
+  "key_phrase_zh": "我們要不要合點一份披薩就好"
  },
  {
   "id": 58,
   "category": "餐飲",
-  "title_en": "Paying with Mobile App",
-  "title_zh": "手機掃碼付款",
-  "scene_zh": "客人使用手機付款 App 結帳",
-  "image_prompt_en": "A chibi customer holds up a smartphone to scan a payment code at the register while a chibi cashier smiles behind the counter.",
+  "title_en": "Politely Turning Down Seconds",
+  "title_zh": "婉拒主人夾菜",
+  "scene_zh": "到朋友家吃飯，主人一直熱情夾菜，客人禮貌婉拒。",
+  "image_prompt_en": "a chibi host at a home dinner table offering a piece of steamed fish with chopsticks while a chibi guest smiles and raises one hand politely to decline, dishes of Taiwanese home cooking on the table",
   "lines": [
    {
     "speaker": "A",
-    "en": "Can I pay with my phone?",
-    "zh": "我可以用手機付款嗎？"
+    "en": "Have some more fish. There's plenty left!",
+    "zh": "再吃點魚嘛，還有很多！"
    },
    {
     "speaker": "B",
-    "en": "Yes, just scan this code.",
-    "zh": "可以，掃這個條碼就好。"
+    "en": "Thanks, but I'm really full. It was delicious.",
+    "zh": "謝謝，不過我真的很飽了，真的很好吃。"
    },
    {
     "speaker": "A",
-    "en": "Got it, one moment please.",
-    "zh": "了解，請等我一下。"
+    "en": "Are you sure? Just one more bite?",
+    "zh": "真的嗎？再吃一口就好？"
    },
    {
     "speaker": "B",
-    "en": "Take your time, no rush.",
-    "zh": "慢慢來，不急。"
+    "en": "I'd better not, but I'd love the recipe.",
+    "zh": "我還是不要了，不過我很想要食譜。"
    },
    {
     "speaker": "A",
-    "en": "All done, thank you.",
-    "zh": "完成了，謝謝你。"
+    "en": "Deal. I'll write it down for you.",
+    "zh": "沒問題，我寫給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "主人",
+   "B": "客人"
+  },
+  "key_phrase": "I'd love the recipe",
+  "key_phrase_zh": "我很想要這道菜的食譜"
  },
  {
   "id": 59,
@@ -2059,10 +2407,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks again for understanding.",
-    "zh": "再次謝謝你的體諒。"
+    "en": "Thanks, I appreciate it.",
+    "zh": "謝謝，麻煩你了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "I just couldn't finish it all",
+  "key_phrase_zh": "我真的吃不完"
  },
  {
   "id": 60,
@@ -2097,7 +2451,13 @@
     "en": "Excellent choice, I'll bring it out.",
     "zh": "很棒的選擇，我馬上端出來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "服務生"
+  },
+  "key_phrase": "I'd recommend the chocolate cake",
+  "key_phrase_zh": "我推薦巧克力蛋糕"
  },
  {
   "id": 61,
@@ -2132,7 +2492,13 @@
     "en": "Perfect, this fits much better.",
     "zh": "太好了，這件合身多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have this in a medium",
+  "key_phrase_zh": "這件有中號嗎"
  },
  {
   "id": 62,
@@ -2149,8 +2515,8 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, just leave the extras outside.",
-    "zh": "可以，多的請放在外面就好。"
+    "en": "Sure. I'll hold the rest for you out here.",
+    "zh": "可以，其他的我先幫你保管在外面。"
    },
    {
     "speaker": "A",
@@ -2167,7 +2533,13 @@
     "en": "Great, I'll be out in a minute.",
     "zh": "好的，我馬上就出來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "try on more than three items",
+  "key_phrase_zh": "我可以試穿超過三件嗎"
  },
  {
   "id": 63,
@@ -2202,7 +2574,13 @@
     "en": "That's much more comfortable, I'll take these.",
     "zh": "這雙舒服多了，我要這雙。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "These feel a little narrow, actually",
+  "key_phrase_zh": "其實這雙感覺有點窄"
  },
  {
   "id": 64,
@@ -2224,8 +2602,8 @@
    },
    {
     "speaker": "A",
-    "en": "Yes, here it is, from last week.",
-    "zh": "有，這是上禮拜買的。"
+    "en": "Yes, here it is. I bought it last week.",
+    "zh": "有，在這裡，我上禮拜買的。"
    },
    {
     "speaker": "B",
@@ -2234,10 +2612,16 @@
    },
    {
     "speaker": "A",
-    "en": "Sounds good, thank you for your help.",
-    "zh": "好的，謝謝你的幫忙。"
+    "en": "Great, that works for me.",
+    "zh": "好，這樣可以。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "I'd like to return this sweater, please",
+  "key_phrase_zh": "我想退這件毛衣"
  },
  {
   "id": 65,
@@ -2269,10 +2653,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll take that one instead.",
-    "zh": "太好了，那我換這個。"
+    "en": "Great, I'll swap it for the navy one.",
+    "zh": "太好了，那我換海軍藍的。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have it in navy blue",
+  "key_phrase_zh": "有海軍藍嗎"
  },
  {
   "id": 66,
@@ -2307,7 +2697,13 @@
     "en": "Got it, I'll take this one then.",
     "zh": "了解，那我要這件。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Is there any discount on this jacket",
+  "key_phrase_zh": "這件外套有折扣嗎"
  },
  {
   "id": 67,
@@ -2339,10 +2735,16 @@
    },
    {
     "speaker": "A",
-    "en": "Great, your total comes to twenty dollars.",
-    "zh": "好的，總共二十元。"
+    "en": "Great, your total comes to two hundred twenty.",
+    "zh": "好的，總共兩百二十元。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "收銀員"
+  },
+  "key_phrase": "Would you like a bag for these",
+  "key_phrase_zh": "需要幫你裝袋子嗎"
  },
  {
   "id": 68,
@@ -2364,8 +2766,8 @@
    },
    {
     "speaker": "A",
-    "en": "It keeps saying unexpected item in bag.",
-    "zh": "一直顯示袋子裡有未預期的商品。"
+    "en": "It keeps saying \"Unexpected item in bagging area.\"",
+    "zh": "一直顯示「裝袋區有未預期的商品」。"
    },
    {
     "speaker": "B",
@@ -2377,7 +2779,13 @@
     "en": "Thanks, sorry for the trouble.",
     "zh": "謝謝，不好意思麻煩你了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Let me take a look for you",
+  "key_phrase_zh": "我來幫你看看"
  },
  {
   "id": 69,
@@ -2409,10 +2817,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll grab one of those too.",
+    "en": "Great, I'll grab one of those too.",
     "zh": "太好了，我也順便拿一條。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Can you heat this up for me",
+  "key_phrase_zh": "這個可以幫我加熱嗎"
  },
  {
   "id": 70,
@@ -2447,7 +2861,13 @@
     "en": "Thanks, I'll take a box of those.",
     "zh": "謝謝，我要買一盒。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "藥師"
+  },
+  "key_phrase": "These lozenges usually work well",
+  "key_phrase_zh": "這款喉糖通常效果不錯"
  },
  {
   "id": 71,
@@ -2482,7 +2902,13 @@
     "en": "That sounds great, I'll take it.",
     "zh": "聽起來不錯，我要這台。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "This model is light and affordable",
+  "key_phrase_zh": "這款輕巧又划算"
  },
  {
   "id": 72,
@@ -2509,15 +2935,21 @@
    },
    {
     "speaker": "B",
-    "en": "It's about six hundred dollars monthly.",
-    "zh": "大約每月六百元。"
+    "en": "It's six hundred a month.",
+    "zh": "每個月六百元。"
    },
    {
     "speaker": "A",
-    "en": "Sounds reasonable, let's sign up for that.",
-    "zh": "聽起來合理，我要辦這個。"
+    "en": "That sounds reasonable. I'll go with that one.",
+    "zh": "聽起來很合理，我就辦這個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "門市人員"
+  },
+  "key_phrase": "How much is it per month",
+  "key_phrase_zh": "這個每個月多少錢"
  },
  {
   "id": 73,
@@ -2529,8 +2961,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Can you recommend a light novel to read?",
-    "zh": "可以推薦一本輕鬆好讀的小說嗎？"
+    "en": "Can you recommend something light to read?",
+    "zh": "可以推薦一些輕鬆好讀的書嗎？"
    },
    {
     "speaker": "B",
@@ -2552,7 +2984,13 @@
     "en": "That sounds fun, I'll take a copy.",
     "zh": "聽起來很有趣，我要買一本。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "This one's been really popular lately",
+  "key_phrase_zh": "這本最近很受歡迎"
  },
  {
   "id": 74,
@@ -2587,7 +3025,13 @@
     "en": "That's fine, I'll wait right here.",
     "zh": "沒關係，我就在這裡等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Could you wrap this as a gift",
+  "key_phrase_zh": "這個可以幫我包裝成禮物嗎"
  },
  {
   "id": 75,
@@ -2619,10 +3063,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks so much for the quick service.",
-    "zh": "謝謝你們的服務這麼快。"
+    "en": "Great, that was really fast.",
+    "zh": "太好了，真的好快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Can I see your order number",
+  "key_phrase_zh": "可以給我看一下訂單號碼嗎"
  },
  {
   "id": 76,
@@ -2657,7 +3107,13 @@
     "en": "Thanks, you're always so generous.",
     "zh": "謝謝，你每次都很大方。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "攤販"
+  },
+  "key_phrase": "Could you throw in one more",
+  "key_phrase_zh": "可以再多送一個嗎"
  },
  {
   "id": 77,
@@ -2674,7 +3130,7 @@
    },
    {
     "speaker": "B",
-    "en": "It's in aisle five, next to soap.",
+    "en": "It's in aisle five, next to the soap.",
     "zh": "在五號走道，肥皂旁邊。"
    },
    {
@@ -2689,10 +3145,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thank you for the help.",
-    "zh": "知道了，謝謝你的幫忙。"
+    "en": "Got it. I'll go that way.",
+    "zh": "了解，我往那邊走。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Excuse me, where can I find toothpaste",
+  "key_phrase_zh": "不好意思，請問牙膏在哪裡"
  },
  {
   "id": 78,
@@ -2714,12 +3176,12 @@
    },
    {
     "speaker": "A",
-    "en": "The tag looked a bit worn out.",
-    "zh": "標籤看起來有點模糊。"
+    "en": "The tag's kind of hard to read.",
+    "zh": "標籤有點看不清楚。"
    },
    {
     "speaker": "B",
-    "en": "It's fifty five dollars, according to the system.",
+    "en": "The system says fifty-five dollars.",
     "zh": "系統顯示是五十五元。"
    },
    {
@@ -2727,7 +3189,13 @@
     "en": "Okay, that matches what I expected.",
     "zh": "好，那跟我想的一樣。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Could you check the price on this",
+  "key_phrase_zh": "可以幫我查一下這個的價格嗎"
  },
  {
   "id": 79,
@@ -2762,7 +3230,13 @@
     "en": "No, it's completely free to join.",
     "zh": "不用，加入完全免費。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Is there a fee to sign up",
+  "key_phrase_zh": "加入需要付費嗎"
  },
  {
   "id": 80,
@@ -2797,7 +3271,13 @@
     "en": "No signature needed, you're all set.",
     "zh": "不用簽名，這樣就完成了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "收銀員"
+  },
+  "key_phrase": "Please insert your card here",
+  "key_phrase_zh": "請把卡片插進這裡"
  },
  {
   "id": 81,
@@ -2832,7 +3312,13 @@
     "en": "Done, the payment went through.",
     "zh": "好了，付款成功了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "收銀員"
+  },
+  "key_phrase": "Can I pay with my phone here",
+  "key_phrase_zh": "這裡可以用手機付款嗎"
  },
  {
   "id": 82,
@@ -2840,17 +3326,17 @@
   "title_en": "Counting Cash Change",
   "title_zh": "確認找零金額",
   "scene_zh": "顧客付現金後在櫃台確認找零是否正確。",
-  "image_prompt_en": "A chibi female cashier counts paper bills into the open hand of a chibi male customer at a checkout counter.",
+  "image_prompt_en": "a chibi customer handing a Taiwanese five-hundred NT dollar bill to a chibi convenience store cashier, who gives back a one-hundred NT dollar bill and coins as change, snacks on the counter [REGEN]",
   "lines": [
    {
     "speaker": "A",
-    "en": "Here's five hundred, keep the change small.",
-    "zh": "這裡五百元，找零盡量給小鈔。"
+    "en": "Here's five hundred. Could I get some small bills back?",
+    "zh": "這是五百元，可以找我小鈔嗎？"
    },
    {
     "speaker": "B",
-    "en": "Sure, your change is one hundred twenty.",
-    "zh": "好的，找您一百二十元。"
+    "en": "Sure. It's three-eighty, so your change is one-twenty.",
+    "zh": "好的，總共三百八，找您一百二十元。"
    },
    {
     "speaker": "A",
@@ -2864,10 +3350,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, have a good rest of your day.",
-    "zh": "謝謝，祝你今天愉快。"
+    "en": "Great, I needed coins for the bus.",
+    "zh": "太好了，我正需要零錢搭公車。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "收銀員"
+  },
+  "key_phrase": "Of course, here you go",
+  "key_phrase_zh": "當然可以，這是你的發票"
  },
  {
   "id": 83,
@@ -2902,7 +3394,13 @@
     "en": "Great, that gives me peace of mind.",
     "zh": "太好了，這樣我比較安心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "It covers any manufacturing defects",
+  "key_phrase_zh": "包含任何製造上的瑕疵"
  },
  {
   "id": 84,
@@ -2934,10 +3432,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll grab a few of those.",
-    "zh": "太好了，那我拿幾個。"
+    "en": "Great, my nephews will love these.",
+    "zh": "太好了，我姪子們一定會喜歡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have anything smaller for kids",
+  "key_phrase_zh": "有沒有比較小、適合小朋友的"
  },
  {
   "id": 85,
@@ -2969,10 +3473,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'd really appreciate that.",
-    "zh": "謝謝，麻煩你了。"
+    "en": "Great, I'll wait here.",
+    "zh": "好，我在這裡等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "It's good until next Friday",
+  "key_phrase_zh": "到下週五都還可以"
  },
  {
   "id": 86,
@@ -3007,7 +3517,13 @@
     "en": "Yes, that's exactly right.",
     "zh": "對，就是這樣。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "I'll cover the drinks and snacks",
+  "key_phrase_zh": "飲料和零食算我的"
  },
  {
   "id": 87,
@@ -3024,13 +3540,13 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, would you like it in your name?",
-    "zh": "好的，要開你的名字嗎？"
+    "en": "Sure. Do you need a company tax ID on it?",
+    "zh": "好的，需要打統編嗎？"
    },
    {
     "speaker": "A",
-    "en": "No, just a plain receipt is fine.",
-    "zh": "不用，開一般發票就好。"
+    "en": "No, a regular receipt is fine.",
+    "zh": "不用，一般發票就好。"
    },
    {
     "speaker": "B",
@@ -3039,10 +3555,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, have a nice day.",
-    "zh": "謝謝，祝你有美好的一天。"
+    "en": "Sure thing. Have a nice day.",
+    "zh": "好，祝你今天順利。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "收銀員"
+  },
+  "key_phrase": "get a paper receipt",
+  "key_phrase_zh": "可以給我紙本發票嗎"
  },
  {
   "id": 88,
@@ -3074,10 +3596,16 @@
    },
    {
     "speaker": "A",
-    "en": "Good to know, thanks for telling me.",
-    "zh": "了解了，謝謝你告訴我。"
+    "en": "Good to know. I'll come back Sunday.",
+    "zh": "了解，那我星期天再來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "What time do you close today",
+  "key_phrase_zh": "你們今天幾點打烊"
  },
  {
   "id": 89,
@@ -3112,7 +3640,13 @@
     "en": "Then I'll go with that one.",
     "zh": "那我要選這款。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "This one has better noise cancellation",
+  "key_phrase_zh": "這款降噪效果比較好"
  },
  {
   "id": 90,
@@ -3147,7 +3681,13 @@
     "en": "Thanks, that will make shopping much easier.",
     "zh": "謝謝，這樣買東西輕鬆多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have any larger carts available",
+  "key_phrase_zh": "有沒有比較大的推車可以借"
  },
  {
   "id": 91,
@@ -3160,7 +3700,7 @@
    {
     "speaker": "A",
     "en": "Hi, I have a reservation under Chen.",
-    "zh": "你好，我用陳這個姓氏訂了房。"
+    "zh": "你好，我有訂房，姓陳。"
    },
    {
     "speaker": "B",
@@ -3174,15 +3714,21 @@
    },
    {
     "speaker": "B",
-    "en": "You're in room 512, breakfast starts at seven.",
-    "zh": "您的房間是512，早餐七點開始供應。"
+    "en": "You're in room five-twelve. Breakfast starts at seven.",
+    "zh": "您的房間是五一二號房，早餐七點開始。"
    },
    {
     "speaker": "A",
-    "en": "Perfect, thank you so much.",
-    "zh": "太好了，非常謝謝。"
+    "en": "Great. I'll take my bags up now.",
+    "zh": "太好了，我先把行李拿上去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "reservation under Chen",
+  "key_phrase_zh": "我有訂房，姓陳"
  },
  {
   "id": 92,
@@ -3194,8 +3740,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "I'd like to check out of room 512.",
-    "zh": "我想要退掉512房。"
+    "en": "I'd like to check out. Room five-twelve.",
+    "zh": "我要退房，五一二號房。"
    },
    {
     "speaker": "B",
@@ -3214,10 +3760,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, have a great day.",
-    "zh": "謝謝，祝你有美好的一天。"
+    "en": "Great. I'll leave my key card here.",
+    "zh": "好，房卡我放這裡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "No, I didn't touch it",
+  "key_phrase_zh": "沒有，我完全沒動它"
  },
  {
   "id": 93,
@@ -3239,8 +3791,8 @@
    },
    {
     "speaker": "A",
-    "en": "It's room 318.",
-    "zh": "是318房。"
+    "en": "It's room three-eighteen.",
+    "zh": "是三一八號房。"
    },
    {
     "speaker": "B",
@@ -3252,7 +3804,13 @@
     "en": "I appreciate the quick response.",
     "zh": "謝謝你們這麼快回應。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "I appreciate the quick response",
+  "key_phrase_zh": "謝謝你們這麼快回應"
  },
  {
   "id": 94,
@@ -3284,10 +3842,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, that's very kind.",
-    "zh": "謝謝你，你人真好。"
+    "en": "Great. We'll be in the room.",
+    "zh": "太好了，我們會在房間等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "客房服務人員"
+  },
+  "key_phrase": "Two more should be enough",
+  "key_phrase_zh": "再兩條就夠了"
  },
  {
   "id": 95,
@@ -3314,15 +3878,21 @@
    },
    {
     "speaker": "B",
-    "en": "Got it, room 220 at six thirty.",
-    "zh": "好的，220房，六點半。"
+    "en": "Got it. Room two-twenty, six-thirty.",
+    "zh": "好的，二二〇號房，六點半。"
    },
    {
     "speaker": "A",
-    "en": "Thanks for setting that up.",
-    "zh": "謝謝你幫我安排。"
+    "en": "Great. I really can't miss my train.",
+    "zh": "太好了，我絕對不能錯過火車。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "get a wake-up call",
+  "key_phrase_zh": "我可以要求晨喚服務嗎"
  },
  {
   "id": 96,
@@ -3334,8 +3904,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Is the light okay to turn off now?",
-    "zh": "現在可以把燈關掉嗎？"
+    "en": "Is it okay if I turn off the light?",
+    "zh": "我可以關燈了嗎？"
    },
    {
     "speaker": "B",
@@ -3354,10 +3924,16 @@
    },
    {
     "speaker": "A",
-    "en": "Good to know, thanks for the tip.",
-    "zh": "知道了，謝謝你的提醒。"
+    "en": "Good to know. I'll buy one tomorrow.",
+    "zh": "了解，我明天去買一個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "背包客"
+  },
+  "key_phrase": "Sure, I'm heading to bed too",
+  "key_phrase_zh": "可以，我也準備要睡了"
  },
  {
   "id": 97,
@@ -3374,8 +3950,8 @@
    },
    {
     "speaker": "B",
-    "en": "Great, the code for the lockbox is 4471.",
-    "zh": "太好了，鑰匙盒的密碼是4471。"
+    "en": "Great. The lockbox code is four-four-seven-one.",
+    "zh": "太好了，鑰匙盒的密碼是四四七一。"
    },
    {
     "speaker": "A",
@@ -3389,10 +3965,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, thanks for the fast reply.",
-    "zh": "太好了，謝謝你這麼快回覆。"
+    "en": "Found it. The place looks great.",
+    "zh": "找到了，房子看起來很棒。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "房東"
+  },
+  "key_phrase": "It's written on the fridge magnet",
+  "key_phrase_zh": "寫在冰箱磁鐵上"
  },
  {
   "id": 98,
@@ -3404,7 +3986,7 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Here's my passport and landing card.",
+    "en": "Here's my passport and arrival card.",
     "zh": "這是我的護照和入境卡。"
    },
    {
@@ -3414,8 +3996,8 @@
    },
    {
     "speaker": "A",
-    "en": "I'm here for tourism, one week.",
-    "zh": "我是來觀光的，待一個星期。"
+    "en": "Sightseeing. I'll be here for a week.",
+    "zh": "觀光，我會待一個星期。"
    },
    {
     "speaker": "B",
@@ -3427,7 +4009,13 @@
     "en": "At a hotel downtown, here's the address.",
     "zh": "住市區的飯店，這是地址。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "證照查驗官員"
+  },
+  "key_phrase": "Where will you be staying",
+  "key_phrase_zh": "您會住在哪裡呢"
  },
  {
   "id": 99,
@@ -3459,45 +4047,57 @@
    },
    {
     "speaker": "A",
-    "en": "Great, thank you for checking.",
-    "zh": "太好了，謝謝你的檢查。"
+    "en": "Great, I'll be on my way.",
+    "zh": "太好了，那我先走了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "海關人員"
+  },
+  "key_phrase": "declare these snacks",
+  "key_phrase_zh": "這些零食需要申報嗎"
  },
  {
   "id": 100,
   "category": "住宿旅遊",
-  "title_en": "Lost Luggage",
-  "title_zh": "行李遺失通報",
-  "scene_zh": "旅客在機場行李遺失櫃檯申報行李未到。",
-  "image_prompt_en": "A chibi traveler stands at an airport baggage claim counter with an empty luggage cart, showing a baggage tag to a chibi airline staff member typing at a computer.",
+  "title_en": "Final Boarding Call",
+  "title_zh": "機場最後登機廣播",
+  "scene_zh": "機場廣播最後登機通知（A 是廣播），旅客聽到後趕往登機門。",
+  "image_prompt_en": "a chibi traveler with a rolling suitcase looking up at a ceiling speaker in a bright airport terminal, a chibi gate agent speaking into a microphone at a boarding gate counter, departure boards without readable text",
   "lines": [
    {
     "speaker": "A",
-    "en": "My suitcase didn't come out on the belt.",
-    "zh": "我的行李箱沒有出現在轉盤上。"
+    "en": "Attention, please. This is the final call for flight one-nine-eight.",
+    "zh": "各位旅客請注意，這是一九八號班機的最後登機廣播。"
    },
    {
     "speaker": "B",
-    "en": "Can I see your baggage claim tag?",
-    "zh": "可以看一下您的行李條嗎？"
+    "en": "Wait, that's our flight! We need to hurry.",
+    "zh": "等等，那是我們的班機！要快點了。"
    },
    {
     "speaker": "A",
-    "en": "Sure, here it is.",
-    "zh": "好，在這裡。"
+    "en": "Passengers to Tokyo, please go to Gate B-seven now.",
+    "zh": "前往東京的旅客，請立即前往 B7 登機門。"
    },
    {
     "speaker": "B",
-    "en": "We'll deliver it to your hotel once found.",
-    "zh": "找到後我們會送到您的飯店。"
+    "en": "Gate B-seven? That's right around the corner.",
+    "zh": "B7 登機門？就在轉角而已。"
    },
    {
     "speaker": "A",
-    "en": "Thank you, I hope it turns up soon.",
-    "zh": "謝謝，希望能快點找到。"
+    "en": "The gate will close in ten minutes. Thank you.",
+    "zh": "登機門將在十分鐘後關閉，謝謝。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "地勤人員",
+   "B": "旅客"
+  },
+  "key_phrase": "final call for flight one-nine-eight",
+  "key_phrase_zh": "這是一九八號班機的最後登機廣播"
  },
  {
   "id": 101,
@@ -3514,8 +4114,8 @@
    },
    {
     "speaker": "B",
-    "en": "Yes, it moved from B12 to B20.",
-    "zh": "對，從B12改到B20了。"
+    "en": "Yes, it moved from B-twelve to B-twenty.",
+    "zh": "對，從 B12 改到 B20 了。"
    },
    {
     "speaker": "A",
@@ -3532,7 +4132,13 @@
     "en": "Okay, I'd better hurry then.",
     "zh": "好，那我最好快點走。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "地勤人員"
+  },
+  "key_phrase": "Excuse me, has the gate changed",
+  "key_phrase_zh": "不好意思，請問登機門有變更嗎"
  },
  {
   "id": 102,
@@ -3549,8 +4155,8 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, which seat is yours?",
-    "zh": "可以啊，你的座位是哪一個？"
+    "en": "Not at all. Which seat is yours?",
+    "zh": "不介意啊，你的座位是哪一個？"
    },
    {
     "speaker": "A",
@@ -3567,7 +4173,13 @@
     "en": "Thanks so much, that's really kind.",
     "zh": "太謝謝你了，你人真好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客甲",
+   "B": "乘客乙"
+  },
+  "key_phrase": "Would you mind swapping seats with me",
+  "key_phrase_zh": "你介意跟我換座位嗎"
  },
  {
   "id": 103,
@@ -3602,7 +4214,13 @@
     "en": "Here you go, enjoy your meal.",
     "zh": "這是您的餐點，請慢用。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "空服員"
+  },
+  "key_phrase": "Would you like something to drink",
+  "key_phrase_zh": "要喝點什麼飲料嗎"
  },
  {
   "id": 104,
@@ -3614,8 +4232,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "I'd like to exchange some dollars.",
-    "zh": "我想兌換一些美金。"
+    "en": "I'd like to change some US dollars.",
+    "zh": "我想換一些美金。"
    },
    {
     "speaker": "B",
@@ -3637,7 +4255,13 @@
     "en": "That's fine, go ahead.",
     "zh": "沒問題，麻煩你了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "兌換櫃檯人員"
+  },
+  "key_phrase": "change some US dollars",
+  "key_phrase_zh": "我想換一些美金"
  },
  {
   "id": 105,
@@ -3655,7 +4279,7 @@
    {
     "speaker": "B",
     "en": "Of course, here you go.",
-    "zh": "當然，這是給你的地圖。"
+    "zh": "當然，給你。"
    },
    {
     "speaker": "A",
@@ -3672,7 +4296,13 @@
     "en": "Sounds great, I'll head there first.",
     "zh": "聽起來不錯，我先去那裡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "服務中心人員"
+  },
+  "key_phrase": "Of course, here you go",
+  "key_phrase_zh": "當然，這是給你的地圖"
  },
  {
   "id": 106,
@@ -3704,10 +4334,16 @@
    },
    {
     "speaker": "A",
-    "en": "Here you go, thank you.",
-    "zh": "這是錢，謝謝你。"
+    "en": "Here's my card. We'll start upstairs.",
+    "zh": "這是我的卡，我們從樓上開始逛。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "售票人員"
+  },
+  "key_phrase": "Would you like the audio guide too",
+  "key_phrase_zh": "要加購語音導覽嗎"
  },
  {
   "id": 107,
@@ -3742,7 +4378,13 @@
     "en": "Sounds perfect, sign me up.",
     "zh": "聽起來很棒，幫我報名。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "導覽人員"
+  },
+  "key_phrase": "How long does it last",
+  "key_phrase_zh": "行程大概多久呢"
  },
  {
   "id": 108,
@@ -3759,13 +4401,13 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, just tap the screen to focus.",
-    "zh": "當然，點一下螢幕對焦就好。"
+    "en": "Sure! Do I just tap the screen?",
+    "zh": "好啊！點螢幕就可以嗎？"
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks for helping.",
-    "zh": "了解，謝謝你的幫忙。"
+    "en": "Yes, just tap the big button. Thanks!",
+    "zh": "對，按那個大按鈕就好，謝謝！"
    },
    {
     "speaker": "B",
@@ -3774,10 +4416,16 @@
    },
    {
     "speaker": "A",
-    "en": "That looks amazing, thank you so much.",
-    "zh": "這張照片太棒了，真的很謝謝你。"
+    "en": "Wow, it looks amazing. You're a great photographer.",
+    "zh": "哇，拍得超好，你很會拍耶！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "路人"
+  },
+  "key_phrase": "take a photo of us",
+  "key_phrase_zh": "可以幫我們拍張照嗎"
  },
  {
   "id": 109,
@@ -3812,7 +4460,13 @@
     "en": "Great, let's try the roller coaster first.",
     "zh": "好，那我們先去玩雲霄飛車。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "樂園工作人員"
+  },
+  "key_phrase": "How does the fast pass work here",
+  "key_phrase_zh": "這裡的快速通關券怎麼使用"
  },
  {
   "id": 110,
@@ -3834,8 +4488,8 @@
    },
    {
     "speaker": "A",
-    "en": "Do you take card payments?",
-    "zh": "可以刷卡付款嗎？"
+    "en": "Do you take cards?",
+    "zh": "可以刷卡嗎？"
    },
    {
     "speaker": "B",
@@ -3847,7 +4501,13 @@
     "en": "No worries, here's the cash.",
     "zh": "沒關係，這是現金。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "出租店員"
+  },
+  "key_phrase": "umbrella and two chairs",
+  "key_phrase_zh": "一把陽傘加兩張躺椅"
  },
  {
   "id": 111,
@@ -3882,7 +4542,13 @@
     "en": "Thanks, we'll set up camp now.",
     "zh": "謝謝，我們現在就去搭營。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "露營客",
+   "B": "營地管理員"
+  },
+  "key_phrase": "Where's the nearest restroom",
+  "key_phrase_zh": "最近的洗手間在哪裡"
  },
  {
   "id": 112,
@@ -3914,10 +4580,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you for your help.",
-    "zh": "謝謝你的幫忙。"
+    "en": "Great, I'll send it tonight.",
+    "zh": "好，我今晚就寄過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "保險客服"
+  },
+  "key_phrase": "file a claim for a delayed flight",
+  "key_phrase_zh": "我想申請班機延誤的理賠"
  },
  {
   "id": 113,
@@ -3952,7 +4624,13 @@
     "en": "Okay, let's grab some coffee then.",
     "zh": "好，那我們先去喝杯咖啡吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Any tips for adjusting faster",
+  "key_phrase_zh": "有什麼方法可以快點調適嗎"
  },
  {
   "id": 114,
@@ -3984,10 +4662,16 @@
    },
    {
     "speaker": "A",
-    "en": "Awesome, thank you very much.",
-    "zh": "太棒了，非常謝謝你。"
+    "en": "Awesome. That gives me time for lunch.",
+    "zh": "太棒了，這樣我還有時間吃午餐。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Is late check-out possible today",
+  "key_phrase_zh": "今天可以延遲退房嗎"
  },
  {
   "id": 115,
@@ -4020,9 +4704,15 @@
    {
     "speaker": "A",
     "en": "Great, I'll be waiting.",
-    "zh": "好，我等一下。"
+    "zh": "好，我等你們送來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "客房服務人員"
+  },
+  "key_phrase": "I'd like to order room service",
+  "key_phrase_zh": "我想叫客房餐點服務"
  },
  {
   "id": 116,
@@ -4057,7 +4747,13 @@
     "en": "Sounds fair, let's go.",
     "zh": "聽起來合理，我們出發吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "乘客",
+   "B": "司機"
+  },
+  "key_phrase": "Can you take me to this hotel",
+  "key_phrase_zh": "可以載我到這間飯店嗎"
  },
  {
   "id": 117,
@@ -4074,7 +4770,7 @@
    },
    {
     "speaker": "B",
-    "en": "It's open from seven to ten at night.",
+    "en": "It's open from seven in the morning to ten at night.",
     "zh": "開放時間是早上七點到晚上十點。"
    },
    {
@@ -4089,10 +4785,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll head there after dinner.",
-    "zh": "太好了，我晚餐後就去。"
+    "en": "Great, I'll swim after dinner.",
+    "zh": "太好了，我晚餐後去游泳。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "What time does the pool open",
+  "key_phrase_zh": "泳池幾點開放"
  },
  {
   "id": 118,
@@ -4127,7 +4829,13 @@
     "en": "No worries, thanks for sorting it out.",
     "zh": "沒關係，謝謝你幫忙處理。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Can you show me the confirmation email",
+  "key_phrase_zh": "可以給我看確認信嗎"
  },
  {
   "id": 119,
@@ -4154,50 +4862,62 @@
    },
    {
     "speaker": "B",
-    "en": "Here is your claim tag. Keep it safe.",
-    "zh": "這是您的領取牌，請收好。"
+    "en": "Here's your claim tag. Don't lose it.",
+    "zh": "這是您的領取牌，別弄丟了。"
    },
    {
     "speaker": "A",
-    "en": "Thanks. I will be back around five.",
+    "en": "Thanks. I'll be back around five.",
     "zh": "謝謝，我大概五點回來拿。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Just one suitcase and a backpack",
+  "key_phrase_zh": "一個行李箱和一個背包"
  },
  {
   "id": 120,
   "category": "住宿旅遊",
-  "title_en": "Airport Security Screening",
-  "title_zh": "機場安檢",
-  "scene_zh": "旅客通過機場安檢時被要求檢查隨身物品。",
-  "image_prompt_en": "A chibi traveler places a laptop and a small bag into trays at an airport security checkpoint, walking toward a metal detector guided by a chibi security officer.",
+  "title_en": "Spelling Your Name for a Booking",
+  "title_zh": "訂房時拼出姓名",
+  "scene_zh": "旅客打電話訂房，櫃檯請對方拼出姓氏，並複誦日期確認。",
+  "image_prompt_en": "a chibi hotel receptionist at a front desk holding a phone and writing letters on a notepad, and a chibi traveler at home talking on a smartphone, split scene connected by a dotted phone line",
   "lines": [
    {
     "speaker": "A",
-    "en": "Do I need to take my laptop out?",
-    "zh": "我需要把筆電拿出來嗎？"
+    "en": "Can I have your last name, please?",
+    "zh": "請問您的姓氏是？"
    },
    {
     "speaker": "B",
-    "en": "Yes, please place it in its own tray.",
-    "zh": "是的，請放進獨立的托盤裡。"
+    "en": "It's Hsu. H-S-U.",
+    "zh": "我姓許，H-S-U。"
    },
    {
     "speaker": "A",
-    "en": "What about my water bottle?",
-    "zh": "那我的水瓶呢？"
+    "en": "Sorry, was that S as in Sam?",
+    "zh": "不好意思，是 Sam 的 S 嗎？"
    },
    {
     "speaker": "B",
-    "en": "You'll need to empty it first.",
-    "zh": "要先把水倒掉。"
+    "en": "Yes. H, S as in Sam, U.",
+    "zh": "對，H，Sam 的 S，U。"
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks for letting me know.",
-    "zh": "了解，謝謝你告訴我。"
+    "en": "Got it. Two nights, from the fifteenth to the seventeenth.",
+    "zh": "好的，兩晚，十五號住到十七號。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "櫃檯人員",
+   "B": "房客"
+  },
+  "key_phrase": "from the fifteenth to the seventeenth",
+  "key_phrase_zh": "從十五號到十七號，住兩晚"
  },
  {
   "id": 121,
@@ -4232,7 +4952,13 @@
     "en": "Great, we'll be in touch soon.",
     "zh": "很好，我們很快會通知你結果。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "應徵者",
+   "B": "面試官"
+  },
+  "key_phrase": "I've worked in marketing for three years",
+  "key_phrase_zh": "我做行銷工作已經三年了"
  },
  {
   "id": 122,
@@ -4249,8 +4975,8 @@
    },
    {
     "speaker": "B",
-    "en": "Nice to meet you, I'm the new designer.",
-    "zh": "很高興認識你，我是新來的設計師。"
+    "en": "Nice to meet you. I'm Lisa, the new designer.",
+    "zh": "很高興認識你，我是Lisa，新來的設計師。"
    },
    {
     "speaker": "A",
@@ -4267,7 +4993,13 @@
     "en": "Your desk is right over here.",
     "zh": "你的座位就在這邊。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "新人",
+   "B": "同事"
+  },
+  "key_phrase": "Let me show you around the office",
+  "key_phrase_zh": "我帶你參觀一下辦公室"
  },
  {
   "id": 123,
@@ -4299,10 +5031,16 @@
    },
    {
     "speaker": "A",
-    "en": "I really appreciate your help.",
-    "zh": "真的很感謝你的幫忙。"
+    "en": "Great. It's the one in column C.",
+    "zh": "太好了，就是C欄那個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Let me take a look at it",
+  "key_phrase_zh": "我來看看是怎麼回事"
  },
  {
   "id": 124,
@@ -4337,7 +5075,13 @@
     "en": "Yes, I'll send the invite now.",
     "zh": "好，我現在就發邀請。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Noon works for me too",
+  "key_phrase_zh": "中午對我來說也可以"
  },
  {
   "id": 125,
@@ -4345,7 +5089,7 @@
   "title_en": "Running Late To Work",
   "title_zh": "上班快遲到了",
   "scene_zh": "員工因塞車快要遲到，打電話通知主管。",
-  "image_prompt_en": "A chibi male employee stands beside a stalled car in traffic, holding a phone and checking his wristwatch anxiously with buildings in the background.",
+  "image_prompt_en": "a chibi office worker in a car stuck in a long traffic jam talking on a hands-free phone, and a chibi manager at an office desk answering the call [REGEN]",
   "lines": [
    {
     "speaker": "A",
@@ -4369,10 +5113,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'll head straight to the desk.",
-    "zh": "謝謝，我到公司會直接去座位。"
+    "en": "Thanks. I'll come straight in when I get there.",
+    "zh": "謝謝，我一到就直接進公司。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "No worries, just drive safely",
+  "key_phrase_zh": "沒關係，開車小心一點"
  },
  {
   "id": 126,
@@ -4385,29 +5135,35 @@
    {
     "speaker": "A",
     "en": "Sorry, your video keeps freezing.",
-    "zh": "不好意思，你的畫面一直當機。"
+    "zh": "不好意思，你的畫面一直卡住。"
    },
    {
     "speaker": "B",
     "en": "Let me turn off my camera.",
-    "zh": "我把攝影機關掉試試看。"
+    "zh": "我把鏡頭關掉試試看。"
    },
    {
     "speaker": "A",
-    "en": "Can you hear me clearly now?",
-    "zh": "你現在聽得清楚嗎？"
+    "en": "Much better. I can hear you clearly now.",
+    "zh": "好多了，現在聽得很清楚。"
    },
    {
     "speaker": "B",
-    "en": "Yes, the audio sounds much better.",
-    "zh": "聽得到，聲音清楚多了。"
+    "en": "Good, sorry about that.",
+    "zh": "太好了，剛剛不好意思。"
    },
    {
     "speaker": "A",
-    "en": "Great, let's continue the meeting.",
-    "zh": "太好了，我們繼續開會吧。"
+    "en": "No problem, let's continue the meeting.",
+    "zh": "沒關係，我們繼續開會吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Let me turn off my camera",
+  "key_phrase_zh": "我把攝影機關掉試試看"
  },
  {
   "id": 127,
@@ -4434,15 +5190,21 @@
    },
    {
     "speaker": "B",
-    "en": "Okay, Friday works as a new deadline.",
-    "zh": "好，那新的截止日訂在星期五。"
+    "en": "Okay, let's make Friday the new deadline.",
+    "zh": "好，那新的截止日就訂星期五。"
    },
    {
     "speaker": "A",
-    "en": "Thank you, I'll finish it by then.",
-    "zh": "謝謝，我一定會在那之前完成。"
+    "en": "Great. I'll send it Friday morning.",
+    "zh": "好，我星期五早上交給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "What's causing the delay",
+  "key_phrase_zh": "是什麼原因造成延遲的"
  },
  {
   "id": 128,
@@ -4477,7 +5239,13 @@
     "en": "Sounds good, keep me posted.",
     "zh": "聽起來不錯，隨時跟我回報進度。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "How's the project coming along",
+  "key_phrase_zh": "專案目前進行得怎麼樣了"
  },
  {
   "id": 129,
@@ -4494,7 +5262,7 @@
    },
    {
     "speaker": "B",
-    "en": "Yeah, back to back meetings.",
+    "en": "Yeah, back-to-back meetings.",
     "zh": "對啊，會議一場接一場。"
    },
    {
@@ -4509,10 +5277,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, let's meet at noon.",
-    "zh": "太好了，中午見。"
+    "en": "Cool, let's meet at noon.",
+    "zh": "好，中午見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "grab lunch later",
+  "key_phrase_zh": "等等要不要一起吃午餐"
  },
  {
   "id": 130,
@@ -4547,7 +5321,13 @@
     "en": "I'll send it right after lunch.",
     "zh": "我吃完午餐就馬上送出去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "Could I take Friday off",
+  "key_phrase_zh": "我星期五可以請假嗎"
  },
  {
   "id": 131,
@@ -4579,10 +5359,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's working, thanks for the help.",
-    "zh": "可以印了，謝謝你的幫忙。"
+    "en": "It's working. You're a lifesaver.",
+    "zh": "可以印了，你真是救星。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Let me open the paper tray",
+  "key_phrase_zh": "我來打開紙匣看看"
  },
  {
   "id": 132,
@@ -4614,10 +5400,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's 0912-345-678, thank you.",
-    "zh": "是0912-345-678，謝謝你。"
+    "en": "It's oh-nine-one-two, three-four-five, six-seven-eight.",
+    "zh": "是 0912-345-678。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事",
+   "B": "來電者"
+  },
+  "key_phrase": "Please ask her to call me back",
+  "key_phrase_zh": "請她回來後回電給我"
  },
  {
   "id": 133,
@@ -4652,7 +5444,13 @@
     "en": "I'll email you next week.",
     "zh": "我下週會寄信給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "商務人士甲",
+   "B": "商務人士乙"
+  },
+  "key_phrase": "Thanks, here's mine as well",
+  "key_phrase_zh": "謝謝，這是我的名片"
  },
  {
   "id": 134,
@@ -4687,7 +5485,13 @@
     "en": "We'll wait for you downstairs.",
     "zh": "我們在樓下等你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "We'll wait for you downstairs",
+  "key_phrase_zh": "我們在樓下等你"
  },
  {
   "id": 135,
@@ -4722,7 +5526,13 @@
     "en": "Got it, I'll revise it today.",
     "zh": "了解，我今天就會修改。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "主管",
+   "B": "員工"
+  },
+  "key_phrase": "Try starting with a stronger example",
+  "key_phrase_zh": "試著用更有力的例子開頭"
  },
  {
   "id": 136,
@@ -4749,15 +5559,21 @@
    },
    {
     "speaker": "B",
-    "en": "Yes, it's calculated separately each period.",
-    "zh": "是的，加班費每期另外計算。"
+    "en": "Yes, overtime is paid in the same paycheck.",
+    "zh": "對，加班費會跟薪水一起發。"
    },
    {
     "speaker": "A",
-    "en": "Thanks for clarifying that for me.",
-    "zh": "謝謝你幫我把這件事說清楚。"
+    "en": "Great, that's good to know.",
+    "zh": "太好了，這樣我就清楚了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "When is payday each month",
+  "key_phrase_zh": "每個月薪水什麼時候發"
  },
  {
   "id": 137,
@@ -4775,12 +5591,12 @@
    {
     "speaker": "B",
     "en": "I'm sorry to hear that, what's your last day?",
-    "zh": "聽到這消息很遺憾，你最後一天是哪天？"
+    "zh": "真可惜，你最後一天是哪天？"
    },
    {
     "speaker": "A",
-    "en": "I'm planning for the end of the month.",
-    "zh": "我打算做到這個月底。"
+    "en": "I'm thinking the end of the month.",
+    "zh": "我想做到這個月底。"
    },
    {
     "speaker": "B",
@@ -4792,7 +5608,13 @@
     "en": "Of course, I'll prepare the documents.",
     "zh": "當然，我會準備好相關文件。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "Let's discuss the handover process",
+  "key_phrase_zh": "我們來討論一下交接的流程"
  },
  {
   "id": 138,
@@ -4827,7 +5649,13 @@
     "en": "He'll really appreciate this.",
     "zh": "他一定會很感動的。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Yes, this Friday after work",
+  "key_phrase_zh": "對，這週五下班後辦"
  },
  {
   "id": 139,
@@ -4845,7 +5673,7 @@
    {
     "speaker": "B",
     "en": "Pretty well, I'm staying focused.",
-    "zh": "還不錯，我保持著專注。"
+    "zh": "還不錯，我都能專心工作。"
    },
    {
     "speaker": "A",
@@ -4862,7 +5690,13 @@
     "en": "Great, let's touch base again tomorrow.",
     "zh": "很好，我們明天再確認一次進度。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "主管",
+   "B": "員工"
+  },
+  "key_phrase": "How's working from home going",
+  "key_phrase_zh": "在家工作進行得如何"
  },
  {
   "id": 140,
@@ -4897,7 +5731,13 @@
     "en": "Anytime, just ask if you get stuck.",
     "zh": "隨時都可以，卡住就問我。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "前輩",
+   "B": "新人"
+  },
+  "key_phrase": "This is our internal system login",
+  "key_phrase_zh": "這是我們內部系統的登入頁面"
  },
  {
   "id": 141,
@@ -4929,10 +5769,16 @@
    },
    {
     "speaker": "A",
-    "en": "I'm done, thanks again.",
-    "zh": "我用完了，再次謝謝你。"
+    "en": "All done. It's back on your desk.",
+    "zh": "用完了，放回你桌上囉。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "Sure, here you go",
+  "key_phrase_zh": "當然，給你"
  },
  {
   "id": 142,
@@ -4964,10 +5810,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's working now, thank you.",
-    "zh": "現在可以連上了，謝謝你。"
+    "en": "It works now. That did the trick.",
+    "zh": "現在可以連了，這招有效。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "IT人員"
+  },
+  "key_phrase": "Let me check your cable connection",
+  "key_phrase_zh": "我來檢查一下你的網路線"
  },
  {
   "id": 143,
@@ -4984,7 +5836,7 @@
    },
    {
     "speaker": "B",
-    "en": "I'll have the chicken box, please.",
+    "en": "I'll have the chicken bento, please.",
     "zh": "我要雞肉便當，謝謝。"
    },
    {
@@ -5002,7 +5854,13 @@
     "en": "Got it, I'll place the order now.",
     "zh": "了解，我現在去下訂單。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "have the chicken bento",
+  "key_phrase_zh": "我要雞肉便當"
  },
  {
   "id": 144,
@@ -5037,7 +5895,13 @@
     "en": "Keep up the great work.",
     "zh": "繼續保持這樣的好表現。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "主管",
+   "B": "員工"
+  },
+  "key_phrase": "Let's go over your performance this year",
+  "key_phrase_zh": "我們來討論一下你今年的表現"
  },
  {
   "id": 145,
@@ -5055,7 +5919,7 @@
    {
     "speaker": "B",
     "en": "Great, which days will you be away?",
-    "zh": "很好，你會不在幾天？"
+    "zh": "很好，你哪幾天不在？"
    },
    {
     "speaker": "A",
@@ -5072,7 +5936,13 @@
     "en": "I'll take care of it before I leave.",
     "zh": "我出發前會處理好的。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "I've booked my flight for the trip",
+  "key_phrase_zh": "我已經訂好出差的機票了"
  },
  {
   "id": 146,
@@ -5099,15 +5969,21 @@
    },
    {
     "speaker": "B",
-    "en": "Perfect, I'll process this by Friday.",
+    "en": "Great, I'll process this by Friday.",
     "zh": "很好，我週五前會處理完。"
    },
    {
     "speaker": "A",
-    "en": "Thanks for handling it quickly.",
-    "zh": "謝謝你這麼快幫我處理。"
+    "en": "Great. I'll email you the digital copies too.",
+    "zh": "好，我也會把電子檔寄給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "會計人員"
+  },
+  "key_phrase": "Yes, it's attached right here",
+  "key_phrase_zh": "有，附在這裡了"
  },
  {
   "id": 147,
@@ -5139,10 +6015,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'm ready to start.",
-    "zh": "謝謝，我準備好可以開始了。"
+    "en": "Thanks. Please, go ahead.",
+    "zh": "謝謝，請繼續。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事甲",
+   "B": "同事乙"
+  },
+  "key_phrase": "send me the slides",
+  "key_phrase_zh": "可以把投影片寄給我嗎"
  },
  {
   "id": 148,
@@ -5174,10 +6056,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks for taking care of it.",
-    "zh": "謝謝你幫忙處理這件事。"
+    "en": "Great, blue ones would be nice.",
+    "zh": "太好了，藍色的就好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "總務人員"
+  },
+  "key_phrase": "Could you also get more pens",
+  "key_phrase_zh": "可以順便多買一些原子筆嗎"
  },
  {
   "id": 149,
@@ -5209,10 +6097,16 @@
    },
    {
     "speaker": "A",
-    "en": "Will do, thanks for clarifying.",
-    "zh": "好的，謝謝你幫我確認清楚。"
+    "en": "Will do. I'll send it tonight.",
+    "zh": "好，我今晚就寄。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "主管"
+  },
+  "key_phrase": "It's due by tomorrow morning",
+  "key_phrase_zh": "是明天早上前要交"
  },
  {
   "id": 150,
@@ -5247,7 +6141,13 @@
     "en": "I hope we stay in touch.",
     "zh": "希望我們以後還能保持聯絡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "員工",
+   "B": "前輩"
+  },
+  "key_phrase": "I hope we stay in touch",
+  "key_phrase_zh": "希望我們以後還能保持聯絡"
  },
  {
   "id": 151,
@@ -5282,7 +6182,13 @@
     "en": "That would be really helpful.",
     "zh": "那真的太好了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Hi, is this seat taken",
+  "key_phrase_zh": "嗨，這個位子有人坐嗎"
  },
  {
   "id": 152,
@@ -5317,7 +6223,13 @@
     "en": "Thank you, that clears things up.",
     "zh": "謝謝，這樣就清楚多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Excuse me, could I ask a question",
+  "key_phrase_zh": "不好意思，我可以問個問題嗎"
  },
  {
   "id": 153,
@@ -5330,7 +6242,7 @@
    {
     "speaker": "A",
     "en": "Could I borrow your notes from yesterday?",
-    "zh": "我可以借你昨天的筆記嗎？"
+    "zh": "可以跟你借昨天的筆記嗎？"
    },
    {
     "speaker": "B",
@@ -5352,7 +6264,13 @@
     "en": "Good to know. I'll return these tomorrow.",
     "zh": "知道了，我明天會還你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "Were there any important announcements",
+  "key_phrase_zh": "有什麼重要公告嗎"
  },
  {
   "id": 154,
@@ -5387,7 +6305,13 @@
     "en": "We need to finish by next Monday.",
     "zh": "我們得在下週一之前完成。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "I can handle the research part",
+  "key_phrase_zh": "我可以負責找資料"
  },
  {
   "id": 155,
@@ -5419,10 +6343,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks for your help.",
-    "zh": "了解，謝謝你的幫忙。"
+    "en": "Got it. I'll return them on time.",
+    "zh": "了解，我會準時還。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "圖書館員"
+  },
+  "key_phrase": "check out these books",
+  "key_phrase_zh": "我想借這幾本書"
  },
  {
   "id": 156,
@@ -5457,7 +6387,13 @@
     "en": "Thank you for understanding.",
     "zh": "謝謝老師的體諒。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "I'm sorry my homework is late",
+  "key_phrase_zh": "對不起，我的作業遲交了"
  },
  {
   "id": 157,
@@ -5469,8 +6405,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "I missed the test because I was absent.",
-    "zh": "我因為請假錯過了考試。"
+    "en": "I was absent last week, so I missed the test.",
+    "zh": "我上週請假，所以錯過了考試。"
    },
    {
     "speaker": "B",
@@ -5492,7 +6428,13 @@
     "en": "Thank you so much for arranging that.",
     "zh": "真的很謝謝老師安排。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Yes, I brought it with me",
+  "key_phrase_zh": "有，我帶來了"
  },
  {
   "id": 158,
@@ -5527,7 +6469,13 @@
     "en": "Just water is fine.",
     "zh": "白開水就好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "福利社員工"
+  },
+  "key_phrase": "What's on the menu today",
+  "key_phrase_zh": "今天菜單有什麼"
  },
  {
   "id": 159,
@@ -5562,7 +6510,13 @@
     "en": "Awesome, I can't wait to start.",
     "zh": "太棒了，我等不及開始了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "社團學長姐"
+  },
+  "key_phrase": "Just fill out this sign-up sheet",
+  "key_phrase_zh": "填這張報名表就可以了"
  },
  {
   "id": 160,
@@ -5597,7 +6551,13 @@
     "en": "Sure, take a short break.",
     "zh": "當然，休息一下吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "體育老師"
+  },
+  "key_phrase": "Let's start with some stretching",
+  "key_phrase_zh": "我們先做一些伸展運動"
  },
  {
   "id": 161,
@@ -5632,7 +6592,13 @@
     "en": "Good, safety comes first.",
     "zh": "很好，安全永遠第一。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Do we need gloves too",
+  "key_phrase_zh": "也需要戴手套嗎"
  },
  {
   "id": 162,
@@ -5667,7 +6633,13 @@
     "en": "Thank you, I'll talk to him about that.",
     "zh": "謝謝，我會跟他聊聊這件事。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "老師"
+  },
+  "key_phrase": "Is there anything he needs to improve",
+  "key_phrase_zh": "有什麼他需要加強的地方嗎"
  },
  {
   "id": 163,
@@ -5684,8 +6656,8 @@
    },
    {
     "speaker": "B",
-    "en": "Nice to meet you, thanks for coming.",
-    "zh": "很高興認識你，謝謝你來接我。"
+    "en": "Nice to meet you. Thanks for having me.",
+    "zh": "很高興認識你，謝謝你們接待我。"
    },
    {
     "speaker": "A",
@@ -5702,7 +6674,13 @@
     "en": "That's cool, let me show you the campus.",
     "zh": "太酷了，我帶你參觀校園吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "交換學生"
+  },
+  "key_phrase": "Where are you from",
+  "key_phrase_zh": "你來自哪裡"
  },
  {
   "id": 164,
@@ -5734,10 +6712,16 @@
    },
    {
     "speaker": "A",
-    "en": "Great, thanks for your help.",
-    "zh": "太好了，謝謝你的幫忙。"
+    "en": "Great, I'll head over now.",
+    "zh": "太好了，我現在過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "學生"
+  },
+  "key_phrase": "Excuse me, where's the main office",
+  "key_phrase_zh": "不好意思，請問行政大樓在哪"
  },
  {
   "id": 165,
@@ -5749,8 +6733,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Thanks for meeting me to study.",
-    "zh": "謝謝你來陪我讀書。"
+    "en": "Thanks for studying with me.",
+    "zh": "謝謝你陪我讀書。"
    },
    {
     "speaker": "B",
@@ -5769,10 +6753,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, let's get started.",
-    "zh": "太好了，我們開始吧。"
+    "en": "Great, let's start with chapter three.",
+    "zh": "好，我們從第三章開始。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "Let's go over the math formulas",
+  "key_phrase_zh": "我們先複習數學公式吧"
  },
  {
   "id": 166,
@@ -5807,7 +6797,13 @@
     "en": "Okay, that worked, thanks!",
     "zh": "好，成功了，謝謝！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "I think I forgot it",
+  "key_phrase_zh": "我好像忘記密碼了"
  },
  {
   "id": 167,
@@ -5842,7 +6838,13 @@
     "en": "Okay, I feel a little better now.",
     "zh": "好，我現在感覺好一點了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "I'm really nervous about my presentation",
+  "key_phrase_zh": "我對上台報告感到很緊張"
  },
  {
   "id": 168,
@@ -5877,7 +6879,13 @@
     "en": "I see, I'll be more careful next time.",
     "zh": "了解，我下次會更小心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Could you explain how this was graded",
+  "key_phrase_zh": "可以說明一下這是怎麼評分的嗎"
  },
  {
   "id": 169,
@@ -5894,8 +6902,8 @@
    },
    {
     "speaker": "B",
-    "en": "Sure, what's the trip for?",
-    "zh": "好啊，這次校外教學要去哪？"
+    "en": "Sure. Where are you going?",
+    "zh": "好啊，要去哪裡？"
    },
    {
     "speaker": "A",
@@ -5912,7 +6920,13 @@
     "en": "It's next Wednesday morning.",
     "zh": "是下週三早上。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "家長"
+  },
+  "key_phrase": "Can you sign this permission slip",
+  "key_phrase_zh": "你可以簽這張同意書嗎"
  },
  {
   "id": 170,
@@ -5947,7 +6961,13 @@
     "en": "Definitely, I promise.",
     "zh": "當然，我保證。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "Can you believe we're graduating soon",
+  "key_phrase_zh": "你能相信我們快畢業了嗎"
  },
  {
   "id": 171,
@@ -5982,42 +7002,54 @@
     "en": "Good idea, I'll go now.",
     "zh": "好主意，我現在就去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "同學"
+  },
+  "key_phrase": "My locker won't open again",
+  "key_phrase_zh": "我的置物櫃又打不開了"
  },
  {
   "id": 172,
   "category": "學校",
-  "title_en": "Asking to Retake a Quiz",
-  "title_zh": "請求重考小考",
-  "scene_zh": "學生因分數不理想請求老師讓他重考",
-  "image_prompt_en": "A chibi student showing a low-score quiz sheet to a sympathetic teacher chibi",
+  "title_en": "Morning PA Announcement",
+  "title_zh": "學務處早上廣播",
+  "scene_zh": "早上學務處廣播運動會預演通知（A 是廣播），學生在教室裡邊聽邊反應。",
+  "image_prompt_en": "a chibi student at a classroom desk looking up at a wall speaker and a chibi teacher speaking into a microphone in the school office, colorful sports day flags on the classroom wall, no readable text",
   "lines": [
    {
     "speaker": "A",
-    "en": "Is there any chance to retake this quiz?",
-    "zh": "有沒有機會可以重考這次小考？"
+    "en": "Good morning, everyone. This is the student affairs office.",
+    "zh": "各位同學早安，這裡是學務處。"
    },
    {
     "speaker": "B",
-    "en": "Why do you want to retake it?",
-    "zh": "你為什麼想重考呢？"
+    "en": "Shh, listen. It might be about sports day.",
+    "zh": "噓，聽一下，可能是運動會的事。"
    },
    {
     "speaker": "A",
-    "en": "I studied the wrong chapter by mistake.",
-    "zh": "我不小心讀錯章節了。"
+    "en": "Sports day rehearsal will be this Friday afternoon.",
+    "zh": "運動會預演在這週五下午。"
    },
    {
     "speaker": "B",
-    "en": "Okay, you can retake it next week.",
-    "zh": "好吧，你下週可以重考。"
+    "en": "Friday? Great, that means no math class!",
+    "zh": "星期五？太好了，那就不用上數學課了！"
    },
    {
     "speaker": "A",
-    "en": "Thank you, I won't waste this chance.",
-    "zh": "謝謝老師，我不會浪費這次機會的。"
+    "en": "Please wear your PE uniform and bring water.",
+    "zh": "請穿體育服，並記得帶水。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學務處人員",
+   "B": "學生"
+  },
+  "key_phrase": "Sports day rehearsal will be this Friday",
+  "key_phrase_zh": "運動會預演訂在這週五"
  },
  {
   "id": 173,
@@ -6052,7 +7084,13 @@
     "en": "Maybe I'll sign up for it too.",
     "zh": "或許我也來報名好了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "I'm thinking about art or photography",
+  "key_phrase_zh": "我在考慮美術或攝影課"
  },
  {
   "id": 174,
@@ -6087,7 +7125,13 @@
     "en": "I owe you one.",
     "zh": "我欠你一個人情。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "No worries, did it help",
+  "key_phrase_zh": "不客氣，有幫上忙嗎"
  },
  {
   "id": 175,
@@ -6119,10 +7163,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thank you.",
-    "zh": "了解，謝謝老師。"
+    "en": "Got it. I'll upload it tonight.",
+    "zh": "了解，我今晚就上傳。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "When is this assignment due",
+  "key_phrase_zh": "這份作業什麼時候要交"
  },
  {
   "id": 176,
@@ -6157,7 +7207,13 @@
     "en": "I'll help you clean up too.",
     "zh": "我也會幫你一起打掃。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "Who's on class duty today",
+  "key_phrase_zh": "今天誰是值日生"
  },
  {
   "id": 177,
@@ -6189,10 +7245,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks for the reminder.",
-    "zh": "謝謝你的提醒。"
+    "en": "Okay, I'll pack my water bottle tonight.",
+    "zh": "好，我今晚就把水壺裝好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "老師"
+  },
+  "key_phrase": "Yes, and don't forget water",
+  "key_phrase_zh": "對，也別忘了帶水"
  },
  {
   "id": 178,
@@ -6214,8 +7276,8 @@
    },
    {
     "speaker": "A",
-    "en": "Which subject do you offer help with?",
-    "zh": "你們提供哪些科目的輔導？"
+    "en": "Which subjects do you offer tutoring in?",
+    "zh": "你們有哪些科目的輔導？"
    },
    {
     "speaker": "B",
@@ -6224,10 +7286,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I really need math help.",
-    "zh": "太好了，我正好需要數學輔導。"
+    "en": "Great, I really need help with math.",
+    "zh": "太好了，我正需要數學輔導。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學生",
+   "B": "輔導老師"
+  },
+  "key_phrase": "Mostly math and English",
+  "key_phrase_zh": "主要是數學和英文"
  },
  {
   "id": 179,
@@ -6254,15 +7322,21 @@
    },
    {
     "speaker": "B",
-    "en": "I take short breaks between studying.",
-    "zh": "我讀書中間會安排短暫休息。"
+    "en": "I take short breaks while I study.",
+    "zh": "我讀書時會穿插短暫休息。"
    },
    {
     "speaker": "A",
     "en": "That's a good idea, I'll try it.",
     "zh": "這是個好方法，我來試試看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "I'm so stressed about the exams",
+  "key_phrase_zh": "我對這次段考感到壓力好大"
  },
  {
   "id": 180,
@@ -6289,7 +7363,7 @@
    },
    {
     "speaker": "B",
-    "en": "I appreciate your support this whole time.",
+    "en": "Thanks for supporting me the whole time.",
     "zh": "謝謝你一直以來的支持。"
    },
    {
@@ -6297,7 +7371,13 @@
     "en": "Let's celebrate after school.",
     "zh": "放學後我們去慶祝一下吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同學甲",
+   "B": "同學乙"
+  },
+  "key_phrase": "Let's celebrate after school",
+  "key_phrase_zh": "放學後我們去慶祝一下吧"
  },
  {
   "id": 181,
@@ -6332,7 +7412,13 @@
     "en": "Let me take a quick look with this light.",
     "zh": "我用這個手電筒看一下喉嚨。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "What seems to be the problem today",
+  "key_phrase_zh": "今天有什麼不舒服嗎"
  },
  {
   "id": 182,
@@ -6364,10 +7450,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, please book me in for that.",
-    "zh": "太好了，幫我約那個時段。"
+    "en": "Great. Please put me down for that.",
+    "zh": "太好了，幫我登記那個時段。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Sure, are you available this Thursday afternoon",
+  "key_phrase_zh": "好的，這週四下午方便嗎"
  },
  {
   "id": 183,
@@ -6380,7 +7472,7 @@
    {
     "speaker": "A",
     "en": "I'm here to pick up a prescription for Chen.",
-    "zh": "我來領陳先生的處方藥。"
+    "zh": "我來領處方藥，姓陳。"
    },
    {
     "speaker": "B",
@@ -6394,15 +7486,21 @@
    },
    {
     "speaker": "B",
-    "en": "Here you go, take one tablet twice a day.",
-    "zh": "這是您的藥，一天吃兩次，一次一顆。"
+    "en": "Here you go. One tablet twice a day, after meals.",
+    "zh": "這是您的藥，一天兩次，一次一顆，飯後吃。"
    },
    {
     "speaker": "A",
-    "en": "Should I take it before or after meals?",
-    "zh": "要飯前還是飯後吃？"
+    "en": "Got it. After breakfast and dinner, then.",
+    "zh": "了解，那就早餐和晚餐後吃。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "藥師"
+  },
+  "key_phrase": "Sure, take your time",
+  "key_phrase_zh": "好的，不急"
  },
  {
   "id": 184,
@@ -6437,7 +7535,13 @@
     "en": "About twenty minutes, just relax and open wide.",
     "zh": "大概二十分鐘，放輕鬆、嘴巴張大一點。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "牙醫"
+  },
+  "key_phrase": "Sounds good. Will it take very long",
+  "key_phrase_zh": "好的，會花很久嗎"
  },
  {
   "id": 185,
@@ -6472,42 +7576,54 @@
     "en": "Great, your prescription has changed slightly this year.",
     "zh": "很好，你的度數今年有稍微改變。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "驗光師"
+  },
+  "key_phrase": "That's much clearer now, thank you",
+  "key_phrase_zh": "這樣清楚多了，謝謝"
  },
  {
   "id": 186,
   "category": "醫療健康",
-  "title_en": "Food Allergy at a Restaurant",
-  "title_zh": "餐廳詢問過敏原",
-  "scene_zh": "顧客告知服務生自己對特定食物過敏",
-  "image_prompt_en": "A chibi waiter holds a notepad next to a chibi customer at a restaurant table, pointing to a menu item while the customer shakes their head.",
+  "title_en": "At the School Nurse on Sports Day",
+  "title_zh": "運動會跌倒到健康中心",
+  "scene_zh": "運動會跑大隊接力時跌倒，學生到健康中心請護理師處理擦傷。",
+  "image_prompt_en": "a chibi school nurse cleaning a scraped knee of a chibi student in a PE uniform sitting on a bed in a school health room, first-aid kit on the table, sports day flags visible through the window",
   "lines": [
    {
     "speaker": "A",
-    "en": "Do you have any food allergies I should know about?",
-    "zh": "請問您有什麼食物過敏需要我注意的嗎？"
+    "en": "What happened? You're bleeding a little.",
+    "zh": "怎麼了？你有點流血。"
    },
    {
     "speaker": "B",
-    "en": "Yes, I'm allergic to peanuts and shellfish.",
-    "zh": "有，我對花生和帶殼海鮮過敏。"
+    "en": "I fell during the relay race.",
+    "zh": "我跑大隊接力的時候跌倒了。"
    },
    {
     "speaker": "A",
-    "en": "Thanks for letting me know, I'll tell the kitchen.",
-    "zh": "謝謝告知，我會轉達廚房。"
+    "en": "Let me clean it first. It might sting.",
+    "zh": "我先幫你清洗傷口，可能會有點刺痛。"
    },
    {
     "speaker": "B",
-    "en": "Is the peanut sauce used in any other dishes?",
-    "zh": "花生醬有用在其他菜色裡嗎？"
+    "en": "Ouch! Can I still run in the final?",
+    "zh": "好痛！那我還能跑決賽嗎？"
    },
    {
     "speaker": "A",
-    "en": "No, only in that one dish you avoided.",
-    "zh": "沒有，只有您避開的那道菜有用到。"
+    "en": "Yes, it's just a scrape. I'll add a bandage.",
+    "zh": "可以，只是擦傷，我幫你貼個 OK 繃。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "老師",
+   "B": "學生"
+  },
+  "key_phrase": "fell during the relay race",
+  "key_phrase_zh": "我接力賽跑跌倒了"
  },
  {
   "id": 187,
@@ -6519,13 +7635,13 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Where exactly does it hurt when you press here?",
-    "zh": "我按這裡的時候，你哪裡會痛？"
+    "en": "Does it hurt when I press here?",
+    "zh": "我按這裡會痛嗎？"
    },
    {
     "speaker": "B",
-    "en": "Right around my belly button, it's a dull ache.",
-    "zh": "肚臍周圍，是那種悶悶的痛。"
+    "en": "Yes, right around my belly button. It's a dull ache.",
+    "zh": "會，就在肚臍周圍，是悶悶的痛。"
    },
    {
     "speaker": "A",
@@ -6542,7 +7658,13 @@
     "en": "Let's avoid spicy food and see if it improves.",
     "zh": "我們先避開辣的食物，看看會不會改善。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "Yes, especially after dinner most nights",
+  "key_phrase_zh": "對，特別是每天晚餐後"
  },
  {
   "id": 188,
@@ -6577,7 +7699,13 @@
     "en": "Let's do a quick check and take her temperature.",
     "zh": "我幫她簡單檢查一下，量個體溫。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "醫生"
+  },
+  "key_phrase": "How long has your daughter had",
+  "key_phrase_zh": "你女兒已經這樣多久了"
  },
  {
   "id": 189,
@@ -6609,10 +7737,16 @@
    },
    {
     "speaker": "A",
-    "en": "How long should I stay off the court?",
-    "zh": "我要停止打球多久？"
+    "en": "Okay. I guess I'll sit out next week's game.",
+    "zh": "好吧，看來我下週的比賽只能坐板凳了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "Can you put any weight",
+  "key_phrase_zh": "現在可以承重嗎"
  },
  {
   "id": 190,
@@ -6647,11 +7781,17 @@
     "en": "That looks good, hold this position for ten seconds.",
     "zh": "這樣很好，維持這個姿勢十秒鐘。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "物理治療師"
+  },
+  "key_phrase": "Let's stretch it slowly before we start",
+  "key_phrase_zh": "我們開始前先慢慢伸展"
  },
  {
   "id": 191,
-  "category": "醫療健康",
+  "category": "休閒運動",
   "title_en": "Gym Membership Sign-Up",
   "title_zh": "健身房會員申辦",
   "scene_zh": "民眾到健身房櫃台辦理會員申請",
@@ -6679,14 +7819,20 @@
    },
    {
     "speaker": "A",
-    "en": "Do you offer a free orientation tour?",
-    "zh": "有提供免費的環境介紹嗎？"
+    "en": "Done. I'll try the pool this weekend.",
+    "zh": "簽好了，我這週末先來游泳。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "健身房員工"
+  },
+  "key_phrase": "Yes, please add that to my plan",
+  "key_phrase_zh": "要，請幫我加進方案裡"
  },
  {
   "id": 192,
-  "category": "醫療健康",
+  "category": "休閒運動",
   "title_en": "Meeting a Personal Trainer",
   "title_zh": "私人教練初次見面",
   "scene_zh": "學員與健身教練討論訓練目標",
@@ -6717,11 +7863,17 @@
     "en": "Got it, we'll focus on proper form first.",
     "zh": "了解，我們先從正確姿勢開始練習。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學員",
+   "B": "教練"
+  },
+  "key_phrase": "I want to build some muscle",
+  "key_phrase_zh": "我想要增肌"
  },
  {
   "id": 193,
-  "category": "醫療健康",
+  "category": "休閒運動",
   "title_en": "Joining a Yoga Class",
   "title_zh": "參加瑜珈課",
   "scene_zh": "新學員詢問瑜珈課程的注意事項",
@@ -6752,7 +7904,13 @@
     "en": "We have extra mats if you don't have one.",
     "zh": "如果沒有的話我們有備用的墊子。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學員",
+   "B": "瑜珈老師"
+  },
+  "key_phrase": "Yes, I'm not very flexible, honestly",
+  "key_phrase_zh": "對，老實說我柔軟度不太好"
  },
  {
   "id": 194,
@@ -6787,7 +7945,13 @@
     "en": "Five stations, starting with blood pressure next.",
     "zh": "五站，接下來先量血壓。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "護理師"
+  },
+  "key_phrase": "Sure, should I take off my shoes",
+  "key_phrase_zh": "好，需要脫鞋嗎"
  },
  {
   "id": 195,
@@ -6822,7 +7986,13 @@
     "en": "You can check them online in three days.",
     "zh": "三天後就可以上網查結果。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "護理師"
+  },
+  "key_phrase": "When will the results be ready",
+  "key_phrase_zh": "報告什麼時候會出來"
  },
  {
   "id": 196,
@@ -6857,7 +8027,13 @@
     "en": "Great, you might feel a small pinch now.",
     "zh": "很好，現在可能會感覺到一點小小的刺痛。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "護理師"
+  },
+  "key_phrase": "No allergies that I know of",
+  "key_phrase_zh": "目前沒有已知的過敏"
  },
  {
   "id": 197,
@@ -6889,10 +8065,16 @@
    },
    {
     "speaker": "A",
-    "en": "Around twenty minutes based on the current queue.",
-    "zh": "依目前排隊人數大概二十分鐘。"
+    "en": "About twenty minutes. There are a few people ahead of you.",
+    "zh": "大概二十分鐘，前面還有幾位。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Could I have your insurance card, please",
+  "key_phrase_zh": "可以麻煩給我您的健保卡嗎"
  },
  {
   "id": 198,
@@ -6927,7 +8109,13 @@
     "en": "Thanks, I'll be careful the first night.",
     "zh": "謝謝，我第一晚會特別小心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "藥師"
+  },
+  "key_phrase": "Should I avoid driving after taking it",
+  "key_phrase_zh": "吃完藥之後應該避免開車嗎"
  },
  {
   "id": 199,
@@ -6962,7 +8150,13 @@
     "en": "Of course, let me know if you need anything.",
     "zh": "當然，需要什麼儘管跟我說。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "訪客",
+   "B": "病人"
+  },
+  "key_phrase": "How are you feeling since the surgery",
+  "key_phrase_zh": "手術後你感覺怎麼樣"
  },
  {
   "id": 200,
@@ -6989,15 +8183,21 @@
    },
    {
     "speaker": "B",
-    "en": "Maybe later, I just need to breathe right now.",
-    "zh": "也許晚點吧，我現在只想喘口氣。"
+    "en": "Maybe later. I just need a little space right now.",
+    "zh": "也許晚點吧，我現在只想一個人靜一靜。"
    },
    {
     "speaker": "A",
     "en": "That's fine, I'm here whenever you're ready.",
     "zh": "沒關係，你準備好了我隨時都在。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "I've just been really stressed about work",
+  "key_phrase_zh": "我最近工作壓力真的很大"
  },
  {
   "id": 201,
@@ -7024,15 +8224,21 @@
    },
    {
     "speaker": "B",
-    "en": "Will the results tell if it's broken?",
-    "zh": "報告會顯示有沒有骨折嗎？"
+    "en": "Will this show if it's broken?",
+    "zh": "這個看得出來有沒有骨折嗎？"
    },
    {
     "speaker": "A",
     "en": "Yes, the doctor will explain the images shortly.",
     "zh": "會，醫生等等會跟你解說片子。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "放射師",
+   "B": "病人"
+  },
+  "key_phrase": "place your foot flat on the table",
+  "key_phrase_zh": "請把腳平放在台面上"
  },
  {
   "id": 202,
@@ -7067,7 +8273,13 @@
     "en": "I'll come by tomorrow afternoon then.",
     "zh": "那我明天下午再過來拿。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "藥局客服"
+  },
+  "key_phrase": "Usually within one business day",
+  "key_phrase_zh": "通常一個工作天內就會好"
  },
  {
   "id": 203,
@@ -7094,15 +8306,21 @@
    },
    {
     "speaker": "B",
-    "en": "This cold medicine should help with those symptoms.",
-    "zh": "這款感冒藥應該可以緩解這些症狀。"
+    "en": "This cold medicine should help. Take it three times a day.",
+    "zh": "這款感冒藥應該有幫助，一天吃三次。"
    },
    {
     "speaker": "A",
-    "en": "How many times a day should I take it?",
-    "zh": "一天要吃幾次？"
+    "en": "Got it. I'll take one after lunch.",
+    "zh": "了解，我午餐後先吃一次。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "藥師"
+  },
+  "key_phrase": "No fever, just feeling stuffy and tired",
+  "key_phrase_zh": "沒有發燒，只是覺得鼻塞又累"
  },
  {
   "id": 204,
@@ -7137,7 +8355,13 @@
     "en": "Yes, please don't eat after midnight tonight.",
     "zh": "要，請今晚十二點後不要進食。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "應徵者",
+   "B": "醫護人員"
+  },
+  "key_phrase": "Yes, please don't eat after midnight tonight",
+  "key_phrase_zh": "要，請今晚十二點後不要進食"
  },
  {
   "id": 205,
@@ -7172,7 +8396,13 @@
     "en": "That's likely the cause, let's stop using it.",
     "zh": "那很可能就是原因，先停用看看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "Have you used any new soap",
+  "key_phrase_zh": "你最近有用新的肥皂嗎"
  },
  {
   "id": 206,
@@ -7207,7 +8437,13 @@
     "en": "I'll set a reminder on my phone for that.",
     "zh": "我會在手機上設個提醒。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "My lower back has been aching",
+  "key_phrase_zh": "我的下背已經痛了"
  },
  {
   "id": 207,
@@ -7220,7 +8456,7 @@
    {
     "speaker": "A",
     "en": "I've decided I really want to quit smoking.",
-    "zh": "我決定要下定決心戒菸了。"
+    "zh": "我決定這次真的要戒菸了。"
    },
    {
     "speaker": "B",
@@ -7239,10 +8475,16 @@
    },
    {
     "speaker": "A",
-    "en": "What side effects should I expect from the patch?",
-    "zh": "貼片可能會有什麼副作用？"
+    "en": "Great. I'll pick up the patches today.",
+    "zh": "好，我今天就去拿貼片。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "I've decided I really want to quit",
+  "key_phrase_zh": "我已經下定決心想戒掉"
  },
  {
   "id": 208,
@@ -7277,7 +8519,13 @@
     "en": "Got it, see you tomorrow morning.",
     "zh": "好的，明天早上見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "護理師"
+  },
+  "key_phrase": "Can I come in tomorrow around nine",
+  "key_phrase_zh": "我明天九點左右可以來嗎"
  },
  {
   "id": 209,
@@ -7304,15 +8552,21 @@
    },
    {
     "speaker": "B",
-    "en": "Let's try adding a small breakfast first.",
-    "zh": "我們先試著加一份簡單的早餐。"
+    "en": "Let's try adding a small breakfast, like eggs and fruit.",
+    "zh": "我們先試著加一份簡單的早餐，像是蛋和水果。"
    },
    {
     "speaker": "A",
-    "en": "What kind of breakfast would you recommend?",
-    "zh": "你會建議吃什麼樣的早餐？"
+    "en": "Okay, I'll start with that tomorrow morning.",
+    "zh": "好，我明天早上就開始。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "營養師"
+  },
+  "key_phrase": "eating more balanced meals",
+  "key_phrase_zh": "想請教怎麼吃得更均衡"
  },
  {
   "id": 210,
@@ -7347,7 +8601,13 @@
     "en": "Let's schedule one more check-up in a month.",
     "zh": "我們一個月後再安排一次回診檢查。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "醫生"
+  },
+  "key_phrase": "Much better, the medication really helped",
+  "key_phrase_zh": "好很多了，藥物真的有幫助"
  },
  {
   "id": 211,
@@ -7359,8 +8619,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "I'd like to open a checking account.",
-    "zh": "我想開一個支票帳戶。"
+    "en": "I'd like to open a savings account.",
+    "zh": "我想開一個活期存款帳戶。"
    },
    {
     "speaker": "B",
@@ -7379,10 +8639,16 @@
    },
    {
     "speaker": "A",
-    "en": "Sure, how long will it take?",
-    "zh": "好的，這大概要多久呢？"
+    "en": "Sure. It'll just take me a minute.",
+    "zh": "好，我一下就填好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "open a savings account",
+  "key_phrase_zh": "我想開一個活期存款帳戶"
  },
  {
   "id": 212,
@@ -7414,10 +8680,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, I'll wait here.",
-    "zh": "謝謝，我會在這裡等。"
+    "en": "Okay, I'll wait right here.",
+    "zh": "好，我在這裡等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "How long does that usually take",
+  "key_phrase_zh": "這通常要花多久時間呢"
  },
  {
   "id": 213,
@@ -7439,7 +8711,7 @@
    },
    {
     "speaker": "A",
-    "en": "It's written on this paper.",
+    "en": "It's on this piece of paper.",
     "zh": "寫在這張紙上。"
    },
    {
@@ -7452,42 +8724,54 @@
     "en": "That's fine, please go ahead.",
     "zh": "沒問題，請幫我處理。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "wire money to another country",
+  "key_phrase_zh": "我需要匯款到國外"
  },
  {
   "id": 214,
   "category": "金融郵政",
-  "title_en": "Exchanging Currency",
-  "title_zh": "兌換外幣",
-  "scene_zh": "旅客到銀行櫃檯兌換出國要用的外幣。",
-  "image_prompt_en": "A chibi customer places colorful foreign banknotes on the counter while a chibi teller counts local bills with a small calculator nearby.",
+  "title_en": "Fifteen or Fifty?",
+  "title_zh": "電話中確認數字",
+  "scene_zh": "銀行打電話通知匯款手續費，顧客在吵雜的路上聽不清楚，請對方再說一次並確認數字。",
+  "image_prompt_en": "a chibi bank clerk at a desk talking on a phone, and a chibi customer on a busy street holding a smartphone to one ear and covering the other ear, scooters passing behind",
   "lines": [
    {
     "speaker": "A",
-    "en": "I'd like to exchange some dollars.",
-    "zh": "我想兌換一些美金。"
+    "en": "Hi, this is your bank calling about your transfer.",
+    "zh": "您好，這裡是銀行，關於您的匯款。"
    },
    {
     "speaker": "B",
-    "en": "How much would you like to exchange?",
-    "zh": "您想兌換多少呢？"
+    "en": "Sorry, could you say that again? It's noisy here.",
+    "zh": "不好意思，可以再說一次嗎？這邊有點吵。"
    },
    {
     "speaker": "A",
-    "en": "About five hundred dollars, please.",
-    "zh": "大概五百美金，麻煩你。"
+    "en": "The transfer fee is fifteen dollars.",
+    "zh": "這筆匯款的手續費是十五元。"
    },
    {
     "speaker": "B",
-    "en": "Today's rate is thirty-one point two.",
-    "zh": "今天的匯率是三十一點二。"
+    "en": "Fifteen or fifty? One-five or five-zero?",
+    "zh": "是十五還是五十？一五還是五零？"
    },
    {
     "speaker": "A",
-    "en": "That works for me, thanks.",
-    "zh": "這樣可以，謝謝。"
+    "en": "One-five, fifteen. We'll take it from your account.",
+    "zh": "一五，十五元，會直接從您的帳戶扣。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "銀行行員",
+   "B": "顧客"
+  },
+  "key_phrase": "transfer fee is fifteen dollars",
+  "key_phrase_zh": "匯款手續費是十五元"
  },
  {
   "id": 215,
@@ -7499,13 +8783,13 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "I need to report my credit card missing.",
+    "en": "I need to report my credit card lost.",
     "zh": "我需要掛失我的信用卡。"
    },
    {
     "speaker": "B",
     "en": "I'm sorry to hear that, let me help.",
-    "zh": "很遺憾聽到這消息，我來協助您。"
+    "zh": "別擔心，我馬上幫您處理。"
    },
    {
     "speaker": "A",
@@ -7522,13 +8806,19 @@
     "en": "Thank you, that's a huge relief.",
     "zh": "謝謝，這樣我就放心多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "Can you cancel it right away",
+  "key_phrase_zh": "可以馬上幫我停用嗎"
  },
  {
   "id": 216,
   "category": "金融郵政",
   "title_en": "Disputing a Charge",
-  "title_zh": "質疑刷卡爭議款項",
+  "title_zh": "信用卡帳款爭議",
   "scene_zh": "顧客發現帳單上有不認識的扣款，向銀行提出申訴。",
   "image_prompt_en": "A chibi customer points at a printed statement with a confused frown while a chibi bank clerk looks at the same paper on the counter.",
   "lines": [
@@ -7549,15 +8839,21 @@
    },
    {
     "speaker": "B",
-    "en": "We'll open a dispute for you.",
-    "zh": "我們會幫您提出爭議申訴。"
+    "en": "We'll open a dispute. It usually takes about two weeks.",
+    "zh": "我們會幫您申請帳款爭議，通常需要兩週左右。"
    },
    {
     "speaker": "A",
-    "en": "How long will the investigation take?",
-    "zh": "調查大概需要多久時間？"
+    "en": "Okay. I'll keep an eye on my account.",
+    "zh": "好，我會留意我的帳戶。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "recognize this charge on my statement",
+  "key_phrase_zh": "我對帳單上這筆扣款沒有印象"
  },
  {
   "id": 217,
@@ -7589,10 +8885,16 @@
    },
    {
     "speaker": "A",
-    "en": "Here you go, thank you.",
-    "zh": "給你，謝謝。"
+    "en": "Here you go. I'll keep the receipt.",
+    "zh": "給你，收據我留著。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "郵局人員"
+  },
+  "key_phrase": "I'd like to mail this package, please",
+  "key_phrase_zh": "我想寄這個包裹，麻煩你"
  },
  {
   "id": 218,
@@ -7624,10 +8926,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, here's the cash.",
-    "zh": "好的，這是現金。"
+    "en": "Okay, here's the cash.",
+    "zh": "好，這是現金。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "郵局人員"
+  },
+  "key_phrase": "Can I get five stamps, please",
+  "key_phrase_zh": "可以給我五張郵票嗎"
  },
  {
   "id": 219,
@@ -7659,10 +8967,16 @@
    },
    {
     "speaker": "A",
-    "en": "Great, thanks for checking.",
-    "zh": "太好了，謝謝你查詢。"
+    "en": "Great, I'll stay home this afternoon.",
+    "zh": "太好了，我下午會待在家。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "Sure, what's your tracking number",
+  "key_phrase_zh": "好的，請問您的追蹤號碼是"
  },
  {
   "id": 220,
@@ -7697,7 +9011,13 @@
     "en": "Thanks, I appreciate it.",
     "zh": "謝謝，麻煩你了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "快遞員"
+  },
+  "key_phrase": "Do you have the slip with you",
+  "key_phrase_zh": "您有帶那張通知單嗎"
  },
  {
   "id": 221,
@@ -7732,7 +9052,13 @@
     "en": "No problem, here you go.",
     "zh": "沒問題，給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "Can I pay by card",
+  "key_phrase_zh": "可以刷卡付款嗎"
  },
  {
   "id": 222,
@@ -7764,10 +9090,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's still the same, thanks.",
-    "zh": "還是一樣的，謝謝。"
+    "en": "It's still the same. Nothing's changed.",
+    "zh": "還是一樣，沒有變。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "讀者",
+   "B": "圖書館員"
+  },
+  "key_phrase": "My library card just expired",
+  "key_phrase_zh": "我的圖書證剛過期了"
  },
  {
   "id": 223,
@@ -7802,7 +9134,13 @@
     "en": "That's fine, I'll wait.",
     "zh": "沒關係，我會等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "戶政人員"
+  },
+  "key_phrase": "This will take about ten minutes",
+  "key_phrase_zh": "這大概需要十分鐘"
  },
  {
   "id": 224,
@@ -7837,7 +9175,13 @@
     "en": "Got it, I'll bring that next time.",
     "zh": "了解，我下次會帶來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "申請人",
+   "B": "簽證處人員"
+  },
+  "key_phrase": "Yes, a bank statement works fine",
+  "key_phrase_zh": "是的，銀行對帳單就可以"
  },
  {
   "id": 225,
@@ -7860,7 +9204,7 @@
    {
     "speaker": "A",
     "en": "I didn't use any extra data.",
-    "zh": "我沒有用超過額外的流量。"
+    "zh": "我沒有多用流量啊。"
    },
    {
     "speaker": "B",
@@ -7869,10 +9213,16 @@
    },
    {
     "speaker": "A",
-    "en": "Ah, that explains it, thanks.",
-    "zh": "啊，這樣就說得通了，謝謝。"
+    "en": "Ah, that explains it. I called my aunt in Japan.",
+    "zh": "啊，難怪，我有打給在日本的阿姨。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "Let me check your account details",
+  "key_phrase_zh": "我來查一下您的帳戶明細"
  },
  {
   "id": 226,
@@ -7899,15 +9249,21 @@
    },
    {
     "speaker": "B",
-    "en": "Tap the link card option here.",
-    "zh": "點這裡的綁定卡片選項。"
+    "en": "Tap \"Link a card\" right here.",
+    "zh": "點這裡的「綁定卡片」。"
    },
    {
     "speaker": "A",
     "en": "Got it, this is easier than I thought.",
     "zh": "了解，比我想的簡單多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "Sure, please open your banking app",
+  "key_phrase_zh": "好的，請打開您的銀行App"
  },
  {
   "id": 227,
@@ -7939,10 +9295,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I'll head over there.",
-    "zh": "謝謝，我去那邊看看。"
+    "en": "Okay, I'll head over there now.",
+    "zh": "好，那我現在過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "Is that one usually stocked",
+  "key_phrase_zh": "那台通常有補足現金嗎"
  },
  {
   "id": 228,
@@ -7977,7 +9339,13 @@
     "en": "Mostly large bills, please.",
     "zh": "大部分大鈔就好，謝謝。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "I'd like to cash this check",
+  "key_phrase_zh": "我想兌現這張支票"
  },
  {
   "id": 229,
@@ -8004,15 +9372,21 @@
    },
    {
     "speaker": "B",
-    "en": "Yes, that transfer has no charge.",
-    "zh": "是的，那種轉帳不收費。"
+    "en": "Yes, transfers within the same bank are free.",
+    "zh": "對，同一家銀行轉帳免費。"
    },
    {
     "speaker": "A",
-    "en": "Good to know, thank you.",
-    "zh": "很高興知道，謝謝你。"
+    "en": "Good to know. That saves me money.",
+    "zh": "了解，這樣可以省錢。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "fee for a bank transfer",
+  "key_phrase_zh": "銀行轉帳的手續費是多少"
  },
  {
   "id": 230,
@@ -8047,7 +9421,13 @@
     "en": "Sounds fair, I'll take it.",
     "zh": "聽起來合理，我要租這個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "郵局人員"
+  },
+  "key_phrase": "I'd like to rent a mailbox here",
+  "key_phrase_zh": "我想在這裡租一個信箱"
  },
  {
   "id": 231,
@@ -8079,10 +9459,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, that works for my schedule.",
-    "zh": "太好了，這樣配合我的行程。"
+    "en": "Great, that's before my trip.",
+    "zh": "太好了，在我出國前就能拿到。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "戶政人員"
+  },
+  "key_phrase": "Do you have your photo and ID",
+  "key_phrase_zh": "您有帶照片和身分證嗎"
  },
  {
   "id": 232,
@@ -8114,10 +9500,16 @@
    },
    {
     "speaker": "A",
-    "en": "Done, thanks for setting that up.",
-    "zh": "好了，謝謝你幫我設定。"
+    "en": "Done. Now I won't miss a payment.",
+    "zh": "好了，這樣就不會忘記繳了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "Please sign this authorization form",
+  "key_phrase_zh": "請在這張授權書上簽名"
  },
  {
   "id": 233,
@@ -8139,8 +9531,8 @@
    },
    {
     "speaker": "A",
-    "en": "Around three hundred thousand dollars.",
-    "zh": "大約三十萬元。"
+    "en": "Three hundred thousand.",
+    "zh": "三十萬。"
    },
    {
     "speaker": "B",
@@ -8152,7 +9544,13 @@
     "en": "That's fine, take your time.",
     "zh": "沒關係，慢慢來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "I'd like to withdraw a large amount",
+  "key_phrase_zh": "我想提領一筆較大金額的現金"
  },
  {
   "id": 234,
@@ -8169,7 +9567,7 @@
    },
    {
     "speaker": "B",
-    "en": "Insert your card and enter your pin.",
+    "en": "Insert your card and enter your PIN.",
     "zh": "請插入卡片並輸入密碼。"
    },
    {
@@ -8184,10 +9582,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks for the help.",
-    "zh": "了解，謝謝你的幫忙。"
+    "en": "Got it. The balance is showing now.",
+    "zh": "好了，餘額出來了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "Okay, I've done that",
+  "key_phrase_zh": "好，我做好了"
  },
  {
   "id": 235,
@@ -8219,10 +9623,16 @@
    },
    {
     "speaker": "A",
-    "en": "That works great, thank you.",
-    "zh": "這樣很好，謝謝你。"
+    "en": "Great, I'm almost out of checks.",
+    "zh": "太好了，我的支票快用完了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "I need to order a new checkbook",
+  "key_phrase_zh": "我需要訂購一本新的支票簿"
  },
  {
   "id": 236,
@@ -8249,7 +9659,7 @@
    },
    {
     "speaker": "B",
-    "en": "I'll need to see your income proof.",
+    "en": "I'll need to see proof of income.",
     "zh": "我需要看一下您的收入證明。"
    },
    {
@@ -8257,7 +9667,13 @@
     "en": "I have it right here.",
     "zh": "我這裡有帶。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "I have it right here",
+  "key_phrase_zh": "我這裡有帶"
  },
  {
   "id": 237,
@@ -8279,8 +9695,8 @@
    },
    {
     "speaker": "A",
-    "en": "It's zero nine one two, three four five.",
-    "zh": "是零九一二三四五。"
+    "en": "It's oh-nine-one-two, three-four-five, six-seven-eight.",
+    "zh": "是 0912-345-678。"
    },
    {
     "speaker": "B",
@@ -8292,7 +9708,13 @@
     "en": "My address changed too, actually.",
     "zh": "其實我的地址也變了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "I need to update my phone number",
+  "key_phrase_zh": "我需要更新我的電話號碼"
  },
  {
   "id": 238,
@@ -8324,10 +9746,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, thanks for your help.",
-    "zh": "太好了，謝謝你的幫忙。"
+    "en": "Great. That was easier than I thought.",
+    "zh": "太好了，比我想的簡單。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "郵局人員"
+  },
+  "key_phrase": "I need to return this package",
+  "key_phrase_zh": "我需要退回這個包裹"
  },
  {
   "id": 239,
@@ -8362,7 +9790,13 @@
     "en": "That's fine, please send it that way.",
     "zh": "沒問題，麻煩用這種方式寄。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "郵局人員"
+  },
+  "key_phrase": "How much extra does that cost",
+  "key_phrase_zh": "這要多付多少錢呢"
  },
  {
   "id": 240,
@@ -8397,7 +9831,13 @@
     "en": "Done, thanks for your help today.",
     "zh": "好了，謝謝你今天的協助。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "銀行行員"
+  },
+  "key_phrase": "I'd like to close this account",
+  "key_phrase_zh": "我想結清這個帳戶"
  },
  {
   "id": 241,
@@ -8430,44 +9870,56 @@
    {
     "speaker": "A",
     "en": "No problem. See you around!",
-    "zh": "不客氣，待會見！"
+    "zh": "不客氣，改天見囉！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "鄰居甲",
+   "B": "鄰居乙"
+  },
+  "key_phrase": "That's so kind, thank you",
+  "key_phrase_zh": "你人真好，謝謝你"
  },
  {
   "id": 242,
   "category": "社交人際",
-  "title_en": "Introducing a Friend",
-  "title_zh": "介紹朋友認識",
-  "scene_zh": "在派對上把兩位互不認識的朋友介紹給彼此。",
+  "title_en": "Meeting a Friend's Best Friend",
+  "title_zh": "認識朋友的好友",
+  "scene_zh": "在派對上，Lily的同事Tom主動認識Lily的好友Sam。",
   "image_prompt_en": "Two chibi characters stand at a party while a third points between them making an introduction, balloons and snack table in background.",
   "lines": [
    {
     "speaker": "A",
-    "en": "Sam, this is my friend Lily from work.",
-    "zh": "山姆，這是我的朋友莉莉，我同事。"
+    "en": "Hi, you must be Sam. I'm Tom, Lily's coworker.",
+    "zh": "嗨，妳一定是Sam吧，我是Tom，Lily的同事。"
    },
    {
     "speaker": "B",
-    "en": "Hey Lily, great to finally meet you.",
-    "zh": "嗨莉莉，終於見到妳了。"
+    "en": "Hey Tom, great to finally meet you.",
+    "zh": "嗨Tom，終於見到你了。"
    },
    {
     "speaker": "A",
-    "en": "She's been wanting to meet you too.",
-    "zh": "她也一直想認識你。"
+    "en": "Lily talks about you all the time.",
+    "zh": "Lily常常提到妳。"
    },
    {
     "speaker": "B",
-    "en": "I've heard so many good things about you.",
-    "zh": "我聽過好多關於你的好事。"
+    "en": "Oh no. What has she been saying?",
+    "zh": "糟糕，她都說了些什麼？"
    },
    {
     "speaker": "A",
-    "en": "All good, I promise!",
-    "zh": "我保證都是好事！"
+    "en": "Only good things, I promise!",
+    "zh": "只有好話啦，我保證！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "同事",
+   "B": "朋友"
+  },
+  "key_phrase": "you must be Sam",
+  "key_phrase_zh": "你一定是Sam吧"
  },
  {
   "id": 243,
@@ -8480,7 +9932,7 @@
    {
     "speaker": "A",
     "en": "Can you believe how much it's rained this week?",
-    "zh": "你相信這週雨下得這麼大嗎？"
+    "zh": "這週雨也下太多了吧！"
    },
    {
     "speaker": "B",
@@ -8502,7 +9954,13 @@
     "en": "Fingers crossed for you then.",
     "zh": "那祝你好運。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Fingers crossed for you then",
+  "key_phrase_zh": "那祝你好運"
  },
  {
   "id": 244,
@@ -8537,7 +9995,13 @@
     "en": "Great, I'll text you the place.",
     "zh": "太好了，我再傳訊息告訴你地點。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "How about Thursday afternoon",
+  "key_phrase_zh": "星期四下午如何"
  },
  {
   "id": 245,
@@ -8569,10 +10033,16 @@
    },
    {
     "speaker": "A",
-    "en": "Of course, have a good weekend.",
-    "zh": "當然，祝你週末愉快。"
+    "en": "Anytime, have a good weekend.",
+    "zh": "隨時歡迎，週末愉快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "No worries, maybe next time",
+  "key_phrase_zh": "沒關係，下次再約"
  },
  {
   "id": 246,
@@ -8607,7 +10077,13 @@
     "en": "Come on, let's join the others.",
     "zh": "走吧，我們去找大家。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "賓客",
+   "B": "主人"
+  },
+  "key_phrase": "I got you something small",
+  "key_phrase_zh": "我帶了一份小禮物給你"
  },
  {
   "id": 247,
@@ -8629,8 +10105,8 @@
    },
    {
     "speaker": "A",
-    "en": "It felt empty without something green.",
-    "zh": "覺得少了點綠意會怪怪的。"
+    "en": "I thought your new place could use something green.",
+    "zh": "我想你的新家可以添點綠意。"
    },
    {
     "speaker": "B",
@@ -8642,7 +10118,13 @@
     "en": "I'd love that, it looks amazing already.",
     "zh": "好啊，看起來已經很棒了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "訪客",
+   "B": "新居主人"
+  },
+  "key_phrase": "new place could use something green",
+  "key_phrase_zh": "你的新家可以增添一點綠意"
  },
  {
   "id": 248,
@@ -8677,7 +10159,13 @@
     "en": "You should wear it more often.",
     "zh": "你應該多穿這件。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "I really like your outfit today",
+  "key_phrase_zh": "我今天真的很喜歡你的穿搭"
  },
  {
   "id": 249,
@@ -8699,20 +10187,26 @@
    },
    {
     "speaker": "A",
-    "en": "I hope you weren't waiting too long.",
-    "zh": "希望你沒有等太久。"
+    "en": "Phew. I thought you'd been waiting forever.",
+    "zh": "呼，我還以為你等了超久。"
    },
    {
     "speaker": "B",
-    "en": "Not at all, don't worry about it.",
-    "zh": "完全沒有，別放在心上。"
+    "en": "Nope. Don't worry about it.",
+    "zh": "沒有啦，別放在心上。"
    },
    {
     "speaker": "A",
-    "en": "Thanks for understanding, let's go inside.",
-    "zh": "謝謝你體諒，我們進去吧。"
+    "en": "Great, let's go inside and order.",
+    "zh": "太好了，我們進去點餐吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "I thought you'd been waiting forever",
+  "key_phrase_zh": "我還以為你等超久了"
  },
  {
   "id": 250,
@@ -8747,7 +10241,13 @@
     "en": "Let's grab lunch this weekend.",
     "zh": "這週末一起吃午餐吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's grab lunch this weekend",
+  "key_phrase_zh": "這週末一起吃午餐吧"
  },
  {
   "id": 251,
@@ -8782,7 +10282,13 @@
     "en": "Sounds good, talk soon.",
     "zh": "好的，再聊。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Perfect, scanning your code now",
+  "key_phrase_zh": "太好了，我現在掃你的條碼"
  },
  {
   "id": 252,
@@ -8817,7 +10323,13 @@
     "en": "You're a lifesaver, thank you.",
     "zh": "你真是救星，謝謝你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Sure, what do you need",
+  "key_phrase_zh": "當然，你需要什麼"
  },
  {
   "id": 253,
@@ -8852,7 +10364,13 @@
     "en": "Let me buy you lunch as thanks.",
     "zh": "讓我請你吃頓午餐表達感謝。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let me buy you lunch as thanks",
+  "key_phrase_zh": "讓我請你吃頓午餐表達感謝"
  },
  {
   "id": 254,
@@ -8887,7 +10405,13 @@
     "en": "Anytime, call me whenever you need to talk.",
     "zh": "隨時都可以，想聊聊就打給我。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Thanks for being here for me",
+  "key_phrase_zh": "謝謝你在我身邊陪我"
  },
  {
   "id": 255,
@@ -8922,7 +10446,13 @@
     "en": "We should celebrate this weekend.",
     "zh": "我們這週末應該慶祝一下。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "We should celebrate this weekend",
+  "key_phrase_zh": "我們這週末應該慶祝一下"
  },
  {
   "id": 256,
@@ -8957,7 +10487,13 @@
     "en": "Definitely, let's toast to them.",
     "zh": "沒錯，我們敬他們一杯吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "賓客甲",
+   "B": "賓客乙"
+  },
+  "key_phrase": "Definitely, let's toast to them",
+  "key_phrase_zh": "沒錯，我們敬他們一杯吧"
  },
  {
   "id": 257,
@@ -8985,14 +10521,20 @@
    {
     "speaker": "B",
     "en": "Oh no, that's really disappointing.",
-    "zh": "哦不，真的很讓人失望。"
+    "zh": "啊，不會吧，好失望喔。"
    },
    {
     "speaker": "A",
     "en": "I know, let's plan another one soon.",
     "zh": "我懂，我們盡快再安排一次吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Okay, go ahead, I'm listening",
+  "key_phrase_zh": "好，你說吧，我在聽"
  },
  {
   "id": 258,
@@ -9027,7 +10569,13 @@
     "en": "Great, I'll pick you up at eight.",
     "zh": "太好了，我八點去接你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "How about hiking on Saturday morning",
+  "key_phrase_zh": "星期六早上去爬山如何"
  },
  {
   "id": 259,
@@ -9062,7 +10610,13 @@
     "en": "Will do, take care!",
     "zh": "一定會的，保重！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "It was great chatting with you",
+  "key_phrase_zh": "跟你聊天真的很開心"
  },
  {
   "id": 260,
@@ -9097,11 +10651,17 @@
     "en": "Enjoy the holidays with your family.",
     "zh": "祝你和家人假期愉快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Enjoy the holidays with your family",
+  "key_phrase_zh": "祝你和家人假期愉快"
  },
  {
   "id": 261,
-  "category": "社交人際",
+  "category": "工作",
   "title_en": "Introducing Yourself at Work",
   "title_zh": "新同事自我介紹",
   "scene_zh": "第一天上班向新同事自我介紹。",
@@ -9129,45 +10689,57 @@
    },
    {
     "speaker": "A",
-    "en": "Good to know, thanks for the welcome.",
-    "zh": "了解了，謝謝妳的歡迎。"
+    "en": "Good to know. I'll come to you first, then!",
+    "zh": "了解，那我有問題就先找妳！"
    }
-  ]
+  ],
+  "roles": {
+   "A": "新同事",
+   "B": "同事"
+  },
+  "key_phrase": "Welcome aboard, I'm Amy from design",
+  "key_phrase_zh": "歡迎加入，我是設計部的艾咪"
  },
  {
   "id": 262,
   "category": "社交人際",
-  "title_en": "Inviting a Coworker to Lunch",
-  "title_zh": "邀約同事共進午餐",
-  "scene_zh": "午休時間邀請同事一起吃飯。",
-  "image_prompt_en": "Two chibi characters stand by an office cafeteria, one pointing toward the food line with a smile.",
+  "title_en": "Red Envelopes at Lunar New Year",
+  "title_zh": "過年拜年領紅包",
+  "scene_zh": "過年到舅舅家拜年，舅舅發紅包，大家準備圍爐。",
+  "image_prompt_en": "a chibi uncle in a red sweater handing a red envelope to a chibi niece in a living room decorated with red spring couplets and paper lanterns, a hot pot on the table, no readable text",
   "lines": [
    {
     "speaker": "A",
-    "en": "Want to grab lunch together today?",
-    "zh": "今天要不要一起吃午餐？"
+    "en": "Happy Lunar New Year! This red envelope is for you.",
+    "zh": "新年快樂！這個紅包給你。"
    },
    {
     "speaker": "B",
-    "en": "Sure, where are you thinking?",
-    "zh": "好啊，你想吃哪裡？"
+    "en": "Thank you, Uncle! Wishing you good health this year.",
+    "zh": "謝謝舅舅！祝您今年身體健康。"
    },
    {
     "speaker": "A",
-    "en": "There's a new noodle place nearby.",
-    "zh": "附近新開了一家麵店。"
+    "en": "You've grown so tall since last year!",
+    "zh": "你比去年長高好多喔！"
    },
    {
     "speaker": "B",
-    "en": "I'm in, let's leave around noon.",
-    "zh": "我加入，我們中午出發吧。"
+    "en": "I know! Do you need help with the hot pot?",
+    "zh": "對啊！火鍋需要我幫忙嗎？"
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll meet you at the elevator.",
-    "zh": "太好了，我在電梯口等你。"
+    "en": "Sure, bring the dumplings from the kitchen.",
+    "zh": "好啊，去廚房把水餃端出來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "叔叔",
+   "B": "姪子姪女"
+  },
+  "key_phrase": "red envelope is for you",
+  "key_phrase_zh": "這個紅包給你"
  },
  {
   "id": 263,
@@ -9202,7 +10774,13 @@
     "en": "You deserve it, welcome back.",
     "zh": "你值得這樣的假期，歡迎回來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "You deserve it, welcome back",
+  "key_phrase_zh": "你值得這樣的假期，歡迎回來"
  },
  {
   "id": 264,
@@ -9220,7 +10798,8 @@
    {
     "speaker": "B",
     "en": "Guilty as charged, nice to finally meet you.",
-    "zh": "沒錯，終於見到你了真好。"
+    "zh": "沒錯，終於見到你了真好。",
+    "voice": "male"
    },
    {
     "speaker": "A",
@@ -9230,14 +10809,21 @@
    {
     "speaker": "B",
     "en": "All good things, I hope.",
-    "zh": "希望都是好事。"
+    "zh": "希望都是好事。",
+    "voice": "male"
    },
    {
     "speaker": "A",
     "en": "Of course, come sit with us.",
     "zh": "當然，過來跟我們一起坐。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友",
+   "B": "朋友的另一半"
+  },
+  "key_phrase": "All good things, I hope",
+  "key_phrase_zh": "希望都是好事"
  },
  {
   "id": 265,
@@ -9272,7 +10858,13 @@
     "en": "On my way, get some rest.",
     "zh": "我馬上過去，好好休息。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "On my way, get some rest",
+  "key_phrase_zh": "我馬上過去，好好休息"
  },
  {
   "id": 266,
@@ -9307,42 +10899,54 @@
     "en": "We should do this again soon.",
     "zh": "我們應該很快再聚一次。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "賓客",
+   "B": "主人"
+  },
+  "key_phrase": "I'm so glad you could come",
+  "key_phrase_zh": "很高興你們能來"
  },
  {
   "id": 267,
   "category": "社交人際",
-  "title_en": "Asking for Directions Politely",
-  "title_zh": "禮貌問路",
-  "scene_zh": "在陌生街道向路人詢問方向。",
-  "image_prompt_en": "Two chibi characters stand on a street corner, one pointing down the road while the other holds a phone map.",
+  "title_en": "Mid-Autumn Barbecue",
+  "title_zh": "中秋節烤肉賞月",
+  "scene_zh": "中秋節晚上在騎樓烤肉，向外國鄰居介紹台灣的過節方式。",
+  "image_prompt_en": "two chibi neighbors grilling corn and skewers on a small charcoal grill outside a Taiwanese apartment arcade at night, a big full moon in the sky, mooncakes and pomelos on a folding table",
   "lines": [
    {
     "speaker": "A",
-    "en": "Excuse me, could you tell me how to get to the station?",
-    "zh": "不好意思，可以告訴我怎麼去車站嗎？"
+    "en": "Happy Mid-Autumn Festival! Want some grilled corn?",
+    "zh": "中秋節快樂！要不要來根烤玉米？"
    },
    {
     "speaker": "B",
-    "en": "Sure, just go straight and turn left.",
-    "zh": "好的，直走然後左轉就到了。"
+    "en": "Yes, please! Why is everyone barbecuing tonight?",
+    "zh": "好啊！為什麼今晚大家都在烤肉？"
    },
    {
     "speaker": "A",
-    "en": "Is it far from here?",
-    "zh": "離這裡遠嗎？"
+    "en": "It's a Taiwanese tradition now. We also eat mooncakes.",
+    "zh": "這是台灣現在的傳統，我們也會吃月餅。"
    },
    {
     "speaker": "B",
-    "en": "About a ten minute walk.",
-    "zh": "大概走十分鐘。"
+    "en": "And look, the moon is so round and bright!",
+    "zh": "你看，月亮好圓好亮！"
    },
    {
     "speaker": "A",
-    "en": "Thank you so much for your help.",
-    "zh": "真的非常謝謝你的幫忙。"
+    "en": "That's the best part. Here, try some pomelo too.",
+    "zh": "這就是最棒的地方，來，也吃點柚子吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Want some grilled corn",
+  "key_phrase_zh": "要不要來根烤玉米"
  },
  {
   "id": 268,
@@ -9377,7 +10981,13 @@
     "en": "Thanks Mom, I couldn't have done it without your support.",
     "zh": "謝謝媽，沒有妳的支持我做不到。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "I'm so proud of you",
+  "key_phrase_zh": "我真的以你為榮"
  },
  {
   "id": 269,
@@ -9390,7 +11000,7 @@
    {
     "speaker": "A",
     "en": "Welcome back! How was the flight?",
-    "zh": "歡迎回來！飛行還順利嗎？"
+    "zh": "歡迎回來！飛機坐得還好嗎？"
    },
    {
     "speaker": "B",
@@ -9412,7 +11022,13 @@
     "en": "Let's get your bags and head home.",
     "zh": "我們拿行李回家吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's get your bags and head home",
+  "key_phrase_zh": "我們拿行李回家吧"
  },
  {
   "id": 270,
@@ -9424,8 +11040,8 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Do you come here often? I haven't seen you before.",
-    "zh": "你常來這裡嗎？我之前沒看過你。"
+    "en": "Are you new here? I don't think I've seen you before.",
+    "zh": "你是新來的嗎？我之前好像沒看過你。"
    },
    {
     "speaker": "B",
@@ -9447,7 +11063,13 @@
     "en": "The morning yoga class is my favorite.",
     "zh": "早上的瑜伽課是我的最愛。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "健身房會員甲",
+   "B": "健身房會員乙"
+  },
+  "key_phrase": "This is actually my first week",
+  "key_phrase_zh": "其實這是我來的第一週"
  },
  {
   "id": 271,
@@ -9465,7 +11087,8 @@
    {
     "speaker": "B",
     "en": "Five more minutes, please.",
-    "zh": "再給我五分鐘就好。"
+    "zh": "再給我五分鐘就好。",
+    "voice": "child"
    },
    {
     "speaker": "A",
@@ -9475,14 +11098,21 @@
    {
     "speaker": "B",
     "en": "Okay, okay, I'm getting up now.",
-    "zh": "好啦好啦，我這就起來。"
+    "zh": "好啦好啦，我這就起來。",
+    "voice": "child"
    },
    {
     "speaker": "A",
     "en": "Breakfast is on the table when you're ready.",
     "zh": "早餐已經放在桌上了，準備好就吃。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "孩子"
+  },
+  "key_phrase": "Five more minutes, please",
+  "key_phrase_zh": "再給我五分鐘就好"
  },
  {
   "id": 272,
@@ -9517,7 +11147,13 @@
     "en": "Sure, dinner will be ready in thirty minutes.",
     "zh": "沒問題，晚餐三十分鐘後就好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Sounds good, I'll chop the vegetables",
+  "key_phrase_zh": "好啊，我來切菜"
  },
  {
   "id": 273,
@@ -9529,7 +11165,7 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Can you do the dishes tonight instead of me?",
+    "en": "Can you do the dishes for me tonight?",
     "zh": "你今晚可以幫我洗碗嗎？"
    },
    {
@@ -9552,7 +11188,13 @@
     "en": "I won't, I promise.",
     "zh": "我不會忘的，我保證。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Deal, that sounds fair",
+  "key_phrase_zh": "成交，這樣公平"
  },
  {
   "id": 274,
@@ -9587,7 +11229,13 @@
     "en": "Great, let's head to the store then.",
     "zh": "太好了，那我們去超市吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Let me add that right now",
+  "key_phrase_zh": "我現在就加上去"
  },
  {
   "id": 275,
@@ -9600,7 +11248,8 @@
    {
     "speaker": "A",
     "en": "Why is this shirt suddenly pink?",
-    "zh": "這件襯衫怎麼突然變成粉紅色？"
+    "zh": "這件襯衫怎麼突然變成粉紅色？",
+    "voice": "female"
    },
    {
     "speaker": "B",
@@ -9610,7 +11259,8 @@
    {
     "speaker": "A",
     "en": "It's okay, we'll be more careful next time.",
-    "zh": "沒關係，下次注意就好。"
+    "zh": "沒關係，下次注意就好。",
+    "voice": "female"
    },
    {
     "speaker": "B",
@@ -9620,9 +11270,16 @@
    {
     "speaker": "A",
     "en": "Good idea, that might save it.",
-    "zh": "好主意，說不定能救回來。"
+    "zh": "好主意，說不定能救回來。",
+    "voice": "female"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Why is this shirt suddenly pink",
+  "key_phrase_zh": "這件襯衫怎麼突然變成粉紅色"
  },
  {
   "id": 276,
@@ -9649,15 +11306,21 @@
    },
    {
     "speaker": "B",
-    "en": "I see the problem, the pipe is loose.",
-    "zh": "我看到問題了，是管子鬆了。"
+    "en": "The pipe is loose. It'll take about ten minutes.",
+    "zh": "是管子鬆了，大概十分鐘就能修好。"
    },
    {
     "speaker": "A",
-    "en": "How long will it take to fix?",
-    "zh": "修好大概要多久？"
+    "en": "Great. I'll make some tea while you work.",
+    "zh": "太好了，你修的時候我來泡個茶。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "屋主",
+   "B": "水電工"
+  },
+  "key_phrase": "dripping right under the kitchen sink",
+  "key_phrase_zh": "就在廚房水槽下面漏水"
  },
  {
   "id": 277,
@@ -9692,7 +11355,13 @@
     "en": "Thank you, I really appreciate that.",
     "zh": "謝謝您，我真的很感激。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "房東"
+  },
+  "key_phrase": "Sure, let's discuss it this weekend",
+  "key_phrase_zh": "當然，我們這週末討論一下"
  },
  {
   "id": 278,
@@ -9724,10 +11393,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, I really appreciate it.",
-    "zh": "謝謝，真的很感謝。"
+    "en": "Great. Good night, then.",
+    "zh": "太好了，那晚安囉。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "室友甲",
+   "B": "室友乙"
+  },
+  "key_phrase": "I have an early class tomorrow morning",
+  "key_phrase_zh": "我明天一早有課"
  },
  {
   "id": 279,
@@ -9762,7 +11437,13 @@
     "en": "We'll be finished within the hour.",
     "zh": "我們一小時內就能搬完。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "屋主",
+   "B": "搬家工人"
+  },
+  "key_phrase": "Yes, the bedroom boxes go upstairs",
+  "key_phrase_zh": "對，寫臥室的箱子搬上樓"
  },
  {
   "id": 280,
@@ -9770,7 +11451,7 @@
   "title_en": "Internet Outage Call",
   "title_zh": "網路斷線打客服",
   "scene_zh": "家裡網路突然斷線，打電話給網路公司客服",
-  "image_prompt_en": "A chibi person sits on the floor holding a phone next to a blinking router, a laptop showing a disconnected icon on a nearby table.",
+  "image_prompt_en": "a chibi adult at home on the phone pointing at a Wi-Fi router with blinking red lights, and a chibi customer service agent wearing a headset typing at a computer [REGEN]",
   "lines": [
    {
     "speaker": "A",
@@ -9784,8 +11465,8 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, the router lights are all off.",
-    "zh": "謝謝，路由器的燈全都熄了。"
+    "en": "Thanks. The lights on the router are blinking red.",
+    "zh": "謝謝，路由器的燈一直閃紅燈。"
    },
    {
     "speaker": "B",
@@ -9797,7 +11478,13 @@
     "en": "Okay, I'll try that right away.",
     "zh": "好，我馬上試試看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "Please unplug it and wait thirty seconds",
+  "key_phrase_zh": "請把它拔掉插頭，等三十秒"
  },
  {
   "id": 281,
@@ -9824,15 +11511,21 @@
    },
    {
     "speaker": "B",
-    "en": "It looks like a mild stomach infection.",
-    "zh": "看起來是輕微的腸胃感染。"
+    "en": "It's a mild stomach infection. She'll need some medicine.",
+    "zh": "是輕微的腸胃感染，她需要吃點藥。"
    },
    {
     "speaker": "A",
-    "en": "Will these medications help her recover?",
-    "zh": "這些藥能幫助她康復嗎？"
+    "en": "Okay, I'll make sure she takes it every day.",
+    "zh": "好，我會確保她每天吃藥。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "飼主",
+   "B": "獸醫"
+  },
+  "key_phrase": "Let me take her temperature first",
+  "key_phrase_zh": "我先幫她量一下體溫"
  },
  {
   "id": 282,
@@ -9846,7 +11539,8 @@
    {
     "speaker": "A",
     "en": "His snack is in the fridge, second shelf.",
-    "zh": "他的點心放在冰箱第二層。"
+    "zh": "他的點心放在冰箱第二層。",
+    "voice": "female"
    },
    {
     "speaker": "B",
@@ -9856,19 +11550,27 @@
    {
     "speaker": "A",
     "en": "Around two o'clock, he gets sleepy after lunch.",
-    "zh": "大概兩點，他吃完午餐就會想睡。"
+    "zh": "大概兩點，他吃完午餐就會想睡。",
+    "voice": "female"
    },
    {
     "speaker": "B",
-    "en": "Perfect, I'll keep an eye on the clock.",
+    "en": "Okay, I'll keep an eye on the clock.",
     "zh": "好的，我會注意時間的。"
    },
    {
     "speaker": "A",
     "en": "Call me if anything comes up.",
-    "zh": "有任何狀況打給我。"
+    "zh": "有任何狀況打給我。",
+    "voice": "female"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "保母"
+  },
+  "key_phrase": "Call me if anything comes up",
+  "key_phrase_zh": "有任何狀況打給我"
  },
  {
   "id": 283,
@@ -9886,7 +11588,8 @@
    {
     "speaker": "B",
     "en": "The one about the little dragon, please.",
-    "zh": "我想聽小龍那個故事。"
+    "zh": "我想聽小龍那個故事。",
+    "voice": "child"
    },
    {
     "speaker": "A",
@@ -9896,14 +11599,21 @@
    {
     "speaker": "B",
     "en": "Can you do the funny voices again?",
-    "zh": "你可以再用搞笑的聲音講嗎？"
+    "zh": "你可以再用搞笑的聲音講嗎？",
+    "voice": "child"
    },
    {
     "speaker": "A",
     "en": "Of course, close your eyes and listen.",
     "zh": "當然可以，閉上眼睛聽故事囉。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "孩子"
+  },
+  "key_phrase": "Can you do the funny voices again",
+  "key_phrase_zh": "你可以再用搞笑的聲音講嗎"
  },
  {
   "id": 284,
@@ -9938,7 +11648,13 @@
     "en": "Sounds like a perfect family day.",
     "zh": "聽起來會是完美的家庭日。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "孩子"
+  },
+  "key_phrase": "Let's pack a picnic lunch as well",
+  "key_phrase_zh": "我們也帶野餐午餐去吧"
  },
  {
   "id": 285,
@@ -9956,7 +11672,7 @@
    {
     "speaker": "B",
     "en": "I think it's my turn this week.",
-    "zh": "我記得這禮拜是我的班。"
+    "zh": "我記得這禮拜輪到我。"
    },
    {
     "speaker": "A",
@@ -9973,7 +11689,13 @@
     "en": "Thanks, don't forget the ones on the balcony.",
     "zh": "謝謝，陽台上那幾盆也別忘了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "I think it's my turn this week",
+  "key_phrase_zh": "我記得這禮拜是我的班"
  },
  {
   "id": 286,
@@ -10008,7 +11730,13 @@
     "en": "Let's hurry before the truck leaves.",
     "zh": "我們動作快點，不然車子要走了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Let's hurry before the truck leaves",
+  "key_phrase_zh": "我們動作快點，不然車子要走了"
  },
  {
   "id": 287,
@@ -10043,7 +11771,13 @@
     "en": "Found them, they were in my bag.",
     "zh": "找到了，原來在我包包裡。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Have you seen my keys anywhere",
+  "key_phrase_zh": "你有看到我的鑰匙嗎"
  },
  {
   "id": 288,
@@ -10056,7 +11790,7 @@
    {
     "speaker": "A",
     "en": "Delivery for apartment three, is this correct?",
-    "zh": "這裡是三樓的包裹，對嗎？"
+    "zh": "請問是三號的包裹嗎？"
    },
    {
     "speaker": "B",
@@ -10078,7 +11812,13 @@
     "en": "Have a great rest of your day.",
     "zh": "祝您今天愉快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "快遞員"
+  },
+  "key_phrase": "Could you sign here, please",
+  "key_phrase_zh": "可以請您在這裡簽名嗎"
  },
  {
   "id": 289,
@@ -10110,10 +11850,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you so much for helping.",
-    "zh": "真的很謝謝你的幫忙。"
+    "en": "You're the best. I'll bring you some soup.",
+    "zh": "你最好了，我等等端碗湯給你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "鄰居甲",
+   "B": "鄰居乙"
+  },
+  "key_phrase": "I'll return it tomorrow, I promise",
+  "key_phrase_zh": "我明天一定會還你"
  },
  {
   "id": 290,
@@ -10131,7 +11877,7 @@
    {
     "speaker": "B",
     "en": "Yes, I can see you all perfectly.",
-    "zh": "看得很清楚，你們都好嗎？"
+    "zh": "看得很清楚，每個人都看到了。"
    },
    {
     "speaker": "A",
@@ -10148,7 +11894,13 @@
     "en": "We can't wait to see you.",
     "zh": "我們等不及要見你了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "孫子女",
+   "B": "祖父母"
+  },
+  "key_phrase": "Grandma, can you see us clearly",
+  "key_phrase_zh": "阿嬤，你看得清楚我們嗎"
  },
  {
   "id": 291,
@@ -10170,7 +11922,7 @@
    },
    {
     "speaker": "A",
-    "en": "Is it something dangerous, do you think?",
+    "en": "Do you think it's dangerous?",
     "zh": "你覺得會很危險嗎？"
    },
    {
@@ -10180,10 +11932,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks for fixing it so fast.",
-    "zh": "謝謝你這麼快就修好。"
+    "en": "Great, no more flickering lights.",
+    "zh": "太好了，燈不會再閃了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "屋主",
+   "B": "電工"
+  },
+  "key_phrase": "Let me check the wiring up here",
+  "key_phrase_zh": "我來檢查一下上面的線路"
  },
  {
   "id": 292,
@@ -10201,24 +11959,32 @@
    {
     "speaker": "B",
     "en": "Sure, how many people are eating tonight?",
-    "zh": "好啊，今晚有幾個人吃飯？"
+    "zh": "好啊，今晚有幾個人吃飯？",
+    "voice": "child"
    },
    {
     "speaker": "A",
-    "en": "Four of us, plus grandma is joining.",
-    "zh": "我們四個，加上阿嬤也會來。"
+    "en": "The four of us, plus Grandma.",
+    "zh": "我們四個，再加阿嬤。"
    },
    {
     "speaker": "B",
     "en": "Got it, I'll set five places then.",
-    "zh": "了解，那我擺五套餐具。"
+    "zh": "了解，那我擺五套餐具。",
+    "voice": "child"
    },
    {
     "speaker": "A",
     "en": "Dinner should be ready in ten minutes.",
     "zh": "晚餐十分鐘後就會好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Can you set the table for dinner",
+  "key_phrase_zh": "你可以幫忙擺晚餐的餐具嗎"
  },
  {
   "id": 293,
@@ -10253,7 +12019,13 @@
     "en": "Agreed, this place will look so much better.",
     "zh": "同意，這裡會清爽很多。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "This garage is a total mess",
+  "key_phrase_zh": "這個車庫真的亂七八糟"
  },
  {
   "id": 294,
@@ -10280,7 +12052,7 @@
    },
    {
     "speaker": "B",
-    "en": "That's a good idea, it will save money.",
+    "en": "That's a good idea. It'll save money.",
     "zh": "這是個好主意，能省不少錢。"
    },
    {
@@ -10288,7 +12060,13 @@
     "en": "Let's plan next week's meals together.",
     "zh": "我們一起規劃下週的菜單吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Let's plan next week's meals together",
+  "key_phrase_zh": "我們一起規劃下週的菜單吧"
  },
  {
   "id": 295,
@@ -10301,29 +12079,40 @@
    {
     "speaker": "A",
     "en": "I'm stuck on this math problem.",
-    "zh": "我這題數學卡住了。"
+    "zh": "我這題數學卡住了。",
+    "voice": "child"
    },
    {
     "speaker": "B",
     "en": "Let's read the question together carefully.",
-    "zh": "我們一起仔細再讀一次題目。"
+    "zh": "我們一起仔細再讀一次題目。",
+    "voice": "male"
    },
    {
     "speaker": "A",
     "en": "I don't understand this part at all.",
-    "zh": "這部分我完全看不懂。"
+    "zh": "這部分我完全看不懂。",
+    "voice": "child"
    },
    {
     "speaker": "B",
     "en": "Try drawing a picture to help you.",
-    "zh": "試試看畫個圖來幫忙理解。"
+    "zh": "試試看畫個圖來幫忙理解。",
+    "voice": "male"
    },
    {
     "speaker": "A",
     "en": "Oh, now it makes more sense.",
-    "zh": "喔，現在懂多了。"
+    "zh": "喔，現在懂多了。",
+    "voice": "child"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "孩子"
+  },
+  "key_phrase": "Let's read the question together carefully",
+  "key_phrase_zh": "我們一起仔細再讀一次題目"
  },
  {
   "id": 296,
@@ -10358,7 +12147,13 @@
     "en": "Seven forty-five works well for us.",
     "zh": "七點四十五對我們來說很好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長甲",
+   "B": "家長乙"
+  },
+  "key_phrase": "I'll take Wednesday and Friday then",
+  "key_phrase_zh": "那我負責星期三跟星期五"
  },
  {
   "id": 297,
@@ -10385,7 +12180,7 @@
    },
    {
     "speaker": "B",
-    "en": "It will send an alert to our phones.",
+    "en": "It'll send an alert to our phones.",
     "zh": "它會傳警示到我們手機上。"
    },
    {
@@ -10393,7 +12188,13 @@
     "en": "Good, that makes me feel safer.",
     "zh": "太好了，這樣我比較安心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Good, that makes me feel safer",
+  "key_phrase_zh": "太好了，這樣我比較安心"
  },
  {
   "id": 298,
@@ -10420,15 +12221,21 @@
    },
    {
     "speaker": "B",
-    "en": "Okay, let's set it to seventy-two degrees.",
-    "zh": "好啊，那就設在七十二度吧。"
+    "en": "Okay, let's set it to twenty-six degrees.",
+    "zh": "好啊，那就設二十六度吧。"
    },
    {
     "speaker": "A",
     "en": "That sounds much more comfortable.",
     "zh": "這樣聽起來舒服多了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "How about we meet in the middle",
+  "key_phrase_zh": "那我們折衷一下如何"
  },
  {
   "id": 299,
@@ -10441,29 +12248,40 @@
    {
     "speaker": "A",
     "en": "Who should we invite to your party?",
-    "zh": "你的派對要邀請誰來？"
+    "zh": "你的派對要邀請誰來？",
+    "voice": "female"
    },
    {
     "speaker": "B",
     "en": "I want to invite my whole class.",
-    "zh": "我想邀請全班同學。"
+    "zh": "我想邀請全班同學。",
+    "voice": "child"
    },
    {
     "speaker": "A",
     "en": "That's a lot of guests to plan for.",
-    "zh": "這樣要準備的東西不少呢。"
+    "zh": "這樣要準備的東西不少呢。",
+    "voice": "female"
    },
    {
     "speaker": "B",
     "en": "Can we get balloons and a chocolate cake?",
-    "zh": "可以買氣球跟巧克力蛋糕嗎？"
+    "zh": "可以買氣球跟巧克力蛋糕嗎？",
+    "voice": "child"
    },
    {
     "speaker": "A",
-    "en": "Of course, it will be a great party.",
-    "zh": "當然可以，一定會是很棒的派對。"
+    "en": "Of course. It's going to be a great party.",
+    "zh": "當然可以，一定會是很棒的派對。",
+    "voice": "female"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "I want to invite my whole class",
+  "key_phrase_zh": "我想邀請全班同學"
  },
  {
   "id": 300,
@@ -10476,7 +12294,7 @@
    {
     "speaker": "A",
     "en": "Should we make pancakes this morning?",
-    "zh": "今天早上我們煮鬆餅好嗎？"
+    "zh": "今天早上我們來煎鬆餅好嗎？"
    },
    {
     "speaker": "B",
@@ -10498,7 +12316,13 @@
     "en": "This is my favorite way to start Sunday.",
     "zh": "這是我最喜歡的星期天開場方式。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家人甲",
+   "B": "家人乙"
+  },
+  "key_phrase": "Can I help flip the pancakes",
+  "key_phrase_zh": "我可以幫忙翻鬆餅嗎"
  },
  {
   "id": 301,
@@ -10530,10 +12354,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, we'll take those.",
+    "en": "Great, we'll take those two.",
     "zh": "太好了，我們要這兩個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "售票員"
+  },
+  "key_phrase": "Somewhere in the middle, if possible",
+  "key_phrase_zh": "如果可以的話，中間的位子"
  },
  {
   "id": 302,
@@ -10545,13 +12375,13 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "How long has this line been moving?",
-    "zh": "這隊伍移動多久了？"
+    "en": "How long have you been waiting in line?",
+    "zh": "你排多久了？"
    },
    {
     "speaker": "B",
-    "en": "It's been pretty slow, honestly.",
-    "zh": "老實說滿慢的。"
+    "en": "About an hour. It's pretty slow, honestly.",
+    "zh": "大概一小時了，老實說滿慢的。"
    },
    {
     "speaker": "A",
@@ -10568,7 +12398,13 @@
     "en": "Let's grab one before they run out.",
     "zh": "我們趕快去搶一件吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "still have the medium shirts",
+  "key_phrase_zh": "還有中尺碼的衣服嗎"
  },
  {
   "id": 303,
@@ -10576,7 +12412,7 @@
   "title_en": "Booking a Karaoke Room",
   "title_zh": "預約KTV包廂",
   "scene_zh": "打電話到KTV預約包廂與確認時段",
-  "image_prompt_en": "Two chibi characters at a karaoke front desk, one holding a phone and pointing at a room availability board with colorful microphone icons.",
+  "image_prompt_en": "a chibi young adult at home talking on a smartphone to book a karaoke room, and a chibi KTV clerk answering the phone at a front desk, a private karaoke room with microphones and a big screen visible through a doorway [REGEN]",
   "lines": [
    {
     "speaker": "A",
@@ -10600,10 +12436,16 @@
    },
    {
     "speaker": "A",
-    "en": "Great, please put it under my name.",
-    "zh": "太好了，請用我的名字訂位。"
+    "en": "Great. It's under Lin.",
+    "zh": "太好了，登記姓林。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Around eight tonight, for three hours",
+  "key_phrase_zh": "今晚八點左右，唱三小時"
  },
  {
   "id": 304,
@@ -10635,45 +12477,57 @@
    },
    {
     "speaker": "A",
-    "en": "Sounds good, thanks for the tip.",
-    "zh": "聽起來不錯，謝謝你的建議。"
+    "en": "Sounds good. We'll take it slow.",
+    "zh": "好，我們慢慢走。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "登山客",
+   "B": "店員"
+  },
+  "key_phrase": "How long does it usually take",
+  "key_phrase_zh": "通常需要走多久"
  },
  {
   "id": 305,
   "category": "休閒運動",
-  "title_en": "Renting a Bike by the River",
-  "title_zh": "河邊租腳踏車",
-  "scene_zh": "在河濱公園租借點租借腳踏車",
-  "image_prompt_en": "Two chibi characters at a riverside bike rental stand, one handing over an ID card while the other picks out a bicycle from a row of parked bikes.",
+  "title_en": "Watching the Dragon Boat Races",
+  "title_zh": "端午節看划龍舟",
+  "scene_zh": "端午節和朋友在河岸看龍舟比賽。",
+  "image_prompt_en": "two chibi friends cheering on a riverbank while colorful dragon boats with drummers and paddlers race on the river, one friend holding a bag of rice dumplings wrapped in bamboo leaves",
   "lines": [
    {
     "speaker": "A",
-    "en": "How much is it to rent a bike for an hour?",
-    "zh": "租一台腳踏車一小時多少錢？"
+    "en": "Look, the dragon boats are starting!",
+    "zh": "你看，龍舟要開始了！"
    },
    {
     "speaker": "B",
-    "en": "It's one hundred dollars an hour.",
-    "zh": "一小時一百元。"
+    "en": "Wow! Why is someone beating a drum?",
+    "zh": "哇！為什麼有人在打鼓？"
    },
    {
     "speaker": "A",
-    "en": "Can I get one with a basket?",
-    "zh": "可以給我一台有籃子的嗎？"
+    "en": "The drummer keeps the paddlers in rhythm.",
+    "zh": "鼓手負責讓划手保持節奏。"
    },
    {
     "speaker": "B",
-    "en": "Sure, this one has a basket in front.",
-    "zh": "當然，這台前面就有籃子。"
+    "en": "The red team is so fast!",
+    "zh": "紅隊好快！"
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll take that one.",
-    "zh": "太棒了，我要這台。"
+    "en": "Let's grab some rice dumplings after the race.",
+    "zh": "比賽完我們去吃粽子吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "dragon boats are starting",
+  "key_phrase_zh": "龍舟要開始了"
  },
  {
   "id": 306,
@@ -10705,10 +12559,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thanks for letting me know.",
-    "zh": "了解了，謝謝你告訴我。"
+    "en": "Got it. I'll start in lane one.",
+    "zh": "了解，我先從第一水道開始。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "泳客",
+   "B": "救生員"
+  },
+  "key_phrase": "Lane one is for beginners",
+  "key_phrase_zh": "第一水道是給初學者的"
  },
  {
   "id": 307,
@@ -10730,8 +12590,8 @@
    },
    {
     "speaker": "A",
-    "en": "What's the score limit?",
-    "zh": "打到幾分結束？"
+    "en": "What are we playing to?",
+    "zh": "打到幾分？"
    },
    {
     "speaker": "B",
@@ -10743,7 +12603,13 @@
     "en": "Cool, let's get started.",
     "zh": "好的，我們開始吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "球員甲",
+   "B": "球員乙"
+  },
+  "key_phrase": "First team to eleven wins",
+  "key_phrase_zh": "先到十一分的隊伍獲勝"
  },
  {
   "id": 308,
@@ -10778,7 +12644,13 @@
     "en": "Thanks, see you at the next run.",
     "zh": "謝謝，下次跑步見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "社團負責人"
+  },
+  "key_phrase": "Is this the running club meetup",
+  "key_phrase_zh": "這裡是跑步社團的集合點嗎"
  },
  {
   "id": 309,
@@ -10811,10 +12683,16 @@
    },
    {
     "speaker": "A",
-    "en": "It's under Chen, thanks.",
-    "zh": "姓陳，謝謝。"
+    "en": "It's Chen. C-H-E-N.",
+    "zh": "姓陳，C-H-E-N。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "場地管理員"
+  },
+  "key_phrase": "I'll book that slot, please",
+  "key_phrase_zh": "請幫我預約那個時段"
  },
  {
   "id": 310,
@@ -10849,7 +12727,13 @@
     "en": "Great, let's meet there at eight.",
     "zh": "太好了，我們八點那邊見。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Sounds fun, where should we go",
+  "key_phrase_zh": "聽起來不錯，要去哪裡"
  },
  {
   "id": 311,
@@ -10871,12 +12755,12 @@
    },
    {
     "speaker": "A",
-    "en": "How long does a round usually take?",
+    "en": "How long does a game usually take?",
     "zh": "一局通常要多久？"
    },
    {
     "speaker": "B",
-    "en": "About thirty minutes per round.",
+    "en": "About thirty minutes a game.",
     "zh": "一局大概三十分鐘。"
    },
    {
@@ -10884,7 +12768,13 @@
     "en": "Let's give it a try.",
     "zh": "我們來試試看吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Let's give it a try",
+  "key_phrase_zh": "我們來試試看吧"
  },
  {
   "id": 312,
@@ -10916,10 +12806,16 @@
    },
    {
     "speaker": "A",
-    "en": "Mind if I try a round?",
-    "zh": "我可以試玩一局嗎？"
+    "en": "Cool, I'll try it at your place this weekend.",
+    "zh": "酷，這週末我去你家玩玩看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "What have you been playing lately",
+  "key_phrase_zh": "你最近都在玩什麼遊戲"
  },
  {
   "id": 313,
@@ -10951,10 +12847,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thanks, that one looks great.",
-    "zh": "謝謝，這張拍得很好。"
+    "en": "Nice, that one's going on my Instagram.",
+    "zh": "讚，這張要放上我的IG。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's walk toward the bridge",
+  "key_phrase_zh": "我們往橋那邊走吧"
  },
  {
   "id": 314,
@@ -10989,7 +12891,13 @@
     "en": "This is going to be a great afternoon.",
     "zh": "這個下午一定會很棒。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "I made lemonade for everyone",
+  "key_phrase_zh": "我準備了檸檬水給大家喝"
  },
  {
   "id": 315,
@@ -11024,7 +12932,13 @@
     "en": "Let's order some snacks too.",
     "zh": "我們也點點小吃吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's order some snacks too",
+  "key_phrase_zh": "我們也點點小吃吧"
  },
  {
   "id": 316,
@@ -11059,42 +12973,54 @@
     "en": "They fit perfectly, thank you.",
     "zh": "完全合腳，謝謝你。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "I need to rent skis and boots",
+  "key_phrase_zh": "我需要租滑雪板和雪靴"
  },
  {
   "id": 317,
   "category": "休閒運動",
   "title_en": "A Surfing Lesson",
   "title_zh": "衝浪課程",
-  "scene_zh": "初學者在海邊上第一堂衝浪課",
-  "image_prompt_en": "Two chibi characters on a sandy beach with surfboards, one demonstrating how to stand while the other practices on the board.",
+  "scene_zh": "教練在海邊替初學者上第一堂衝浪課。",
+  "image_prompt_en": "a chibi surf instructor in a full wetsuit showing a chibi adult beginner in a long-sleeve rash guard and board shorts how to push up on a surfboard lying on the sand, gentle waves behind, adult proportions [REGEN]",
   "lines": [
    {
     "speaker": "A",
-    "en": "Is this my first time on a board?",
-    "zh": "這是我第一次站上衝浪板嗎？"
+    "en": "Is this your first time on a board?",
+    "zh": "這是你第一次站上衝浪板嗎？"
    },
    {
     "speaker": "B",
-    "en": "Yes, let's start with balance practice.",
-    "zh": "是的，我們先練習平衡。"
+    "en": "Yes, I've never surfed before.",
+    "zh": "對，我從來沒衝過浪。"
    },
    {
     "speaker": "A",
+    "en": "Okay, let's start with balance practice on the sand.",
+    "zh": "好，我們先在沙灘上練平衡。"
+   },
+   {
+    "speaker": "B",
     "en": "How do I stand up correctly?",
     "zh": "我要怎麼正確地站起來？"
    },
    {
-    "speaker": "B",
-    "en": "Push up with your arms first.",
-    "zh": "先用手臂撐起來。"
-   },
-   {
     "speaker": "A",
-    "en": "Okay, I think I got it.",
-    "zh": "好的，我覺得我學會了。"
+    "en": "Push up with your arms first, then jump to your feet.",
+    "zh": "先用手臂撐起來，再跳起來站好。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "教練",
+   "B": "學員"
+  },
+  "key_phrase": "start with balance practice on the sand",
+  "key_phrase_zh": "我們先在沙灘上練習平衡"
  },
  {
   "id": 318,
@@ -11129,7 +13055,13 @@
     "en": "We only have five minutes left.",
     "zh": "我們只剩五分鐘了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "What does this clue mean",
+  "key_phrase_zh": "這個線索是什麼意思"
  },
  {
   "id": 319,
@@ -11156,50 +13088,62 @@
    },
    {
     "speaker": "B",
-    "en": "Here's your device and headphones.",
-    "zh": "這是您的導覽機和耳機。"
+    "en": "Here's your device. Start on the second floor.",
+    "zh": "這是您的導覽機，建議從二樓開始。"
    },
    {
     "speaker": "A",
-    "en": "Thanks, where should I start?",
-    "zh": "謝謝，我應該從哪裡開始看？"
+    "en": "Great, I'll head upstairs now.",
+    "zh": "好，那我現在上樓。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "遊客",
+   "B": "服務人員"
+  },
+  "key_phrase": "Can I rent an audio guide here",
+  "key_phrase_zh": "我可以在這裡租語音導覽嗎"
  },
  {
   "id": 320,
   "category": "休閒運動",
-  "title_en": "Getting a Bookstore Recommendation",
-  "title_zh": "書店挑書推薦",
-  "scene_zh": "在獨立書店向店員詢問小說推薦",
-  "image_prompt_en": "Two chibi characters in a cozy bookstore, one browsing a shelf of novels while the other holds up a book to recommend.",
+  "title_en": "Asking the Dance Teacher to Slow Down",
+  "title_zh": "請舞蹈老師放慢示範",
+  "scene_zh": "第一次上街舞課跟不上動作，請老師放慢示範並問單字意思。",
+  "image_prompt_en": "a chibi dance teacher demonstrating a turn in a mirrored dance studio while a chibi beginner raises a hand with a confused smile, water bottles along the wall",
   "lines": [
    {
     "speaker": "A",
-    "en": "Can you recommend a good mystery novel?",
-    "zh": "可以推薦一本好看的推理小說嗎？"
+    "en": "Step left, turn, clap, and spin!",
+    "zh": "左踏、轉身、拍手，再旋轉！"
    },
    {
     "speaker": "B",
-    "en": "This one just won an award.",
-    "zh": "這本剛得了一個獎。"
+    "en": "Sorry, could you show that more slowly?",
+    "zh": "不好意思，可以再慢一點示範嗎？"
    },
    {
     "speaker": "A",
-    "en": "What's it about?",
-    "zh": "這本書是在講什麼？"
+    "en": "Sure. First, step left. Then turn.",
+    "zh": "當然，先往左踏，再轉身。"
    },
    {
     "speaker": "B",
-    "en": "It's about a detective in a small town.",
-    "zh": "是講一位小鎮偵探的故事。"
+    "en": "What does \"spin\" mean exactly?",
+    "zh": "「spin」到底是什麼意思？"
    },
    {
     "speaker": "A",
-    "en": "That sounds interesting, I'll take it.",
-    "zh": "聽起來很有趣，我要買這本。"
+    "en": "It means turn all the way around, like this.",
+    "zh": "就是像這樣整個轉一圈。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "舞蹈老師",
+   "B": "學員"
+  },
+  "key_phrase": "It means turn all the way around",
+  "key_phrase_zh": "意思是要整個轉一圈"
  },
  {
   "id": 321,
@@ -11234,7 +13178,13 @@
     "en": "Got it, we're ready to go.",
     "zh": "了解，我們準備好了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do we need life jackets",
+  "key_phrase_zh": "我們需要穿救生衣嗎"
  },
  {
   "id": 322,
@@ -11269,7 +13219,13 @@
     "en": "Great, I'll sign up now.",
     "zh": "太好了，我現在就報名。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學員",
+   "B": "教練"
+  },
+  "key_phrase": "Great, I'll sign up now",
+  "key_phrase_zh": "太好了，我現在就報名"
  },
  {
   "id": 323,
@@ -11304,7 +13260,13 @@
     "en": "Let's take a short break.",
     "zh": "我們先休息一下吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's take a short break",
+  "key_phrase_zh": "我們先休息一下吧"
  },
  {
   "id": 324,
@@ -11339,42 +13301,54 @@
     "en": "Okay, I'll give it a try.",
     "zh": "好的，我來試試看。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "攀岩館員工"
+  },
+  "key_phrase": "Which route is good for beginners",
+  "key_phrase_zh": "哪一條路線適合初學者"
  },
  {
   "id": 325,
   "category": "休閒運動",
-  "title_en": "Ordering at a Bubble Tea Shop",
-  "title_zh": "手搖飲店點餐",
-  "scene_zh": "和朋友在手搖飲店排隊點珍珠奶茶",
-  "image_prompt_en": "Two chibi characters standing at a bubble tea counter, one pointing at a drink menu board while the other holds two cups with straws.",
+  "title_en": "Showing a Visitor Around Elephant Mountain",
+  "title_zh": "帶外國朋友爬象山",
+  "scene_zh": "帶來台灣玩的外國朋友爬象山，順便介紹台北夜景。",
+  "image_prompt_en": "a chibi local guide pointing at the Taipei skyline with one very tall skyscraper from a mountain trail with stone steps, a chibi foreign visitor with a camera beside them, warm sunset sky",
   "lines": [
    {
     "speaker": "A",
-    "en": "What size should we get?",
-    "zh": "我們要點哪個尺寸？"
+    "en": "This is Elephant Mountain. The view is worth it.",
+    "zh": "這是象山，上面的景色很值得。"
    },
    {
     "speaker": "B",
-    "en": "Large, with less ice please.",
-    "zh": "大杯，少冰。"
+    "en": "How long does it take to get to the top?",
+    "zh": "爬到山頂要多久？"
    },
    {
     "speaker": "A",
-    "en": "Do you want extra boba?",
-    "zh": "你要加珍珠嗎？"
+    "en": "About twenty minutes, but the stairs are steep.",
+    "zh": "大概二十分鐘，不過樓梯很陡。"
    },
    {
     "speaker": "B",
-    "en": "Yes, and less sugar too.",
-    "zh": "要，也要少糖。"
+    "en": "No problem. Is that Taipei one-oh-one over there?",
+    "zh": "沒問題，那邊那個是台北101嗎？"
    },
    {
     "speaker": "A",
-    "en": "Sounds good, I'll order that.",
-    "zh": "聽起來不錯，我去點這個。"
+    "en": "Yes! It looks amazing at sunset.",
+    "zh": "對！夕陽的時候超美。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "This is Elephant Mountain",
+  "key_phrase_zh": "這是象山"
  },
  {
   "id": 326,
@@ -11409,7 +13383,13 @@
     "en": "I can't wait to see them.",
     "zh": "我等不及要看煙火了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "What time do the fireworks start",
+  "key_phrase_zh": "煙火幾點開始"
  },
  {
   "id": 327,
@@ -11444,7 +13424,13 @@
     "en": "Great, I'll take both.",
     "zh": "太好了，兩樣我都要。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "Do you have tents for four people",
+  "key_phrase_zh": "你們有四人帳篷嗎"
  },
  {
   "id": 328,
@@ -11479,7 +13465,13 @@
     "en": "Alright, let's have some fun.",
     "zh": "好，我們來玩吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Let's warm up on flat ground first",
+  "key_phrase_zh": "我們先在平地熱身吧"
  },
  {
   "id": 329,
@@ -11514,7 +13506,13 @@
     "en": "Good game, let's play again.",
     "zh": "打得不錯，再來一場吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Can we borrow two paddles",
+  "key_phrase_zh": "我們可以借兩支球拍嗎"
  },
  {
   "id": 330,
@@ -11549,25 +13547,31 @@
     "en": "I've always wanted to try that.",
     "zh": "我一直很想試試看做這個。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "學員",
+   "B": "老師"
+  },
+  "key_phrase": "I've always wanted to try that",
+  "key_phrase_zh": "我一直很想試試看做這個"
  },
  {
   "id": 331,
   "category": "緊急與服務",
   "title_en": "Calling 911",
   "title_zh": "打電話報案車禍",
-  "scene_zh": "路人目擊小車禍，打電話請求緊急協助。",
-  "image_prompt_en": "A chibi character kneels beside a small dented toy car on a street corner, holding a phone to call for help, while another chibi bystander points at the scene with a worried expression.",
+  "scene_zh": "在美國旅遊時目擊小車禍，打 911 請求緊急協助（台灣報案打 110、救護火警打 119）。",
+  "image_prompt_en": "a chibi adult pedestrian calling on a phone at a real city intersection in the United States, two full-size cars with a minor fender-bender and a dented bumper, traffic lights and a street sign without readable text [REGEN]",
   "lines": [
    {
     "speaker": "A",
-    "en": "911, what's your emergency?",
-    "zh": "911，請問有什麼緊急狀況？"
+    "en": "Nine-one-one, what's your emergency?",
+    "zh": "九一一，請問有什麼緊急狀況？"
    },
    {
     "speaker": "B",
     "en": "There's been a car accident on Main Street.",
-    "zh": "緬因街這邊發生車禍了。"
+    "zh": "主街這邊發生車禍了。"
    },
    {
     "speaker": "A",
@@ -11584,7 +13588,13 @@
     "en": "Okay, help is on the way.",
     "zh": "好的，救援馬上就到。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "接線人員",
+   "B": "民眾"
+  },
+  "key_phrase": "car accident on Main Street",
+  "key_phrase_zh": "大馬路上發生車禍"
  },
  {
   "id": 332,
@@ -11619,7 +13629,13 @@
     "en": "My ID, a credit card, and some cash.",
     "zh": "身分證、一張信用卡，還有一些現金。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "警察"
+  },
+  "key_phrase": "I'd like to report a lost wallet",
+  "key_phrase_zh": "我想要報案，我的皮夾不見了"
  },
  {
   "id": 333,
@@ -11654,7 +13670,13 @@
     "en": "Good idea, everyone meet at the parking lot.",
     "zh": "好主意，大家在停車場集合。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "管理員"
+  },
+  "key_phrase": "Let's take the stairs, not the elevator",
+  "key_phrase_zh": "我們走樓梯，不要搭電梯"
  },
  {
   "id": 334,
@@ -11689,7 +13711,13 @@
     "en": "Thanks for being so understanding.",
     "zh": "謝謝你這麼通情達理。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛甲",
+   "B": "駕駛乙"
+  },
+  "key_phrase": "Can we exchange insurance information",
+  "key_phrase_zh": "我們可以交換一下保險資料嗎"
  },
  {
   "id": 335,
@@ -11724,7 +13752,13 @@
     "en": "Thank you so much, I really appreciate it.",
     "zh": "太謝謝你了，真的很感激。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "救援人員"
+  },
+  "key_phrase": "My tire just went flat",
+  "key_phrase_zh": "我的輪胎剛剛爆了"
  },
  {
   "id": 336,
@@ -11759,7 +13793,13 @@
     "en": "Thank you, I really owe you one.",
     "zh": "謝謝你，這次真的欠你一次。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "鎖匠"
+  },
+  "key_phrase": "Do you have any form of identification",
+  "key_phrase_zh": "你有帶身分證明嗎"
  },
  {
   "id": 337,
@@ -11781,20 +13821,26 @@
    },
    {
     "speaker": "A",
-    "en": "It's 12 Elm Street, near the corner store.",
-    "zh": "榆樹街12號，靠近轉角商店那邊。"
+    "en": "It's twelve Elm Street, near the corner store.",
+    "zh": "榆樹街 12 號，靠近轉角商店那邊。"
    },
    {
     "speaker": "B",
-    "en": "We're already aware and crews are on the way.",
-    "zh": "我們已經知道了，搶修人員正在趕過去。"
+    "en": "We're aware. Power should be back in about two hours.",
+    "zh": "我們已經知道了，大約兩小時後會恢復供電。"
    },
    {
     "speaker": "A",
-    "en": "Do you know when the power will be back?",
-    "zh": "你知道大概什麼時候會來電嗎？"
+    "en": "Okay, I'll keep my fridge closed until then.",
+    "zh": "好，那我在這之前先不開冰箱。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "客服人員"
+  },
+  "key_phrase": "Can I have your address, please",
+  "key_phrase_zh": "可以請問您的地址嗎"
  },
  {
   "id": 338,
@@ -11829,7 +13875,13 @@
     "en": "That works for me, I'll come back later.",
     "zh": "可以，我等等再過來拿。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "維修人員"
+  },
+  "key_phrase": "Let me take a look at it",
+  "key_phrase_zh": "我看一下狀況"
  },
  {
   "id": 339,
@@ -11851,8 +13903,8 @@
    },
    {
     "speaker": "A",
-    "en": "It's under Chen, ticket number 45.",
-    "zh": "姓陳，取件單號是45號。"
+    "en": "It's under Chen, ticket number forty-five.",
+    "zh": "姓陳，取件單號是 45 號。"
    },
    {
     "speaker": "B",
@@ -11861,10 +13913,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, thank you for the quick service.",
-    "zh": "太好了，謝謝你們這麼快就處理好。"
+    "en": "Great, it looks brand new.",
+    "zh": "太好了，看起來跟新的一樣。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "I'm here to pick up my dry cleaning",
+  "key_phrase_zh": "我來拿送洗的衣服"
  },
  {
   "id": 340,
@@ -11899,7 +13957,13 @@
     "en": "Great, let's get started.",
     "zh": "好的，那我們開始吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "美髮師"
+  },
+  "key_phrase": "Would you like the sides shorter too",
+  "key_phrase_zh": "兩側也要剪短一點嗎"
  },
  {
   "id": 341,
@@ -11921,8 +13985,8 @@
    },
    {
     "speaker": "A",
-    "en": "Would you like a manicure and pedicure both?",
-    "zh": "要一起做手部和腳部保養嗎？"
+    "en": "Would you like a manicure and a pedicure?",
+    "zh": "要做手部和腳部保養嗎？"
    },
    {
     "speaker": "B",
@@ -11934,7 +13998,13 @@
     "en": "Sounds good, please sit back and relax.",
     "zh": "沒問題，請坐好放輕鬆。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "美甲師"
+  },
+  "key_phrase": "Just the manicure today, please",
+  "key_phrase_zh": "今天只要做手部就好"
  },
  {
   "id": 342,
@@ -11966,10 +14036,16 @@
    },
    {
     "speaker": "A",
-    "en": "That's perfect, thank you for your help.",
-    "zh": "太好了，謝謝你的幫忙。"
+    "en": "Great, I'll come by Thursday afternoon.",
+    "zh": "好，我週四下午來拿。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "裁縫師"
+  },
+  "key_phrase": "Can you hem these pants for me",
+  "key_phrase_zh": "可以幫我改褲長嗎"
  },
  {
   "id": 343,
@@ -12004,7 +14080,13 @@
     "en": "Great, I'll pick it up on Friday.",
     "zh": "太好了，我週五來拿。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "修鞋師傅"
+  },
+  "key_phrase": "How much will it cost",
+  "key_phrase_zh": "修理大概要多少錢"
  },
  {
   "id": 344,
@@ -12036,10 +14118,16 @@
    },
    {
     "speaker": "A",
-    "en": "Perfect, I'll wait right here.",
-    "zh": "太好了，我就在這裡等。"
+    "en": "Great, I'll look around while I wait.",
+    "zh": "好，我等的時候逛一下。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "五金行老闆"
+  },
+  "key_phrase": "make a copy of this key",
+  "key_phrase_zh": "可以幫我複製這把鑰匙嗎"
  },
  {
   "id": 345,
@@ -12074,7 +14162,13 @@
     "en": "Thanks, I'll be right over there.",
     "zh": "謝謝，我就在那邊等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "洗車員"
+  },
+  "key_phrase": "Can I wait in the lobby",
+  "key_phrase_zh": "我可以在休息區等嗎"
  },
  {
   "id": 346,
@@ -12109,7 +14203,13 @@
     "en": "Thank you, I'll use a different machine.",
     "zh": "謝謝，我改用別台機器。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "店員"
+  },
+  "key_phrase": "It's machine number four, over there",
+  "key_phrase_zh": "是四號機，在那邊"
  },
  {
   "id": 347,
@@ -12144,11 +14244,17 @@
     "en": "Yes, and the internet is working again.",
     "zh": "是的，網路又可以用了。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "客服人員"
+  },
+  "key_phrase": "Let's try restarting your router first",
+  "key_phrase_zh": "我們先試著重開路由器"
  },
  {
   "id": 348,
-  "category": "緊急與服務",
+  "category": "交通",
   "title_en": "Returning Rental Car",
   "title_zh": "歸還租車",
   "scene_zh": "把租來的車子開回還車，跟櫃檯人員確認狀況。",
@@ -12176,15 +14282,21 @@
    },
    {
     "speaker": "A",
-    "en": "Great, thanks for the smooth service.",
-    "zh": "太好了，謝謝你們的服務。"
+    "en": "Great, thanks. That was easy.",
+    "zh": "太好了，謝謝，好簡單。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "租車行員工"
+  },
+  "key_phrase": "Everything looks good, no extra charges",
+  "key_phrase_zh": "一切都沒問題，不用另外收費"
  },
  {
   "id": 349,
   "category": "緊急與服務",
-  "title_en": "Asking Security Guard",
+  "title_en": "Asking a Security Guard",
   "title_zh": "向警衛問路",
   "scene_zh": "在大樓大廳向警衛詢問某間辦公室的位置。",
   "image_prompt_en": "A chibi character stands in a lobby asking a chibi security guard at a desk for directions, while the guard points down a hallway.",
@@ -12211,10 +14323,16 @@
    },
    {
     "speaker": "A",
-    "en": "Got it, thank you for your help.",
-    "zh": "了解，謝謝你的幫忙。"
+    "en": "Got it. I'll sign in now.",
+    "zh": "了解，我現在簽。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "警衛"
+  },
+  "key_phrase": "Excuse me, where's the fifth floor office",
+  "key_phrase_zh": "不好意思，請問五樓辦公室在哪裡"
  },
  {
   "id": 350,
@@ -12236,20 +14354,26 @@
    },
    {
     "speaker": "A",
-    "en": "There's something important inside I need.",
-    "zh": "裡面有我需要的重要物品。"
+    "en": "I have something important in there that I need.",
+    "zh": "裡面有我需要的重要東西。"
    },
    {
     "speaker": "B",
-    "en": "Our staff member has the master code.",
-    "zh": "我們的工作人員有主控密碼。"
+    "en": "They'll have the master code to open it.",
+    "zh": "他們有萬用密碼可以打開。"
    },
    {
     "speaker": "A",
-    "en": "Thank you, I'll wait in my room.",
-    "zh": "謝謝，我在房間裡等。"
+    "en": "Okay, I'll wait in my room.",
+    "zh": "好，我在房間等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "櫃檯人員"
+  },
+  "key_phrase": "safe in my room won't open",
+  "key_phrase_zh": "我房間裡的保險箱打不開"
  },
  {
   "id": 351,
@@ -12284,7 +14408,13 @@
     "en": "Good thinking, let's check it together.",
     "zh": "好主意，我們一起去檢查。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "Good thinking, let's check it together",
+  "key_phrase_zh": "好主意，我們一起去檢查"
  },
  {
   "id": 352,
@@ -12311,7 +14441,7 @@
    },
    {
     "speaker": "B",
-    "en": "We should also bring in the plants outside.",
+    "en": "We should also bring the plants inside.",
     "zh": "外面的盆栽也該搬進來。"
    },
    {
@@ -12319,7 +14449,13 @@
     "en": "Sounds like a plan, let's get ready.",
     "zh": "聽起來不錯，我們準備一下吧。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "朋友甲",
+   "B": "朋友乙"
+  },
+  "key_phrase": "School's closed tomorrow because of the typhoon",
+  "key_phrase_zh": "明天因為颱風停課了"
  },
  {
   "id": 353,
@@ -12347,14 +14483,20 @@
    {
     "speaker": "B",
     "en": "They should, it's a full-service pharmacy.",
-    "zh": "應該有，那是一家完整服務的藥局。"
+    "zh": "應該有，那是大型藥局，品項很齊全。"
    },
    {
     "speaker": "A",
     "en": "Great, I'll head over there now.",
     "zh": "太好了，我現在就過去。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "藥師"
+  },
+  "key_phrase": "Is there a pharmacy open this late",
+  "key_phrase_zh": "這麼晚了還有藥局在開嗎"
  },
  {
   "id": 354,
@@ -12389,7 +14531,13 @@
     "en": "I'll stay with her until you find her mom.",
     "zh": "我會陪她到找到媽媽為止。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "家長",
+   "B": "保全人員"
+  },
+  "key_phrase": "We'll announce it over the speakers now",
+  "key_phrase_zh": "我們現在馬上用廣播尋人"
  },
  {
   "id": 355,
@@ -12406,8 +14554,8 @@
    },
    {
     "speaker": "B",
-    "en": "No problem, let me call a translator.",
-    "zh": "沒關係，我幫你找一位翻譯。"
+    "en": "No problem. Let me call an interpreter.",
+    "zh": "沒關係，我幫你找一位口譯員。"
    },
    {
     "speaker": "A",
@@ -12416,15 +14564,21 @@
    },
    {
     "speaker": "B",
-    "en": "The translator will join us in a few minutes.",
-    "zh": "翻譯幾分鐘後就會加入我們。"
+    "en": "The interpreter will be here in a few minutes.",
+    "zh": "口譯員幾分鐘後就會到。"
    },
    {
     "speaker": "A",
     "en": "I really appreciate your patience.",
     "zh": "真的很感謝你的耐心。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "病人",
+   "B": "診所人員"
+  },
+  "key_phrase": "I really appreciate your patience",
+  "key_phrase_zh": "真的很感謝你的耐心"
  },
  {
   "id": 356,
@@ -12441,25 +14595,31 @@
    },
    {
     "speaker": "B",
-    "en": "I'll call the maintenance team right away.",
-    "zh": "我馬上打電話叫維修人員來。"
+    "en": "Is anyone trapped inside?",
+    "zh": "有人被困在裡面嗎？"
    },
    {
     "speaker": "A",
-    "en": "Is anyone trapped inside right now?",
-    "zh": "現在有人被困在裡面嗎？"
+    "en": "No, it's empty. It's stuck between floors.",
+    "zh": "沒有，裡面沒人，卡在兩層樓中間。"
    },
    {
     "speaker": "B",
-    "en": "No, it's just stuck between floors, empty.",
-    "zh": "沒有，只是卡在樓層之間，裡面是空的。"
+    "en": "Okay, I'll call the maintenance team right away.",
+    "zh": "好，我馬上叫維修人員來。"
    },
    {
     "speaker": "A",
-    "en": "Good, please use the stairs for now.",
-    "zh": "那就好，請大家先走樓梯。"
+    "en": "Thanks. I'll tell everyone to use the stairs.",
+    "zh": "謝謝，我會請大家先走樓梯。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "管理員"
+  },
+  "key_phrase": "The elevator seems to be stuck",
+  "key_phrase_zh": "電梯好像卡住了"
  },
  {
   "id": 357,
@@ -12476,25 +14636,31 @@
    },
    {
     "speaker": "B",
-    "en": "Please leave the windows open and step outside.",
-    "zh": "請把窗戶打開然後到外面去。"
+    "en": "Don't touch any switches. Open the windows and go outside.",
+    "zh": "不要碰任何開關，打開窗戶，然後到外面去。"
    },
    {
     "speaker": "A",
-    "en": "Okay, I'm outside now, what should I do?",
+    "en": "Okay, I'm outside now. What should I do next?",
     "zh": "好，我已經到外面了，接下來呢？"
    },
    {
     "speaker": "B",
-    "en": "A technician is on the way to check it.",
-    "zh": "技師正在趕過去檢查。"
+    "en": "Stay outside. A technician is on the way.",
+    "zh": "待在外面，技師正在趕過去。"
    },
    {
     "speaker": "A",
-    "en": "Thank you, I'll wait out here.",
-    "zh": "謝謝，我在這裡等。"
+    "en": "Got it. I'll wait out here until they arrive.",
+    "zh": "了解，我會在外面等到他們來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "管理員"
+  },
+  "key_phrase": "I smell gas in my kitchen",
+  "key_phrase_zh": "我在廚房聞到瓦斯味"
  },
  {
   "id": 358,
@@ -12529,7 +14695,13 @@
     "en": "Thank you, I appreciate the quick help.",
     "zh": "謝謝你，這樣處理得很快。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "警察"
+  },
+  "key_phrase": "When was it delivered",
+  "key_phrase_zh": "什麼時候送達的"
  },
  {
   "id": 359,
@@ -12551,8 +14723,8 @@
    },
    {
     "speaker": "A",
-    "en": "It's a blue mountain bike, brand new.",
-    "zh": "是藍色的登山車，全新的。"
+    "en": "It's a blue Giant mountain bike. It's brand new.",
+    "zh": "是藍色的捷安特登山車，全新的。"
    },
    {
     "speaker": "B",
@@ -12564,7 +14736,13 @@
     "en": "Thank you, I hope you can find it.",
     "zh": "謝謝你，希望能找回來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "警察"
+  },
+  "key_phrase": "Do you remember the color and brand",
+  "key_phrase_zh": "你記得顏色和牌子嗎"
  },
  {
   "id": 360,
@@ -12599,7 +14777,13 @@
     "en": "Thank you, I've put a bucket underneath for now.",
     "zh": "謝謝，我先放了一個桶子在下面接水。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "住戶",
+   "B": "管理員"
+  },
+  "key_phrase": "How long has it been dripping",
+  "key_phrase_zh": "已經漏多久了"
  },
  {
   "id": 361,
@@ -12631,10 +14815,16 @@
    },
    {
     "speaker": "A",
-    "en": "Thank you, I'll be waiting by the car.",
-    "zh": "謝謝你，我在車子旁邊等。"
+    "en": "Great. I'll be waiting by the car.",
+    "zh": "太好了，我在車子旁邊等。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "駕駛",
+   "B": "道路救援員"
+  },
+  "key_phrase": "Where are you parked right now",
+  "key_phrase_zh": "你現在停在哪裡"
  },
  {
   "id": 362,
@@ -12652,7 +14842,7 @@
    {
     "speaker": "B",
     "en": "I'm sorry to hear that, what's the noise?",
-    "zh": "很抱歉聽到這個，是什麼樣的噪音？"
+    "zh": "真是辛苦你了，是什麼聲音？"
    },
    {
     "speaker": "A",
@@ -12669,7 +14859,13 @@
     "en": "Thank you, I hope it stops soon.",
     "zh": "謝謝你，希望能盡快安靜下來。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "房客",
+   "B": "房東"
+  },
+  "key_phrase": "Loud music, and it's already past midnight",
+  "key_phrase_zh": "很大聲的音樂，現在已經過午夜了"
  },
  {
   "id": 363,
@@ -12681,30 +14877,36 @@
   "lines": [
    {
     "speaker": "A",
-    "en": "Hi, there is no water in my apartment.",
-    "zh": "你好，我家公寓沒有水。"
+    "en": "Hi, there's no water in my apartment.",
+    "zh": "你好，我家沒有水。"
    },
    {
     "speaker": "B",
-    "en": "I am sorry. What is your address?",
+    "en": "I'm sorry. What's your address?",
     "zh": "不好意思，請問您的地址是？"
    },
    {
     "speaker": "A",
-    "en": "It is 12 Maple Street, apartment 3B.",
+    "en": "It's twelve Maple Street, apartment three-B.",
     "zh": "楓葉街 12 號，3B 室。"
    },
    {
     "speaker": "B",
-    "en": "There is repair work nearby until about six.",
-    "zh": "附近有維修工程，大約到六點。"
+    "en": "There's some repair work nearby. It should be back on around six.",
+    "zh": "附近在施工維修，大約六點會恢復供水。"
    },
    {
     "speaker": "A",
-    "en": "Okay, thanks for letting me know.",
-    "zh": "好的，謝謝你告訴我。"
+    "en": "Okay, I'll buy some bottled water for now.",
+    "zh": "好，那我先去買些瓶裝水。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "民眾",
+   "B": "客服人員"
+  },
+  "key_phrase": "no water in my apartment",
+  "key_phrase_zh": "我家沒有水"
  },
  {
   "id": 364,
@@ -12739,7 +14941,13 @@
     "en": "Okay, thank you for helping me look.",
     "zh": "好的，謝謝你陪我一起找。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "旅客",
+   "B": "地勤人員"
+  },
+  "key_phrase": "I can't find my passport anywhere",
+  "key_phrase_zh": "我到處都找不到我的護照"
  },
  {
   "id": 365,
@@ -12747,12 +14955,12 @@
   "title_en": "Restaurant Lost and Found",
   "title_zh": "餐廳失物招領",
   "scene_zh": "把雨傘忘在餐廳，打電話詢問失物招領。",
-  "image_prompt_en": "A chibi character stands at a restaurant host stand asking about a forgotten umbrella, while a chibi restaurant staff member checks a lost and found box.",
+  "image_prompt_en": "a chibi diner at home by a rainy window calling on a smartphone, and a chibi restaurant staff member on the phone holding up a black umbrella taken from a lost-and-found box [REGEN]",
   "lines": [
    {
     "speaker": "A",
-    "en": "I think I left my umbrella there last night.",
-    "zh": "我昨晚可能把雨傘忘在你們那裡了。"
+    "en": "I think I left my umbrella at your restaurant last night.",
+    "zh": "我昨晚好像把雨傘忘在你們餐廳了。"
    },
    {
     "speaker": "B",
@@ -12766,14 +14974,20 @@
    },
    {
     "speaker": "B",
-    "en": "Let me check our lost and found box.",
-    "zh": "我去我們的失物招領箱看看。"
+    "en": "Let me check… Yes, there's a black one here.",
+    "zh": "我看一下……有，這裡有一把黑色的。"
    },
    {
     "speaker": "A",
-    "en": "Found it, thank you so much for checking.",
-    "zh": "找到了，真的很謝謝你幫忙查看。"
+    "en": "That's it! Thank you so much for checking.",
+    "zh": "就是那把！真的很謝謝你幫我找。"
    }
-  ]
+  ],
+  "roles": {
+   "A": "顧客",
+   "B": "餐廳人員"
+  },
+  "key_phrase": "left my umbrella at your restaurant",
+  "key_phrase_zh": "我把雨傘忘在你們餐廳了"
  }
 ]
