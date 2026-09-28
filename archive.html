@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全部情境 — 英語日日聽</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>英語<span>日日</span>聽</h1>
+    <nav><a href="./">回今天</a></nav>
+  </header>
+  <p class="hint">365 個情境依主題分組，點任一個即可練習。紅框＝已完成過的日期對應情境。</p>
+  <div id="groups"></div>
+</div>
+<script type="module">
+import { todayIndex } from './js/day.js';
+const scenes = await (await fetch('data/scenes.json')).json();
+const today = todayIndex();
+const groups = new Map();
+for (const x of scenes) { if (!groups.has(x.category)) groups.set(x.category, []); groups.get(x.category).push(x); }
+const root = document.getElementById('groups');
+for (const [cat, list] of groups) {
+  const g = document.createElement('section'); g.className = 'group';
+  g.innerHTML = `<h3>${cat}（${list.length}）</h3><div class="grid"></div>`;
+  const grid = g.querySelector('.grid');
+  for (const x of list) {
+    const a = document.createElement('a'); a.href = `./?d=${x.id}`;
+    a.className = x.id === today ? 'today' : '';
+    a.innerHTML = `<small>第 ${x.id} 天</small>`;
+    a.append(x.title_zh);
+    grid.appendChild(a);
+  }
+  root.appendChild(g);
+}
+</script>
+<script src="js/vendor/gc-config.js"></script>
+<script async src="js/vendor/count.js"></script>
+</body>
+</html>

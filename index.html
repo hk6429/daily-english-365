@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英語日日聽 — 每天 5 句生活英語</title>
+<meta name="description" content="每天一個生活情境、5 句實用英語對話，先聽、再看英文、再看中譯。365 個情境配潑墨 Q 版插畫與真人感語音。">
+<meta property="og:title" content="英語日日聽 — 每天 5 句生活英語">
+<meta property="og:description" content="365 個生活情境，每天 5 句，聽→遮字→揭曉。">
+<meta property="og:image" content="img/001.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%231c1c1c'/%3E%3Ccircle cx='44' cy='20' r='8' fill='%23c23a2b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>英語<span>日日</span>聽</h1>
+    <nav><a href="archive.html">全部情境</a></nav>
+  </header>
+  <div class="meta">
+    <span id="dayLabel">今天</span>
+    <span class="nav"><button id="prev" aria-label="前一天">‹</button> <button id="next" aria-label="後一天">›</button></span>
+  </div>
+  <article class="card">
+    <div class="hero" id="hero"><img id="heroImg" alt=""></div>
+    <div class="title">
+      <span class="cat" id="cat"></span>
+      <h2 id="titleZh">載入中…</h2>
+      <div class="en" id="titleEn"></div>
+      <p class="scene" id="scene"></p>
+    </div>
+    <div class="controls">
+      <button id="playAll">▶ 聽全部</button>
+      <button id="rate" aria-pressed="false">1×</button>
+      <button id="showEn">看英文</button>
+      <button id="showZh">看中譯</button>
+    </div>
+    <ol class="lines" id="lines"></ol>
+    <div class="done"><span id="stats"></span><button id="doneBtn">完成今日</button></div>
+  </article>
+  <p class="hint">怎麼練：先按「聽全部」只用耳朵聽 2–3 次 → 點單句可重播 → 聽不出來再按「看英文」→ 最後看中譯確認。點任一句文字也能單獨揭曉。</p>
+  <footer>英語日日聽 · 大乃老師 · 插畫由 AI 生成 · 語音為合成人聲</footer>
+</div>
+<script type="module" src="js/app.js"></script>
+<script src="js/vendor/gc-config.js"></script>
+<script async src="js/vendor/count.js"></script>
+</body>
+</html>
