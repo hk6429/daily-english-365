@@ -1,0 +1,11 @@
+const s = JSON.parse(require('fs').readFileSync('data/scenes.json','utf8'));
+const errs=[]; if(s.length!==365) errs.push(`count ${s.length}`);
+const titles=new Set();
+s.forEach((x,i)=>{ if(x.id!==i+1) errs.push(`id ${x.id} at ${i}`);
+ if(!x.category||!x.title_en||!x.title_zh||!x.scene_zh||!x.image_prompt_en) errs.push(`fields ${x.id}`);
+ const t=(x.title_en||'').toLowerCase(); if(titles.has(t)) errs.push(`dup title ${x.title_en}`); titles.add(t);
+ if(!Array.isArray(x.lines)||x.lines.length!==5) errs.push(`lines ${x.id}`);
+ (x.lines||[]).forEach((l,k)=>{ if(!['A','B'].includes(l.speaker)) errs.push(`spk ${x.id}-${k}`);
+  const w=(l.en||'').trim().split(/\s+/).length; if(w<3||w>14) errs.push(`len ${x.id}-${k}: ${l.en}`);
+  if(!l.zh) errs.push(`zh ${x.id}-${k}`); });});
+if(errs.length){console.error(errs.join('\n'));process.exit(1)} console.log('ok 365');

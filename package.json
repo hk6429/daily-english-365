@@ -1,0 +1,1 @@
+{"name":"daily-english-365","private":true,"scripts":{"test":"node scripts/validate.js && node scripts/check-assets.js","test:day":"node --test test/"}}
