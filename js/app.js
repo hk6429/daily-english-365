@@ -1,4 +1,5 @@
 import { todayIndex, parseDay, taipeiDateKey } from './day.js';
+import { bgFor, setPageBg } from './cats.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const pad = n => String(n).padStart(3, '0');
@@ -22,6 +23,7 @@ function render() {
   document.title = `${x.title_zh} — 英語日日聽`;
   $('#dayLabel').textContent = state.id === today ? `今天 · 第 ${state.id} 天` : `第 ${state.id} 天`;
   $('#cat').textContent = x.category;
+  setPageBg(bgFor(x.category));
   $('#titleZh').textContent = x.title_zh;
   $('#titleEn').textContent = x.title_en;
   $('#scene').textContent = x.scene_zh;

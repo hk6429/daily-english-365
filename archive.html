@@ -12,11 +12,13 @@
     <h1>英語<span>日日</span>聽</h1>
     <nav><a href="./">回今天</a></nav>
   </header>
-  <p class="hint">365 個情境依主題分組，點任一個即可練習。紅框＝已完成過的日期對應情境。</p>
+  <p class="hint">365 個情境依主題分組，點任一張卡片即可練習。</p>
   <div id="groups"></div>
 </div>
 <script type="module">
 import { todayIndex } from './js/day.js';
+import { bgFor, setPageBg } from './js/cats.js';
+setPageBg('bg/generic.webp');
 const scenes = await (await fetch('data/scenes.json')).json();
 const today = todayIndex();
 const groups = new Map();
@@ -24,13 +26,15 @@ for (const x of scenes) { if (!groups.has(x.category)) groups.set(x.category, []
 const root = document.getElementById('groups');
 for (const [cat, list] of groups) {
   const g = document.createElement('section'); g.className = 'group';
-  g.innerHTML = `<h3>${cat}（${list.length}）</h3><div class="grid"></div>`;
+  g.innerHTML = `<div class="banner"><h3>${cat}<small>${list.length} 個情境</small></h3></div><div class="grid"></div>`;
+  g.querySelector('.banner').style.backgroundImage = `url("${bgFor(cat)}")`;
   const grid = g.querySelector('.grid');
   for (const x of list) {
     const a = document.createElement('a'); a.href = `./?d=${x.id}`;
     a.className = x.id === today ? 'today' : '';
-    a.innerHTML = `<small>第 ${x.id} 天</small>`;
-    a.append(x.title_zh);
+    const id3 = String(x.id).padStart(3, '0');
+    a.innerHTML = `<span class="thumb"><img loading="lazy" alt="" src="img/${id3}.webp" onerror="this.parentNode.classList.add('missing');this.remove()"></span><span class="txt"><small>第 ${x.id} 天</small><b></b><i></i></span>`;
+    a.querySelector('b').textContent = x.title_zh; a.querySelector('i').textContent = x.title_en;
     grid.appendChild(a);
   }
   root.appendChild(g);
