@@ -1,0 +1,5477 @@
+[
+ {
+  "id": 1,
+  "slot": "take the highway",
+  "variants": [
+   {
+    "en": "Can you take the back roads?",
+    "zh": "可以走小路嗎？"
+   },
+   {
+    "en": "Can you avoid the highway?",
+    "zh": "可以避開高速公路嗎？"
+   }
+  ],
+  "tip": "回應請求用 No problem，回應道謝才用 You're welcome。"
+ },
+ {
+  "id": 2,
+  "slot": "the fare",
+  "variants": [
+   {
+    "en": "How much is the child fare?",
+    "zh": "兒童票多少錢？"
+   },
+   {
+    "en": "How much is a day pass?",
+    "zh": "一日券多少錢？"
+   }
+  ],
+  "tip": "車資是 fare，車票是 ticket，入場費是 admission。"
+ },
+ {
+  "id": 3,
+  "slot": "How many stops",
+  "variants": [
+   {
+    "en": "How many stations is that?",
+    "zh": "要坐幾站？"
+   },
+   {
+    "en": "How many transfers is that?",
+    "zh": "要轉幾次車？"
+   }
+  ],
+  "tip": "搭某條線用 take，換車是 transfer，別說 change car。"
+ },
+ {
+  "id": 4,
+  "slot": "One ticket to Taichung",
+  "variants": [
+   {
+    "en": "Two tickets to Kaohsiung, please.",
+    "zh": "麻煩兩張到高雄的票。"
+   },
+   {
+    "en": "One ticket to Hualien, please.",
+    "zh": "麻煩一張到花蓮的票。"
+   }
+  ],
+  "tip": "單程 one-way，來回 round trip，別說 go and back。"
+ },
+ {
+  "id": 5,
+  "slot": "near the front",
+  "variants": [
+   {
+    "en": "Car seven, near the back.",
+    "zh": "靠後面。"
+   },
+   {
+    "en": "Car seven, in the middle.",
+    "zh": "在中間。"
+   }
+  ],
+  "tip": "火車車廂用 car，不用 carriage；等車廂是 wait for。"
+ },
+ {
+  "id": 6,
+  "slot": "your passport and ticket",
+  "variants": [
+   {
+    "en": "Can I see your ID and ticket?",
+    "zh": "可以看一下您的身分證和機票嗎？"
+   },
+   {
+    "en": "Can I see your passport and visa?",
+    "zh": "可以看一下您的護照和簽證嗎？"
+   }
+  ],
+  "tip": "辦理登機動詞是 check in，名詞才是 check-in。"
+ },
+ {
+  "id": 7,
+  "slot": "your jacket and shoes",
+  "variants": [
+   {
+    "en": "Please take off your belt and watch.",
+    "zh": "請脫掉皮帶和手錶。"
+   },
+   {
+    "en": "Please take off your coat and hat.",
+    "zh": "請脫掉大衣和帽子。"
+   }
+  ],
+  "tip": "脫衣鞋用 take off，托盤是 tray，不是 plate。"
+ },
+ {
+  "id": 8,
+  "slot": "on my phone",
+  "variants": [
+   {
+    "en": "Sure, it's in the app.",
+    "zh": "當然，在 App 裡。"
+   },
+   {
+    "en": "Sure, it's in my email.",
+    "zh": "當然，在我的信箱裡。"
+   }
+  ],
+  "tip": "登機證是 boarding pass，不是 ticket。"
+ },
+ {
+  "id": 9,
+  "slot": "with baskets",
+  "variants": [
+   {
+    "en": "Do you have any with child seats?",
+    "zh": "有附兒童座椅的嗎？"
+   },
+   {
+    "en": "Do you have any with gears?",
+    "zh": "有附變速的嗎？"
+   }
+  ],
+  "tip": "rent 是租入，租出去是 rent out，別搞反。"
+ },
+ {
+  "id": 10,
+  "slot": "within walking distance",
+  "variants": [
+   {
+    "en": "Is it far from here?",
+    "zh": "離這裡很遠嗎？"
+   },
+   {
+    "en": "Is it close to the station?",
+    "zh": "離車站很近嗎？"
+   }
+  ],
+  "tip": "走得到是 within walking distance，步行是 on foot。"
+ },
+ {
+  "id": 11,
+  "slot": "parking per hour",
+  "variants": [
+   {
+    "en": "How much is parking per day?",
+    "zh": "停車一天多少錢？"
+   },
+   {
+    "en": "How much is parking after midnight?",
+    "zh": "半夜過後停車怎麼收費？"
+   }
+  ],
+  "tip": "停車費 parking fee，車位 parking space，樓層用 on。"
+ },
+ {
+  "id": 12,
+  "slot": "your windshield cleaned",
+  "variants": [
+   {
+    "en": "Would you like your tires checked too?",
+    "zh": "需要幫您檢查一下輪胎嗎？"
+   },
+   {
+    "en": "Would you like your oil checked too?",
+    "zh": "需要幫您檢查一下機油嗎？"
+   }
+  ],
+  "tip": "Would you like X cleaned? 是 have＋受詞＋過去分詞。"
+ },
+ {
+  "id": 13,
+  "slot": "broke down",
+  "variants": [
+   {
+    "en": "My car just ran out of gas on the highway.",
+    "zh": "沒油了"
+   },
+   {
+    "en": "My car just got a flat tire on the highway.",
+    "zh": "爆胎了"
+   }
+  ],
+  "tip": "拋錨 break down 三態是 broke、broken；路肩是 shoulder。"
+ },
+ {
+  "id": 14,
+  "slot": "the next ferry",
+  "variants": [
+   {
+    "en": "What time does the last ferry leave?",
+    "zh": "最後一班渡輪幾點開？"
+   },
+   {
+    "en": "What time does the next boat leave?",
+    "zh": "下一班船幾點開？"
+   }
+  ],
+  "tip": "What time 問時間點，How long 問時間長度。"
+ },
+ {
+  "id": 15,
+  "slot": "a compact car",
+  "variants": [
+   {
+    "en": "I have a reservation for an SUV.",
+    "zh": "我有預約一台休旅車。"
+   },
+   {
+    "en": "I have a reservation for a minivan.",
+    "zh": "我有預約一台廂型車。"
+   }
+  ],
+  "tip": "預約車輛用 reservation，看醫生才是 appointment。"
+ },
+ {
+  "id": 16,
+  "slot": "confirm your name",
+  "variants": [
+   {
+    "en": "Yes, can you confirm your destination?",
+    "zh": "是的，可以確認一下您的目的地嗎？"
+   },
+   {
+    "en": "Yes, can you confirm your phone number?",
+    "zh": "是的，可以確認一下您的手機號碼嗎？"
+   }
+  ],
+  "tip": "hop in 是上車，pick me up 是來接我。"
+ },
+ {
+  "id": 17,
+  "slot": "missed the bus",
+  "variants": [
+   {
+    "en": "Wait, wait! I missed my train!",
+    "zh": "等等，等一下！我錯過火車了！"
+   },
+   {
+    "en": "Wait, wait! I left my bag!",
+    "zh": "等等，等一下！我把包包忘了！"
+   }
+  ],
+  "tip": "miss 是錯過班次，leave 是忘記帶；wait here 不加 for。"
+ },
+ {
+  "id": 18,
+  "slot": "baggage claim ticket",
+  "variants": [
+   {
+    "en": "Can I see your boarding pass?",
+    "zh": "可以看一下您的登機證嗎？"
+   },
+   {
+    "en": "Can I see your baggage tag?",
+    "zh": "可以看一下您的行李條嗎？"
+   }
+  ],
+  "tip": "baggage 不可數，要說 a piece of baggage。"
+ },
+ {
+  "id": 19,
+  "slot": "another route",
+  "variants": [
+   {
+    "en": "Is there a shortcut we could take?",
+    "zh": "有捷徑可以走嗎？"
+   },
+   {
+    "en": "Is there a faster way we could take?",
+    "zh": "有更快的路可以走嗎？"
+   }
+  ],
+  "tip": "traffic 不可數，別說 a traffic；塞車是 heavy traffic。"
+ },
+ {
+  "id": 20,
+  "slot": "take care of it",
+  "variants": [
+   {
+    "en": "I'll pay it online tonight.",
+    "zh": "我今晚就上網繳。"
+   },
+   {
+    "en": "I'll deal with it tonight.",
+    "zh": "我今晚就處理掉。"
+   }
+  ],
+  "tip": "parking ticket 是罰單，罰款是 fine，不是 money。"
+ },
+ {
+  "id": 21,
+  "slot": "five hundred dollars",
+  "variants": [
+   {
+    "en": "Can I add two hundred dollars?",
+    "zh": "可以加值兩百元嗎？"
+   },
+   {
+    "en": "Can I add a thousand dollars?",
+    "zh": "可以加值一千元嗎？"
+   }
+  ],
+  "tip": "儲值是 add value 或 top up；紙鈔 bill，硬幣 coin。"
+ },
+ {
+  "id": 22,
+  "slot": "run for it",
+  "variants": [
+   {
+    "en": "Thanks, I'll hurry over.",
+    "zh": "謝謝，我趕快過去。"
+   },
+   {
+    "en": "Thanks, I'll take the stairs.",
+    "zh": "謝謝，我走樓梯下去。"
+   }
+  ],
+  "tip": "connecting train 是轉乘班次；depart 比 leave 正式。"
+ },
+ {
+  "id": 23,
+  "slot": "arrive downtown",
+  "variants": [
+   {
+    "en": "What time do we arrive in Taipei?",
+    "zh": "幾點會到台北？"
+   },
+   {
+    "en": "What time do we get to the airport?",
+    "zh": "幾點會到機場？"
+   }
+  ],
+  "tip": "arrive in 接大地方，arrive at 接小地點，不用 to。"
+ },
+ {
+  "id": 24,
+  "slot": "borrow your scooter",
+  "variants": [
+   {
+    "en": "Can I borrow your helmet this afternoon?",
+    "zh": "今天下午可以跟你借安全帽嗎？"
+   },
+   {
+    "en": "Can I borrow your charger this afternoon?",
+    "zh": "今天下午可以跟你借充電器嗎？"
+   }
+  ],
+  "tip": "borrow 是借入，lend 是借出，別說 borrow me。"
+ },
+ {
+  "id": 25,
+  "slot": "it turns green",
+  "variants": [
+   {
+    "en": "How long until it turns red?",
+    "zh": "還要多久才會變紅燈？"
+   },
+   {
+    "en": "How long until the light changes?",
+    "zh": "還要多久才會換燈？"
+   }
+  ],
+  "tip": "紅燈停是 stop at the red light，不是 stop in。"
+ },
+ {
+  "id": 26,
+  "slot": "a full car wash",
+  "variants": [
+   {
+    "en": "How much for an oil change?",
+    "zh": "換機油要多少錢？"
+   },
+   {
+    "en": "How much for a basic car wash?",
+    "zh": "基本洗車要多少錢？"
+   }
+  ],
+  "tip": "How much for...? 是口語省略；限時用 in，不用 within。"
+ },
+ {
+  "id": 27,
+  "slot": "The morning one",
+  "variants": [
+   {
+    "en": "The evening one, it's cheaper too.",
+    "zh": "晚上那班，也比較便宜。"
+   },
+   {
+    "en": "The direct one, it's cheaper too.",
+    "zh": "直飛那班，也比較便宜。"
+   }
+  ],
+  "tip": "靠窗 window seat，靠走道 aisle seat。"
+ },
+ {
+  "id": 28,
+  "slot": "new departure time",
+  "variants": [
+   {
+    "en": "What's the new boarding time?",
+    "zh": "新的登機時間是幾點？"
+   },
+   {
+    "en": "What's the new arrival time?",
+    "zh": "新的抵達時間是幾點？"
+   }
+  ],
+  "tip": "delayed 是延誤，cancelled 是取消；I'm afraid 委婉報壞消息。"
+ },
+ {
+  "id": 29,
+  "slot": "see you then",
+  "variants": [
+   {
+    "en": "Sounds good, talk to you later.",
+    "zh": "好，晚點聊。"
+   },
+   {
+    "en": "Sounds good, see you at eight.",
+    "zh": "好，八點見。"
+   }
+  ],
+  "tip": "Sounds good 是同意提議；see you then 用在已約好時間。"
+ },
+ {
+  "id": 30,
+  "slot": "long, but comfortable",
+  "variants": [
+   {
+    "en": "It was long, but relaxing.",
+    "zh": "有點久，但很放鬆。"
+   },
+   {
+    "en": "It was smooth, but tiring.",
+    "zh": "很順利，但有點累。"
+   }
+  ],
+  "tip": "No worries 回應道歉，You're welcome 回應道謝。"
+ },
+ {
+  "id": 31,
+  "slot": "with oat milk",
+  "variants": [
+   {
+    "en": "Iced, please, with almond milk.",
+    "zh": "冰的，麻煩用杏仁奶。"
+   },
+   {
+    "en": "Iced, please, with less ice.",
+    "zh": "冰的，麻煩少冰。"
+   }
+  ],
+  "tip": "點餐用 Can I get...? 比 I want 有禮貌。"
+ },
+ {
+  "id": 32,
+  "slot": "What time",
+  "variants": [
+   {
+    "en": "Which day works for you?",
+    "zh": "哪一天方便呢？"
+   },
+   {
+    "en": "What day works for you?",
+    "zh": "星期幾方便呢？"
+   }
+  ],
+  "tip": "訂位是 book a table，別說 order a table。"
+ },
+ {
+  "id": 33,
+  "slot": "check for you",
+  "variants": [
+   {
+    "en": "Let me ask my manager.",
+    "zh": "我幫您問一下經理。"
+   },
+   {
+    "en": "Let me see what's open.",
+    "zh": "我幫您看看還有哪些位子。"
+   }
+  ],
+  "tip": "Let me check 是查一下，比單說 Wait 有禮貌。"
+ },
+ {
+  "id": 34,
+  "slot": "ready to order",
+  "variants": [
+   {
+    "en": "Are you ready to pay?",
+    "zh": "請問可以結帳了嗎？"
+   },
+   {
+    "en": "Are you ready for dessert?",
+    "zh": "請問要來點甜點了嗎？"
+   }
+  ],
+  "tip": "點餐說 I'll have...，比 I want 委婉；一杯水是 a glass。"
+ },
+ {
+  "id": 35,
+  "slot": "check with the kitchen",
+  "variants": [
+   {
+    "en": "Let me ask the chef.",
+    "zh": "我去問一下主廚。"
+   },
+   {
+    "en": "Let me check with the manager.",
+    "zh": "我去跟經理確認一下。"
+   }
+  ],
+  "tip": "allergy 唸 AL-er-jee；形容詞是 allergic to。"
+ },
+ {
+  "id": 36,
+  "slot": "this soup is cold",
+  "variants": [
+   {
+    "en": "Excuse me, this steak is overcooked.",
+    "zh": "不好意思，這塊牛排煎過頭了。"
+   },
+   {
+    "en": "Excuse me, this pasta is undercooked.",
+    "zh": "不好意思，這份義大利麵沒煮熟。"
+   }
+  ],
+  "tip": "客訴先說 Excuse me 再說問題；加熱是 heat up。"
+ },
+ {
+  "id": 37,
+  "slot": "accept credit cards",
+  "variants": [
+   {
+    "en": "Do you take Apple Pay?",
+    "zh": "你們可以用 Apple Pay 嗎？"
+   },
+   {
+    "en": "Do you accept debit cards?",
+    "zh": "你們可以刷簽帳金融卡嗎？"
+   }
+  ],
+  "tip": "美式帳單是 check，英式是 bill，別說 count money。"
+ },
+ {
+  "id": 38,
+  "slot": "ask for separate checks",
+  "variants": [
+   {
+    "en": "Deal. Let's pay separately.",
+    "zh": "就這麼說定，我們分開付吧。"
+   },
+   {
+    "en": "Deal. Let's split the bill.",
+    "zh": "就這麼說定，我們平分吧。"
+   }
+  ],
+  "tip": "split evenly 是平分，pay separately 是各付各的。"
+ },
+ {
+  "id": 39,
+  "slot": "tipping is optional",
+  "variants": [
+   {
+    "en": "No, service is included here.",
+    "zh": "沒有，這裡已含服務費。"
+   },
+   {
+    "en": "No, tipping isn't expected here.",
+    "zh": "沒有，這裡不用給小費。"
+   }
+  ],
+  "tip": "tip 是小費，fifteen percent 是 15%，percent 不加 s。"
+ },
+ {
+  "id": 40,
+  "slot": "this order to go",
+  "variants": [
+   {
+    "en": "I'd like these to go, please.",
+    "zh": "這些我要外帶，謝謝。"
+   },
+   {
+    "en": "I'd like two coffees to go, please.",
+    "zh": "這兩杯咖啡我要外帶，謝謝。"
+   }
+  ],
+  "tip": "外帶美式說 to go，英式說 takeaway。"
+ },
+ {
+  "id": 41,
+  "slot": "sorry to hear that",
+  "variants": [
+   {
+    "en": "I'm so sorry about that.",
+    "zh": "真的很抱歉。"
+   },
+   {
+    "en": "I'm sorry for the trouble.",
+    "zh": "造成您的困擾，很抱歉。"
+   }
+  ],
+  "tip": "sorry to hear that 是同情，不是認錯道歉。"
+ },
+ {
+  "id": 42,
+  "slot": "pull up",
+  "variants": [
+   {
+    "en": "Please move forward to the next window.",
+    "zh": "請往前開到下一個窗口。"
+   },
+   {
+    "en": "Please drive ahead to the next window.",
+    "zh": "請直接開到下一個窗口。"
+   }
+  ],
+  "tip": "得來速是 drive-thru；make it a large 是升級成大杯。"
+ },
+ {
+  "id": 43,
+  "slot": "brown sugar milk tea",
+  "variants": [
+   {
+    "en": "One jasmine green tea, please.",
+    "zh": "我要一杯茉莉綠茶。"
+   },
+   {
+    "en": "One winter melon tea, please.",
+    "zh": "我要一杯冬瓜茶。"
+   }
+  ],
+  "tip": "甜度說 half sugar，冰量說 less ice，別說 sweet degree。"
+ },
+ {
+  "id": 44,
+  "slot": "three skewers",
+  "variants": [
+   {
+    "en": "How much for five skewers?",
+    "zh": "五串多少錢？"
+   },
+   {
+    "en": "How much for a dozen skewers?",
+    "zh": "一打串燒多少錢？"
+   }
+  ],
+  "tip": "辣是 spicy，微辣是 mild；skewer 是烤肉串。"
+ },
+ {
+  "id": 45,
+  "slot": "bacon or sausage",
+  "variants": [
+   {
+    "en": "Would you like toast or a bagel?",
+    "zh": "要吐司還是貝果？"
+   },
+   {
+    "en": "Would you like juice or coffee?",
+    "zh": "要果汁還是咖啡？"
+   }
+  ],
+  "tip": "For here or to go? 問內用或外帶；趕時間是 in a hurry。"
+ },
+ {
+  "id": 46,
+  "slot": "passion fruit soda",
+  "variants": [
+   {
+    "en": "Our mango smoothie is really popular.",
+    "zh": "我們的芒果冰沙很受歡迎。"
+   },
+   {
+    "en": "Our iced lemon tea is really popular.",
+    "zh": "我們的冰檸檬茶很受歡迎。"
+   }
+  ],
+  "tip": "What do you recommend? 問推薦；for now 是暫時。"
+ },
+ {
+  "id": 47,
+  "slot": "the buffet",
+  "variants": [
+   {
+    "en": "How long does the happy hour run?",
+    "zh": "歡樂時光開放到幾點？"
+   },
+   {
+    "en": "How long does the breakfast buffet run?",
+    "zh": "早餐自助餐開放到幾點？"
+   }
+  ],
+  "tip": "buffet 唸 buh-FAY，t 不發音；run 在此是持續營業。"
+ },
+ {
+  "id": 48,
+  "slot": "vegetarian options",
+  "variants": [
+   {
+    "en": "Do you have vegan options?",
+    "zh": "你們有純素的選項嗎？"
+   },
+   {
+    "en": "Do you have gluten-free options?",
+    "zh": "你們有無麩質的選項嗎？"
+   }
+  ],
+  "tip": "vegetarian 可含蛋奶，vegan 是全素，說清楚最保險。"
+ },
+ {
+  "id": 49,
+  "slot": "it was amazing",
+  "variants": [
+   {
+    "en": "Please tell him we loved it.",
+    "zh": "請告訴他我們超愛。"
+   },
+   {
+    "en": "Please tell him the food was perfect.",
+    "zh": "請告訴他餐點太完美了。"
+   }
+  ],
+  "tip": "pass that along 是轉達；come back 已含再來之意。"
+ },
+ {
+  "id": 50,
+  "slot": "box this up",
+  "variants": [
+   {
+    "en": "Could you wrap this up for me?",
+    "zh": "可以幫我包起來嗎？"
+   },
+   {
+    "en": "Could you pack this up for me?",
+    "zh": "可以幫我裝起來嗎？"
+   }
+  ],
+  "tip": "Could you 比 Can you 更客氣；打包也可說 to-go box。"
+ },
+ {
+  "id": 51,
+  "slot": "it's mild",
+  "variants": [
+   {
+    "en": "Not at all, it's really mild.",
+    "zh": "完全不會，真的很溫和。"
+   },
+   {
+    "en": "Not at all, it's kind of sweet.",
+    "zh": "完全不會，還有點甜。"
+   }
+  ],
+  "tip": "問辣度用 Is it spicy?；Not at all 是完全不。"
+ },
+ {
+  "id": 52,
+  "slot": "here's the chair",
+  "variants": [
+   {
+    "en": "No worries, here you go.",
+    "zh": "別擔心，給你。"
+   },
+   {
+    "en": "No worries, it's right here.",
+    "zh": "別擔心，就在這裡。"
+   }
+  ],
+  "tip": "high chair 是兒童餐椅；No worries 較隨性。"
+ },
+ {
+  "id": 53,
+  "slot": "the wait right now",
+  "variants": [
+   {
+    "en": "How long is the wait tonight?",
+    "zh": "今晚大概要等多久？"
+   },
+   {
+    "en": "How long is the wait for brunch?",
+    "zh": "早午餐大概要等多久？"
+   }
+  ],
+  "tip": "wait 當名詞時用 the wait；候位登記用 under 姓名。"
+ },
+ {
+  "id": 54,
+  "slot": "any lemon",
+  "variants": [
+   {
+    "en": "Do you have any ice for it?",
+    "zh": "有冰塊可以加嗎？"
+   },
+   {
+    "en": "Do you have any honey for it?",
+    "zh": "有蜂蜜可以加嗎？"
+   }
+  ],
+  "tip": "一片檸檬是 a slice of lemon；Could I get 較有禮貌。"
+ },
+ {
+  "id": 55,
+  "slot": "it's been cancelled",
+  "variants": [
+   {
+    "en": "All set, it's been removed.",
+    "zh": "好了，已經幫您刪除了。"
+   },
+   {
+    "en": "All set, it's all taken care of.",
+    "zh": "好了，已經幫您處理好了。"
+   }
+  ],
+  "tip": "cancel 是取消，postpone 才是延期；party of two 是兩位。"
+ },
+ {
+  "id": 56,
+  "slot": "make it mild",
+  "variants": [
+   {
+    "en": "Can you make it less spicy, please?",
+    "zh": "可以幫我做得不那麼辣嗎？"
+   },
+   {
+    "en": "Can you make it extra spicy, please?",
+    "zh": "可以幫我做得特別辣嗎？"
+   }
+  ],
+  "tip": "medium spicy 是中辣；make it 加形容詞表示調整程度。"
+ },
+ {
+  "id": 57,
+  "slot": "split one pizza",
+  "variants": [
+   {
+    "en": "Should we just share a pizza?",
+    "zh": "我們要不要合吃一份披薩就好？"
+   },
+   {
+    "en": "Should we just split a salad?",
+    "zh": "我們要不要分一份沙拉就好？"
+   }
+  ],
+  "tip": "split 是分攤，share 是共享；dig in 是開動。"
+ },
+ {
+  "id": 58,
+  "slot": "I'd love the recipe",
+  "variants": [
+   {
+    "en": "I'd better not, but I'd love some for later.",
+    "zh": "我還是不要了，不過我想帶一些回去晚點吃。"
+   },
+   {
+    "en": "I'd better not, but I'd love your cooking tips.",
+    "zh": "我還是不要了，不過我想請教你的烹飪秘訣。"
+   }
+  ],
+  "tip": "婉拒加菜說 I'd better not；飽了是 I'm full。"
+ },
+ {
+  "id": 59,
+  "slot": "couldn't finish it all",
+  "variants": [
+   {
+    "en": "I just ate too much.",
+    "zh": "我真的吃太多了。"
+   },
+   {
+    "en": "I just couldn't eat any more.",
+    "zh": "我真的吃不下了。"
+   }
+  ],
+  "tip": "doggy bag 是打包袋；wrap it up 是包起來。"
+ },
+ {
+  "id": 60,
+  "slot": "the chocolate cake",
+  "variants": [
+   {
+    "en": "I'd recommend the cheesecake.",
+    "zh": "我推薦起司蛋糕。"
+   },
+   {
+    "en": "I'd recommend the mango pudding.",
+    "zh": "我推薦芒果布丁。"
+   }
+  ],
+  "tip": "dessert 甜點只有一個 s，desert 是沙漠。"
+ },
+ {
+  "id": 61,
+  "slot": "in a medium",
+  "variants": [
+   {
+    "en": "Do you have this in a large?",
+    "zh": "這件有大號嗎？"
+   },
+   {
+    "en": "Do you have this in a smaller size?",
+    "zh": "這件有小一點的尺寸嗎？"
+   }
+  ],
+  "tip": "問尺寸用 in a medium；try it on 代名詞放中間。"
+ },
+ {
+  "id": 62,
+  "slot": "more than three items",
+  "variants": [
+   {
+    "en": "Can I try on more than five items?",
+    "zh": "我可以試穿超過五件嗎？"
+   },
+   {
+    "en": "Can I try on a few more items?",
+    "zh": "我可以多試穿幾件嗎？"
+   }
+  ],
+  "tip": "try on 是試穿，代名詞放中間；fitting room 是試衣間。"
+ },
+ {
+  "id": 63,
+  "slot": "a little narrow",
+  "variants": [
+   {
+    "en": "These feel a bit tight, actually.",
+    "zh": "其實這雙感覺有點緊。"
+   },
+   {
+    "en": "These feel kind of loose, actually.",
+    "zh": "其實這雙感覺有點鬆。"
+   }
+  ],
+  "tip": "鞋子成雙用複數，所以說 These feel；half size up 是大半號。"
+ },
+ {
+  "id": 64,
+  "slot": "return this sweater",
+  "variants": [
+   {
+    "en": "I'd like to exchange this sweater, please.",
+    "zh": "我想換這件毛衣。"
+   },
+   {
+    "en": "I'd like to return these shoes, please.",
+    "zh": "我想退這雙鞋。"
+   }
+  ],
+  "tip": "return 是退貨，exchange 是換貨；refund 是退款。"
+ },
+ {
+  "id": 65,
+  "slot": "in navy blue",
+  "variants": [
+   {
+    "en": "Do you have it in black?",
+    "zh": "有黑色嗎？"
+   },
+   {
+    "en": "Do you have it in light gray?",
+    "zh": "有淺灰色嗎？"
+   }
+  ],
+  "tip": "顏色前面用 in，不用 with；in stock 是有現貨。"
+ },
+ {
+  "id": 66,
+  "slot": "any discount",
+  "variants": [
+   {
+    "en": "Is there a student discount on this jacket?",
+    "zh": "這件外套有學生折扣嗎？"
+   },
+   {
+    "en": "Is there a member discount on this jacket?",
+    "zh": "這件外套有會員折扣嗎？"
+   }
+  ],
+  "tip": "fifteen percent off 是打 85 折，別說 85 off。"
+ },
+ {
+  "id": 67,
+  "slot": "a bag",
+  "variants": [
+   {
+    "en": "Would you like a receipt for these?",
+    "zh": "需要幫你附收據嗎？"
+   },
+   {
+    "en": "Would you like a plastic bag for these?",
+    "zh": "需要幫你裝塑膠袋嗎？"
+   }
+  ],
+  "tip": "bring my own 是自備；No thanks 是婉拒。"
+ },
+ {
+  "id": 68,
+  "slot": "take a look",
+  "variants": [
+   {
+    "en": "Let me try it again for you.",
+    "zh": "我再幫你試一次。"
+   },
+   {
+    "en": "Let me have a look for you.",
+    "zh": "我來幫你看一下。"
+   }
+  ],
+  "tip": "won't scan 的 won't 表示機器不肯動；manually 是手動。"
+ },
+ {
+  "id": 69,
+  "slot": "heat this up",
+  "variants": [
+   {
+    "en": "Can you warm this up for me?",
+    "zh": "這個可以幫我溫一下嗎？"
+   },
+   {
+    "en": "Can you wrap this up for me?",
+    "zh": "這個可以幫我包起來嗎？"
+   }
+  ],
+  "tip": "heat up 是加熱，代名詞放中間；charger 是充電器。"
+ },
+ {
+  "id": 70,
+  "slot": "usually work well",
+  "variants": [
+   {
+    "en": "These lozenges really help.",
+    "zh": "這款喉糖真的有幫助。"
+   },
+   {
+    "en": "These lozenges work pretty well.",
+    "zh": "這款喉糖效果滿不錯的。"
+   }
+  ],
+  "tip": "lozenge 是喉糖；one every four hours 是每四小時一顆。"
+ },
+ {
+  "id": 71,
+  "slot": "light and affordable",
+  "variants": [
+   {
+    "en": "This model is thin and powerful.",
+    "zh": "這款又薄又強。"
+   },
+   {
+    "en": "This model is cheap and reliable.",
+    "zh": "這款便宜又可靠。"
+   }
+  ],
+  "tip": "affordable 是負擔得起，cheap 帶貶意。"
+ },
+ {
+  "id": 72,
+  "slot": "per month",
+  "variants": [
+   {
+    "en": "How much is it per year?",
+    "zh": "這個每年多少錢？"
+   },
+   {
+    "en": "How much is it for the first month?",
+    "zh": "這個第一個月多少錢？"
+   }
+  ],
+  "tip": "unlimited data 是吃到飽；I'll go with 是決定選這個。"
+ },
+ {
+  "id": 73,
+  "slot": "really popular lately",
+  "variants": [
+   {
+    "en": "This one's been selling fast lately.",
+    "zh": "這本最近賣得很快。"
+   },
+   {
+    "en": "This one's been a big hit lately.",
+    "zh": "這本最近大受歡迎。"
+   }
+  ],
+  "tip": "lately 常搭現在完成式；take a copy 是買一本。"
+ },
+ {
+  "id": 74,
+  "slot": "wrap this as a gift",
+  "variants": [
+   {
+    "en": "Could you gift-wrap this?",
+    "zh": "這個可以幫我用禮物包裝嗎？"
+   },
+   {
+    "en": "Could you put a ribbon on this?",
+    "zh": "這個可以幫我綁上緞帶嗎？"
+   }
+  ],
+  "tip": "wrap 是包裝；if possible 是可以的話。"
+ },
+ {
+  "id": 75,
+  "slot": "your order number",
+  "variants": [
+   {
+    "en": "Can I see some ID?",
+    "zh": "可以給我看一下證件嗎？"
+   },
+   {
+    "en": "Can I see your confirmation email?",
+    "zh": "可以給我看一下確認信嗎？"
+   }
+  ],
+  "tip": "pick up 是取貨，package 是包裹；order number 是訂單號碼。"
+ },
+ {
+  "id": 76,
+  "slot": "throw in one more",
+  "variants": [
+   {
+    "en": "Could you give me a discount?",
+    "zh": "可以給我折扣嗎？"
+   },
+   {
+    "en": "Could you throw in a bag?",
+    "zh": "可以送我一個袋子嗎？"
+   }
+  ],
+  "tip": "throw in 是加送；How about...? 用來提出還價。"
+ },
+ {
+  "id": 77,
+  "slot": "find toothpaste",
+  "variants": [
+   {
+    "en": "Excuse me, where can I find the batteries?",
+    "zh": "不好意思，請問電池在哪裡？"
+   },
+   {
+    "en": "Excuse me, where can I find trash bags?",
+    "zh": "不好意思，請問垃圾袋在哪裡？"
+   }
+  ],
+  "tip": "aisle 的 s 不發音，唸 ile；toothpaste 不可數。"
+ },
+ {
+  "id": 78,
+  "slot": "check the price",
+  "variants": [
+   {
+    "en": "Could you check the stock on this?",
+    "zh": "可以幫我查一下這個的庫存嗎？"
+   },
+   {
+    "en": "Could you check the size on this?",
+    "zh": "可以幫我查一下這個的尺寸嗎？"
+   }
+  ],
+  "tip": "tag 是標籤；scan 是掃描；matches 是符合。"
+ },
+ {
+  "id": 79,
+  "slot": "a fee",
+  "variants": [
+   {
+    "en": "Is there a minimum spend to sign up?",
+    "zh": "加入需要消費門檻嗎？"
+   },
+   {
+    "en": "Is there a deadline to sign up?",
+    "zh": "加入有期限嗎？"
+   }
+  ],
+  "tip": "動詞是 sign up，名詞是 sign-up；points 是點數。"
+ },
+ {
+  "id": 80,
+  "slot": "insert your card",
+  "variants": [
+   {
+    "en": "Please tap your card here.",
+    "zh": "請把卡片感應這裡。"
+   },
+   {
+    "en": "Please swipe your card here.",
+    "zh": "請在這裡刷卡。"
+   }
+  ],
+  "tip": "insert 插入晶片，tap 感應，swipe 刷磁條。"
+ },
+ {
+  "id": 81,
+  "slot": "pay with my phone",
+  "variants": [
+   {
+    "en": "Can I pay with Line Pay here?",
+    "zh": "這裡可以用 Line Pay 付款嗎？"
+   },
+   {
+    "en": "Can I pay by card here?",
+    "zh": "這裡可以刷卡付款嗎？"
+   }
+  ],
+  "tip": "pay with 接工具，pay by card 是固定說法。"
+ },
+ {
+  "id": 82,
+  "slot": "here you go",
+  "variants": [
+   {
+    "en": "Of course, here it is.",
+    "zh": "當然可以，這是你的發票。"
+   },
+   {
+    "en": "Of course, one moment.",
+    "zh": "當然可以，請稍等。"
+   }
+  ],
+  "tip": "change 是找零，small bills 小鈔，coins 硬幣。"
+ },
+ {
+  "id": 83,
+  "slot": "any manufacturing defects",
+  "variants": [
+   {
+    "en": "It covers any hardware problems.",
+    "zh": "包含任何硬體問題。"
+   },
+   {
+    "en": "It covers all repair costs.",
+    "zh": "包含所有維修費用。"
+   }
+  ],
+  "tip": "warranty 是保固，guarantee 是保證；cover 是涵蓋。"
+ },
+ {
+  "id": 84,
+  "slot": "anything smaller for kids",
+  "variants": [
+   {
+    "en": "Do you have anything cheaper for kids?",
+    "zh": "有沒有比較便宜、適合小朋友的？"
+   },
+   {
+    "en": "Do you have anything lighter to carry?",
+    "zh": "有沒有比較輕、好攜帶的？"
+   }
+  ],
+  "tip": "anything 後接比較級；nephew 是姪子或外甥。"
+ },
+ {
+  "id": 85,
+  "slot": "good until next Friday",
+  "variants": [
+   {
+    "en": "It's good for two weeks.",
+    "zh": "可以放兩個星期。"
+   },
+   {
+    "en": "It's good through Sunday.",
+    "zh": "到星期天都還可以。"
+   }
+  ],
+  "tip": "expiration date 是保存期限；good until 是可用到。"
+ },
+ {
+  "id": 86,
+  "slot": "cover the drinks and snacks",
+  "variants": [
+   {
+    "en": "I'll pay for the drinks.",
+    "zh": "飲料算我的。"
+   },
+   {
+    "en": "I'll get the snacks.",
+    "zh": "零食算我的。"
+   }
+  ],
+  "tip": "cover 是負責付；the drinks 前要加 the。"
+ },
+ {
+  "id": 87,
+  "slot": "a paper receipt",
+  "variants": [
+   {
+    "en": "Could I get an e-receipt, please?",
+    "zh": "可以給我電子發票嗎？"
+   },
+   {
+    "en": "Could I get a gift receipt, please?",
+    "zh": "可以給我禮物收據嗎？"
+   }
+  ],
+  "tip": "統一發票是 uniform invoice，統編是 company tax ID。"
+ },
+ {
+  "id": 88,
+  "slot": "close today",
+  "variants": [
+   {
+    "en": "What time do you open tomorrow?",
+    "zh": "你們明天幾點開門？"
+   },
+   {
+    "en": "What time do you close on Sundays?",
+    "zh": "你們週日幾點打烊？"
+   }
+  ],
+  "tip": "close 是打烊；public holiday 是國定假日。"
+ },
+ {
+  "id": 89,
+  "slot": "better noise cancellation",
+  "variants": [
+   {
+    "en": "This one has longer battery life.",
+    "zh": "這款電池續航力比較長。"
+   },
+   {
+    "en": "This one has a better microphone.",
+    "zh": "這款麥克風比較好。"
+   }
+  ],
+  "tip": "noise cancellation 是不可數名詞；lasts longer 是更耐用。"
+ },
+ {
+  "id": 90,
+  "slot": "larger carts",
+  "variants": [
+   {
+    "en": "Do you have any smaller baskets available?",
+    "zh": "有沒有比較小的籃子可以借？"
+   },
+   {
+    "en": "Do you have any child-sized carts available?",
+    "zh": "有沒有兒童尺寸的推車可以借？"
+   }
+  ],
+  "tip": "cart 是美式購物車，英式說 trolley；basket 是手提籃。"
+ },
+ {
+  "id": 91,
+  "slot": "a reservation under Chen",
+  "variants": [
+   {
+    "en": "Hi, I have a room booked under Chen.",
+    "zh": "你好，我有一間用陳先生名字訂的房間。"
+   },
+   {
+    "en": "Hi, I have an online booking.",
+    "zh": "你好，我有一筆線上訂房。"
+   }
+  ],
+  "tip": "check in 是辦入住；reservation 與 booking 同義。"
+ },
+ {
+  "id": 92,
+  "slot": "didn't touch it",
+  "variants": [
+   {
+    "en": "No, I didn't use it.",
+    "zh": "沒有，我完全沒用。"
+   },
+   {
+    "en": "No, I didn't take anything.",
+    "zh": "沒有，我什麼都沒拿。"
+   }
+  ],
+  "tip": "minibar 是房內小冰箱；check out 是退房。"
+ },
+ {
+  "id": 93,
+  "slot": "the quick response",
+  "variants": [
+   {
+    "en": "I appreciate your help.",
+    "zh": "我很感謝你的幫忙。"
+   },
+   {
+    "en": "I appreciate the fast service.",
+    "zh": "我很感謝這麼快的服務。"
+   }
+  ],
+  "tip": "appreciate 後面直接接事物，不加 for；比 Thanks 更正式。"
+ },
+ {
+  "id": 94,
+  "slot": "Two more",
+  "variants": [
+   {
+    "en": "Three more should be enough.",
+    "zh": "再三條應該就夠了。"
+   },
+   {
+    "en": "One more should be enough.",
+    "zh": "再一條應該就夠了。"
+   }
+  ],
+  "tip": "毛巾可數，說 a few towels；加量說 more towels。"
+ },
+ {
+  "id": 95,
+  "slot": "a wake-up call",
+  "variants": [
+   {
+    "en": "Could I get a taxi tomorrow?",
+    "zh": "明天可以幫我叫一輛計程車嗎？"
+   },
+   {
+    "en": "Could I get a late check-out tomorrow?",
+    "zh": "明天可以讓我晚一點退房嗎？"
+   }
+  ],
+  "tip": "叫醒服務是 wake-up call，不是 morning call。"
+ },
+ {
+  "id": 96,
+  "slot": "heading to bed",
+  "variants": [
+   {
+    "en": "Sure, I'm going to sleep too.",
+    "zh": "好啊，我也要睡了。"
+   },
+   {
+    "en": "Sure, I'm calling it a night too.",
+    "zh": "好啊，我今天也收工睡了。"
+   }
+  ],
+  "tip": "回 Sure 就夠，不必說 Yes, you can；自備 bring your own。"
+ },
+ {
+  "id": 97,
+  "slot": "the fridge magnet",
+  "variants": [
+   {
+    "en": "It's written on the front door.",
+    "zh": "寫在前門上。"
+   },
+   {
+    "en": "It's written on a sticky note.",
+    "zh": "寫在便利貼上。"
+   }
+  ],
+  "tip": "Wi-Fi 密碼說 password，不說 code；數字逐位唸。"
+ },
+ {
+  "id": 98,
+  "slot": "Where will you be staying",
+  "variants": [
+   {
+    "en": "What hotel will you be staying at?",
+    "zh": "你會住哪一家飯店？"
+   },
+   {
+    "en": "Who will you be staying with?",
+    "zh": "你會跟誰一起住？"
+   }
+  ],
+  "tip": "住在某處說 stay at，不說 live at；目的回 Sightseeing。"
+ },
+ {
+  "id": 99,
+  "slot": "declare these snacks",
+  "variants": [
+   {
+    "en": "Do I need to declare this food?",
+    "zh": "我需要申報這些食物嗎？"
+   },
+   {
+    "en": "Do I need to declare these gifts?",
+    "zh": "我需要申報這些禮物嗎？"
+   }
+  ],
+  "tip": "declare 是「申報」；肉類與鮮果 (fresh produce) 常需申報。"
+ },
+ {
+  "id": 100,
+  "slot": "final call for flight one-nine-eight",
+  "variants": [
+   {
+    "en": "Attention, please. This is the final boarding call for flight one-nine-eight.",
+    "zh": "各位旅客請注意，這是一九八號班機的最後登機廣播。"
+   },
+   {
+    "en": "Attention, please. This is the final call for flight two-zero-six.",
+    "zh": "各位旅客請注意，這是二零六號班機的最後廣播。"
+   }
+  ],
+  "tip": "班機號碼逐位唸，0 唸 oh 或 zero；final call 要馬上走。"
+ },
+ {
+  "id": 101,
+  "slot": "the gate",
+  "variants": [
+   {
+    "en": "Excuse me, has the boarding gate changed?",
+    "zh": "不好意思，登機門有變動嗎？"
+   },
+   {
+    "en": "Excuse me, has the departure time changed?",
+    "zh": "不好意思，起飛時間有變動嗎？"
+   }
+  ],
+  "tip": "問距離說 Is that far?；回答用 a ten-minute walk。"
+ },
+ {
+  "id": 102,
+  "slot": "swapping seats",
+  "variants": [
+   {
+    "en": "Would you mind trading seats with me?",
+    "zh": "你介意跟我換座位嗎？"
+   },
+   {
+    "en": "Would you mind changing seats with me?",
+    "zh": "你介意跟我換個位子嗎？"
+   }
+  ],
+  "tip": "Would you mind…? 回 Not at all 才是不介意。"
+ },
+ {
+  "id": 103,
+  "slot": "something to drink",
+  "variants": [
+   {
+    "en": "Would you like some coffee?",
+    "zh": "要不要來點咖啡？"
+   },
+   {
+    "en": "Would you like anything to drink?",
+    "zh": "需要喝點什麼嗎？"
+   }
+  ],
+  "tip": "Just water 的 just 是「只要」；點餐用 I'll have。"
+ },
+ {
+  "id": 104,
+  "slot": "change some US dollars",
+  "variants": [
+   {
+    "en": "I'd like to exchange some euros.",
+    "zh": "我想換一些歐元。"
+   },
+   {
+    "en": "I'd like to change some Japanese yen.",
+    "zh": "我想換一些日圓。"
+   }
+  ],
+  "tip": "換錢說 change 或 exchange；手續費說 a small fee。"
+ },
+ {
+  "id": 105,
+  "slot": "here you go",
+  "variants": [
+   {
+    "en": "Of course, here it is.",
+    "zh": "當然，在這裡。"
+   },
+   {
+    "en": "Of course, there you are.",
+    "zh": "當然，給你。"
+   }
+  ],
+  "tip": "Here you go 和 Here it is 都通用；must-see 是「必看」。"
+ },
+ {
+  "id": 106,
+  "slot": "the audio guide",
+  "variants": [
+   {
+    "en": "Would you like a printed map too?",
+    "zh": "你們要不要再加一份紙本地圖？"
+   },
+   {
+    "en": "Would you like the guided tour too?",
+    "zh": "你們要不要也參加導覽？"
+   }
+  ],
+  "tip": "audio guide 是語音導覽；買票說 Two adult tickets。"
+ },
+ {
+  "id": 107,
+  "slot": "does it last",
+  "variants": [
+   {
+    "en": "How long does it take?",
+    "zh": "這個要多久？"
+   },
+   {
+    "en": "How long is the tour?",
+    "zh": "這趟行程要多久？"
+   }
+  ],
+  "tip": "問時長用 How long does it last/take。"
+ },
+ {
+  "id": 108,
+  "slot": "take a photo of us",
+  "variants": [
+   {
+    "en": "Excuse me, could you take a picture of us?",
+    "zh": "不好意思，可以幫我們拍張照嗎？"
+   },
+   {
+    "en": "Excuse me, could you take a group photo?",
+    "zh": "不好意思，可以幫我們拍張大合照嗎？"
+   }
+  ],
+  "tip": "請人拍照說 take a photo of us；Say cheese 就是「茄子」。"
+ },
+ {
+  "id": 109,
+  "slot": "the fast pass",
+  "variants": [
+   {
+    "en": "How does the day pass work here?",
+    "zh": "這裡的一日券要怎麼用？"
+   },
+   {
+    "en": "How does this wristband work here?",
+    "zh": "這裡的手環要怎麼用？"
+   }
+  ],
+  "tip": "How does X work? 是問「怎麼使用」，別說 How to use it。"
+ },
+ {
+  "id": 110,
+  "slot": "an umbrella and two chairs",
+  "variants": [
+   {
+    "en": "How much for a towel and two chairs?",
+    "zh": "一條毛巾和兩張椅子多少錢？"
+   },
+   {
+    "en": "How much for two sunbeds and an umbrella?",
+    "zh": "兩張躺椅和一支遮陽傘多少錢？"
+   }
+  ],
+  "tip": "How much for…? 是口語問價；Cash only 是「只收現金」。"
+ },
+ {
+  "id": 111,
+  "slot": "the nearest restroom",
+  "variants": [
+   {
+    "en": "Where's the nearest shower?",
+    "zh": "最近的淋浴間在哪裡？"
+   },
+   {
+    "en": "Where's the nearest water tap?",
+    "zh": "最近的水龍頭在哪裡？"
+   }
+  ],
+  "tip": "美式說 restroom，英式說 toilet，都不說 WC。"
+ },
+ {
+  "id": 112,
+  "slot": "a delayed flight",
+  "variants": [
+   {
+    "en": "I'd like to file a claim for a lost suitcase.",
+    "zh": "我想申請行李遺失的理賠。"
+   },
+   {
+    "en": "I'd like to file a claim for a canceled flight.",
+    "zh": "我想申請班機取消的理賠。"
+   }
+  ],
+  "tip": "申請理賠是 file a claim，不是 make a claim。"
+ },
+ {
+  "id": 113,
+  "slot": "adjusting faster",
+  "variants": [
+   {
+    "en": "Any tips for beating jet lag?",
+    "zh": "有什麼克服時差的訣竅嗎？"
+   },
+   {
+    "en": "Any tips for sleeping better?",
+    "zh": "有什麼睡得更好的訣竅嗎？"
+   }
+  ],
+  "tip": "tips for 後面接動名詞；時差是 jet lag。"
+ },
+ {
+  "id": 114,
+  "slot": "late check-out",
+  "variants": [
+   {
+    "en": "Is early check-in possible today?",
+    "zh": "今天可以提早入住嗎？"
+   },
+   {
+    "en": "Is a room upgrade possible today?",
+    "zh": "今天可以升等房型嗎？"
+   }
+  ],
+  "tip": "check-out 當名詞要連字號，動詞是 check out。"
+ },
+ {
+  "id": 115,
+  "slot": "order room service",
+  "variants": [
+   {
+    "en": "I'd like to order breakfast.",
+    "zh": "我想點早餐。"
+   },
+   {
+    "en": "I'd like to order some snacks.",
+    "zh": "我想點一些點心。"
+   }
+  ],
+  "tip": "I'd like to 比 I want to 有禮貌；room service 是送餐"
+ },
+ {
+  "id": 116,
+  "slot": "this hotel",
+  "variants": [
+   {
+    "en": "Can you take me to this address?",
+    "zh": "可以載我到這個地址嗎？"
+   },
+   {
+    "en": "Can you take me to the airport?",
+    "zh": "可以載我到機場嗎？"
+   }
+  ],
+  "tip": "搭計程車說 Can you take me to…；tolls 是過路費。"
+ },
+ {
+  "id": 117,
+  "slot": "the pool",
+  "variants": [
+   {
+    "en": "What time does the gym open?",
+    "zh": "健身房幾點開？"
+   },
+   {
+    "en": "What time does the spa open?",
+    "zh": "水療中心幾點開？"
+   }
+  ],
+  "tip": "問營業時間用 What time does X open；全天是 24 hours。"
+ },
+ {
+  "id": 118,
+  "slot": "the confirmation email",
+  "variants": [
+   {
+    "en": "Can you show me your booking number?",
+    "zh": "可以給我看你的訂位編號嗎？"
+   },
+   {
+    "en": "Can you show me the booking details?",
+    "zh": "可以給我看訂房明細嗎？"
+   }
+  ],
+  "tip": "訂房用 booking 或 reservation；No worries 回應對方的道歉。"
+ },
+ {
+  "id": 119,
+  "slot": "one suitcase and a backpack",
+  "variants": [
+   {
+    "en": "Just two suitcases and a backpack.",
+    "zh": "就兩個行李箱跟一個背包。"
+   },
+   {
+    "en": "Just a suitcase and a laptop bag.",
+    "zh": "就一個行李箱跟一個筆電包。"
+   }
+  ],
+  "tip": "luggage 不可數，不說 two luggages；要數說 two bags。"
+ },
+ {
+  "id": 120,
+  "slot": "the fifteenth to the seventeenth",
+  "variants": [
+   {
+    "en": "Got it. Two nights, from the second to the fourth.",
+    "zh": "好的，兩晚，從二號到四號。"
+   },
+   {
+    "en": "Got it. Two nights, from the twentieth to the twenty-second.",
+    "zh": "好的，兩晚，從二十號到二十二號。"
+   }
+  ],
+  "tip": "日期用序數 the fifteenth；拼名字說 S as in Sam。"
+ },
+ {
+  "id": 121,
+  "slot": "in marketing for three years",
+  "variants": [
+   {
+    "en": "I've worked in sales for five years.",
+    "zh": "我做業務做了五年。"
+   },
+   {
+    "en": "I've worked in design for two years.",
+    "zh": "我做設計做了兩年。"
+   }
+  ],
+  "tip": "for + 一段時間配現在完成式；別說 since three years。"
+ },
+ {
+  "id": 122,
+  "slot": "show you around",
+  "variants": [
+   {
+    "en": "Let me give you a tour of the office.",
+    "zh": "讓我帶你參觀一下辦公室。"
+   },
+   {
+    "en": "Let me take you around the office.",
+    "zh": "讓我帶你逛逛辦公室。"
+   }
+  ],
+  "tip": "show you around 是帶人參觀；Welcome aboard 是歡迎加入。"
+ },
+ {
+  "id": 123,
+  "slot": "take a look at it",
+  "variants": [
+   {
+    "en": "Let me have a look at it.",
+    "zh": "讓我看一下。"
+   },
+   {
+    "en": "Let me check it out.",
+    "zh": "讓我查看一下。"
+   }
+  ],
+  "tip": "Let me 後面接原形動詞，不加 to；figure out 是「想通」。"
+ },
+ {
+  "id": 124,
+  "slot": "Noon works",
+  "variants": [
+   {
+    "en": "Eleven is fine for me too.",
+    "zh": "十一點我也可以。"
+   },
+   {
+    "en": "That time works for me too.",
+    "zh": "那個時間我也可以。"
+   }
+  ],
+  "tip": "works for me 是「這時間我可以」，別說 is suitable for me。"
+ },
+ {
+  "id": 125,
+  "slot": "just drive safely",
+  "variants": [
+   {
+    "en": "No worries, take your time.",
+    "zh": "沒關係，慢慢來。"
+   },
+   {
+    "en": "No worries, be careful on the road.",
+    "zh": "沒關係，路上小心。"
+   }
+  ],
+  "tip": "No worries 回應道歉；You're welcome 回應感謝，別混用。"
+ },
+ {
+  "id": 126,
+  "slot": "turn off my camera",
+  "variants": [
+   {
+    "en": "Let me mute my microphone.",
+    "zh": "我先把麥克風靜音。"
+   },
+   {
+    "en": "Let me switch to audio only.",
+    "zh": "我改成只用語音。"
+   }
+  ],
+  "tip": "mute 是靜音，freeze 是畫面卡住；別說 my video is stuck。"
+ },
+ {
+  "id": 127,
+  "slot": "causing the delay",
+  "variants": [
+   {
+    "en": "What's behind the delay?",
+    "zh": "延誤的原因是什麼？"
+   },
+   {
+    "en": "What's holding things up?",
+    "zh": "是什麼卡住了進度？"
+   }
+  ],
+  "tip": "wait on 是「等對方提供」；延期說 two more days。"
+ },
+ {
+  "id": 128,
+  "slot": "coming along",
+  "variants": [
+   {
+    "en": "How's the project going?",
+    "zh": "專案進行得如何？"
+   },
+   {
+    "en": "How's the project progressing?",
+    "zh": "專案進展得如何？"
+   }
+  ],
+  "tip": "coming along 問進度；keep me posted 是隨時更新。"
+ },
+ {
+  "id": 129,
+  "slot": "grab lunch later",
+  "variants": [
+   {
+    "en": "Want to get coffee later?",
+    "zh": "晚點要不要喝杯咖啡？"
+   },
+   {
+    "en": "Want to grab dinner tonight?",
+    "zh": "今晚要不要吃個晚餐？"
+   }
+  ],
+  "tip": "grab lunch 是「隨便吃個午餐」，比 eat lunch 口語。"
+ },
+ {
+  "id": 130,
+  "slot": "take Friday off",
+  "variants": [
+   {
+    "en": "Could I take Monday off?",
+    "zh": "我可以請星期一休假嗎？"
+   },
+   {
+    "en": "Could I leave early today?",
+    "zh": "我今天可以提早離開嗎？"
+   }
+  ],
+  "tip": "請假說 take a day off，不說 ask for leave。"
+ },
+ {
+  "id": 131,
+  "slot": "the paper tray",
+  "variants": [
+   {
+    "en": "Let me open the back cover.",
+    "zh": "讓我打開後蓋。"
+   },
+   {
+    "en": "Let me open the front panel.",
+    "zh": "讓我打開前面板。"
+   }
+  ],
+  "tip": "卡紙說 The printer is jammed；lifesaver 是救星。"
+ },
+ {
+  "id": 132,
+  "slot": "call me back",
+  "variants": [
+   {
+    "en": "Please ask her to email me.",
+    "zh": "請她寄信給我。"
+   },
+   {
+    "en": "Please ask her to text me.",
+    "zh": "請她傳簡訊給我。"
+   }
+  ],
+  "tip": "留言說 take a message；call me back 是「回電給我」。"
+ },
+ {
+  "id": 133,
+  "slot": "here's mine as well",
+  "variants": [
+   {
+    "en": "Thanks, here's my card as well.",
+    "zh": "謝謝，這是我的名片。"
+   },
+   {
+    "en": "Thanks, here's mine too.",
+    "zh": "謝謝，這是我的。"
+   }
+  ],
+  "tip": "遞名片說 Here's my card，回遞說 Here's mine。"
+ },
+ {
+  "id": 134,
+  "slot": "wait for you downstairs",
+  "variants": [
+   {
+    "en": "We'll wait for you outside.",
+    "zh": "我們在外面等你。"
+   },
+   {
+    "en": "We'll meet you in the lobby.",
+    "zh": "我們在大廳等你。"
+   }
+  ],
+  "tip": "wait for 後面接人，for 不能省；grab 是「拿一下」。"
+ },
+ {
+  "id": 135,
+  "slot": "starting with a stronger example",
+  "variants": [
+   {
+    "en": "Try opening with a story.",
+    "zh": "試著用一個故事開頭。"
+   },
+   {
+    "en": "Try adding a clearer example.",
+    "zh": "試著多加一個更清楚的例子。"
+   }
+  ],
+  "tip": "給建議用 Try + V-ing，語氣柔和；needs work 比 is bad 委婉。"
+ },
+ {
+  "id": 136,
+  "slot": "payday each month",
+  "variants": [
+   {
+    "en": "When is payday this month?",
+    "zh": "這個月幾號發薪水？"
+   },
+   {
+    "en": "When is payday every month?",
+    "zh": "每個月幾號發薪水？"
+   }
+  ],
+  "tip": "薪水日是 payday；在五號說 on the fifth，日期前面用 on。"
+ },
+ {
+  "id": 137,
+  "slot": "the handover process",
+  "variants": [
+   {
+    "en": "Let's discuss your last day.",
+    "zh": "我們來談談你的最後一天。"
+   },
+   {
+    "en": "Let's discuss the transition plan.",
+    "zh": "我們來談談交接計畫。"
+   }
+  ],
+  "tip": "交接是 handover，不說 exchange work。"
+ },
+ {
+  "id": 138,
+  "slot": "this Friday after work",
+  "variants": [
+   {
+    "en": "Yes, next Friday at noon.",
+    "zh": "對，下週五中午。"
+   },
+   {
+    "en": "Yes, this Thursday evening.",
+    "zh": "對，這個星期四晚上。"
+   }
+  ],
+  "tip": "this Friday 前面不加 on；farewell party 是歡送會。"
+ },
+ {
+  "id": 139,
+  "slot": "working from home",
+  "variants": [
+   {
+    "en": "How's the new project going?",
+    "zh": "新專案進行得如何？"
+   },
+   {
+    "en": "How's your first week going?",
+    "zh": "你第一週過得如何？"
+   }
+  ],
+  "tip": "在家工作是 work from home（WFH）；blocker 是擋住進度的事。"
+ },
+ {
+  "id": 140,
+  "slot": "our internal system login",
+  "variants": [
+   {
+    "en": "This is our company portal.",
+    "zh": "這是我們的公司入口網站。"
+   },
+   {
+    "en": "This is our HR system.",
+    "zh": "這是我們的人事系統。"
+   }
+  ],
+  "tip": "Anytime 回應感謝，比 You're welcome 更輕鬆。"
+ },
+ {
+  "id": 141,
+  "slot": "here you go",
+  "variants": [
+   {
+    "en": "Sure, go ahead.",
+    "zh": "當然，請用。"
+   },
+   {
+    "en": "Sure, it's right here.",
+    "zh": "當然，就在這裡。"
+   }
+  ],
+  "tip": "借東西說 Can I borrow…，不說 lend；No rush 是「不急」。"
+ },
+ {
+  "id": 142,
+  "slot": "your cable connection",
+  "variants": [
+   {
+    "en": "Let me check your Wi-Fi settings.",
+    "zh": "讓我檢查一下你的無線網路設定。"
+   },
+   {
+    "en": "Let me check the network cable.",
+    "zh": "讓我檢查一下網路線。"
+   }
+  ],
+  "tip": "連不上網說 won't connect；That did the trick 是有效。"
+ },
+ {
+  "id": 143,
+  "slot": "the chicken bento",
+  "variants": [
+   {
+    "en": "I'll have the pork cutlet bento, please.",
+    "zh": "我要豬排便當。"
+   },
+   {
+    "en": "I'll have a bowl of beef noodles, please.",
+    "zh": "我要一碗牛肉麵。"
+   }
+  ],
+  "tip": "點餐用 I'll have…，比 I want 有禮貌。"
+ },
+ {
+  "id": 144,
+  "slot": "your performance this year",
+  "variants": [
+   {
+    "en": "Let's go over your goals for next year.",
+    "zh": "我們來看看你明年的目標。"
+   },
+   {
+    "en": "Let's go over your progress so far.",
+    "zh": "我們來看看你目前的進度。"
+   }
+  ],
+  "tip": "go over 是「逐項檢視」；道謝說 I appreciate it。"
+ },
+ {
+  "id": 145,
+  "slot": "my flight for the trip",
+  "variants": [
+   {
+    "en": "I've booked my hotel for the trip.",
+    "zh": "我已經訂好這趟出差的飯店了。"
+   },
+   {
+    "en": "I've booked my train tickets for the trip.",
+    "zh": "我已經訂好這趟出差的火車票了。"
+   }
+  ],
+  "tip": "訂機票是 book a flight；leave Monday 不必加 on。"
+ },
+ {
+  "id": 146,
+  "slot": "attached right here",
+  "variants": [
+   {
+    "en": "Yes, it's in this folder.",
+    "zh": "有，就在這個資料夾裡。"
+   },
+   {
+    "en": "Yes, it's stapled to the back.",
+    "zh": "有，就釘在背面。"
+   }
+  ],
+  "tip": "expense form 是報帳單；process 是「處理、核銷」。"
+ },
+ {
+  "id": 147,
+  "slot": "send me the slides",
+  "variants": [
+   {
+    "en": "Great, can you share your screen?",
+    "zh": "太好了，可以請你分享畫面嗎？"
+   },
+   {
+    "en": "Great, can you send me the agenda?",
+    "zh": "太好了，可以請你把議程寄給我嗎？"
+   }
+  ],
+  "tip": "send me 後面直接接物品，不說 send to me the slides。"
+ },
+ {
+  "id": 148,
+  "slot": "get more pens",
+  "variants": [
+   {
+    "en": "Could you also order more folders?",
+    "zh": "你可以也訂購更多資料夾嗎？"
+   },
+   {
+    "en": "Could you also pick up some tape?",
+    "zh": "你可以也買一些膠帶嗎？"
+   }
+  ],
+  "tip": "printer paper 不可數，不說 papers；out of 是「用完了」。"
+ },
+ {
+  "id": 149,
+  "slot": "due by tomorrow morning",
+  "variants": [
+   {
+    "en": "It's due by Friday noon.",
+    "zh": "最晚週五中午要交。"
+   },
+   {
+    "en": "It's due next Monday.",
+    "zh": "下週一要交。"
+   }
+  ],
+  "tip": "due by 是「最遲到」，due on 是「在…當天」。"
+ },
+ {
+  "id": 150,
+  "slot": "stay in touch",
+  "variants": [
+   {
+    "en": "I hope we keep in touch.",
+    "zh": "我希望我們保持聯絡。"
+   },
+   {
+    "en": "I hope we stay connected.",
+    "zh": "我希望我們保持連繫。"
+   }
+  ],
+  "tip": "stay in touch 與 keep in touch 同義；別加 will。"
+ },
+ {
+  "id": 151,
+  "slot": "this seat",
+  "variants": [
+   {
+    "en": "Hi, is this chair taken?",
+    "zh": "嗨，這張椅子有人坐嗎？"
+   },
+   {
+    "en": "Hi, is the seat next to you taken?",
+    "zh": "嗨，你旁邊的位子有人坐嗎？"
+   }
+  ],
+  "tip": "問位子說 Is this seat taken?，不說 Is here someone?。"
+ },
+ {
+  "id": 152,
+  "slot": "ask a question",
+  "variants": [
+   {
+    "en": "Excuse me, could I ask you something?",
+    "zh": "不好意思，我可以問你一件事嗎？"
+   },
+   {
+    "en": "Excuse me, could I ask for help?",
+    "zh": "不好意思，我可以請你幫忙嗎？"
+   }
+  ],
+  "tip": "提問動詞用 ask，不用 make；clears things up 是「釐清了疑問」。"
+ },
+ {
+  "id": 153,
+  "slot": "any important announcements",
+  "variants": [
+   {
+    "en": "Were there any important updates?",
+    "zh": "有什麼重要的最新消息嗎？"
+   },
+   {
+    "en": "Were there any new assignments?",
+    "zh": "有新的作業嗎？"
+   }
+  ],
+  "tip": "announcement 是可數名詞；借筆記說 borrow your notes。"
+ },
+ {
+  "id": 154,
+  "slot": "handle the research part",
+  "variants": [
+   {
+    "en": "I can do the writing part.",
+    "zh": "我可以負責寫作的部分。"
+   },
+   {
+    "en": "I can take care of the research.",
+    "zh": "我可以負責研究的部分。"
+   }
+  ],
+  "tip": "handle 與 take care of 都是「負責」。"
+ },
+ {
+  "id": 155,
+  "slot": "check out these books",
+  "variants": [
+   {
+    "en": "I'd like to borrow these books, please.",
+    "zh": "我想借這些書。"
+   },
+   {
+    "en": "I'd like to check out this novel, please.",
+    "zh": "我想借這本小說。"
+   }
+  ],
+  "tip": "圖書館借書是 check out，還書是 return；due back 是「須歸還」。"
+ },
+ {
+  "id": 156,
+  "slot": "my homework is late",
+  "variants": [
+   {
+    "en": "I'm sorry I missed the deadline.",
+    "zh": "很抱歉，我錯過了繳交期限。"
+   },
+   {
+    "en": "I'm sorry I forgot my homework.",
+    "zh": "很抱歉，我忘了帶作業。"
+   }
+  ],
+  "tip": "homework 不可數，不說 homeworks；交作業用 turn in。"
+ },
+ {
+  "id": 157,
+  "slot": "brought it with me",
+  "variants": [
+   {
+    "en": "Yes, I have it right here.",
+    "zh": "有，我帶在身上了。"
+   },
+   {
+    "en": "Yes, I have it in my bag.",
+    "zh": "有，我放在包包裡了。"
+   }
+  ],
+  "tip": "bring 的過去式是 brought；makeup test 是補考。"
+ },
+ {
+  "id": 158,
+  "slot": "the menu today",
+  "variants": [
+   {
+    "en": "What's on the lunch menu?",
+    "zh": "午餐菜單有什麼？"
+   },
+   {
+    "en": "What's on the menu for lunch?",
+    "zh": "午餐有什麼菜色？"
+   }
+  ],
+  "tip": "What's on the menu? 問菜色；飲料問 Any drinks?"
+ },
+ {
+  "id": 159,
+  "slot": "fill out this sign-up sheet",
+  "variants": [
+   {
+    "en": "Just write your name here.",
+    "zh": "只要在這裡寫下名字就好。"
+   },
+   {
+    "en": "Just fill in this form.",
+    "zh": "只要填這張表格就好。"
+   }
+  ],
+  "tip": "fill out 和 fill in 都是填表；borrow 是借入，lend 是借出。"
+ },
+ {
+  "id": 160,
+  "slot": "some stretching",
+  "variants": [
+   {
+    "en": "Let's start with a warm-up.",
+    "zh": "我們先從暖身開始。"
+   },
+   {
+    "en": "Let's start with a few laps.",
+    "zh": "我們先從跑幾圈開始。"
+   }
+  ],
+  "tip": "Let's start with… 帶大家開始；繞操場跑說 laps。"
+ },
+ {
+  "id": 161,
+  "slot": "need gloves too",
+  "variants": [
+   {
+    "en": "Do we need a lab coat too?",
+    "zh": "我們也需要實驗袍嗎？"
+   },
+   {
+    "en": "Do we wear masks too?",
+    "zh": "我們也要戴口罩嗎？"
+   }
+  ],
+  "tip": "goggles 與 gloves 都是複數；safety first 是安全第一。"
+ },
+ {
+  "id": 162,
+  "slot": "he needs to improve",
+  "variants": [
+   {
+    "en": "Is there anything I can do at home?",
+    "zh": "有什麼是我可以在家做的嗎？"
+   },
+   {
+    "en": "Is there anything he should work on?",
+    "zh": "有什麼是他該加強的嗎？"
+   }
+  ],
+  "tip": "家長會問近況說 How has he been doing?"
+ },
+ {
+  "id": 163,
+  "slot": "Where are you from",
+  "variants": [
+   {
+    "en": "What grade are you in?",
+    "zh": "你念幾年級？"
+   },
+   {
+    "en": "How do you like it here?",
+    "zh": "你覺得這裡怎麼樣？"
+   }
+  ],
+  "tip": "問來自哪裡說 Where are you from?，別加 now。"
+ },
+ {
+  "id": 164,
+  "slot": "the main office",
+  "variants": [
+   {
+    "en": "Excuse me, where's the library?",
+    "zh": "不好意思，圖書館在哪裡？"
+   },
+   {
+    "en": "Excuse me, where's the gym?",
+    "zh": "不好意思，體育館在哪裡？"
+   }
+  ],
+  "tip": "問路開頭說 Excuse me；two-minute walk 的 minute 用單數。"
+ },
+ {
+  "id": 165,
+  "slot": "the math formulas",
+  "variants": [
+   {
+    "en": "Let's go over the vocabulary list.",
+    "zh": "我們來複習單字表吧。"
+   },
+   {
+    "en": "Let's go over chapter two.",
+    "zh": "我們來複習第二章吧。"
+   }
+  ],
+  "tip": "go over 與 review 都是複習；study with me 是「陪我念書」。"
+ },
+ {
+  "id": 166,
+  "slot": "I forgot it",
+  "variants": [
+   {
+    "en": "I think it expired.",
+    "zh": "我想是過期了。"
+   },
+   {
+    "en": "I think I typed it wrong.",
+    "zh": "我想是我打錯了。"
+   }
+  ],
+  "tip": "登入動詞是 log in，名詞是 login；reset 是重設。"
+ },
+ {
+  "id": 167,
+  "slot": "my presentation",
+  "variants": [
+   {
+    "en": "I'm really nervous about the exam.",
+    "zh": "我對考試真的很緊張。"
+   },
+   {
+    "en": "I'm really nervous about tomorrow's speech.",
+    "zh": "我對明天的演講真的很緊張。"
+   }
+  ],
+  "tip": "nervous about 後面接名詞；What if… 是「萬一…」，後面用現在式。"
+ },
+ {
+  "id": 168,
+  "slot": "how this was graded",
+  "variants": [
+   {
+    "en": "Could you explain why I lost points?",
+    "zh": "你能解釋我為什麼被扣分嗎？"
+   },
+   {
+    "en": "Could you explain how I can improve?",
+    "zh": "你能解釋我該怎麼進步嗎？"
+   }
+  ],
+  "tip": "grade 當動詞是「評分」；lose points 是「被扣分」。"
+ },
+ {
+  "id": 169,
+  "slot": "sign this permission slip",
+  "variants": [
+   {
+    "en": "Can you check this form?",
+    "zh": "你可以看一下這張表格嗎？"
+   },
+   {
+    "en": "Can you sign my report card?",
+    "zh": "你可以在我的成績單上簽名嗎？"
+   }
+  ],
+  "tip": "permission slip 是家長同意書；field trip 是校外教學。"
+ },
+ {
+  "id": 170,
+  "slot": "we're graduating soon",
+  "variants": [
+   {
+    "en": "Can you believe it's already June?",
+    "zh": "你能相信已經六月了嗎？"
+   },
+   {
+    "en": "Can you believe we're almost done?",
+    "zh": "你能相信我們快結束了嗎？"
+   }
+  ],
+  "tip": "畢業說 graduate from，不說 graduate the school。"
+ },
+ {
+  "id": 171,
+  "slot": "won't open",
+  "variants": [
+   {
+    "en": "My locker is stuck again.",
+    "zh": "我的置物櫃又卡住了。"
+   },
+   {
+    "en": "My locker is jammed again.",
+    "zh": "我的置物櫃又打不開了。"
+   }
+  ],
+  "tip": "won't + 動詞表示怎麼弄都不動；combination 是密碼鎖的號碼組合。"
+ },
+ {
+  "id": 172,
+  "slot": "this Friday afternoon",
+  "variants": [
+   {
+    "en": "Sports day rehearsal will be next Monday morning.",
+    "zh": "運動會預演會在下週一早上。"
+   },
+   {
+    "en": "Sports day rehearsal will be tomorrow afternoon.",
+    "zh": "運動會預演會在明天下午。"
+   }
+  ],
+  "tip": "運動會是 sports day；PE uniform 是體育服。"
+ },
+ {
+  "id": 173,
+  "slot": "art or photography",
+  "variants": [
+   {
+    "en": "I'm thinking about music or drama.",
+    "zh": "我在考慮音樂或戲劇。"
+   },
+   {
+    "en": "I'm thinking about cooking or coding.",
+    "zh": "我在考慮烹飪或程式設計。"
+   }
+  ],
+  "tip": "elective 是選修課；報名是 sign up for，注意介系詞 for。"
+ },
+ {
+  "id": 174,
+  "slot": "did it help",
+  "variants": [
+   {
+    "en": "No worries, was it useful?",
+    "zh": "沒關係，有幫上忙嗎？"
+   },
+   {
+    "en": "No worries, did it make sense?",
+    "zh": "沒關係，你有讀懂嗎？"
+   }
+  ],
+  "tip": "I owe you one 是「欠你一個人情」；回謝可用 No problem。"
+ },
+ {
+  "id": 175,
+  "slot": "this assignment",
+  "variants": [
+   {
+    "en": "When is the essay due?",
+    "zh": "這篇作文什麼時候要交？"
+   },
+   {
+    "en": "When is your project due?",
+    "zh": "你的專題什麼時候要交？"
+   }
+  ],
+  "tip": "問期限說 When is it due?，不說 When to submit。"
+ },
+ {
+  "id": 176,
+  "slot": "class duty",
+  "variants": [
+   {
+    "en": "Who's on cleaning duty today?",
+    "zh": "今天誰負責打掃？"
+   },
+   {
+    "en": "Who's on lunch duty today?",
+    "zh": "今天誰負責午餐？"
+   }
+  ],
+  "tip": "on duty 是「值班」；I don't mind at all 是完全不介意。"
+ },
+ {
+  "id": 177,
+  "slot": "don't forget water",
+  "variants": [
+   {
+    "en": "Yes, and bring a hat.",
+    "zh": "對，還要帶帽子。"
+   },
+   {
+    "en": "Yes, and remember your sunscreen.",
+    "zh": "對，還要記得帶防曬乳。"
+   }
+  ],
+  "tip": "meet at the gate at eight 兩個 at 分指地點和時間。"
+ },
+ {
+  "id": 178,
+  "slot": "math and English",
+  "variants": [
+   {
+    "en": "Mostly science and Chinese.",
+    "zh": "大多是自然和國文。"
+   },
+   {
+    "en": "Mostly English and history.",
+    "zh": "大多是英文和歷史。"
+   }
+  ],
+  "tip": "Mostly 是「大多」；寫在名單上用 on the list；tutoring 不可數。"
+ },
+ {
+  "id": 179,
+  "slot": "the exams",
+  "variants": [
+   {
+    "en": "I'm so stressed about my grades.",
+    "zh": "我對成績壓力好大。"
+   },
+   {
+    "en": "I'm so stressed about the final test.",
+    "zh": "我對期末考壓力好大。"
+   }
+  ],
+  "tip": "stressed 形容人有壓力；stressful 形容事情讓人有壓力，兩者別混用。"
+ },
+ {
+  "id": 180,
+  "slot": "after school",
+  "variants": [
+   {
+    "en": "Let's celebrate this weekend.",
+    "zh": "我們這個週末慶祝一下吧。"
+   },
+   {
+    "en": "Let's celebrate tonight.",
+    "zh": "我們今晚來慶祝一下吧。"
+   }
+  ],
+  "tip": "Congratulations 結尾一定要加 s；deserve 是「應得」。"
+ },
+ {
+  "id": 181,
+  "slot": "the problem today",
+  "variants": [
+   {
+    "en": "What seems to be the trouble?",
+    "zh": "是哪裡不舒服？"
+   },
+   {
+    "en": "What seems to be the matter?",
+    "zh": "是哪裡有狀況？"
+   }
+  ],
+  "tip": "sore throat 是喉嚨痛；swallow 是吞嚥"
+ },
+ {
+  "id": 182,
+  "slot": "this Thursday afternoon",
+  "variants": [
+   {
+    "en": "Sure, are you available next Monday morning?",
+    "zh": "好的，您下週一早上有空嗎？"
+   },
+   {
+    "en": "Sure, are you available tomorrow at ten?",
+    "zh": "好的，您明天十點有空嗎？"
+   }
+  ],
+  "tip": "預約說 schedule an appointment；available 是「有空」。"
+ },
+ {
+  "id": 183,
+  "slot": "take your time",
+  "variants": [
+   {
+    "en": "Sure, no rush.",
+    "zh": "好的，不急。"
+   },
+   {
+    "en": "Sure, that's fine.",
+    "zh": "好的，沒問題。"
+   }
+  ],
+  "tip": "one tablet twice a day 是每天兩次、每次一錠。"
+ },
+ {
+  "id": 184,
+  "slot": "take very long",
+  "variants": [
+   {
+    "en": "Sounds good. Will it hurt?",
+    "zh": "聽起來不錯。會痛嗎？"
+   },
+   {
+    "en": "Sounds good. Will it take a while?",
+    "zh": "聽起來不錯。會花一點時間嗎？"
+   }
+  ],
+  "tip": "Will it take long? 的 long 是副詞；open wide 是張大嘴。"
+ },
+ {
+  "id": 185,
+  "slot": "much clearer",
+  "variants": [
+   {
+    "en": "That's a lot sharper now, thank you.",
+    "zh": "現在銳利多了，謝謝。"
+   },
+   {
+    "en": "That's so much better now, thank you.",
+    "zh": "這樣好太多了，謝謝。"
+   }
+  ],
+  "tip": "blurry 是模糊、clear 是清楚；眼鏡度數說 prescription。"
+ },
+ {
+  "id": 186,
+  "slot": "the relay race",
+  "variants": [
+   {
+    "en": "I fell during gym class.",
+    "zh": "我在體育課跌倒了。"
+   },
+   {
+    "en": "I fell during the basketball game.",
+    "zh": "我在籃球賽中跌倒了。"
+   }
+  ],
+  "tip": "scrape 擦傷、cut 割傷、bruise 瘀青；刺痛用 sting。"
+ },
+ {
+  "id": 187,
+  "slot": "after dinner",
+  "variants": [
+   {
+    "en": "Yes, especially after lunch most nights.",
+    "zh": "對，尤其是午餐後，大部分日子都這樣。"
+   },
+   {
+    "en": "Yes, especially after big meals most nights.",
+    "zh": "對，尤其是大餐之後，大部分晚上都這樣。"
+   }
+  ],
+  "tip": "dull ache 是悶痛、sharp pain 是刺痛；位置說 around it。"
+ },
+ {
+  "id": 188,
+  "slot": "your daughter",
+  "variants": [
+   {
+    "en": "How long has your son had this fever?",
+    "zh": "您的兒子這次發燒多久了？"
+   },
+   {
+    "en": "How long has the baby had this fever?",
+    "zh": "寶寶這次發燒多久了？"
+   }
+  ],
+  "tip": "問持續多久用 How long has ... had，現在完成式，別用 did。"
+ },
+ {
+  "id": 189,
+  "slot": "put any weight on it",
+  "variants": [
+   {
+    "en": "Can you walk on it right now?",
+    "zh": "你現在能走路嗎？"
+   },
+   {
+    "en": "Can you stand on it right now?",
+    "zh": "你現在能站著嗎？"
+   }
+  ],
+  "tip": "twist 是扭到、sprain 是韌帶扭傷；sit out 是這次不上場。"
+ },
+ {
+  "id": 190,
+  "slot": "stretch it slowly",
+  "variants": [
+   {
+    "en": "Let's warm it up gently before we start today.",
+    "zh": "今天開始前，我們先輕輕把它暖開。"
+   },
+   {
+    "en": "Let's loosen it up before we start today.",
+    "zh": "今天開始前，我們先把它放鬆開。"
+   }
+  ],
+  "tip": "stiff 是僵硬、sore 是痠痛，別混用；hold 是維持姿勢。"
+ },
+ {
+  "id": 191,
+  "slot": "add that to my plan",
+  "variants": [
+   {
+    "en": "Yes, please sign me up for that.",
+    "zh": "好的，請幫我報名那個。"
+   },
+   {
+    "en": "Yes, please include the pool.",
+    "zh": "好的，請把泳池也算進去。"
+   }
+  ],
+  "tip": "sign up for 是報名、sign 是簽名；Yes, please 較有禮貌。"
+ },
+ {
+  "id": 192,
+  "slot": "build some muscle",
+  "variants": [
+   {
+    "en": "I want to get stronger and lose weight.",
+    "zh": "我想變得更強壯，也想減重。"
+   },
+   {
+    "en": "I want to tone up my arms and lose weight.",
+    "zh": "我想把手臂線條練出來，也想減重。"
+   }
+  ],
+  "tip": "增肌 build muscle；減脂用 lose fat 更精準。"
+ },
+ {
+  "id": 193,
+  "slot": "not very flexible",
+  "variants": [
+   {
+    "en": "Yes, I'm a total beginner, honestly.",
+    "zh": "對，老實說我是完全的新手。"
+   },
+   {
+    "en": "Yes, I'm pretty stiff, honestly.",
+    "zh": "對，老實說我身體滿僵硬的。"
+   }
+  ],
+  "tip": "No worries 可安撫人，也可回應道謝；extra mats 是備用墊子。"
+ },
+ {
+  "id": 194,
+  "slot": "take off my shoes",
+  "variants": [
+   {
+    "en": "Sure, should I empty my pockets?",
+    "zh": "好的，我需要把口袋清空嗎？"
+   },
+   {
+    "en": "Sure, should I take off my jacket?",
+    "zh": "好的，我需要脫外套嗎？"
+   }
+  ],
+  "tip": "脫 take off、穿上 put on、穿著 wear；量體重用 scale。"
+ },
+ {
+  "id": 195,
+  "slot": "the results",
+  "variants": [
+   {
+    "en": "When will my test results be ready?",
+    "zh": "我的檢驗結果什麼時候會好？"
+   },
+   {
+    "en": "When will the report be ready?",
+    "zh": "報告什麼時候會好？"
+   }
+  ],
+  "tip": "問結果用 When will ... be ready；nervous 接 about。"
+ },
+ {
+  "id": 196,
+  "slot": "No allergies",
+  "variants": [
+   {
+    "en": "None that I know of.",
+    "zh": "就我所知，沒有。"
+   },
+   {
+    "en": "No reactions that I know of.",
+    "zh": "就我所知，沒有過敏反應。"
+   }
+  ],
+  "tip": "對…過敏是 be allergic to；that I know of 是據我所知。"
+ },
+ {
+  "id": 197,
+  "slot": "your insurance card",
+  "variants": [
+   {
+    "en": "Could I have your ID card, please?",
+    "zh": "可以給我您的身分證嗎？"
+   },
+   {
+    "en": "Could I have your health card, please?",
+    "zh": "可以給我您的健保卡嗎？"
+   }
+  ],
+  "tip": "要證件用 Could I have ...?，比 Give me 有禮貌。"
+ },
+ {
+  "id": 198,
+  "slot": "avoid driving",
+  "variants": [
+   {
+    "en": "Should I avoid alcohol after taking it?",
+    "zh": "吃了之後我該避免喝酒嗎？"
+   },
+   {
+    "en": "Should I skip caffeine after taking it?",
+    "zh": "吃了之後我該少喝咖啡因嗎？"
+   }
+  ],
+  "tip": "副作用是 side effects；吃藥用 take，不說 eat medicine。"
+ },
+ {
+  "id": 199,
+  "slot": "the surgery",
+  "variants": [
+   {
+    "en": "How are you feeling since your operation?",
+    "zh": "開完刀後，你感覺怎麼樣？"
+   },
+   {
+    "en": "How are you feeling since the accident?",
+    "zh": "發生意外後，你感覺怎麼樣？"
+   }
+  ],
+  "tip": "探病問 How are you feeling?；開刀是 have surgery。"
+ },
+ {
+  "id": 200,
+  "slot": "really stressed about work",
+  "variants": [
+   {
+    "en": "I've just been so worried about money.",
+    "zh": "我最近只是一直在擔心錢的事。"
+   },
+   {
+    "en": "I've just been really tired lately.",
+    "zh": "我最近只是真的很累。"
+   }
+  ],
+  "tip": "stressed 形容人、stressful 形容事情；need space 是想獨處。"
+ },
+ {
+  "id": 201,
+  "slot": "your foot flat",
+  "variants": [
+   {
+    "en": "Please place your hand flat on the table here.",
+    "zh": "請把你的手平放在這裡的檯子上。"
+   },
+   {
+    "en": "Please place your arm flat on the table here.",
+    "zh": "請把你的手臂平放在這裡的檯子上。"
+   }
+  ],
+  "tip": "照 X 光說 get an X-ray；骨折口語 broken、正式 fracture。"
+ },
+ {
+  "id": 202,
+  "slot": "within one business day",
+  "variants": [
+   {
+    "en": "Usually by tomorrow afternoon.",
+    "zh": "通常明天下午就好了。"
+   },
+   {
+    "en": "Usually within two days.",
+    "zh": "通常兩天內就好了。"
+   }
+  ],
+  "tip": "refill 是續領藥；business day 是工作天，不含週末。"
+ },
+ {
+  "id": 203,
+  "slot": "feeling stuffy and tired",
+  "variants": [
+   {
+    "en": "No fever, just a runny nose.",
+    "zh": "沒發燒，只有流鼻水。"
+   },
+   {
+    "en": "No fever, just a sore throat.",
+    "zh": "沒發燒，只有喉嚨痛。"
+   }
+  ],
+  "tip": "runny nose 流鼻水、stuffy 鼻塞；三次是 three times。"
+ },
+ {
+  "id": 204,
+  "slot": "don't eat",
+  "variants": [
+   {
+    "en": "Yes, please don't eat or drink after midnight tonight.",
+    "zh": "是的，今晚午夜後請不要吃也不要喝。"
+   },
+   {
+    "en": "Yes, please don't drink coffee after midnight tonight.",
+    "zh": "是的，今晚午夜後請不要喝咖啡。"
+   }
+  ],
+  "tip": "抽血前禁食是 fast；by next Monday 表示最晚期限。"
+ },
+ {
+  "id": 205,
+  "slot": "any new soap or lotion",
+  "variants": [
+   {
+    "en": "Have you used any new detergent recently?",
+    "zh": "你最近有用新的洗衣精嗎？"
+   },
+   {
+    "en": "Have you used any new skin products recently?",
+    "zh": "你最近有用新的保養品嗎？"
+   }
+  ],
+  "tip": "rash 皮疹、itchy 癢；問近況用 Have you used ...?"
+ },
+ {
+  "id": 206,
+  "slot": "lower back",
+  "variants": [
+   {
+    "en": "My neck has been aching for two weeks.",
+    "zh": "我的脖子已經痠痛兩週了。"
+   },
+   {
+    "en": "My right shoulder has been aching for two weeks.",
+    "zh": "我的右肩已經痠痛兩週了。"
+   }
+  ],
+  "tip": "痠痛持續到現在用 has been aching for；for 接時間段。"
+ },
+ {
+  "id": 207,
+  "slot": "quit smoking",
+  "variants": [
+   {
+    "en": "I've decided I really want to cut down on drinking.",
+    "zh": "我決定我真的要少喝酒。"
+   },
+   {
+    "en": "I've decided I really want to quit vaping.",
+    "zh": "我決定我真的要戒電子菸。"
+   }
+  ],
+  "tip": "quit 後面接 -ing，不接 to；a pack a day 是一天一包。"
+ },
+ {
+  "id": 208,
+  "slot": "tomorrow around nine",
+  "variants": [
+   {
+    "en": "Can I come in next Monday at ten?",
+    "zh": "我下週一十點可以過去嗎？"
+   },
+   {
+    "en": "Can I come in this Friday morning?",
+    "zh": "我這週五早上可以過去嗎？"
+   }
+  ],
+  "tip": "預約看診用 book an appointment；around nine 是九點左右。"
+ },
+ {
+  "id": 209,
+  "slot": "more balanced meals",
+  "variants": [
+   {
+    "en": "I'd like some advice on eating healthier meals.",
+    "zh": "我想請教如何吃得更健康。"
+   },
+   {
+    "en": "I'd like some advice on eating less sugar.",
+    "zh": "我想請教如何少吃點糖。"
+   }
+  ],
+  "tip": "advice 不可數，不能說 advices 或 an advice。"
+ },
+ {
+  "id": 210,
+  "slot": "the medication really helped",
+  "variants": [
+   {
+    "en": "Much better, the treatment worked.",
+    "zh": "好多了，治療很有效。"
+   },
+   {
+    "en": "Much better, the rest really helped.",
+    "zh": "好多了，休息真的有幫助。"
+   }
+  ],
+  "tip": "medicine 較口語、medication 較正式；fatigue 是疲倦。"
+ },
+ {
+  "id": 211,
+  "slot": "a savings account",
+  "variants": [
+   {
+    "en": "I'd like to open a checking account.",
+    "zh": "我想開一個支票帳戶。"
+   },
+   {
+    "en": "I'd like to open a joint account.",
+    "zh": "我想開一個聯名帳戶。"
+   }
+  ],
+  "tip": "開戶 open an account；savings 一定要加 s；存款 deposit。"
+ },
+ {
+  "id": 212,
+  "slot": "does that usually take",
+  "variants": [
+   {
+    "en": "How long will that take?",
+    "zh": "那大概要多久？"
+   },
+   {
+    "en": "How long does that normally take?",
+    "zh": "那通常要多久？"
+   }
+  ],
+  "tip": "問多久用 How long；ATM 吃卡是 swallowed my card。"
+ },
+ {
+  "id": 213,
+  "slot": "wire money",
+  "variants": [
+   {
+    "en": "I need to send money to another country.",
+    "zh": "我需要匯錢到另一個國家。"
+   },
+   {
+    "en": "I need to transfer money to another country.",
+    "zh": "我需要轉帳到另一個國家。"
+   }
+  ],
+  "tip": "匯款 wire 較正式、transfer 較通用；收款人是 recipient。"
+ },
+ {
+  "id": 214,
+  "slot": "fifteen dollars",
+  "variants": [
+   {
+    "en": "The transfer fee is twenty dollars.",
+    "zh": "轉帳手續費是二十元。"
+   },
+   {
+    "en": "The transfer fee is fifty dollars.",
+    "zh": "轉帳手續費是五十元。"
+   }
+  ],
+  "tip": "fifteen 重音在後、fifty 在前；電話中用 one-five 拆開確認。"
+ },
+ {
+  "id": 215,
+  "slot": "cancel it",
+  "variants": [
+   {
+    "en": "Can you block it right away?",
+    "zh": "你可以馬上凍結它嗎？"
+   },
+   {
+    "en": "Can you freeze the card right away?",
+    "zh": "你可以馬上凍結這張卡嗎？"
+   }
+  ],
+  "tip": "掛失 report a card lost；right away 即馬上。"
+ },
+ {
+  "id": 216,
+  "slot": "this charge",
+  "variants": [
+   {
+    "en": "I don't recognize this payment on my statement.",
+    "zh": "我不認得帳單上這筆付款。"
+   },
+   {
+    "en": "I don't recognize this transaction on my statement.",
+    "zh": "我不認得帳單上這筆交易。"
+   }
+  ],
+  "tip": "recognize 是認得；statement 是對帳單；dispute 是爭議款申訴。"
+ },
+ {
+  "id": 217,
+  "slot": "mail this package",
+  "variants": [
+   {
+    "en": "I'd like to send this parcel, please.",
+    "zh": "我想寄這個包裹，麻煩你。"
+   },
+   {
+    "en": "I'd like to ship this box, please.",
+    "zh": "我想運送這個箱子，麻煩你。"
+   }
+  ],
+  "tip": "寄信 mail、寄物 send 或 ship；headed 是寄往。"
+ },
+ {
+  "id": 218,
+  "slot": "five stamps",
+  "variants": [
+   {
+    "en": "Can I get ten stamps, please?",
+    "zh": "我可以買十張郵票嗎？"
+   },
+   {
+    "en": "Can I get two envelopes, please?",
+    "zh": "我可以買兩個信封嗎？"
+   }
+  ],
+  "tip": "domestic 國內、international 國際；stamp 是郵票，不是印章。"
+ },
+ {
+  "id": 219,
+  "slot": "your tracking number",
+  "variants": [
+   {
+    "en": "Sure, what's your order number?",
+    "zh": "好的，你的訂單編號是多少？"
+   },
+   {
+    "en": "Sure, what's your confirmation number?",
+    "zh": "好的，你的確認碼是多少？"
+   }
+  ],
+  "tip": "out for delivery 是派送中；stay home 不加 at。"
+ },
+ {
+  "id": 220,
+  "slot": "the slip",
+  "variants": [
+   {
+    "en": "Do you have your ID with you?",
+    "zh": "你有帶證件嗎？"
+   },
+   {
+    "en": "Do you have the notice with you?",
+    "zh": "你有帶通知單嗎？"
+   }
+  ],
+  "tip": "slip 是單據；with you 是隨身帶著；I'll go grab 是我去拿。"
+ },
+ {
+  "id": 221,
+  "slot": "pay by card",
+  "variants": [
+   {
+    "en": "Can I pay by mobile?",
+    "zh": "我可以用手機付款嗎？"
+   },
+   {
+    "en": "Can I pay with a credit card?",
+    "zh": "我可以刷信用卡付款嗎？"
+   }
+  ],
+  "tip": "付款用 pay by card；cash only 是只收現金。"
+ },
+ {
+  "id": 222,
+  "slot": "library card",
+  "variants": [
+   {
+    "en": "My student ID just expired.",
+    "zh": "我的學生證剛到期了。"
+   },
+   {
+    "en": "My passport just expired.",
+    "zh": "我的護照剛到期了。"
+   }
+  ],
+  "tip": "expire 是到期，不用被動；renew 是續辦，別和 renovate 混淆。"
+ },
+ {
+  "id": 223,
+  "slot": "about ten minutes",
+  "variants": [
+   {
+    "en": "This will take about half an hour.",
+    "zh": "這大概要半小時。"
+   },
+   {
+    "en": "This will take around five minutes.",
+    "zh": "這大概要五分鐘。"
+   }
+  ],
+  "tip": "這件事要花多久用 It takes ...；about 和 around 都是大約。"
+ },
+ {
+  "id": 224,
+  "slot": "a bank statement",
+  "variants": [
+   {
+    "en": "Yes, a pay stub works fine.",
+    "zh": "薪資單就可以。"
+   },
+   {
+    "en": "Yes, your tax return works fine.",
+    "zh": "你的報稅單就可以。"
+   }
+  ],
+  "tip": "proof of income 是收入證明；visa 是簽證，不是簽帳卡。"
+ },
+ {
+  "id": 225,
+  "slot": "check your account details",
+  "variants": [
+   {
+    "en": "Let me pull up your account.",
+    "zh": "讓我調出你的帳戶資料。"
+   },
+   {
+    "en": "Let me look at your bill.",
+    "zh": "讓我看看你的帳單。"
+   }
+  ],
+  "tip": "Let me 後面接原形動詞，不加 to；charge 是費用。"
+ },
+ {
+  "id": 226,
+  "slot": "your banking app",
+  "variants": [
+   {
+    "en": "Sure, please open the payment app.",
+    "zh": "好的，請打開支付 App。"
+   },
+   {
+    "en": "Sure, please open your bank's app.",
+    "zh": "好的，請打開你銀行的 App。"
+   }
+  ],
+  "tip": "tap 是輕點、link a card 是綁卡；行動支付 mobile payment。"
+ },
+ {
+  "id": 227,
+  "slot": "usually stocked",
+  "variants": [
+   {
+    "en": "Is that one always working?",
+    "zh": "那台一直都能用嗎？"
+   },
+   {
+    "en": "Is that one open all day?",
+    "zh": "那台整天都有開嗎？"
+   }
+  ],
+  "tip": "ATM 沒錢說 out of cash；refill 是補鈔。"
+ },
+ {
+  "id": 228,
+  "slot": "cash this check",
+  "variants": [
+   {
+    "en": "I'd like to deposit this check.",
+    "zh": "我想存這張支票。"
+   },
+   {
+    "en": "I'd like to cash this money order.",
+    "zh": "我想兌現這張匯票。"
+   }
+  ],
+  "tip": "cash a check 是兌現、deposit 是存入；英式拼 cheque。"
+ },
+ {
+  "id": 229,
+  "slot": "a bank transfer",
+  "variants": [
+   {
+    "en": "What's the fee for a wire transfer?",
+    "zh": "電匯的手續費是多少？"
+   },
+   {
+    "en": "What's the fee for an ATM withdrawal?",
+    "zh": "ATM 提款的手續費是多少？"
+   }
+  ],
+  "tip": "服務費 fee、車資 fare、罰款 fine，三個別混用。"
+ },
+ {
+  "id": 230,
+  "slot": "rent a mailbox",
+  "variants": [
+   {
+    "en": "I'd like to open a P.O. box here.",
+    "zh": "我想在這裡申請一個郵政信箱。"
+   },
+   {
+    "en": "I'd like to rent a locker here.",
+    "zh": "我想在這裡租一個置物櫃。"
+   }
+  ],
+  "tip": "rent 是付費承租；a year 等於 per year，是每年。"
+ },
+ {
+  "id": 231,
+  "slot": "your photo and ID",
+  "variants": [
+   {
+    "en": "Do you have your old passport?",
+    "zh": "你有帶舊護照嗎？"
+   },
+   {
+    "en": "Do you have the application form?",
+    "zh": "你有帶申請表嗎？"
+   }
+  ],
+  "tip": "申請護照 apply for a passport；business days 是工作天。"
+ },
+ {
+  "id": 232,
+  "slot": "sign this authorization form",
+  "variants": [
+   {
+    "en": "Please fill out this form.",
+    "zh": "請填寫這份表格。"
+   },
+   {
+    "en": "Please initial this page.",
+    "zh": "請在這一頁簽姓名縮寫。"
+   }
+  ],
+  "tip": "sign 是簽全名、initial 是簽縮寫；authorization 是授權。"
+ },
+ {
+  "id": 233,
+  "slot": "a large amount",
+  "variants": [
+   {
+    "en": "I'd like to withdraw some cash.",
+    "zh": "我想提一些現金。"
+   },
+   {
+    "en": "I'd like to withdraw fifty thousand dollars.",
+    "zh": "我想提五萬元。"
+   }
+  ],
+  "tip": "大額說 a large amount，不說 big money；withdraw 是提款。"
+ },
+ {
+  "id": 234,
+  "slot": "I've done that",
+  "variants": [
+   {
+    "en": "Okay, that's done.",
+    "zh": "好，這樣就好了。"
+   },
+   {
+    "en": "Okay, I just did it.",
+    "zh": "好，我剛剛做完了。"
+   }
+  ],
+  "tip": "insert 是插入、enter 是輸入；PIN 是密碼，不說 password。"
+ },
+ {
+  "id": 235,
+  "slot": "order a new checkbook",
+  "variants": [
+   {
+    "en": "I need to request a new passbook.",
+    "zh": "我需要申請新的存摺。"
+   },
+   {
+    "en": "I need to replace my debit card.",
+    "zh": "我需要補發我的金融卡。"
+   }
+  ],
+  "tip": "訂購 order、申請補發 request；by mail 是用郵寄。"
+ },
+ {
+  "id": 236,
+  "slot": "have it right here",
+  "variants": [
+   {
+    "en": "I brought it with me.",
+    "zh": "我帶來了。"
+   },
+   {
+    "en": "I have it in my bag.",
+    "zh": "我放在包包裡。"
+   }
+  ],
+  "tip": "loan 是貸款；兩百千元寫 two hundred thousand，不加 s。"
+ },
+ {
+  "id": 237,
+  "slot": "update my phone number",
+  "variants": [
+   {
+    "en": "I need to change my address.",
+    "zh": "我需要更改我的地址。"
+   },
+   {
+    "en": "I need to update my email.",
+    "zh": "我需要更新我的電子郵件。"
+   }
+  ],
+  "tip": "更新用 update、更換用 change；電話號碼逐位唸，0 常唸 oh。"
+ },
+ {
+  "id": 238,
+  "slot": "return this package",
+  "variants": [
+   {
+    "en": "I need to send this back.",
+    "zh": "我需要把這個寄回去。"
+   },
+   {
+    "en": "I need to exchange this item.",
+    "zh": "我需要換這個商品。"
+   }
+  ],
+  "tip": "return 退回、exchange 換貨、refund 退款；free 是免費。"
+ },
+ {
+  "id": 239,
+  "slot": "does that cost",
+  "variants": [
+   {
+    "en": "How much extra will that cost?",
+    "zh": "那要多付多少錢？"
+   },
+   {
+    "en": "How much extra does it cost?",
+    "zh": "這要多收多少錢？"
+   }
+  ],
+  "tip": "問價錢用 How much，不說 How many money。"
+ },
+ {
+  "id": 240,
+  "slot": "close this account",
+  "variants": [
+   {
+    "en": "I'd like to cancel this card.",
+    "zh": "我想取消這張卡。"
+   },
+   {
+    "en": "I'd like to freeze this account.",
+    "zh": "我想凍結這個帳戶。"
+   }
+  ],
+  "tip": "close an account 是銷戶；reason for 接名詞或 -ing。"
+ },
+ {
+  "id": 241,
+  "slot": "so kind",
+  "variants": [
+   {
+    "en": "That's very sweet, thank you.",
+    "zh": "你人真好，謝謝。"
+   },
+   {
+    "en": "That's really nice of you, thank you.",
+    "zh": "你真好心，謝謝。"
+   }
+  ],
+  "tip": "See you around 是隨口道別，不是真的約定。"
+ },
+ {
+  "id": 242,
+  "slot": "you must be Sam",
+  "variants": [
+   {
+    "en": "Hi, you must be Anna. I'm Tom, Lily's coworker.",
+    "zh": "嗨，你一定就是安娜。"
+   },
+   {
+    "en": "Hi, you must be Sam's brother. I'm Tom, Lily's coworker.",
+    "zh": "嗨，你一定是山姆的哥哥。"
+   }
+  ],
+  "tip": "you must be ... 是推測對方身分；coworker 是同事。"
+ },
+ {
+  "id": 243,
+  "slot": "Fingers crossed for you",
+  "variants": [
+   {
+    "en": "Good luck to you then.",
+    "zh": "那祝你好運囉。"
+   },
+   {
+    "en": "I'll cross my fingers for you then.",
+    "zh": "那我幫你祈禱囉。"
+   }
+  ],
+  "tip": "Fingers crossed 是祈求好運；clear up 是天氣放晴。"
+ },
+ {
+  "id": 244,
+  "slot": "Thursday afternoon",
+  "variants": [
+   {
+    "en": "How about Friday evening?",
+    "zh": "星期五晚上怎麼樣？"
+   },
+   {
+    "en": "How about this Saturday?",
+    "zh": "這個星期六怎麼樣？"
+   }
+  ],
+  "tip": "How about 後接名詞；grab coffee 是喝杯咖啡。"
+ },
+ {
+  "id": 245,
+  "slot": "maybe next time",
+  "variants": [
+   {
+    "en": "No worries, another time.",
+    "zh": "沒關係，改天吧。"
+   },
+   {
+    "en": "No worries, let's catch up later.",
+    "zh": "沒關係，我們之後再聊。"
+   }
+  ],
+  "tip": "婉拒後說 maybe next time 保持友善；make it 是能到場。"
+ },
+ {
+  "id": 246,
+  "slot": "something small",
+  "variants": [
+   {
+    "en": "I got you a little gift.",
+    "zh": "我帶了一份小禮物給你。"
+   },
+   {
+    "en": "I got you a small present.",
+    "zh": "我帶了一份小禮物給你。"
+   }
+  ],
+  "tip": "gift 與 present 都是禮物；You didn't have to 是客套話。"
+ },
+ {
+  "id": 247,
+  "slot": "something green",
+  "variants": [
+   {
+    "en": "I thought your new place could use some flowers.",
+    "zh": "我想你的新家可以擺些花。"
+   },
+   {
+    "en": "I thought your new place could use a little color.",
+    "zh": "我想你的新家可以添點色彩。"
+   }
+  ],
+  "tip": "could use 是委婉說需要；show you around 是帶你參觀。"
+ },
+ {
+  "id": 248,
+  "slot": "your outfit today",
+  "variants": [
+   {
+    "en": "I really like your dress.",
+    "zh": "我真的很喜歡你這件洋裝。"
+   },
+   {
+    "en": "I really like your new haircut.",
+    "zh": "我真的很喜歡你的新髮型。"
+   }
+  ],
+  "tip": "稱讚衣著用 I like your ...；color suits you 是顏色適合你。"
+ },
+ {
+  "id": 249,
+  "slot": "waiting forever",
+  "variants": [
+   {
+    "en": "Phew. I thought you'd been waiting for ages.",
+    "zh": "我還以為你已經等了好久。"
+   },
+   {
+    "en": "Phew. I thought you'd been waiting so long.",
+    "zh": "我還以為你已經等很久了。"
+   }
+  ],
+  "tip": "I just got here 是剛到；forever 是誇張的很久很久。"
+ },
+ {
+  "id": 250,
+  "slot": "grab lunch",
+  "variants": [
+   {
+    "en": "Let's get dinner this weekend.",
+    "zh": "這週末一起吃晚餐吧。"
+   },
+   {
+    "en": "Let's have brunch this weekend.",
+    "zh": "這週末一起吃早午餐吧。"
+   }
+  ],
+  "tip": "catch up 是敘舊；grab lunch 口語等於 have lunch。"
+ },
+ {
+  "id": 251,
+  "slot": "scanning your code",
+  "variants": [
+   {
+    "en": "Perfect, adding you now.",
+    "zh": "太好了，我現在加你。"
+   },
+   {
+    "en": "Perfect, sending you a request now.",
+    "zh": "太好了，我現在送出邀請給你。"
+   }
+  ],
+  "tip": "加好友說 add someone on LINE，別說 plus。"
+ },
+ {
+  "id": 252,
+  "slot": "what do you need",
+  "variants": [
+   {
+    "en": "Sure, how can I help?",
+    "zh": "當然，我能幫什麼忙？"
+   },
+   {
+    "en": "Sure, what's up?",
+    "zh": "當然，怎麼了？"
+   }
+  ],
+  "tip": "do me a favor 是請幫個忙；lifesaver 是救星。"
+ },
+ {
+  "id": 253,
+  "slot": "buy you lunch",
+  "variants": [
+   {
+    "en": "Let me treat you to dinner as thanks.",
+    "zh": "讓我請你吃晚餐當作感謝。"
+   },
+   {
+    "en": "Let me take you out for lunch as thanks.",
+    "zh": "讓我帶你出去吃午餐當作感謝。"
+   }
+  ],
+  "tip": "That's what friends are for 是朋友本分；treat 是請客。"
+ },
+ {
+  "id": 254,
+  "slot": "being here for me",
+  "variants": [
+   {
+    "en": "Thanks for listening to me.",
+    "zh": "謝謝你聽我說。"
+   },
+   {
+    "en": "Thanks for checking on me.",
+    "zh": "謝謝你關心我。"
+   }
+  ],
+  "tip": "Thanks for 後面接 -ing；Anytime 是隨時都可以。"
+ },
+ {
+  "id": 255,
+  "slot": "celebrate this weekend",
+  "variants": [
+   {
+    "en": "We should go out for dinner.",
+    "zh": "我們應該出去吃頓飯。"
+   },
+   {
+    "en": "We should grab dinner tonight.",
+    "zh": "我們應該今晚去吃頓飯。"
+   }
+  ],
+  "tip": "Congratulations 一定要加 s；get promoted 是被升遷。"
+ },
+ {
+  "id": 256,
+  "slot": "toast to them",
+  "variants": [
+   {
+    "en": "Definitely, let's raise a glass to them.",
+    "zh": "當然，我們舉杯祝福他們。"
+   },
+   {
+    "en": "Definitely, let's drink to them.",
+    "zh": "當然，我們敬他們一杯。"
+   }
+  ],
+  "tip": "Small world 是世界真小；toast 是敬酒；groom 是新郎。"
+ },
+ {
+  "id": 257,
+  "slot": "I'm listening",
+  "variants": [
+   {
+    "en": "Okay, go ahead, I'm all ears.",
+    "zh": "好，你說吧，我洗耳恭聽。"
+   },
+   {
+    "en": "Okay, go ahead, I'm here.",
+    "zh": "好，你說吧，我在這裡。"
+   }
+  ],
+  "tip": "disappointing 形容事、disappointed 形容人。"
+ },
+ {
+  "id": 258,
+  "slot": "hiking on Saturday morning",
+  "variants": [
+   {
+    "en": "How about a movie on Friday night?",
+    "zh": "週五晚上去看場電影怎麼樣？"
+   },
+   {
+    "en": "How about biking by the river?",
+    "zh": "去河邊騎腳踏車怎麼樣？"
+   }
+  ],
+  "tip": "How about 後接名詞或 -ing；count me in 是算我一份。"
+ },
+ {
+  "id": 259,
+  "slot": "chatting with you",
+  "variants": [
+   {
+    "en": "It was great talking to you.",
+    "zh": "很高興和你聊天。"
+   },
+   {
+    "en": "It was great catching up with you.",
+    "zh": "很高興能和你敘敘舊。"
+   }
+  ],
+  "tip": "道別用過去式 It was great ...；keep in touch 是保持聯絡。"
+ },
+ {
+  "id": 260,
+  "slot": "the holidays",
+  "variants": [
+   {
+    "en": "Enjoy the long weekend with your family.",
+    "zh": "祝你和家人度過愉快的連假。"
+   },
+   {
+    "en": "Enjoy your vacation with your family.",
+    "zh": "祝你和家人度過愉快的假期。"
+   }
+  ],
+  "tip": "Enjoy 是及物動詞，直接接受詞；You're too generous 是客套。"
+ },
+ {
+  "id": 261,
+  "slot": "Welcome aboard",
+  "variants": [
+   {
+    "en": "Nice to meet you, I'm Amy from design.",
+    "zh": "很高興認識你，我是設計部的艾咪。"
+   },
+   {
+    "en": "Welcome to the team, I'm Amy from design.",
+    "zh": "歡迎加入團隊，我是設計部的艾咪。"
+   }
+  ],
+  "tip": "介紹部門用 from design；ask questions 別說 problems。"
+ },
+ {
+  "id": 262,
+  "slot": "red envelope",
+  "variants": [
+   {
+    "en": "Happy Lunar New Year! This lucky money is for you.",
+    "zh": "這份紅包給你。"
+   },
+   {
+    "en": "Happy Lunar New Year! This little gift is for you.",
+    "zh": "這份小禮物給你。"
+   }
+  ],
+  "tip": "紅包說 red envelope 或 lucky money；grown 是長大。"
+ },
+ {
+  "id": 263,
+  "slot": "welcome back",
+  "variants": [
+   {
+    "en": "You deserve it, glad you're back.",
+    "zh": "你值得，很高興你回來了。"
+   },
+   {
+    "en": "You deserve it, enjoy being back.",
+    "zh": "你值得，好好享受回到家吧。"
+   }
+  ],
+  "tip": "relaxing 形容事、relaxed 形容人；break 不加 s。"
+ },
+ {
+  "id": 264,
+  "slot": "All good things",
+  "variants": [
+   {
+    "en": "Nothing bad, I hope.",
+    "zh": "希望沒說什麼壞話。"
+   },
+   {
+    "en": "Only good stuff, I hope.",
+    "zh": "希望說的都是好話。"
+   }
+  ],
+  "tip": "Guilty as charged 是俏皮承認，不是真犯罪。"
+ },
+ {
+  "id": 265,
+  "slot": "get some rest",
+  "variants": [
+   {
+    "en": "On my way, take care.",
+    "zh": "我正在路上，保重。"
+   },
+   {
+    "en": "On my way, drink lots of water.",
+    "zh": "我正在路上，多喝水。"
+   }
+  ],
+  "tip": "I'm on my way 是我在路上；bring over 是帶過去。"
+ },
+ {
+  "id": 266,
+  "slot": "so glad you could come",
+  "variants": [
+   {
+    "en": "I'm really happy you made it.",
+    "zh": "真高興你來了。"
+   },
+   {
+    "en": "I'm so happy to see you.",
+    "zh": "真高興見到你。"
+   }
+  ],
+  "tip": "having us over 是邀請到家；walk you out 是送出門。"
+ },
+ {
+  "id": 267,
+  "slot": "some grilled corn",
+  "variants": [
+   {
+    "en": "Happy Mid-Autumn Festival! Want a mooncake?",
+    "zh": "中秋節快樂！要不要吃月餅？"
+   },
+   {
+    "en": "Happy Mid-Autumn Festival! Want a slice of pomelo?",
+    "zh": "中秋節快樂！要不要來片柚子？"
+   }
+  ],
+  "tip": "中秋節 Mid-Autumn；pomelo 是柚子；mooncake 是月餅。"
+ },
+ {
+  "id": 268,
+  "slot": "so proud of you",
+  "variants": [
+   {
+    "en": "I'm really proud of you!",
+    "zh": "我真的以你為榮！"
+   },
+   {
+    "en": "I'm so happy for you!",
+    "zh": "我真為你高興！"
+   }
+  ],
+  "tip": "be proud of 後接人；pass the exam 是通過考試。"
+ },
+ {
+  "id": 269,
+  "slot": "get your bags",
+  "variants": [
+   {
+    "en": "Let's grab your luggage and head home.",
+    "zh": "我們去拿你的行李回家吧。"
+   },
+   {
+    "en": "Let's carry your bags and head home.",
+    "zh": "我們去幫你提行李回家吧。"
+   }
+  ],
+  "tip": "bag 可數、luggage 不可數，沒有 luggages。"
+ },
+ {
+  "id": 270,
+  "slot": "my first week",
+  "variants": [
+   {
+    "en": "This is actually my first day.",
+    "zh": "其實我今天第一天。"
+   },
+   {
+    "en": "This is actually my second visit.",
+    "zh": "其實這是我第二次來。"
+   }
+  ],
+  "tip": "new here 是新來的；actually 是其實；first week 不加 s。"
+ },
+ {
+  "id": 271,
+  "slot": "Five more minutes",
+  "variants": [
+   {
+    "en": "Just ten more minutes, please.",
+    "zh": "再十分鐘就好，拜託。"
+   },
+   {
+    "en": "One more minute, please.",
+    "zh": "再一分鐘，拜託。"
+   }
+  ],
+  "tip": "more 放在數字後：five more minutes；get up 是起床。"
+ },
+ {
+  "id": 272,
+  "slot": "chop the vegetables",
+  "variants": [
+   {
+    "en": "Sounds good, I'll wash the rice.",
+    "zh": "聽起來不錯，我來洗米。"
+   },
+   {
+    "en": "Sounds good, I'll set the table.",
+    "zh": "聽起來不錯，我來擺碗筷。"
+   }
+  ],
+  "tip": "chop 切碎、slice 切片、stir-fry 炒。"
+ },
+ {
+  "id": 273,
+  "slot": "that sounds fair",
+  "variants": [
+   {
+    "en": "Deal, it's a fair trade.",
+    "zh": "成交，這交換很公平。"
+   },
+   {
+    "en": "Deal, that works for me.",
+    "zh": "成交，我可以接受。"
+   }
+  ],
+  "tip": "do the dishes 洗碗、take out the trash 倒垃圾。"
+ },
+ {
+  "id": 274,
+  "slot": "add that",
+  "variants": [
+   {
+    "en": "Let me write it down right now.",
+    "zh": "我現在就把它寫下來。"
+   },
+   {
+    "en": "Let me put it on the list right now.",
+    "zh": "我現在就把它加進清單。"
+   }
+  ],
+  "tip": "almost out of 是快用完；toilet paper 是不可數名詞。"
+ },
+ {
+  "id": 275,
+  "slot": "this shirt",
+  "variants": [
+   {
+    "en": "Why is this towel suddenly pink?",
+    "zh": "為什麼這條毛巾突然變粉紅色？"
+   },
+   {
+    "en": "Why is my white sock suddenly pink?",
+    "zh": "為什麼我的白襪子突然變粉紅色？"
+   }
+  ],
+  "tip": "colors 是有色衣物、whites 是白色衣物；soak 是浸泡。"
+ },
+ {
+  "id": 276,
+  "slot": "the kitchen sink",
+  "variants": [
+   {
+    "en": "It's dripping right under the bathroom sink.",
+    "zh": "就滴在浴室洗手台下面。"
+   },
+   {
+    "en": "It's dripping right under the washing machine.",
+    "zh": "就滴在洗衣機下面。"
+   }
+  ],
+  "tip": "leak 漏水、drip 滴水、loose 鬆脫；水龍頭是 faucet。"
+ },
+ {
+  "id": 277,
+  "slot": "this weekend",
+  "variants": [
+   {
+    "en": "Sure, let's discuss it tomorrow evening.",
+    "zh": "好啊，我們明天晚上來談吧。"
+   },
+   {
+    "en": "Sure, let's discuss it over dinner.",
+    "zh": "好啊，我們吃晚餐時來談吧。"
+   }
+  ],
+  "tip": "協商用 Could we talk about；感謝說 appreciate that。"
+ },
+ {
+  "id": 278,
+  "slot": "an early class",
+  "variants": [
+   {
+    "en": "I have a big exam tomorrow morning.",
+    "zh": "我明天早上有一場大考。"
+   },
+   {
+    "en": "I have an early shift tomorrow morning.",
+    "zh": "我明天早上要上早班。"
+   }
+  ],
+  "tip": "No worries 是回應道歉的沒關係，不是 You're welcome。"
+ },
+ {
+  "id": 279,
+  "slot": "bedroom boxes",
+  "variants": [
+   {
+    "en": "Yes, the kitchen boxes go upstairs.",
+    "zh": "對，廚房的箱子要搬到樓上。"
+   },
+   {
+    "en": "Yes, the book boxes go upstairs.",
+    "zh": "對，書的箱子要搬到樓上。"
+   }
+  ],
+  "tip": "靠牆放是 against the wall；go upstairs 不加 to。"
+ },
+ {
+  "id": 280,
+  "slot": "wait thirty seconds",
+  "variants": [
+   {
+    "en": "Please unplug it and wait one minute.",
+    "zh": "請拔掉插頭，等一分鐘。"
+   },
+   {
+    "en": "Please unplug it and wait a few minutes.",
+    "zh": "請拔掉插頭，等幾分鐘。"
+   }
+  ],
+  "tip": "斷線說 down，不說 broken；拔掉 unplug，插回 plug back in。"
+ },
+ {
+  "id": 281,
+  "slot": "take her temperature",
+  "variants": [
+   {
+    "en": "Let me check her weight first.",
+    "zh": "我先幫她量一下體重。"
+   },
+   {
+    "en": "Let me listen to her stomach first.",
+    "zh": "我先聽一下她的肚子。"
+   }
+  ],
+  "tip": "連兩天沒吃要用 hasn't been eating，不說 didn't eat。"
+ },
+ {
+  "id": 282,
+  "slot": "Call me",
+  "variants": [
+   {
+    "en": "Text me if anything comes up.",
+    "zh": "有任何狀況就傳訊息給我。"
+   },
+   {
+    "en": "Give me a call if anything comes up.",
+    "zh": "有任何狀況就打電話給我。"
+   }
+  ],
+  "tip": "anything comes up 指臨時有狀況；nap 是小睡。"
+ },
+ {
+  "id": 283,
+  "slot": "the funny voices",
+  "variants": [
+   {
+    "en": "Can you do the animal sounds again?",
+    "zh": "你可以再學一次動物的叫聲嗎？"
+   },
+   {
+    "en": "Can you do the silly faces again?",
+    "zh": "你可以再做一次搞笑的鬼臉嗎？"
+   }
+  ],
+  "tip": "講故事用 tell a story，念書才是 read。"
+ },
+ {
+  "id": 284,
+  "slot": "a picnic lunch",
+  "variants": [
+   {
+    "en": "Let's pack a few sandwiches as well.",
+    "zh": "我們也帶幾個三明治吧。"
+   },
+   {
+    "en": "Let's pack some snacks and drinks as well.",
+    "zh": "我們也帶些點心和飲料吧。"
+   }
+  ],
+  "tip": "as well 放句尾，比 too 正式；with 別省。"
+ },
+ {
+  "id": 285,
+  "slot": "my turn",
+  "variants": [
+   {
+    "en": "I think it's your turn this week.",
+    "zh": "我想這週輪到你了。"
+   },
+   {
+    "en": "I think it's the kids' turn this week.",
+    "zh": "我想這週輪到孩子們了。"
+   }
+  ],
+  "tip": "問輪到誰說 Whose turn，Whose 不是 Who's；water 當動詞是澆水。"
+ },
+ {
+  "id": 286,
+  "slot": "the truck leaves",
+  "variants": [
+   {
+    "en": "Let's hurry before the truck drives off.",
+    "zh": "我們快點，趁垃圾車開走之前。"
+   },
+   {
+    "en": "Let's hurry before the truck passes by.",
+    "zh": "我們快點，趁垃圾車經過之前。"
+   }
+  ],
+  "tip": "垃圾車是 garbage truck；分類是 separate A from B。"
+ },
+ {
+  "id": 287,
+  "slot": "my keys",
+  "variants": [
+   {
+    "en": "Have you seen my phone anywhere?",
+    "zh": "你有看到我的手機嗎？"
+   },
+   {
+    "en": "Have you seen my glasses anywhere?",
+    "zh": "你有看到我的眼鏡嗎？"
+   }
+  ],
+  "tip": "問有沒有看到用 Have you seen；look for 是找，find 是找到。"
+ },
+ {
+  "id": 288,
+  "slot": "sign here",
+  "variants": [
+   {
+    "en": "Could you print your name here, please?",
+    "zh": "可以請你在這裡寫上大名嗎？"
+   },
+   {
+    "en": "Could you initial here, please?",
+    "zh": "可以請你在這裡簽姓名縮寫嗎？"
+   }
+  ],
+  "tip": "簽收是 sign for；Could you 比 Can you 客氣。"
+ },
+ {
+  "id": 289,
+  "slot": "return it tomorrow",
+  "variants": [
+   {
+    "en": "I'll bring it back tonight, I promise.",
+    "zh": "我今晚就拿回來還你，我保證。"
+   },
+   {
+    "en": "I'll give it back Monday, I promise.",
+    "zh": "我星期一就還你，我保證。"
+   }
+  ],
+  "tip": "向人借用 borrow，借出去才是 lend；歸還用 return。"
+ },
+ {
+  "id": 290,
+  "slot": "see us clearly",
+  "variants": [
+   {
+    "en": "Grandma, can you hear us clearly?",
+    "zh": "奶奶，你聽得清楚我們說話嗎？"
+   },
+   {
+    "en": "Grandma, can you see us okay?",
+    "zh": "奶奶，你看得到我們嗎？"
+   }
+  ],
+  "tip": "視訊確認說 Can you see/hear me；來看我們是 visit us。"
+ },
+ {
+  "id": 291,
+  "slot": "the wiring",
+  "variants": [
+   {
+    "en": "Let me check the bulb up here.",
+    "zh": "我來檢查一下這裡的燈泡。"
+   },
+   {
+    "en": "Let me check the switch up here.",
+    "zh": "我來檢查一下這裡的開關。"
+   }
+  ],
+  "tip": "接觸不良是 loose connection；wiring 不加 s。"
+ },
+ {
+  "id": 292,
+  "slot": "set the table",
+  "variants": [
+   {
+    "en": "Can you wash the rice for dinner?",
+    "zh": "你可以幫忙洗個米準備晚餐嗎？"
+   },
+   {
+    "en": "Can you light the candles for dinner?",
+    "zh": "你可以幫忙點蠟燭準備晚餐嗎？"
+   }
+  ],
+  "tip": "擺碗筷是 set the table；plus Grandma 是再加奶奶。"
+ },
+ {
+  "id": 293,
+  "slot": "a total mess",
+  "variants": [
+   {
+    "en": "This garage is a complete disaster.",
+    "zh": "這個車庫簡直是一場災難。"
+   },
+   {
+    "en": "This garage is such a disaster zone.",
+    "zh": "這個車庫根本就是個災區。"
+   }
+  ],
+  "tip": "亂七八糟用 a mess，不說 very chaos；donate 直接接物品。"
+ },
+ {
+  "id": 294,
+  "slot": "next week's meals",
+  "variants": [
+   {
+    "en": "Let's plan our grocery list together.",
+    "zh": "我們一起來規劃採買清單吧。"
+   },
+   {
+    "en": "Let's plan this weekend's dinners together.",
+    "zh": "我們一起來規劃這個週末的晚餐吧。"
+   }
+  ],
+  "tip": "花在雜貨上是 spend on groceries；漲價說 prices go up。"
+ },
+ {
+  "id": 295,
+  "slot": "read the question",
+  "variants": [
+   {
+    "en": "Let's go through the steps together carefully.",
+    "zh": "我們一起仔細把步驟檢查一遍吧。"
+   },
+   {
+    "en": "Let's look at the example together carefully.",
+    "zh": "我們一起仔細看看這個範例吧。"
+   }
+  ],
+  "tip": "卡關說 stuck on；at all 只用在否定句。"
+ },
+ {
+  "id": 296,
+  "slot": "Wednesday and Friday",
+  "variants": [
+   {
+    "en": "I'll take Monday and Thursday then.",
+    "zh": "那我負責星期一和星期四。"
+   },
+   {
+    "en": "I'll take the morning runs then.",
+    "zh": "那我負責早上的接送。"
+   }
+  ],
+  "tip": "drive 是載去學校，pick up 是接回來；take 在這裡是我負責。"
+ },
+ {
+  "id": 297,
+  "slot": "feel safer",
+  "variants": [
+   {
+    "en": "Good, that makes me sleep better.",
+    "zh": "很好，這樣我晚上會睡得更好。"
+   },
+   {
+    "en": "Good, that makes me feel more relaxed.",
+    "zh": "很好，這讓我感覺更放心。"
+   }
+  ],
+  "tip": "make me feel + 形容詞，不加 to；arm the alarm 是啟動保全。"
+ },
+ {
+  "id": 298,
+  "slot": "meet in the middle",
+  "variants": [
+   {
+    "en": "How about we find a compromise?",
+    "zh": "不如我們各退一步吧？"
+   },
+   {
+    "en": "How about we split the difference?",
+    "zh": "不如我們折衷一下吧？"
+   }
+  ],
+  "tip": "meet in the middle 是各退一步；冷氣調高 turn up。"
+ },
+ {
+  "id": 299,
+  "slot": "my whole class",
+  "variants": [
+   {
+    "en": "I want to invite all my cousins.",
+    "zh": "我想邀請我所有的表兄弟姊妹。"
+   },
+   {
+    "en": "I want to invite my best friends.",
+    "zh": "我想邀請我最好的朋友們。"
+   }
+  ],
+  "tip": "辦派對說 have 或 throw a party，不說 make。"
+ },
+ {
+  "id": 300,
+  "slot": "flip the pancakes",
+  "variants": [
+   {
+    "en": "Can I help crack the eggs?",
+    "zh": "我可以幫忙打蛋嗎？"
+   },
+   {
+    "en": "Can I help stir the batter?",
+    "zh": "我可以幫忙攪拌麵糊嗎？"
+   }
+  ],
+  "tip": "Can I help 後接原形，不加 to；hot pan 是熱鍋，非火鍋。"
+ },
+ {
+  "id": 301,
+  "slot": "in the middle",
+  "variants": [
+   {
+    "en": "Somewhere near the back, if possible.",
+    "zh": "盡量坐後面一點的位置，可以的話。"
+   },
+   {
+    "en": "Somewhere close to the aisle, if possible.",
+    "zh": "盡量靠走道一點，可以的話。"
+   }
+  ],
+  "tip": "if possible 語氣委婉，比 I want 客氣；訂位常用。"
+ },
+ {
+  "id": 302,
+  "slot": "the medium shirts",
+  "variants": [
+   {
+    "en": "Do they still have the large hoodies?",
+    "zh": "他們還有大號的連帽衫嗎？"
+   },
+   {
+    "en": "Do they still have the blue ones?",
+    "zh": "他們還有藍色那幾件嗎？"
+   }
+  ],
+  "tip": "排隊是 wait in line；sell out 是賣光，run out 是用完。"
+ },
+ {
+  "id": 303,
+  "slot": "for three hours",
+  "variants": [
+   {
+    "en": "Around eight tonight, for two hours.",
+    "zh": "今晚八點左右，用兩個小時。"
+   },
+   {
+    "en": "Around eight tonight, until midnight.",
+    "zh": "今晚八點左右，用到午夜。"
+   }
+  ],
+  "tip": "for 接時間長度、until 接結束時間；under Lin 是以林的名字訂位。"
+ },
+ {
+  "id": 304,
+  "slot": "does it usually take",
+  "variants": [
+   {
+    "en": "How long does the hike usually take?",
+    "zh": "這條健行路線通常要花多久？"
+   },
+   {
+    "en": "How long does it normally take?",
+    "zh": "通常要花多久時間？"
+   }
+  ],
+  "tip": "問時間用 How long，問距離用 How far；take it slow 是慢慢來。"
+ },
+ {
+  "id": 305,
+  "slot": "the dragon boats",
+  "variants": [
+   {
+    "en": "Look, the lion dancers are starting!",
+    "zh": "你看，舞獅要開始了！"
+   },
+   {
+    "en": "Look, the fireworks are starting!",
+    "zh": "你看，煙火要開始了！"
+   }
+  ],
+  "tip": "龍舟是 dragon boats，粽子是 rice dumplings。"
+ },
+ {
+  "id": 306,
+  "slot": "for beginners",
+  "variants": [
+   {
+    "en": "Lane one is for kids.",
+    "zh": "一號道是給小朋友的。"
+   },
+   {
+    "en": "Lane one is for fast swimmers.",
+    "zh": "一號道是給游得快的人的。"
+   }
+  ],
+  "tip": "泳帽是 swim cap，不說 swimming hat；slower 指游得慢的人。"
+ },
+ {
+  "id": 307,
+  "slot": "to eleven",
+  "variants": [
+   {
+    "en": "First team to fifteen wins.",
+    "zh": "先拿到十五分的隊伍獲勝。"
+   },
+   {
+    "en": "First team to twenty-one wins.",
+    "zh": "先拿到二十一分的隊伍獲勝。"
+   }
+  ],
+  "tip": "Mind if I join? 回 Sure 才是不介意；別回 Yes。"
+ },
+ {
+  "id": 308,
+  "slot": "the running club",
+  "variants": [
+   {
+    "en": "Is this the hiking club meetup?",
+    "zh": "這裡是登山社的聚會嗎？"
+   },
+   {
+    "en": "Is this the book club meetup?",
+    "zh": "這裡是讀書會的聚會嗎？"
+   }
+  ],
+  "tip": "報名動詞是 sign up，名詞才是 signup；寫在名單上介系詞用 on。"
+ },
+ {
+  "id": 309,
+  "slot": "that slot",
+  "variants": [
+   {
+    "en": "I'll book the three o'clock slot, please.",
+    "zh": "我要預約三點那個時段。"
+   },
+   {
+    "en": "I'll book the first slot, please.",
+    "zh": "我要預約第一個時段。"
+   }
+  ],
+  "tip": "free from three to four 用 from ... to 表時段。"
+ },
+ {
+  "id": 310,
+  "slot": "where should we go",
+  "variants": [
+   {
+    "en": "Sounds fun, what should we bring?",
+    "zh": "聽起來不錯，我們該帶什麼？"
+   },
+   {
+    "en": "Sounds fun, when should we leave?",
+    "zh": "聽起來不錯，我們該什麼時候出發？"
+   }
+  ],
+  "tip": "Sounds fun 可省略主詞 It；go fishing 不加 to。"
+ },
+ {
+  "id": 311,
+  "slot": "give it a try",
+  "variants": [
+   {
+    "en": "Let's try it out.",
+    "zh": "我們來試玩看看吧。"
+   },
+   {
+    "en": "Let's play one round.",
+    "zh": "我們來玩一局吧。"
+   }
+  ],
+  "tip": "give it a try 是試試看；a game 指單場，不是整個遊戲。"
+ },
+ {
+  "id": 312,
+  "slot": "playing lately",
+  "variants": [
+   {
+    "en": "What have you been watching lately?",
+    "zh": "你最近都在看什麼？"
+   },
+   {
+    "en": "What have you been reading lately?",
+    "zh": "你最近都在讀什麼？"
+   }
+  ],
+  "tip": "lately 常搭現在完成進行式 have been ...ing；hang 是訣竅。"
+ },
+ {
+  "id": 313,
+  "slot": "toward the bridge",
+  "variants": [
+   {
+    "en": "Let's walk along the river.",
+    "zh": "我們沿著河邊走吧。"
+   },
+   {
+    "en": "Let's walk to the fountain.",
+    "zh": "我們走去噴水池吧。"
+   }
+  ],
+  "tip": "請人拍照說 take a picture of me，不說 shoot me。"
+ },
+ {
+  "id": 314,
+  "slot": "made lemonade",
+  "variants": [
+   {
+    "en": "I brought cookies for everyone.",
+    "zh": "我幫大家帶了餅乾。"
+   },
+   {
+    "en": "I baked brownies for everyone.",
+    "zh": "我幫大家烤了布朗尼。"
+   }
+  ],
+  "tip": "野餐帶食物用 bring，過去式是 brought；set up 是架設或擺好。"
+ },
+ {
+  "id": 315,
+  "slot": "order some snacks",
+  "variants": [
+   {
+    "en": "Let's get some drinks too.",
+    "zh": "我們也去點些飲料吧。"
+   },
+   {
+    "en": "Let's grab some popcorn too.",
+    "zh": "我們也去拿些爆米花吧。"
+   }
+  ],
+  "tip": "看球賽的 game 是比賽，不是電玩；in ten minutes 是十分鐘之後。"
+ },
+ {
+  "id": 316,
+  "slot": "rent skis and boots",
+  "variants": [
+   {
+    "en": "I need to rent a helmet.",
+    "zh": "我需要租一頂安全帽。"
+   },
+   {
+    "en": "I need to rent a snowboard.",
+    "zh": "我需要租一塊滑雪板。"
+   }
+  ],
+  "tip": "腳的尺寸說 I wear a size nine；try on 是試穿；fit 表示合身。"
+ },
+ {
+  "id": 317,
+  "slot": "balance practice",
+  "variants": [
+   {
+    "en": "Okay, let's start with a quick warm-up on the sand.",
+    "zh": "好的，我們先在沙灘上做個快速的暖身。"
+   },
+   {
+    "en": "Okay, let's start with stretching exercises on the sand.",
+    "zh": "好的，我們先在沙灘上做伸展運動。"
+   }
+  ],
+  "tip": "第一次做某事用 I've never ... before；push up 是撐起身體。"
+ },
+ {
+  "id": 318,
+  "slot": "this clue",
+  "variants": [
+   {
+    "en": "What does this symbol mean?",
+    "zh": "這個符號是什麼意思？"
+   },
+   {
+    "en": "What does this riddle mean?",
+    "zh": "這個謎題是什麼意思？"
+   }
+  ],
+  "tip": "問意思說 What does X mean，別再加 the meaning。"
+ },
+ {
+  "id": 319,
+  "slot": "an audio guide",
+  "variants": [
+   {
+    "en": "Can I rent a wheelchair here?",
+    "zh": "我可以在這裡租輪椅嗎？"
+   },
+   {
+    "en": "Can I rent a locker here?",
+    "zh": "我可以在這裡租置物櫃嗎？"
+   }
+  ],
+  "tip": "語言前用 in five languages；head upstairs 是往樓上走。"
+ },
+ {
+  "id": 320,
+  "slot": "turn all the way around",
+  "variants": [
+   {
+    "en": "It means go around in a circle, like this.",
+    "zh": "意思是原地轉一整圈，像這樣。"
+   },
+   {
+    "en": "It means rotate in place, like this.",
+    "zh": "意思是原地旋轉，像這樣。"
+   }
+  ],
+  "tip": "問字義加 exactly 強調；more slowly 要用副詞。"
+ },
+ {
+  "id": 321,
+  "slot": "life jackets",
+  "variants": [
+   {
+    "en": "Do we need sun hats?",
+    "zh": "我們需要戴遮陽帽嗎？"
+   },
+   {
+    "en": "Do we need extra paddles?",
+    "zh": "我們需要多帶幾支船槳嗎？"
+   }
+  ],
+  "tip": "救生衣是 life jacket；put on 是穿戴動作，wear 才是穿著的狀態。"
+ },
+ {
+  "id": 322,
+  "slot": "sign up now",
+  "variants": [
+   {
+    "en": "Great, I'll register online.",
+    "zh": "太好了，我現在就上網報名。"
+   },
+   {
+    "en": "Great, I'll sign up today.",
+    "zh": "太好了，我今天就報名。"
+   }
+  ],
+  "tip": "bring my own 是自備；報名課程說 sign up for。"
+ },
+ {
+  "id": 323,
+  "slot": "a short break",
+  "variants": [
+   {
+    "en": "Let's take a quick break.",
+    "zh": "我們休息一下吧。"
+   },
+   {
+    "en": "Let's take a water break.",
+    "zh": "我們休息一下喝點水吧。"
+   }
+  ],
+  "tip": "休息是 take a break；serve 是發球；close 是差一點。"
+ },
+ {
+  "id": 324,
+  "slot": "good for beginners",
+  "variants": [
+   {
+    "en": "Which route is easy for beginners?",
+    "zh": "哪一條路線適合新手？"
+   },
+   {
+    "en": "Which route is best for kids?",
+    "zh": "哪一條路線最適合小朋友？"
+   }
+  ],
+  "tip": "harness 是攀岩吊帶；low enough 是夠低。"
+ },
+ {
+  "id": 325,
+  "slot": "Elephant Mountain",
+  "variants": [
+   {
+    "en": "This is Yangming Mountain. The view is worth it.",
+    "zh": "這裡是陽明山，風景很值得一看。"
+   },
+   {
+    "en": "This is Qixing Mountain. The view is worth it.",
+    "zh": "這裡是七星山，風景很值得一看。"
+   }
+  ],
+  "tip": "worth it 是值得，不說 worth to；101 讀作 one-oh-one。"
+ },
+ {
+  "id": 326,
+  "slot": "the fireworks",
+  "variants": [
+   {
+    "en": "What time do the concert start?",
+    "zh": "演唱會幾點開始？"
+   },
+   {
+    "en": "What time do the parade start?",
+    "zh": "遊行幾點開始？"
+   }
+  ],
+  "tip": "fireworks 煙火永遠用複數；around nine 是大約九點。"
+ },
+ {
+  "id": 327,
+  "slot": "tents for four people",
+  "variants": [
+   {
+    "en": "Do you have tents for two people?",
+    "zh": "你們有雙人帳篷嗎？"
+   },
+   {
+    "en": "Do you have tents for six people?",
+    "zh": "你們有六人帳篷嗎？"
+   }
+  ],
+  "tip": "帳篷幾人用說 tent for four people；take both 是都要。"
+ },
+ {
+  "id": 328,
+  "slot": "flat ground",
+  "variants": [
+   {
+    "en": "Let's warm up on an easy slope first.",
+    "zh": "我們先在緩坡上暖身吧。"
+   },
+   {
+    "en": "Let's warm up on the beginner ramp first.",
+    "zh": "我們先在初學者斜坡上暖身吧。"
+   }
+  ],
+  "tip": "warm up 是暖身；戴安全帽說 wear 或 put on a helmet。"
+ },
+ {
+  "id": 329,
+  "slot": "two paddles",
+  "variants": [
+   {
+    "en": "Can we borrow two rackets?",
+    "zh": "我們可以借兩支球拍嗎？"
+   },
+   {
+    "en": "Can we borrow a spare ball?",
+    "zh": "我們可以借一顆備用球嗎？"
+   }
+  ],
+  "tip": "借進來用 borrow，借出去用 lend；best of three 是三戰兩勝。"
+ },
+ {
+  "id": 330,
+  "slot": "always wanted to try",
+  "variants": [
+   {
+    "en": "I've never tried that.",
+    "zh": "我從來沒試過這個。"
+   },
+   {
+    "en": "I've been dying to try that.",
+    "zh": "我一直很想試試這個。"
+   }
+  ],
+  "tip": "I've always wanted to 用現在完成式表示一直想做；apron 是圍裙。"
+ },
+ {
+  "id": 331,
+  "slot": "a car accident",
+  "variants": [
+   {
+    "en": "There's been a fire on Main Street.",
+    "zh": "主街上發生火災了。"
+   },
+   {
+    "en": "There's been a serious crash on Main Street.",
+    "zh": "主街上發生嚴重車禍了。"
+   }
+  ],
+  "tip": "報案說 There's been an accident，用現在完成式。"
+ },
+ {
+  "id": 332,
+  "slot": "a lost wallet",
+  "variants": [
+   {
+    "en": "I'd like to report a stolen bag.",
+    "zh": "我想報案，我的包包被偷了。"
+   },
+   {
+    "en": "I'd like to report a missing phone.",
+    "zh": "我想報案，我的手機不見了。"
+   }
+  ],
+  "tip": "遺失用 lost、被偷用 stolen，別混用；I'd like to 較有禮貌。"
+ },
+ {
+  "id": 333,
+  "slot": "take the stairs",
+  "variants": [
+   {
+    "en": "Let's use the stairs, not the elevator.",
+    "zh": "我們走樓梯，不要搭電梯。"
+   },
+   {
+    "en": "Let's take the back exit, not the elevator.",
+    "zh": "我們走後門，不要搭電梯。"
+   }
+  ],
+  "tip": "火警走樓梯說 take the stairs；just in case 是以防萬一。"
+ },
+ {
+  "id": 334,
+  "slot": "insurance information",
+  "variants": [
+   {
+    "en": "Can we exchange contact information?",
+    "zh": "我們可以交換聯絡資料嗎？"
+   },
+   {
+    "en": "Can we exchange phone numbers?",
+    "zh": "我們可以交換電話號碼嗎？"
+   }
+  ],
+  "tip": "information 不可數，不能寫 informations；bumper 是保險桿。"
+ },
+ {
+  "id": 335,
+  "slot": "went flat",
+  "variants": [
+   {
+    "en": "My tire just blew out.",
+    "zh": "我的輪胎剛剛爆胎了。"
+   },
+   {
+    "en": "My tire just got punctured.",
+    "zh": "我的輪胎剛剛被刺破了。"
+   }
+  ],
+  "tip": "go flat 是洩氣；spare tire 是備胎；trunk 是後車廂。"
+ },
+ {
+  "id": 336,
+  "slot": "any form of identification",
+  "variants": [
+   {
+    "en": "Do you have some photo ID?",
+    "zh": "你有帶附照片的證件嗎？"
+   },
+   {
+    "en": "Do you have proof of residence?",
+    "zh": "你有居住證明嗎？"
+   }
+  ],
+  "tip": "被鎖在門外是 locked out；identification 不可數。"
+ },
+ {
+  "id": 337,
+  "slot": "your address",
+  "variants": [
+   {
+    "en": "Can I have your name, please?",
+    "zh": "可以給我你的姓名嗎？"
+   },
+   {
+    "en": "Can I have your phone number, please?",
+    "zh": "可以給我你的電話號碼嗎？"
+   }
+  ],
+  "tip": "停電是 lost power；in two hours 是兩小時後。"
+ },
+ {
+  "id": 338,
+  "slot": "take a look at it",
+  "variants": [
+   {
+    "en": "Let me have a look at it.",
+    "zh": "讓我看一下。"
+   },
+   {
+    "en": "Let me check it out.",
+    "zh": "讓我檢查一下。"
+   }
+  ],
+  "tip": "螢幕裂了是 cracked；That works for me 是我可以接受。"
+ },
+ {
+  "id": 339,
+  "slot": "my dry cleaning",
+  "variants": [
+   {
+    "en": "I'm here to pick up my jacket.",
+    "zh": "我來領我的外套。"
+   },
+   {
+    "en": "I'm here to pick up my suit.",
+    "zh": "我來領我的西裝。"
+   }
+  ],
+  "tip": "dry cleaning 是不可數名詞；pick up 是領取；pressed 是燙平。"
+ },
+ {
+  "id": 340,
+  "slot": "the sides shorter",
+  "variants": [
+   {
+    "en": "Would you like the back shorter too?",
+    "zh": "後面也要剪短一點嗎？"
+   },
+   {
+    "en": "Would you like the bangs trimmed too?",
+    "zh": "瀏海也要修一下嗎？"
+   }
+  ],
+  "tip": "just a trim 是稍微修一下；剪頭髮說 get a haircut。"
+ },
+ {
+  "id": 341,
+  "slot": "the manicure",
+  "variants": [
+   {
+    "en": "Just the pedicure today, please.",
+    "zh": "今天只做足部美甲就好。"
+   },
+   {
+    "en": "Just a hand massage today, please.",
+    "zh": "今天只做手部按摩就好。"
+   }
+  ],
+  "tip": "manicure 是手部美甲，pedicure 是足部美甲；shade 指顏色深淺。"
+ },
+ {
+  "id": 342,
+  "slot": "hem these pants",
+  "variants": [
+   {
+    "en": "Can you shorten this skirt for me?",
+    "zh": "你可以幫我改短這件裙子嗎？"
+   },
+   {
+    "en": "Can you fix this zipper for me?",
+    "zh": "你可以幫我修這個拉鍊嗎？"
+   }
+  ],
+  "tip": "pants 永遠複數，要說 these pants，不說 this pant。"
+ },
+ {
+  "id": 343,
+  "slot": "will it cost",
+  "variants": [
+   {
+    "en": "How much would it cost?",
+    "zh": "那要花多少錢？"
+   },
+   {
+    "en": "How much will it be?",
+    "zh": "那總共多少錢？"
+   }
+  ],
+  "tip": "How much will it cost 問總價；in two days 是兩天後。"
+ },
+ {
+  "id": 344,
+  "slot": "a copy of this key",
+  "variants": [
+   {
+    "en": "Can you make two copies of this key?",
+    "zh": "你可以幫我複製兩把這支鑰匙嗎？"
+   },
+   {
+    "en": "Can you make a spare key?",
+    "zh": "你可以幫我做一把備用鑰匙嗎？"
+   }
+  ],
+  "tip": "複製鑰匙說 make a copy；copy 可數，兩把要說 two copies。"
+ },
+ {
+  "id": 345,
+  "slot": "in the lobby",
+  "variants": [
+   {
+    "en": "Can I wait in the car?",
+    "zh": "我可以在車上等嗎？"
+   },
+   {
+    "en": "Can I wait in the waiting room?",
+    "zh": "我可以在等候室等嗎？"
+   }
+  ],
+  "tip": "wait in 接地點；we'll call your name 是叫號。"
+ },
+ {
+  "id": 346,
+  "slot": "machine number four",
+  "variants": [
+   {
+    "en": "It's machine number two, over there.",
+    "zh": "是二號機，在那邊。"
+   },
+   {
+    "en": "It's the last machine, over there.",
+    "zh": "是最後那一台，在那邊。"
+   }
+  ],
+  "tip": "洗衣機吃錢不動說 took my money but won't start。"
+ },
+ {
+  "id": 347,
+  "slot": "restarting your router",
+  "variants": [
+   {
+    "en": "Let's try checking the cables first.",
+    "zh": "我們先試著檢查一下線路。"
+   },
+   {
+    "en": "Let's try resetting the modem first.",
+    "zh": "我們先試著重設數據機。"
+   }
+  ],
+  "tip": "try + V-ing 是試試看某個做法；unplug 是拔掉；down 是斷線。"
+ },
+ {
+  "id": 348,
+  "slot": "no extra charges",
+  "variants": [
+   {
+    "en": "Everything looks good, no damage.",
+    "zh": "一切看起來都很好，沒有損壞。"
+   },
+   {
+    "en": "Everything looks good, no late fees.",
+    "zh": "一切看起來都很好，沒有逾期費用。"
+   }
+  ],
+  "tip": "fill up the tank 是加滿油；charges 是費用。"
+ },
+ {
+  "id": 349,
+  "slot": "the fifth floor office",
+  "variants": [
+   {
+    "en": "Excuse me, where's the HR office?",
+    "zh": "請問人資辦公室在哪裡？"
+   },
+   {
+    "en": "Excuse me, where's the front desk?",
+    "zh": "請問服務台在哪裡？"
+   }
+  ],
+  "tip": "五樓用序數 fifth floor；sign in 是簽到。"
+ },
+ {
+  "id": 350,
+  "slot": "in my room",
+  "variants": [
+   {
+    "en": "The safe in my closet won't open.",
+    "zh": "我衣櫃裡的保險箱打不開。"
+   },
+   {
+    "en": "The safe in my suite won't open.",
+    "zh": "我套房裡的保險箱打不開。"
+   }
+  ],
+  "tip": "保險箱是 safe；send someone up 是派人上去。"
+ },
+ {
+  "id": 351,
+  "slot": "check it together",
+  "variants": [
+   {
+    "en": "Good thinking, let's turn it off together.",
+    "zh": "好想法，我們一起把它關掉。"
+   },
+   {
+    "en": "Good thinking, let's look for damage.",
+    "zh": "好想法，我們一起找找有沒有損壞。"
+   }
+  ],
+  "tip": "地震動作是 drop, cover, hold on；gas line 是瓦斯管。"
+ },
+ {
+  "id": 352,
+  "slot": "because of the typhoon",
+  "variants": [
+   {
+    "en": "School's closed tomorrow due to the storm.",
+    "zh": "因為暴風雨，明天學校停課。"
+   },
+   {
+    "en": "School's closed tomorrow because of the heavy rain.",
+    "zh": "因為大雨，明天學校停課。"
+   }
+  ],
+  "tip": "because of 後接名詞、because 後接句子；stock up 是囤貨。"
+ },
+ {
+  "id": 353,
+  "slot": "open this late",
+  "variants": [
+   {
+    "en": "Is there a pharmacy open right now?",
+    "zh": "現在有藥局有開嗎？"
+   },
+   {
+    "en": "Is there a pharmacy open after midnight?",
+    "zh": "有藥局過了午夜還開嗎？"
+   }
+  ],
+  "tip": "藥局是 pharmacy 或 drugstore；carry 在這裡是有販售。"
+ },
+ {
+  "id": 354,
+  "slot": "over the speakers",
+  "variants": [
+   {
+    "en": "We'll announce it over the intercom now.",
+    "zh": "我們現在用廣播系統廣播。"
+   },
+   {
+    "en": "We'll announce it on the loudspeaker now.",
+    "zh": "我們現在用擴音器廣播。"
+   }
+  ],
+  "tip": "迷路的小孩是 lost child；announce it 是廣播。"
+ },
+ {
+  "id": 355,
+  "slot": "your patience",
+  "variants": [
+   {
+    "en": "I really appreciate your help.",
+    "zh": "我真的很感謝你的幫忙。"
+   },
+   {
+    "en": "I really appreciate your understanding.",
+    "zh": "我真的很感謝你的體諒。"
+   }
+  ],
+  "tip": "appreciate 後面接事情，不直接接人，不說 appreciate you。"
+ },
+ {
+  "id": 356,
+  "slot": "seems to be stuck",
+  "variants": [
+   {
+    "en": "The elevator is out of order.",
+    "zh": "電梯故障了。"
+   },
+   {
+    "en": "The elevator has stopped working.",
+    "zh": "電梯停止運轉了。"
+   }
+  ],
+  "tip": "電梯是 elevator，英式說 lift；trapped 是被困；stuck 是卡住。"
+ },
+ {
+  "id": 357,
+  "slot": "smell gas",
+  "variants": [
+   {
+    "en": "I smell smoke in my kitchen.",
+    "zh": "我廚房有聞到煙味。"
+   },
+   {
+    "en": "I hear a hissing sound in my kitchen.",
+    "zh": "我廚房有聽到嘶嘶聲。"
+   }
+  ],
+  "tip": "瓦斯是 gas；don't touch any switches 是不要碰任何開關。"
+ },
+ {
+  "id": 358,
+  "slot": "was it delivered",
+  "variants": [
+   {
+    "en": "When did it arrive?",
+    "zh": "它是什麼時候送到的？"
+   },
+   {
+    "en": "When was it dropped off?",
+    "zh": "它是什麼時候被放下的？"
+   }
+  ],
+  "tip": "被偷用被動 was stolen；doorstep 是門階；tracking 是物流追蹤。"
+ },
+ {
+  "id": 359,
+  "slot": "the color and brand",
+  "variants": [
+   {
+    "en": "Do you remember the model?",
+    "zh": "你記得型號嗎？"
+   },
+   {
+    "en": "Do you remember the serial number?",
+    "zh": "你記得序號嗎？"
+   }
+  ],
+  "tip": "被偷是 was stolen，被搶才是 was robbed。"
+ },
+ {
+  "id": 360,
+  "slot": "been dripping",
+  "variants": [
+   {
+    "en": "How long has it been leaking?",
+    "zh": "它漏水多久了？"
+   },
+   {
+    "en": "How long has it been like this?",
+    "zh": "它變這樣多久了？"
+   }
+  ],
+  "tip": "持續到現在用現在完成進行式 has been dripping；plumber 是水電工。"
+ },
+ {
+  "id": 361,
+  "slot": "are you parked",
+  "variants": [
+   {
+    "en": "Where is your car right now?",
+    "zh": "你的車現在在哪裡？"
+   },
+   {
+    "en": "Where are you standing right now?",
+    "zh": "你現在站在哪裡？"
+   }
+  ],
+  "tip": "鑰匙鎖在車內是 locked my keys inside my car。"
+ },
+ {
+  "id": 362,
+  "slot": "Loud music",
+  "variants": [
+   {
+    "en": "Barking dogs, and it's already past midnight.",
+    "zh": "狗一直叫，而且已經過午夜了。"
+   },
+   {
+    "en": "Heavy footsteps, and it's already past midnight.",
+    "zh": "腳步聲很重，而且已經過午夜了。"
+   }
+  ],
+  "tip": "quiet down 是安靜下來；past midnight 是過了午夜。"
+ },
+ {
+  "id": 363,
+  "slot": "no water",
+  "variants": [
+   {
+    "en": "Hi, there's no hot water in my apartment.",
+    "zh": "嗨，我的公寓沒有熱水。"
+   },
+   {
+    "en": "Hi, there's no power in my apartment.",
+    "zh": "嗨，我的公寓沒有電。"
+   }
+  ],
+  "tip": "停水可說 no water 或 water outage。"
+ },
+ {
+  "id": 364,
+  "slot": "my passport",
+  "variants": [
+   {
+    "en": "I can't find my boarding pass anywhere.",
+    "zh": "我到處都找不到我的登機證。"
+   },
+   {
+    "en": "I can't find my wallet anywhere.",
+    "zh": "我到處都找不到我的皮夾。"
+   }
+  ],
+  "tip": "否定句用 anywhere，肯定句用 somewhere。"
+ },
+ {
+  "id": 365,
+  "slot": "my umbrella",
+  "variants": [
+   {
+    "en": "I think I left my scarf at your restaurant last night.",
+    "zh": "我想我昨晚把圍巾忘在你們餐廳了。"
+   },
+   {
+    "en": "I think I left my phone charger at your restaurant last night.",
+    "zh": "我想我昨晚把手機充電器忘在你們餐廳了。"
+   }
+  ],
+  "tip": "忘在某處用 left it at，forgot 後面不能接地點。"
+ }
+]

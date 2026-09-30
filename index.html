@@ -35,24 +35,28 @@
       <div class="en" id="titleEn"></div>
       <p class="scene" id="scene"></p>
       <p class="roles" id="roles"></p>
+      <p class="veil" id="veil" hidden>先聽再看：情境標題已遮住，聽完五句自動揭曉。<button id="veilShow" type="button">直接看</button></p>
     </div>
     <div class="controls">
       <button id="playAll" type="button">▶ 聽全部</button>
       <button id="rate" type="button" aria-pressed="false">1× 正常</button>
       <button id="shadow" type="button" aria-pressed="false">跟讀</button>
+      <button id="role" type="button" aria-pressed="false">角色扮演</button>
       <button id="showEn" type="button">看英文</button>
       <button id="showZh" type="button">看中譯</button>
     </div>
     <p id="shadowHint" class="hint-inline" hidden>跟讀模式：每句播完會留同樣長度的空檔，請跟著大聲唸一次。</p>
+    <p id="roleHint" class="hint-inline" hidden></p>
     <ol class="lines" id="lines"></ol>
     <p id="keyPhrase" class="keyphrase" hidden></p>
+    <p id="tip" class="tip" hidden></p>
     <div class="quiz-bar"><button id="quizBtn" type="button" hidden aria-expanded="false">聽完了？來個小測驗</button></div>
     <section id="quiz" class="quiz" hidden aria-label="聽音選句小測驗"></section>
     <div class="done"><span id="stats"></span><button id="doneBtn" type="button" disabled>聽完 5 句後可完成</button></div>
     <p id="missed" class="hint-inline missed" hidden></p>
   </article>
   <section id="review" class="review" hidden></section>
-  <p class="hint">怎麼練：先按「聽全部」只用耳朵聽 2–3 次 → 點單句可重播、切 0.75× 慢速 → 聽不出來再按「顯示英文」→ 最後看中譯確認 → 開「跟讀」跟著唸一遍。</p>
+  <p class="hint">怎麼練：先按「聽全部」只用耳朵聽 2–3 次 → 聽不出來再按「顯示英文」→ 看中譯確認 → 開「跟讀」跟著唸，會標出漏掉的字 → 開「角色扮演」自己接一方台詞 → 最後來個小測驗。</p>
   <footer>英語日日聽 · 大乃老師 · 插畫由 AI 生成 · 語音為合成人聲</footer>
 </div>
 <script type="module" src="js/app.js"></script>
