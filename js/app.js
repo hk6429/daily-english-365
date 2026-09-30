@@ -23,7 +23,7 @@ const scene = () => state.scenes.find(s => s.id === state.order[state.day - 1]);
 function render() {
   const x = scene();
   const today = todayIndex();
-  stopAll(); closeQuiz();
+  stopAll(); closeQuiz(); delete $('#quizBtn').dataset.shown; $('#quizBtn').classList.remove('pop');
   state.played = new Set();
   document.title = `${x.title_zh} — 英語日日聽`;
   $('#dayLabel').textContent = state.day === today ? `今天 · 第 ${state.day} 天` : `第 ${state.day} 天`;
@@ -99,7 +99,8 @@ function renderDone() {
   const btn = $('#doneBtn');
   const done = isDoneToday(list, x.id);
   const heard = state.played.size >= 5;
-  $('#quizBtn').hidden = !(heard || done) || buildQuiz(state.scenes, x.id).length === 0;
+  const qb = $('#quizBtn'); const avail = (heard || done) && buildQuiz(state.scenes, x.id).length > 0;
+  qb.dataset.avail = avail ? '1' : '0'; if ($('#quiz').hidden) { qb.hidden = !avail; if (avail && !qb.dataset.shown) { qb.dataset.shown = '1'; qb.classList.add('pop'); } }
   btn.classList.toggle('is-done', done);
   btn.disabled = !done && !heard;
   btn.textContent = done ? '✓ 已完成' : heard ? '完成這一課' : '聽完 5 句後可完成';
@@ -131,11 +132,11 @@ function renderOnboarding() {
 
 // ---------- 音訊 ----------
 function lineVoice(k) { return scene().lines[k - 1]; }
-function speakFallback(k) {
+function speakFallback(k, rate = state.rate) {
   return new Promise(res => {
     if (!('speechSynthesis' in window)) return res();
     const u = new SpeechSynthesisUtterance(lineVoice(k).en);
-    u.lang = 'en-US'; u.rate = state.rate; u.onend = res; u.onerror = res;
+    u.lang = 'en-US'; u.rate = rate; u.onend = res; u.onerror = res;
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   });
 }
@@ -143,7 +144,7 @@ function markPlaying(k) {
   document.querySelectorAll('.line.playing').forEach(e => e.classList.remove('playing'));
   const li = $(`.line[data-k="${k}"]`); li && li.classList.add('playing');
 }
-function playLine(k) {
+function playLine(k, rate = state.rate) {
   const token = ++playToken;
   markPlaying(k);
   return new Promise(res => {
@@ -154,10 +155,10 @@ function playLine(k) {
       renderDone(); res();
     };
     player.onended = finish;
-    player.onerror = () => { if (token !== playToken) return res(); speakFallback(k).then(finish); };
+    player.onerror = () => { if (token !== playToken) return res(); speakFallback(k, rate).then(finish); };
     player.src = `audio/${pad(scene().id)}-${k}.mp3`;
-    player.playbackRate = state.rate;
-    player.play().catch(() => { if (token !== playToken) return res(); speakFallback(k).then(finish); });
+    player.playbackRate = rate;
+    player.play().catch(() => { if (token !== playToken) return res(); speakFallback(k, rate).then(finish); });
   });
 }
 function stopAll() {
@@ -189,58 +190,85 @@ async function playAll() {
 // ── 聽音選句小測驗 ──
 const QUIZ_KEY = 'de365.quiz';
 const quizBest = () => { try { const o = JSON.parse(localStorage.getItem(QUIZ_KEY) || '{}'); return o && typeof o === 'object' ? o : {}; } catch { return {}; } };
-const saveQuizBest = n => { try { const o = quizBest(); const k = taipeiDateKey(); o[k] = Math.max(o[k] || 0, n); localStorage.setItem(QUIZ_KEY, JSON.stringify(o)); } catch {} };
-const quiz = { qs: [], i: 0, score: 0 };
+const saveQuizBest = (n, total) => { try { const k = taipeiDateKey(); const o = { [k]: Math.min(total, Math.max(quizBest()[k] || 0, n)) }; localStorage.setItem(QUIZ_KEY, JSON.stringify(o)); } catch {} };
+const quiz = { qs: [], i: 0, score: 0, wrong: [], round: 0 };
+const QUIZ_LABEL = '聽完了？來個小測驗';
 
 function closeQuiz() {
-  const box = $('#quiz'); box.hidden = true; box.innerHTML = '';
-  $('#lines').hidden = false; $('#keyPhrase').hidden = !$('#keyPhrase').innerHTML;
-  $('#quizBtn').setAttribute('aria-expanded', 'false'); $('#quizBtn').textContent = '聽音選句 小測驗';
+  stopAll();
+  const box = $('#quiz'); const wasOpen = !box.hidden;
+  box.hidden = true; box.innerHTML = '';
+  $('#lines').hidden = false; $('.controls').hidden = false;
+  $('#keyPhrase').hidden = !$('#keyPhrase').innerHTML;
+  const b = $('#quizBtn'); b.setAttribute('aria-expanded', 'false'); b.textContent = QUIZ_LABEL; b.hidden = b.dataset.avail !== '1';
+  if (wasOpen) b.focus();
 }
 function openQuiz() {
-  quiz.qs = buildQuiz(state.scenes, scene().id); quiz.i = 0; quiz.score = 0;
+  quiz.qs = buildQuiz(state.scenes, scene().id, quiz.round++); quiz.i = 0; quiz.score = 0; quiz.wrong = [];
   stopAll();
-  $('#lines').hidden = true; $('#keyPhrase').hidden = true; $('#quiz').hidden = false;
-  $('#quizBtn').setAttribute('aria-expanded', 'true'); $('#quizBtn').textContent = '收起測驗';
+  $('#lines').hidden = true; $('.controls').hidden = true; $('#shadowHint').hidden = true; $('#keyPhrase').hidden = true; $('#quiz').hidden = false;
+  const b = $('#quizBtn'); b.hidden = false; b.setAttribute('aria-expanded', 'true'); b.textContent = '離開測驗（本次不計分）';
   showQuestion();
+  $('#quiz').scrollIntoView({ block: 'start', behavior: 'smooth' });
 }
 function showQuestion() {
   const box = $('#quiz'); const q = quiz.qs[quiz.i]; box.innerHTML = '';
   const h = document.createElement('div'); h.className = 'q-head';
   h.textContent = `第 ${quiz.i + 1} / ${quiz.qs.length} 題　答對 ${quiz.score}`;
-  const play = document.createElement('button'); play.className = 'q-play'; play.textContent = '▶ 聽這句';
-  play.onclick = () => { stopAll(); playLine(q.k); };
+  const play = document.createElement('button'); play.className = 'q-play'; play.textContent = '▶ 再聽一次';
+  play.onclick = () => { stopAll(); playLine(q.k, 1); };
   const ask = document.createElement('p'); ask.className = 'q-ask'; ask.textContent = '聽到的是哪一句？';
-  const opts = document.createElement('div'); opts.className = 'q-opts';
+  const opts = document.createElement('div'); opts.className = 'q-opts'; opts.classList.add('cooldown');
+  setTimeout(() => opts.classList.remove('cooldown'), 400); // 防連點誤答
   const fb = document.createElement('div'); fb.className = 'q-fb'; fb.setAttribute('aria-live', 'polite');
-  q.options.forEach((text, n) => {
-    const b = document.createElement('button'); b.textContent = text;
+  q.options.forEach((o, n) => {
+    const b = document.createElement('button'); b.textContent = o.en;
     b.onclick = () => {
+      if (opts.classList.contains('cooldown')) return;
       opts.querySelectorAll('button').forEach(x => x.disabled = true);
-      const ok = n === q.answer; if (ok) quiz.score++;
-      b.classList.add(ok ? 'right' : 'wrong'); opts.children[q.answer].classList.add('right');
+      const ok = n === q.answer; if (ok) quiz.score++; else quiz.wrong.push(q);
+      const right = opts.children[q.answer];
+      right.classList.add('right'); right.textContent = `✓ ${q.en}`;
+      if (!ok) { b.classList.add('wrong'); b.textContent = `✗ ${o.en}`; }
       fb.innerHTML = '';
-      const r = document.createElement('p'); r.className = 'q-res'; r.textContent = ok ? '答對了！' : '再聽一次，對照綠色那句。';
-      const z = document.createElement('p'); z.className = 'q-zh'; z.textContent = q.zh;
+      const r = document.createElement('p'); r.className = 'q-res'; r.textContent = ok ? '答對了！' : '答錯了，慢速再聽一次：';
+      const z = document.createElement('p'); z.className = 'q-zh'; z.textContent = ok ? q.zh : `正確是「${q.zh}」，你選的是「${o.zh}」`;
       const nx = document.createElement('button'); nx.className = 'q-next';
       nx.textContent = quiz.i + 1 < quiz.qs.length ? '下一題' : '看成績';
       nx.onclick = () => { stopAll(); quiz.i++; quiz.i < quiz.qs.length ? showQuestion() : showResult(); };
-      fb.append(r, z, nx); nx.focus();
+      fb.append(r, z, nx); nx.focus({ preventScroll: true });
+      stopAll(); playLine(q.k, ok ? 1 : 0.75);
     };
     opts.appendChild(b);
   });
   box.append(h, play, ask, opts, fb);
-  stopAll(); playLine(q.k);
+  play.focus({ preventScroll: true });
+  stopAll(); playLine(q.k, 1); // 測驗固定 1× 正常語速
 }
 function showResult() {
-  saveQuizBest(quiz.score);
+  const n = quiz.qs.length; saveQuizBest(quiz.score, n);
   const box = $('#quiz'); box.innerHTML = '';
-  const n = quiz.qs.length; const best = quizBest()[taipeiDateKey()] || quiz.score;
+  const best = quizBest()[taipeiDateKey()] || quiz.score;
   const h = document.createElement('p'); h.className = 'q-score'; h.textContent = `答對 ${quiz.score} / ${n}`;
-  const s = document.createElement('p'); s.className = 'q-sub'; s.textContent = `今日最佳 ${best} / ${n}${quiz.score === n ? '　全對！' : ''}`;
-  const again = document.createElement('button'); again.textContent = '再玩一次'; again.onclick = openQuiz;
+  const tier = quiz.score === n ? '全對！耳朵很靈。' : quiz.score >= 3 ? '不錯，把答錯的再聽一次就穩了。' : '先回去把五句多聽兩三遍，再來一次。';
+  const s = document.createElement('p'); s.className = 'q-sub'; s.textContent = `${tier}　今日最佳 ${best} / ${n}`;
+  box.append(h, s);
+  if (quiz.wrong.length) {
+    const w = document.createElement('div'); w.className = 'q-wrong';
+    w.innerHTML = '<b>答錯的句子</b>';
+    quiz.wrong.forEach(q => {
+      const row = document.createElement('div'); row.className = 'q-wrong-row';
+      const p = document.createElement('button'); p.className = 'play'; p.textContent = '▶'; p.setAttribute('aria-label', `播放：${q.en}`);
+      p.onclick = () => { stopAll(); playLine(q.k, 0.75); };
+      const t = document.createElement('div'); t.innerHTML = `<div class="q-wrong-en">${esc(q.en)}</div><div class="q-zh">${esc(q.zh)}</div>`;
+      row.append(p, t); w.appendChild(row);
+    });
+    box.appendChild(w);
+  }
+  const again = document.createElement('button'); again.className = 'q-again'; again.textContent = '再玩一次'; again.onclick = openQuiz;
   const back = document.createElement('button'); back.className = 'q-next'; back.textContent = '回到練習'; back.onclick = closeQuiz;
-  box.append(h, s, again, back); back.focus();
+  box.append(again, back); back.focus({ preventScroll: true });
+  $('#quizBtn').hidden = true; // 成績頁只留「回到練習」
 }
 $('#quizBtn').onclick = () => ($('#quiz').hidden ? openQuiz() : closeQuiz());
 
