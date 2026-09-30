@@ -47,11 +47,13 @@ function render() {
     const who = roles[l.speaker] ? `${l.speaker} · ${roles[l.speaker]}` : l.speaker;
     li.innerHTML = `<button class="play" aria-label="播放第 ${k + 1} 句">▶</button>
       <div class="body"><span class="spk">${esc(who)}</span>
-        <div class="en"><button class="reveal" data-t="en" aria-label="顯示第 ${k + 1} 句英文">‥‥ 顯示英文</button></div>
-        <div class="zh"><button class="reveal" data-t="zh" aria-label="顯示第 ${k + 1} 句中譯">‥‥ 顯示中譯</button></div></div>`;
+        <div class="en"><button class="reveal" data-t="en" aria-label="顯示第 ${k + 1} 句英文">‥‥ 顯示英文</button><span class="txt" role="button" title="點一下收回" hidden></span></div>
+        <div class="zh"><button class="reveal" data-t="zh" aria-label="顯示第 ${k + 1} 句中譯">‥‥ 顯示中譯</button><span class="txt" role="button" title="點一下收回" hidden></span></div></div>`;
     $('.play', li).onclick = () => { stopAll(); playLine(k + 1); };
     $('.reveal[data-t="en"]', li).onclick = () => revealLine(li, 'en');
     $('.reveal[data-t="zh"]', li).onclick = () => { revealLine(li, 'en'); revealLine(li, 'zh'); };
+    $('.en .txt', li).onclick = () => { hideLine(li, 'zh'); hideLine(li, 'en'); };
+    $('.zh .txt', li).onclick = () => hideLine(li, 'zh');
     ul.appendChild(li);
   });
   $('#keyPhrase').hidden = true;
@@ -65,14 +67,27 @@ function revealLine(li, t) {
   const box = $(`.${t}`, li); if (!box || box.dataset.open) return;
   const l = scene().lines[Number(li.dataset.k) - 1];
   box.dataset.open = '1';
+  const txt = $('.txt', box);
   if (t === 'en') {
     const kp = scene().key_phrase;
-    const txt = esc(l.en);
-    box.innerHTML = kp && l.en.includes(kp) ? txt.replace(esc(kp), `<mark>${esc(kp)}</mark>`) : txt;
+    const e = esc(l.en);
+    txt.innerHTML = kp && l.en.includes(kp) ? e.replace(esc(kp), `<mark>${esc(kp)}</mark>`) : e;
     if (kp && l.en.includes(kp)) showKeyPhrase();
-  } else box.textContent = l.zh;
+  } else txt.textContent = l.zh;
+  $('.reveal', box).hidden = true; txt.hidden = false;
 }
-function revealAll(t) { document.querySelectorAll('.line').forEach(li => { if (t === 'zh') revealLine(li, 'en'); revealLine(li, t); }); }
+function hideLine(li, t) {
+  const box = $(`.${t}`, li); if (!box || !box.dataset.open) return;
+  delete box.dataset.open;
+  $('.reveal', box).hidden = false; $('.txt', box).hidden = true;
+}
+// 看英文／看中譯：全開 ↔ 全收
+function revealAll(t) {
+  const lis = [...document.querySelectorAll('.line')];
+  const allOpen = lis.every(li => $(`.${t}`, li).dataset.open);
+  if (allOpen) lis.forEach(li => { hideLine(li, 'zh'); if (t === 'en') hideLine(li, 'en'); });
+  else lis.forEach(li => { if (t === 'zh') revealLine(li, 'en'); revealLine(li, t); });
+}
 function showKeyPhrase() {
   const x = scene(); const el = $('#keyPhrase');
   el.hidden = false; el.innerHTML = `<b>今日關鍵句</b> <span>${esc(x.key_phrase)}</span> <small>${esc(x.key_phrase_zh || '')}</small>`;
