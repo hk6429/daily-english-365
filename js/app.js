@@ -1,6 +1,7 @@
 import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './day.js';
 import { bgFor, setPageBg } from './cats.js';
 import { loadDone, markDone, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
+import { buildQuiz } from './quiz.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const pad = n => String(n).padStart(3, '0');
@@ -22,7 +23,7 @@ const scene = () => state.scenes.find(s => s.id === state.order[state.day - 1]);
 function render() {
   const x = scene();
   const today = todayIndex();
-  stopAll();
+  stopAll(); closeQuiz();
   state.played = new Set();
   document.title = `${x.title_zh} — 英語日日聽`;
   $('#dayLabel').textContent = state.day === today ? `今天 · 第 ${state.day} 天` : `第 ${state.day} 天`;
@@ -56,7 +57,7 @@ function render() {
     $('.zh .txt', li).onclick = () => hideLine(li, 'zh');
     ul.appendChild(li);
   });
-  $('#keyPhrase').hidden = true;
+  $('#keyPhrase').hidden = true; $('#keyPhrase').innerHTML = '';
   $('#prev').disabled = state.day <= 1; $('#next').disabled = state.day >= 365;
   renderDone();
   renderReview();
@@ -98,6 +99,7 @@ function renderDone() {
   const btn = $('#doneBtn');
   const done = isDoneToday(list, x.id);
   const heard = state.played.size >= 5;
+  $('#quizBtn').hidden = !(heard || done) || buildQuiz(state.scenes, x.id).length === 0;
   btn.classList.toggle('is-done', done);
   btn.disabled = !done && !heard;
   btn.textContent = done ? '✓ 已完成' : heard ? '完成這一課' : '聽完 5 句後可完成';
@@ -183,6 +185,64 @@ async function playAll() {
   }
   if (state.playing) stopAll();
 }
+
+// ── 聽音選句小測驗 ──
+const QUIZ_KEY = 'de365.quiz';
+const quizBest = () => { try { const o = JSON.parse(localStorage.getItem(QUIZ_KEY) || '{}'); return o && typeof o === 'object' ? o : {}; } catch { return {}; } };
+const saveQuizBest = n => { try { const o = quizBest(); const k = taipeiDateKey(); o[k] = Math.max(o[k] || 0, n); localStorage.setItem(QUIZ_KEY, JSON.stringify(o)); } catch {} };
+const quiz = { qs: [], i: 0, score: 0 };
+
+function closeQuiz() {
+  const box = $('#quiz'); box.hidden = true; box.innerHTML = '';
+  $('#lines').hidden = false; $('#keyPhrase').hidden = !$('#keyPhrase').innerHTML;
+  $('#quizBtn').setAttribute('aria-expanded', 'false'); $('#quizBtn').textContent = '聽音選句 小測驗';
+}
+function openQuiz() {
+  quiz.qs = buildQuiz(state.scenes, scene().id); quiz.i = 0; quiz.score = 0;
+  stopAll();
+  $('#lines').hidden = true; $('#keyPhrase').hidden = true; $('#quiz').hidden = false;
+  $('#quizBtn').setAttribute('aria-expanded', 'true'); $('#quizBtn').textContent = '收起測驗';
+  showQuestion();
+}
+function showQuestion() {
+  const box = $('#quiz'); const q = quiz.qs[quiz.i]; box.innerHTML = '';
+  const h = document.createElement('div'); h.className = 'q-head';
+  h.textContent = `第 ${quiz.i + 1} / ${quiz.qs.length} 題　答對 ${quiz.score}`;
+  const play = document.createElement('button'); play.className = 'q-play'; play.textContent = '▶ 聽這句';
+  play.onclick = () => { stopAll(); playLine(q.k); };
+  const ask = document.createElement('p'); ask.className = 'q-ask'; ask.textContent = '聽到的是哪一句？';
+  const opts = document.createElement('div'); opts.className = 'q-opts';
+  const fb = document.createElement('div'); fb.className = 'q-fb'; fb.setAttribute('aria-live', 'polite');
+  q.options.forEach((text, n) => {
+    const b = document.createElement('button'); b.textContent = text;
+    b.onclick = () => {
+      opts.querySelectorAll('button').forEach(x => x.disabled = true);
+      const ok = n === q.answer; if (ok) quiz.score++;
+      b.classList.add(ok ? 'right' : 'wrong'); opts.children[q.answer].classList.add('right');
+      fb.innerHTML = '';
+      const r = document.createElement('p'); r.className = 'q-res'; r.textContent = ok ? '答對了！' : '再聽一次，對照綠色那句。';
+      const z = document.createElement('p'); z.className = 'q-zh'; z.textContent = q.zh;
+      const nx = document.createElement('button'); nx.className = 'q-next';
+      nx.textContent = quiz.i + 1 < quiz.qs.length ? '下一題' : '看成績';
+      nx.onclick = () => { stopAll(); quiz.i++; quiz.i < quiz.qs.length ? showQuestion() : showResult(); };
+      fb.append(r, z, nx); nx.focus();
+    };
+    opts.appendChild(b);
+  });
+  box.append(h, play, ask, opts, fb);
+  stopAll(); playLine(q.k);
+}
+function showResult() {
+  saveQuizBest(quiz.score);
+  const box = $('#quiz'); box.innerHTML = '';
+  const n = quiz.qs.length; const best = quizBest()[taipeiDateKey()] || quiz.score;
+  const h = document.createElement('p'); h.className = 'q-score'; h.textContent = `答對 ${quiz.score} / ${n}`;
+  const s = document.createElement('p'); s.className = 'q-sub'; s.textContent = `今日最佳 ${best} / ${n}${quiz.score === n ? '　全對！' : ''}`;
+  const again = document.createElement('button'); again.textContent = '再玩一次'; again.onclick = openQuiz;
+  const back = document.createElement('button'); back.className = 'q-next'; back.textContent = '回到練習'; back.onclick = closeQuiz;
+  box.append(h, s, again, back); back.focus();
+}
+$('#quizBtn').onclick = () => ($('#quiz').hidden ? openQuiz() : closeQuiz());
 
 function go(day) { history.pushState(null, '', `?d=${day}`); state.day = day; render(); window.scrollTo(0, 0); }
 
