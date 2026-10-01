@@ -3,13 +3,11 @@ import { webkit, devices } from 'playwright';
 const BASE = process.env.BASE || 'http://localhost:3000';
 const browser = await webkit.launch();
 const ctx = await browser.newContext({ ...devices['iPhone 13'] });
-// 假語音辨識：回傳 window.__say（口說任務用）
+// 口說任務不得動用麥克風：計數語音辨識與 getUserMedia 的使用
 await ctx.addInitScript(() => {
-  window.webkitSpeechRecognition = class {
-    start() { this._t = setTimeout(() => this.onresult && this.onresult({ results: [[{ transcript: window.__say || '' }]] }), 150); }
-    stop() { clearTimeout(this._t); setTimeout(() => this.onend && this.onend(), 0); }
-    abort() { clearTimeout(this._t); }
-  };
+  window.__mic = 0;
+  window.webkitSpeechRecognition = class { constructor() { window.__mic++; } start() {} stop() {} abort() {} };
+  if (navigator.mediaDevices) navigator.mediaDevices.getUserMedia = () => { window.__mic++; return Promise.reject(new Error('blocked')); };
 });
 const page = await ctx.newPage();
 const fails = [];
@@ -55,24 +53,22 @@ await page.goto(BASE + '/?d=42');
 await page.waitForSelector('.line');
 check('?d=42 label', (await t('#dayLabel')).includes('第 42 天'));
 check('page bg set', (await page.locator('#pageBg').count()) === 1);
-// ── 今日口說任務 ──
+// ── 今日口說任務（自己查核，不用麥克風）──
 await page.goto(BASE + '/?d=42'); await page.waitForSelector('.line');
 const doneBefore = await t('#doneBtn');
-const say = () => page.evaluate(() => { window.__say = [...document.querySelectorAll('.line .en .txt')].map(e => e.textContent).join(' '); });
-await page.click('#showEn'); await say();
 await page.click('#missionBtn');
 check('mission panel replaces lines', await page.locator('#mission').isVisible() && !(await page.locator('#lines').isVisible()));
 check('mission starts at stage 1', (await page.locator('.m-stages li.on').getAttribute('data-s')) === '1');
-await page.click('.m-go');
-await page.waitForFunction(() => /總進度 2 \//.test(document.querySelector('.m-count')?.textContent || ''), null, { timeout: 30000 });
-check('two passes counted', true);
-await page.click('#next'); await page.waitForTimeout(3500);
+await page.click('.m-manual'); await page.click('.m-manual');
+check('two self-checks counted', (await t('.m-count')).includes('總進度 2 /'));
+check('dots show 2 of 5', (await t('.m-where')).includes('●●○○○'));
+await page.click('#next'); await page.waitForSelector('.line');
 check('leaving closes the panel', !(await page.locator('#mission').isVisible()));
 await page.click('#prev'); await page.waitForSelector('.line');
 await page.click('#missionBtn');
 check('progress restored after leaving', (await t('.m-count')).includes('總進度 2 /'));
 await page.click('#missionBtn');
-// 預存到最後一次（關四第 5 輪第 5 句），念一次就完成
+// 預存到最後一次（關四第 5 輪第 5 句），按一次就完成
 await page.evaluate(async () => {
   const { buildOrder, taipeiDateKey } = await import('/js/day.js');
   const sc = await (await fetch('/data/scenes.json')).json();
@@ -80,28 +76,27 @@ await page.evaluate(async () => {
   localStorage.setItem('de365.mission', JSON.stringify({ [taipeiDateKey()]: { [id]: { stage: 4, k: 5, n: 4, done: false } } }));
 });
 await page.reload(); await page.waitForSelector('.line');
-await page.click('#showEn'); await say();
-await page.click('#missionBtn'); await page.click('.m-go');
-await page.waitForSelector('.m-done', { timeout: 20000 });
+await page.click('#missionBtn');
+check('stage 4 hides text and replay', (await page.locator('#mission .m-en.masked').count()) === 1 && (await page.locator('#mission .m-hear').count()) === 0);
+await page.click('.m-manual');
+await page.waitForSelector('.m-done', { timeout: 5000 });
 check('mission complete badge', (await t('.m-done')).includes('今日口說任務完成'));
 await page.click('#missionBtn');
 check('mission button shows done', (await t('#missionBtn')).includes('✓'));
 check('done button unaffected', (await t('#doneBtn')) === doneBefore);
+check('mission never touches the microphone', (await page.evaluate(() => window.__mic)) === 0);
 // 已聽完 5 句時，任務中測驗鈕不得冒出
 await page.goto(BASE + '/?d=43'); await page.waitForSelector('.line');
 for (let k = 1; k <= 5; k++) { await page.click(`.line[data-k="${k}"] .play`); await page.waitForFunction(k => !document.querySelector(`.line[data-k="${k}"]`).classList.contains('playing'), k, { timeout: 15000 }); }
 check('quiz button available after 5 lines', await page.locator('#quizBtn').isVisible());
-await page.click('#showEn'); await say();
-await page.click('#missionBtn'); await page.click('.m-go');
-await page.waitForFunction(() => /總進度 1 \//.test(document.querySelector('.m-count')?.textContent || ''), null, { timeout: 30000 });
+await page.click('#missionBtn'); await page.waitForTimeout(4000); await page.click('.m-manual');
 check('quiz button stays hidden during mission', !(await page.locator('#quizBtn').isVisible()));
 await page.click('#missionBtn');
-// 原音卡住（不回應）時，關一不得永遠卡住
+// 原音卡住（不回應）時，仍可按「念完了」前進
 await page.route('**/audio/**', () => {});
 await page.goto(BASE + '/?d=44'); await page.waitForSelector('.line');
-await page.click('#showEn'); await say();
-await page.click('#missionBtn'); await page.click('.m-go');
-check('stage 1 advances even if audio hangs', await page.waitForFunction(() => /總進度 1 \//.test(document.querySelector('.m-count')?.textContent || ''), null, { timeout: 20000 }).then(() => true, () => false));
+await page.click('#missionBtn'); await page.click('.m-manual', { timeout: 8000 });
+check('self-check works even if audio hangs', (await t('.m-count')).includes('總進度 1 /'));
 await page.click('#missionBtn');
 await page.unroute('**/audio/**');
 await page.goto(BASE + '/archive.html');
