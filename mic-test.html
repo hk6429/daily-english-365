@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>麥克風檢測 — 英語日日聽</title>
+<style>
+body{font:16px/1.5 -apple-system,system-ui,sans-serif;margin:0;padding:16px;background:#faf7f0;color:#1c1c1c}
+h1{font-size:20px;margin:0 0 4px}p{margin:4px 0 12px}
+.say{font-size:20px;font-weight:700;background:#fff;padding:10px;border-radius:10px;margin-bottom:12px}
+button{display:block;width:100%;min-height:48px;margin:8px 0;border-radius:10px;border:1px solid #2c3e6b;background:#2c3e6b;color:#fff;font-size:16px;font-weight:700}
+button:disabled{opacity:.4}
+#log{white-space:pre-wrap;font:13px/1.4 ui-monospace,monospace;background:#fff;border:1px solid #ddd;border-radius:10px;padding:10px;min-height:120px}
+</style>
+</head>
+<body>
+<h1>麥克風檢測</h1>
+<p>每按一顆按鈕，請對著手機唸下面這句。五個都測完，把整個畫面截圖傳給大乃老師。</p>
+<div class="say">Can I get a coffee, please?</div>
+<button data-t="1">測試 1：辨識（單句模式）</button>
+<button data-t="2">測試 2：辨識（連續模式，現在用的）</button>
+<button data-t="3">測試 3：先播原音，再辨識</button>
+<button data-t="4">測試 4：邊播原音邊辨識</button>
+<button data-t="5">測試 5：音量偵測</button>
+<div id="log"></div>
+<script>
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const logEl = document.getElementById('log');
+const log = s => { logEl.textContent += s + '\n'; };
+log('UA: ' + navigator.userAgent);
+log('辨識 API: ' + (SR ? '有' : '無') + '　AudioContext: ' + (window.AudioContext || window.webkitAudioContext ? '有' : '無'));
+const AUDIO = 'audio/001-1.mp3';
+const player = new Audio();
+
+function runSR(tag, continuous, ms) {
+  return new Promise(res => {
+    if (!SR) { log(tag + ' 無辨識 API'); return res(); }
+    const t0 = performance.now(); const at = () => Math.round(performance.now() - t0) + 'ms';
+    const r = new SR(); r.lang = 'en-US'; r.continuous = continuous; r.interimResults = continuous; r.maxAlternatives = 1;
+    let got = '', ended = false;
+    ['start', 'audiostart', 'soundstart', 'speechstart', 'speechend', 'audioend'].forEach(ev => r.addEventListener(ev, () => log(`${tag} ${at()} ${ev}`)));
+    r.onresult = e => { got = Array.from(e.results).map(x => x[0].transcript + (x.isFinal ? '[final]' : '')).join(' | '); log(`${tag} ${at()} result: ${got}`); };
+    r.onerror = e => log(`${tag} ${at()} ERROR: ${e.error}`);
+    r.onend = () => { ended = true; log(`${tag} ${at()} end。最後結果：「${got}」`); res(); };
+    const stopT = setTimeout(() => { log(`${tag} ${at()} 呼叫 stop()`); try { r.stop(); } catch (e) { log(tag + ' stop 例外 ' + e); } }, ms);
+    setTimeout(() => { if (!ended) { log(`${tag} ${at()} 15 秒仍未 end（卡住）`); try { r.abort(); } catch {} res(); } }, 15000);
+    try { r.start(); log(`${tag} ${at()} start() 已呼叫`); } catch (e) { clearTimeout(stopT); log(`${tag} start 例外 ${e}`); res(); }
+  });
+}
+function play() {
+  return new Promise(res => {
+    player.onended = () => { log('原音 ended'); res(); };
+    player.onpause = () => log('原音 pause');
+    player.onerror = () => { log('原音 error'); res(); };
+    player.src = AUDIO; player.play().then(() => log('原音開始播'), e => { log('原音 play 失敗 ' + e); res(); });
+    setTimeout(res, 8000);
+  });
+}
+async function volume(tag, ms) {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  let s; try { s = await navigator.mediaDevices.getUserMedia({ audio: true }); } catch (e) { log(tag + ' getUserMedia 失敗 ' + e.name); return; }
+  const ctx = new AC(); log(tag + ' ctx 建立後 state=' + ctx.state);
+  try { await ctx.resume(); } catch (e) { log(tag + ' resume 失敗 ' + e); }
+  log(tag + ' resume 後 state=' + ctx.state);
+  const src = ctx.createMediaStreamSource(s), an = ctx.createAnalyser(); an.fftSize = 1024; src.connect(an);
+  const buf = new Float32Array(an.fftSize); let peak = 0, voiced = 0, last = performance.now(); const end = last + ms;
+  await new Promise(res => { const tick = () => { const now = performance.now(); an.getFloatTimeDomainData(buf); let sum = 0; for (const v of buf) sum += v * v; const rms = Math.sqrt(sum / buf.length); peak = Math.max(peak, rms); if (rms > 0.02) voiced += now - last; last = now; now < end ? setTimeout(tick, 50) : res(); }; tick(); });
+  log(`${tag} 峰值 RMS=${peak.toFixed(4)}　超過門檻 ${Math.round(voiced)}ms`);
+  s.getTracks().forEach(t => t.stop()); ctx.close();
+}
+const tests = {
+  1: () => runSR('[1]', false, 6000),
+  2: () => runSR('[2]', true, 5000),
+  3: async () => { await play(); await runSR('[3]', false, 6000); },
+  4: () => Promise.all([play(), runSR('[4]', true, 5000)]),
+  5: () => volume('[5]', 5000),
+};
+document.querySelectorAll('button').forEach(b => b.onclick = async () => {
+  document.querySelectorAll('button').forEach(x => x.disabled = true);
+  log('── ' + b.textContent + ' ──');
+  try { await tests[b.dataset.t](); } catch (e) { log('例外 ' + e); }
+  document.querySelectorAll('button').forEach(x => x.disabled = false);
+});
+</script>
+</body>
+</html>
