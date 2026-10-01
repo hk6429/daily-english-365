@@ -150,7 +150,7 @@ function renderDone() {
   const ex = state.extras[x.id];
   if ((heard || done) && ex && ex.tip) { $('#tip').hidden = false; $('#tip').innerHTML = `<b>小提醒</b>${esc(ex.tip)}`; }
   const qb = $('#quizBtn'); const avail = (heard || done) && buildQuiz(state.scenes, x.id).length > 0;
-  qb.dataset.avail = avail ? '1' : '0'; if (!$('#mission').hidden) qb.hidden = true; if ($('#quiz').hidden) { qb.hidden = !avail; if (avail && !qb.dataset.shown) { qb.dataset.shown = '1'; qb.classList.add('pop'); } }
+  qb.dataset.avail = avail ? '1' : '0'; if ($('#quiz').hidden && $('#mission').hidden) { qb.hidden = !avail; if (avail && !qb.dataset.shown) { qb.dataset.shown = '1'; qb.classList.add('pop'); } }
   btn.classList.toggle('is-done', done);
   btn.disabled = !done && !heard;
   btn.textContent = done ? '✓ 已完成' : heard ? '完成這一課' : '聽完 5 句後可完成';
@@ -297,6 +297,7 @@ function closeQuiz() {
   if (wasOpen) b.focus();
 }
 function openQuiz() {
+  closeMission();
   quiz.qs = buildQuiz(state.scenes, scene().id, quiz.round++); quiz.i = 0; quiz.score = 0; quiz.wrong = [];
   stopAll();
   $('#lines').hidden = true; $('.controls').hidden = true; $('#shadowHint').hidden = true; $('#keyPhrase').hidden = true; $('#quiz').hidden = false;
@@ -372,6 +373,8 @@ const MISSION_LABEL = '今日口說任務（四關）';
 const ms = { st: null, run: 0, manual: false, srBroken: false };
 const estMs = en => Math.max(2500, en.split(/\s+/).length * 450 + 1200);
 const missionOpen = () => !$('#mission').hidden;
+// 原音最多等 cap 毫秒：iOS 開收音時可能把 <audio> 暫停而不發 ended，不能讓流程卡住
+const playCapped = (k, cap) => Promise.race([playLine(k), sleep(cap)]);
 
 function renderMissionBtn() {
   const b = $('#missionBtn'); if (missionOpen()) return;
@@ -445,9 +448,9 @@ async function missionLoop() {
     let res;
     if (st.stage === 1) {
       setMsg('跟著原音一起念！');
-      [res] = await Promise.all([missionAttempt(l.en, dur / state.rate), playLine(st.k)]);
+      [res] = await Promise.all([missionAttempt(l.en, dur / state.rate), playCapped(st.k, dur / state.rate + 3000)]);
     } else {
-      if (needsAudio(st)) { setMsg('先聽一次原音…'); await playLine(st.k); if (run !== ms.run) return; }
+      if (needsAudio(st)) { setMsg('先聽一次原音…'); await playCapped(st.k, dur / state.rate + 3000); if (run !== ms.run) return; }
       setMsg('● 換你念！'); res = await missionAttempt(l.en, dur);
     }
     if (run !== ms.run) return;

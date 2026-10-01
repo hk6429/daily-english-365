@@ -46,3 +46,10 @@ test('load/save：同日接續、跨日重來、壞資料回初始', () => {
   assert.deepEqual(loadMission(9, '2026-10-02'), initial());
   delete globalThis.localStorage;
 });
+test('壞資料：k 非整數、n 已滿但未完成 → 回初始', () => {
+  const mem = {}; globalThis.localStorage = { getItem: k => mem[k] ?? null, setItem: (k, v) => { mem[k] = v; } };
+  mem['de365.mission'] = JSON.stringify({ d: { 1: { stage: 2, k: 1.5, n: 0, done: false }, 2: { stage: 1, k: 1, n: 5, done: false } } });
+  assert.deepEqual(loadMission(1, 'd'), initial());
+  assert.deepEqual(loadMission(2, 'd'), initial());
+  delete globalThis.localStorage;
+});

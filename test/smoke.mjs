@@ -87,6 +87,23 @@ check('mission complete badge', (await t('.m-done')).includes('今日口說任�
 await page.click('#missionBtn');
 check('mission button shows done', (await t('#missionBtn')).includes('✓'));
 check('done button unaffected', (await t('#doneBtn')) === doneBefore);
+// 已聽完 5 句時，任務中測驗鈕不得冒出
+await page.goto(BASE + '/?d=43'); await page.waitForSelector('.line');
+for (let k = 1; k <= 5; k++) { await page.click(`.line[data-k="${k}"] .play`); await page.waitForFunction(k => !document.querySelector(`.line[data-k="${k}"]`).classList.contains('playing'), k, { timeout: 15000 }); }
+check('quiz button available after 5 lines', await page.locator('#quizBtn').isVisible());
+await page.click('#showEn'); await say();
+await page.click('#missionBtn'); await page.click('.m-go');
+await page.waitForFunction(() => /總進度 1 \//.test(document.querySelector('.m-count')?.textContent || ''), null, { timeout: 30000 });
+check('quiz button stays hidden during mission', !(await page.locator('#quizBtn').isVisible()));
+await page.click('#missionBtn');
+// 原音卡住（不回應）時，關一不得永遠卡住
+await page.route('**/audio/**', () => {});
+await page.goto(BASE + '/?d=44'); await page.waitForSelector('.line');
+await page.click('#showEn'); await say();
+await page.click('#missionBtn'); await page.click('.m-go');
+check('stage 1 advances even if audio hangs', await page.waitForFunction(() => /總進度 1 \//.test(document.querySelector('.m-count')?.textContent || ''), null, { timeout: 20000 }).then(() => true, () => false));
+await page.click('#missionBtn');
+await page.unroute('**/audio/**');
 await page.goto(BASE + '/archive.html');
 await page.waitForSelector('.grid a');
 check('archive lists 365', (await page.locator('.grid a').count()) === 365);

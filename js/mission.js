@@ -32,8 +32,8 @@ export function progress(st) {
   return (st.stage - 1) * per + (st.stage < 4 ? (st.k - 1) * REPS + st.n : st.n * LINES + (st.k - 1));
 }
 
-const valid = v => v && typeof v === 'object' && [1, 2, 3, 4].includes(v.stage) && v.k >= 1 && v.k <= LINES
-  && Number.isInteger(v.n) && v.n >= 0 && v.n <= REPS && typeof v.done === 'boolean';
+const valid = v => v && typeof v === 'object' && [1, 2, 3, 4].includes(v.stage) && Number.isInteger(v.k) && v.k >= 1 && v.k <= LINES
+  && Number.isInteger(v.n) && v.n >= 0 && (v.n < REPS || v.done) && typeof v.done === 'boolean';
 const readAll = () => { try { const o = JSON.parse(localStorage.getItem(KEY) || '{}'); return o && typeof o === 'object' ? o : {}; } catch { return {}; } };
 
 export function loadMission(id, today = taipeiDateKey()) {
