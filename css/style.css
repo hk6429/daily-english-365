@@ -140,3 +140,24 @@ footer{margin-top:28px;font-size:12px;color:var(--ink3);text-align:center;backgr
 /* 小提醒 */
 .tip{margin:0 16px 10px;padding:8px 12px;border-left:4px solid var(--indigo);background:#eef2f8;font-size:14px;border-radius:0 8px 8px 0;color:var(--ink2)}
 .tip b{color:var(--indigo);margin-right:6px}
+/* 今日口說任務 */
+.mission-bar button#missionBtn{background:transparent;color:var(--indigo)}
+.mission{margin:0 16px 12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.55);scroll-margin-top:12px}
+.m-stages{display:flex;gap:8px;list-style:none;margin:0 0 10px;padding:0;justify-content:center}
+.m-stages li{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink3);font-weight:700}
+.m-stages li.on{border-color:var(--indigo);color:var(--indigo);box-shadow:0 0 0 3px rgba(0,0,0,.04)}
+.m-stages li.ok{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.m-name{font-weight:700;text-align:center;margin:0 0 10px}
+.m-line{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.7);margin-bottom:8px}
+.m-en{font-size:18px;line-height:1.5;margin-top:4px}.m-en.masked{color:var(--ink3);letter-spacing:4px}
+.m-zh{color:var(--ink3);margin-top:2px}
+.m-where{text-align:center;font-size:18px;letter-spacing:2px;margin:6px 0 2px}
+.m-count{text-align:center;color:var(--ink3);font-size:13px;margin:0 0 4px}
+.m-bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-bottom:8px}.m-bar i{display:block;height:100%;background:var(--indigo);transition:width .3s}
+.m-msg{text-align:center;min-height:1.4em;font-weight:700;margin:4px 0}
+.m-fb{text-align:center;font-size:14px;min-height:1.2em;margin-bottom:6px}
+.m-act{display:flex;gap:8px}.m-act button{flex:1;min-height:46px;border-radius:10px;border:1px solid var(--indigo);background:var(--indigo);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+.m-act .m-hear{background:transparent;color:var(--indigo)}
+.m-done{text-align:center;font-size:20px;font-weight:700;color:var(--indigo);margin:10px 0 4px}
+.m-sub{text-align:center;color:var(--ink3);margin:0}
+.mission button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}

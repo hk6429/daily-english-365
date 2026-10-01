@@ -2,7 +2,8 @@ import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './d
 import { bgFor, setPageBg } from './cats.js';
 import { loadDone, markDone, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
 import { buildQuiz } from './quiz.js';
-import { hasRecognition, hasRecorder, alignWords, recognize, record, ensureMic } from './speech.js';
+import { hasRecognition, hasRecorder, alignWords, recognize, record, ensureMic, isPass, detectVoice } from './speech.js';
+import { STAGES, REPS, TOTAL, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const pad = n => String(n).padStart(3, '0');
@@ -31,7 +32,7 @@ const scene = () => state.scenes.find(s => s.id === state.order[state.day - 1]);
 function render() {
   const x = scene();
   const today = todayIndex();
-  stopAll(); closeQuiz(); delete $('#quizBtn').dataset.shown; $('#quizBtn').classList.remove('pop');
+  stopAll(); closeQuiz(); closeMission(); delete $('#quizBtn').dataset.shown; $('#quizBtn').classList.remove('pop');
   state.played = new Set();
   state.veiled = !isDoneScene(loadDone(), x.id) && !state.reviewQuiz;
   document.title = state.veiled ? `第 ${state.day} 天 — 英語日日聽` : `${x.title_zh} — 英語日日聽`;
@@ -72,6 +73,7 @@ function render() {
   });
   $('#keyPhrase').hidden = true; $('#keyPhrase').innerHTML = '';
   $('#prev').disabled = state.day <= 1; $('#next').disabled = state.day >= 365;
+  renderMissionBtn();
   renderDone();
   renderReview();
   renderOnboarding();
@@ -148,7 +150,7 @@ function renderDone() {
   const ex = state.extras[x.id];
   if ((heard || done) && ex && ex.tip) { $('#tip').hidden = false; $('#tip').innerHTML = `<b>小提醒</b>${esc(ex.tip)}`; }
   const qb = $('#quizBtn'); const avail = (heard || done) && buildQuiz(state.scenes, x.id).length > 0;
-  qb.dataset.avail = avail ? '1' : '0'; if ($('#quiz').hidden) { qb.hidden = !avail; if (avail && !qb.dataset.shown) { qb.dataset.shown = '1'; qb.classList.add('pop'); } }
+  qb.dataset.avail = avail ? '1' : '0'; if (!$('#mission').hidden) qb.hidden = true; if ($('#quiz').hidden) { qb.hidden = !avail; if (avail && !qb.dataset.shown) { qb.dataset.shown = '1'; qb.classList.add('pop'); } }
   btn.classList.toggle('is-done', done);
   btn.disabled = !done && !heard;
   btn.textContent = done ? '✓ 已完成' : heard ? '完成這一課' : '聽完 5 句後可完成';
@@ -365,6 +367,100 @@ function showResult() {
   box.append(again, back); back.focus({ preventScroll: true });
   $('#quizBtn').hidden = true; // 成績頁只留「回到練習」
 }
+// ── 今日口說任務（四關跟讀）──
+const MISSION_LABEL = '今日口說任務（四關）';
+const ms = { st: null, run: 0, manual: false, srBroken: false };
+const estMs = en => Math.max(2500, en.split(/\s+/).length * 450 + 1200);
+const missionOpen = () => !$('#mission').hidden;
+
+function renderMissionBtn() {
+  const b = $('#missionBtn'); if (missionOpen()) return;
+  b.textContent = loadMission(scene().id).done ? '✓ 今日口說任務完成' : MISSION_LABEL;
+}
+function closeMission() {
+  ms.run++; stopAll();
+  const box = $('#mission'); if (box.hidden) return;
+  box.hidden = true; box.innerHTML = '';
+  $('#lines').hidden = false; $('.controls').hidden = false;
+  $('#keyPhrase').hidden = !$('#keyPhrase').innerHTML;
+  $('#shadowHint').hidden = !state.shadow; $('#roleHint').hidden = !state.role;
+  $('#quizBtn').hidden = $('#quizBtn').dataset.avail !== '1';
+  const b = $('#missionBtn'); b.setAttribute('aria-expanded', 'false'); renderMissionBtn();
+}
+function openMission() {
+  closeQuiz(); stopAll();
+  ms.st = loadMission(scene().id); ms.manual = false;
+  $('#lines').hidden = true; $('.controls').hidden = true; $('#shadowHint').hidden = true; $('#roleHint').hidden = true;
+  $('#keyPhrase').hidden = true; $('#quizBtn').hidden = true; $('#mission').hidden = false;
+  const b = $('#missionBtn'); b.setAttribute('aria-expanded', 'true'); b.textContent = '離開口說任務（進度會保留）';
+  renderMission(false);
+  $('#mission').scrollIntoView({ block: 'start', behavior: 'smooth' });
+}
+function setMsg(t) { const m = $('#mission .m-msg'); if (m) m.textContent = t; }
+function renderMission(running) {
+  const box = $('#mission'); const st = ms.st; const x = scene();
+  const S = STAGES[st.stage - 1]; const l = x.lines[st.k - 1];
+  const roles = x.roles || {}; const who = roles[l.speaker] ? `${l.speaker} · ${roles[l.speaker]}` : l.speaker;
+  const stages = STAGES.map(s => `<li data-s="${s.n}" class="${st.done || s.n < st.stage ? 'ok' : s.n === st.stage ? 'on' : ''}">${st.done || s.n < st.stage ? '✓' : s.n}</li>`).join('');
+  if (st.done) {
+    box.innerHTML = `<ol class="m-stages">${stages}</ol><p class="m-done">✓ 今日口說任務完成</p><p class="m-sub">四關 ${TOTAL} 次開口全數過關，明天見！</p>`;
+    return;
+  }
+  const dots = st.stage < 4 ? '●'.repeat(st.n) + '○'.repeat(REPS - st.n) : '';
+  const where = st.stage < 4 ? `第 ${st.k} 句　${dots}` : `第 ${st.n + 1} / ${REPS} 輪　第 ${st.k} 句`;
+  box.innerHTML = `<ol class="m-stages">${stages}</ol>
+    <p class="m-name">第${'一二三四'[st.stage - 1]}關：${esc(S.name)}</p>
+    <div class="m-line"><span class="spk">${esc(who)}</span>
+      ${S.en ? `<div class="m-en">${esc(l.en)}</div>` : '<div class="m-en masked">‧‧‧‧‧‧</div>'}
+      ${S.zh ? `<div class="m-zh">${esc(l.zh)}</div>` : ''}</div>
+    <p class="m-where">${where}</p>
+    <p class="m-count">總進度 ${progress(st)} / ${TOTAL}</p>
+    <div class="m-bar"><i style="width:${progress(st)}%"></i></div>
+    <p class="m-msg" aria-live="polite"></p><div class="m-fb"></div>
+    <div class="m-act">${ms.manual
+      ? `<button class="m-hear" type="button">▶ 聽原音</button><button class="m-manual" type="button">念完了</button>`
+      : `<button class="m-go" type="button">${running ? '■ 暫停' : '▶ 開始'}</button>`}</div>
+    <p class="hint-inline">戴耳機效果最好。從寬判定：有開口、大致念對就算一次；沒聽到會原地再來，不會扣次數。</p>`;
+  const go = $('.m-go', box); if (go) go.onclick = () => (running ? pauseMission() : missionLoop());
+  const hear = $('.m-hear', box); if (hear) hear.onclick = () => { stopAll(); playLine(st.k); };
+  const man = $('.m-manual', box); if (man) man.onclick = () => { stopAll(); ms.st = advance(ms.st); saveMission(x.id, ms.st); renderMission(false); renderMissionBtn(); };
+  if (ms.manual) setMsg(S.audio === 'none' ? '沒有麥克風：自己念完按「念完了」。' : '沒有麥克風：先聽原音，念完按「念完了」。');
+}
+function pauseMission() { ms.run++; stopAll(); renderMission(false); }
+// 一次開口：有辨識看分數；辨識失敗或不支援改量音量；都不行回 {pass:null}
+async function missionAttempt(text, dur) {
+  if (hasRecognition && !ms.srBroken) {
+    const [heard] = await Promise.all([recognize(dur), sleep(dur)]);
+    if (heard !== null) { const a = alignWords(text, heard); return { pass: isPass({ score: a.score }), a }; }
+    ms.srBroken = true;
+  }
+  const v = await detectVoice(dur);
+  return v === null ? { pass: null } : { pass: isPass({ voicedMs: v }) };
+}
+async function missionLoop() {
+  const run = ++ms.run; const x = scene();
+  while (run === ms.run && !ms.st.done) {
+    const st = ms.st; const l = x.lines[st.k - 1]; const dur = estMs(l.en);
+    renderMission(true);
+    let res;
+    if (st.stage === 1) {
+      setMsg('跟著原音一起念！');
+      [res] = await Promise.all([missionAttempt(l.en, dur / state.rate), playLine(st.k)]);
+    } else {
+      if (needsAudio(st)) { setMsg('先聽一次原音…'); await playLine(st.k); if (run !== ms.run) return; }
+      setMsg('● 換你念！'); res = await missionAttempt(l.en, dur);
+    }
+    if (run !== ms.run) return;
+    if (res.pass === null) { ms.manual = true; renderMission(false); return; }
+    if (res.a) $('#mission .m-fb').innerHTML = `<span class="fb-words">${res.a.words.map((w, i) => `<i class="${res.a.hit[i] ? 'hit' : 'miss'}">${esc(w)}</i>`).join(' ')}</span>`;
+    if (res.pass) { ms.st = advance(st); saveMission(x.id, ms.st); setMsg('✓ 過關'); }
+    else setMsg('沒聽到，再念一次');
+    await sleep(900);
+  }
+  if (run === ms.run && ms.st.done) { renderMission(false); renderMissionBtn(); }
+}
+$('#missionBtn').onclick = () => (missionOpen() ? closeMission() : openMission());
+
 $('#quizBtn').onclick = () => ($('#quiz').hidden ? openQuiz() : closeQuiz());
 
 function go(day) { history.pushState(null, '', `?d=${day}`); state.day = day; state.reviewQuiz = false; render(); window.scrollTo(0, 0); }
