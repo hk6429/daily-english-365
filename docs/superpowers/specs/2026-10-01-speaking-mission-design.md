@@ -34,13 +34,12 @@
 
 ## 模組
 - `js/mission.js`（純函式、無 DOM）：`STAGES` 規格、`initial()`、`advance(st)`（念過一次後回傳新狀態）、`progress(st)`（0–100 次）、`load/save`。
-- `js/speech.js`：新增 `detectVoice(ms)`（音量偵測，回傳有聲毫秒數）、`isPass({score, voicedMs})`。
+- `js/speech.js`：已移除（2026-10-02 跟讀／角色扮演也撤麥克風，改留白開口後揭曉英文自己對照）。
 - `js/app.js`／`index.html`／`css/style.css`：面板、流程迴圈、按鈕。
 
 ## 測試
 - `test/mission.test.mjs`：從 initial 連續 advance 100 次 → done；各關邊界（關一第 5 句第 5 次 → 關二第 1 句）；關四輪數。
-- `test/speech.test.mjs` 補 `isPass` 邊界。
-- `test/smoke.mjs`：Playwright 以假辨識跑完整四關，確認完成徽章出現、原「完成」狀態不受影響。
+- `test/smoke.mjs`：Playwright 跑四關自己查核流程，確認完成徽章出現、原「完成」狀態不受影響、全程未動用麥克風。
 - 真機：使用者手機實測一次。
 
 ## 不做
