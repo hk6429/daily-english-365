@@ -2,7 +2,6 @@ import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './d
 import { bgFor, setPageBg } from './cats.js';
 import { loadDone, markDone, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
 import { buildQuiz } from './quiz.js';
-import { hasRecognition, hasRecorder, alignWords, recognize, record, ensureMic } from './speech.js';
 import { STAGES, REPS, TOTAL, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -221,25 +220,12 @@ function stopAll() {
   const b = $('#playAll'); b.textContent = '▶ 聽全部'; b.classList.remove('primary');
 }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-// 開口一段時間：有語音辨識就逐字比對，沒有就錄音回放；兩者都不行就純留白
+// 開口一段時間：不用麥克風（iPhone Safari 播過原音後麥克風全靜音），留白後揭曉英文讓學習者自己對照
 async function captureAndShow(li, k, ms) {
-  const l = scene().lines[k - 1];
   const fb = $('.fb', li); fb.hidden = false; fb.innerHTML = '<span class="fb-mic">● 請開口唸…</span>';
-  if (hasRecognition) {
-    const [heard] = await Promise.all([recognize(ms), sleep(ms)]);
-    if (!state.playing) return;
-    if (heard === null) { fb.innerHTML = '<span class="fb-none">這台裝置無法辨識語音，請自行對照句子。</span>'; return; }
-    const a = alignWords(l.en, heard);
-    fb.innerHTML = `<span class="fb-words">${a.words.map((w, i) => `<i class="${a.hit[i] ? 'hit' : 'miss'}">${esc(w)}</i>`).join(' ')}</span><span class="fb-score">${a.hit.filter(Boolean).length}／${a.words.length} 字</span>`;
-    revealLine(li, 'en');
-  } else if (hasRecorder) {
-    const url = await record(ms);
-    if (!state.playing) return;
-    if (!url) { fb.innerHTML = '<span class="fb-none">沒有麥克風權限，無法錄音。</span>'; return; }
-    fb.innerHTML = ''; const b = document.createElement('button'); b.className = 'fb-play'; b.textContent = '▶ 聽自己唸的';
-    const me = new Audio(url); b.onclick = () => { stopAll(); me.currentTime = 0; me.play(); };
-    fb.appendChild(b); revealLine(li, 'en');
-  } else { await sleep(ms); fb.hidden = true; }
+  await sleep(ms);
+  if (!state.playing) return;
+  fb.hidden = true; revealLine(li, 'en');
 }
 async function yourTurn(k, ms) {
   const li = $(`.line[data-k="${k}"]`); markPlaying(k); li.classList.add('yours');
@@ -452,8 +438,7 @@ $('#shadow').onclick = e => {
   state.shadow = !state.shadow;
   e.currentTarget.setAttribute('aria-pressed', String(state.shadow));
   $('#shadowHint').hidden = !state.shadow;
-  $('#shadowHint').textContent = hasRecognition ? '跟讀模式：每句播完請跟著唸一次，會逐字標出你唸到與漏掉的字。' : hasRecorder ? '跟讀模式：每句播完請跟著唸一次，之後可以回放自己的聲音對照。' : '跟讀模式：每句播完會留同樣長度的空檔，請跟著大聲唸一次。';
-  if (state.shadow && !hasRecognition && hasRecorder) ensureMic();
+  $('#shadowHint').textContent = '跟讀模式：每句播完會留同樣長度的空檔，請跟著大聲唸一次，念完會揭曉英文讓你對照。';
 };
 $('#role').onclick = e => {
   state.role = state.role === null ? 'B' : state.role === 'B' ? 'A' : null;
@@ -461,7 +446,6 @@ $('#role').onclick = e => {
   const r = scene().roles || {};
   $('#roleHint').hidden = !state.role;
   if (state.role) $('#roleHint').textContent = `角色扮演：你是 ${state.role}${r[state.role] ? '（' + r[state.role] + '）' : ''}。按「聽全部」，輪到你時會給中譯提示，請用英文說出來。`;
-  if (state.role && !hasRecognition && hasRecorder) ensureMic();
 };
 $('#veilShow').onclick = unveil;
 $('#prev').onclick = () => go(state.day - 1);

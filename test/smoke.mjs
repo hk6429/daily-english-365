@@ -53,6 +53,16 @@ await page.goto(BASE + '/?d=42');
 await page.waitForSelector('.line');
 check('?d=42 label', (await t('#dayLabel')).includes('第 42 天'));
 check('page bg set', (await page.locator('#pageBg').count()) === 1);
+// ── 跟讀／角色扮演也不得動用麥克風：開口後揭曉英文自己對照 ──
+await page.goto(BASE + '/?d=45'); await page.waitForSelector('.line');
+await page.click('#shadow'); await page.click('#playAll');
+await page.waitForFunction(() => document.querySelector('.line[data-k="1"] .en').dataset.open === '1', null, { timeout: 20000 });
+await page.click('#playAll');
+await page.click('#shadow'); await page.click('#role'); await page.click('#playAll');
+await page.waitForFunction(() => document.querySelector('.line.yours'), null, { timeout: 20000 });
+check('role turn shows speak prompt', (await page.locator('.line.yours .fb-mic').count()) === 1);
+await page.click('#playAll');
+check('shadow/role never touch the microphone', (await page.evaluate(() => window.__mic)) === 0);
 // ── 今日口說任務（自己查核，不用麥克風）──
 await page.goto(BASE + '/?d=42'); await page.waitForSelector('.line');
 const doneBefore = await t('#doneBtn');
