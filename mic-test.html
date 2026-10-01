@@ -16,13 +16,12 @@ button:disabled{opacity:.4}
 </head>
 <body>
 <h1>麥克風檢測</h1>
-<p>每按一顆按鈕，請對著手機唸下面這句。五個都測完，把整個畫面截圖傳給大乃老師。</p>
+<p><b>第二輪：</b>每測一項之前，先按網址列的 ↻ 重新整理，再按按鈕。原音播完、看到「● 現在請念」再念下面這句。三項各錄一段畫面（或截圖）傳給大乃老師。</p>
 <div class="say">Can I get a coffee, please?</div>
-<button data-t="1">測試 1：辨識（單句模式）</button>
-<button data-t="2">測試 2：辨識（連續模式，現在用的）</button>
-<button data-t="3">測試 3：先播原音，再辨識</button>
-<button data-t="4">測試 4：邊播原音邊辨識</button>
-<button data-t="5">測試 5：音量偵測</button>
+<button data-t="6">測試 A：原音（現行播放器）播完「釋放」後再辨識</button>
+<button data-t="7">測試 B：原音改用 Web Audio 播，播完再辨識</button>
+<button data-t="8">測試 C：Web Audio 邊播原音邊辨識</button>
+<button data-t="9">測試 D：Web Audio 播完後量音量</button>
 <div id="log"></div>
 <script>
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -69,7 +68,25 @@ async function volume(tag, ms) {
   log(`${tag} 峰值 RMS=${peak.toFixed(4)}　超過門檻 ${Math.round(voiced)}ms`);
   s.getTracks().forEach(t => t.stop()); ctx.close();
 }
+let actx = null;
+function webAudioPlay() {
+  return new Promise(async res => {
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      actx = actx || new AC(); await actx.resume();
+      const buf = await actx.decodeAudioData(await (await fetch(AUDIO)).arrayBuffer());
+      const src = actx.createBufferSource(); src.buffer = buf; src.connect(actx.destination);
+      src.onended = () => { log('WebAudio 原音 ended'); res(); };
+      src.start(0); log('WebAudio 原音開始播（ctx ' + actx.state + '）');
+    } catch (e) { log('WebAudio 失敗 ' + e); res(); }
+  });
+}
+const now = () => log('● 現在請念');
 const tests = {
+  6: async () => { await play(); player.pause(); player.removeAttribute('src'); player.load(); log('播放器已釋放'); now(); await runSR('[A]', true, 6000); },
+  7: async () => { await webAudioPlay(); now(); await runSR('[B]', true, 6000); },
+  8: async () => { now(); await Promise.all([webAudioPlay(), runSR('[C]', true, 6000)]); },
+  9: async () => { await webAudioPlay(); now(); await volume('[D]', 5000); },
   1: () => runSR('[1]', false, 6000),
   2: () => runSR('[2]', true, 5000),
   3: async () => { await play(); await runSR('[3]', false, 6000); },
