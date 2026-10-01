@@ -13,3 +13,15 @@ test('漏字與多字', () => {
 test('空輸入', () => {
   assert.equal(alignWords('Hello there.', '').score, 0);
 });
+import { isPass } from '../js/speech.js';
+test('isPass：有辨識分數看分數（≥0.4）', () => {
+  assert.equal(isPass({ score: 0.4 }), true);
+  assert.equal(isPass({ score: 0.39 }), false);
+  assert.equal(isPass({ score: 0, voicedMs: 9999 }), false); // 有分數就不看音量
+});
+test('isPass：無分數看有聲時間（≥500ms）', () => {
+  assert.equal(isPass({ voicedMs: 500 }), true);
+  assert.equal(isPass({ voicedMs: 499 }), false);
+  assert.equal(isPass({ score: null, voicedMs: 800 }), true);
+  assert.equal(isPass({}), false);
+});

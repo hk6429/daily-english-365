@@ -52,3 +52,28 @@ export async function record(ms) {
     rec.start(); setTimeout(() => { try { rec.stop(); } catch { res(null); } }, ms);
   });
 }
+
+// 口說任務的從寬判定：有辨識分數就看分數，否則看麥克風收到聲音的時間
+export const PASS_SCORE = 0.4, PASS_VOICED_MS = 500;
+export function isPass({ score = null, voicedMs = 0 } = {}) {
+  return score != null ? score >= PASS_SCORE : voicedMs >= PASS_VOICED_MS;
+}
+// 音量偵測：聽 ms 毫秒，回傳 RMS 超過門檻的累計毫秒數；拿不到麥克風回 null
+export async function detectVoice(ms, threshold = 0.02) {
+  const AC = typeof window !== 'undefined' && (window.AudioContext || window.webkitAudioContext);
+  const s = AC ? await ensureMic() : null; if (!s) return null;
+  let ctx; try { ctx = new AC(); await ctx.resume().catch(() => {}); } catch { return null; }
+  const src = ctx.createMediaStreamSource(s), an = ctx.createAnalyser(); an.fftSize = 1024; src.connect(an);
+  const buf = new Float32Array(an.fftSize); let voiced = 0, last = performance.now(); const end = last + ms;
+  await new Promise(res => {
+    const tick = () => {
+      const now = performance.now(); an.getFloatTimeDomainData(buf);
+      let sum = 0; for (const v of buf) sum += v * v;
+      if (Math.sqrt(sum / buf.length) > threshold) voiced += now - last;
+      last = now; now < end ? setTimeout(tick, 50) : res();
+    };
+    tick();
+  });
+  try { src.disconnect(); ctx.close(); } catch {}
+  return Math.round(voiced);
+}
