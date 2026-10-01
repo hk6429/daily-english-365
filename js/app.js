@@ -2,7 +2,6 @@ import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './d
 import { bgFor, setPageBg } from './cats.js';
 import { loadDone, markDone, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
 import { buildQuiz } from './quiz.js';
-import { playOut, stopOut, setOutRate } from './audio-out.js';
 import { hasRecognition, hasRecorder, alignWords, recognize, record, ensureMic, isPass, detectVoice } from './speech.js';
 import { STAGES, REPS, TOTAL, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
 
@@ -12,6 +11,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 
 const state = { scenes: [], order: [], day: 1, rate: 1, shadow: false, role: null, playing: false, played: new Set(), extras: {}, reviewQuiz: false, veiled: false };
 const ROLE_LABEL = { null: '角色扮演', A: '我當 A', B: '我當 B' };
+const player = new Audio(); // 單一元素重用：iOS 首次手勢解鎖後，後續換 src 才能自動連播
 let playToken = 0;
 
 async function main() {
@@ -131,7 +131,10 @@ function showKeyPhrase() {
 }
 function playVariant(id, v, text) {
   const token = ++playToken;
-  playOut(`audio/${pad(id)}-v${v}.mp3`, 1, () => {}, () => { if (token === playToken) speakText(text); });
+  player.onended = player.onerror = null;
+  player.onerror = () => { if (token !== playToken) return; speakText(text); };
+  player.src = `audio/${pad(id)}-v${v}.mp3`; player.playbackRate = 1;
+  player.play().catch(() => { if (token === playToken) speakText(text); });
 }
 function speakText(text) {
   if (!('speechSynthesis' in window)) return;
@@ -195,20 +198,24 @@ function playLine(k, rate = state.rate) {
   const token = ++playToken;
   markPlaying(k);
   return new Promise(res => {
-    let failed = false;
     const finish = () => {
+      player.onended = player.onerror = null;
       if (token !== playToken) return res(); // 已被 stopAll 取代
       state.played.add(k); document.querySelectorAll('.line.playing').forEach(e => e.classList.remove('playing'));
       renderDone(); res();
     };
-    const fail = () => { if (failed) return; failed = true; if (token !== playToken) return res(); speakFallback(k, rate).then(finish); };
-    playOut(`audio/${pad(scene().id)}-${k}.mp3`, rate, finish, fail);
+    player.onended = finish;
+    player.onerror = () => { if (token !== playToken) return res(); speakFallback(k, rate).then(finish); };
+    player.src = `audio/${pad(scene().id)}-${k}.mp3`;
+    player.playbackRate = rate;
+    player.play().catch(() => { if (token !== playToken) return res(); speakFallback(k, rate).then(finish); });
   });
 }
 function stopAll() {
   playToken++;
   state.playing = false;
-  stopOut();
+  player.onended = player.onerror = null;
+  try { player.pause(); } catch {}
   if ('speechSynthesis' in window) speechSynthesis.cancel();
   document.querySelectorAll('.line.playing,.line.yours').forEach(e => { e.classList.remove('playing', 'yours'); const sp = $('.spk', e); if (sp) delete sp.dataset.turn; const m = $('.fb-mic', e); if (m) m.parentElement.hidden = true; });
   const b = $('#playAll'); b.textContent = '▶ 聽全部'; b.classList.remove('primary');
@@ -230,7 +237,7 @@ async function captureAndShow(li, k, ms) {
     if (!state.playing) return;
     if (!url) { fb.innerHTML = '<span class="fb-none">沒有麥克風權限，無法錄音。</span>'; return; }
     fb.innerHTML = ''; const b = document.createElement('button'); b.className = 'fb-play'; b.textContent = '▶ 聽自己唸的';
-    b.onclick = () => { stopAll(); playOut(url, 1, () => {}, () => {}); };
+    const me = new Audio(url); b.onclick = () => { stopAll(); me.currentTime = 0; me.play(); };
     fb.appendChild(b); revealLine(li, 'en');
   } else { await sleep(ms); fb.hidden = true; }
 }
@@ -465,7 +472,7 @@ $('#playAll').onclick = playAll;
 $('#showEn').onclick = () => revealAll('en');
 $('#showZh').onclick = () => revealAll('zh');
 $('#rate').onclick = e => {
-  state.rate = state.rate === 1 ? 0.75 : 1; setOutRate(state.rate);
+  state.rate = state.rate === 1 ? 0.75 : 1; player.playbackRate = state.rate;
   e.currentTarget.textContent = state.rate === 1 ? '1× 正常' : '0.75× 慢速';
   e.currentTarget.setAttribute('aria-pressed', String(state.rate !== 1));
 };

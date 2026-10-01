@@ -5,9 +5,6 @@ const browser = await webkit.launch();
 const ctx = await browser.newContext({ ...devices['iPhone 13'] });
 // 假語音辨識：回傳 window.__say（口說任務用）
 await ctx.addInitScript(() => {
-  // 計數 <audio> 播放：iPhone 上一律不得用（播過後麥克風會變靜音）
-  window.__elPlays = 0; const op = HTMLMediaElement.prototype.play;
-  HTMLMediaElement.prototype.play = function () { window.__elPlays++; return op.apply(this, arguments); };
   window.webkitSpeechRecognition = class {
     start() { this._t = setTimeout(() => this.onresult && this.onresult({ results: [[{ transcript: window.__say || '' }]] }), 150); }
     stop() { clearTimeout(this._t); setTimeout(() => this.onend && this.onend(), 0); }
@@ -50,7 +47,6 @@ check('second click stops', (await t('#playAll')).includes('聽全部'));
 await page.click('#rate');
 for (let k = 1; k <= 5; k++) { await page.click(`.line[data-k="${k}"] .play`); await page.waitForFunction(k => !document.querySelector(`.line[data-k="${k}"]`).classList.contains('playing'), k, { timeout: 15000 }); }
 check('done enabled after 5 lines', !(await page.locator('#doneBtn').isDisabled()));
-check('iPhone never plays through <audio>', (await page.evaluate(() => window.__elPlays)) === 0);
 await page.click('#doneBtn');
 check('done button marks', (await t('#doneBtn')).includes('已完成'));
 check('stats show 1 day / streak 1', (await t('#stats')).includes('已練 1 天') && (await t('#stats')).includes('連續 1 天'));
