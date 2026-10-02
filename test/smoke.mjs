@@ -65,7 +65,6 @@ await page.click('#playAll');
 check('shadow/role never touch the microphone', (await page.evaluate(() => window.__mic)) === 0);
 // ── 今日口說任務（自己查核，不用麥克風）──
 await page.goto(BASE + '/?d=42'); await page.waitForSelector('.line');
-const doneBefore = await t('#doneBtn');
 await page.click('#missionBtn');
 check('mission panel replaces lines', await page.locator('#mission').isVisible() && !(await page.locator('#lines').isVisible()));
 check('mission starts at stage 1', (await page.locator('.m-stages li.on').getAttribute('data-s')) === '1');
@@ -96,10 +95,10 @@ await page.click('.m-again');
 check('retry masks again without counting', (await page.locator('#mission .m-en.masked').count()) === 1 && (await t('.m-count')).includes('總進度 99 /'));
 await page.click('.m-manual'); await page.click('.m-ok', { timeout: 8000 });
 await page.waitForSelector('.m-done', { timeout: 5000 });
-check('mission complete badge', (await t('.m-done')).includes('今日口說任務完成'));
+check('mission complete badge', (await t('.m-done')).includes('口說任務完成') && (await page.locator('.m-seal').count()) === 1);
 await page.click('#missionBtn');
 check('mission button shows done', (await t('#missionBtn')).includes('✓'));
-check('done button unaffected', (await t('#doneBtn')) === doneBefore);
+check('mission completion also completes the lesson', (await t('#doneBtn')).includes('已完成') && (await page.locator('#stampSay.show').count()) === 1);
 check('mission never touches the microphone', (await page.evaluate(() => window.__mic)) === 0);
 // 已聽完 5 句時，任務中測驗鈕不得冒出
 await page.goto(BASE + '/?d=43'); await page.waitForSelector('.line');
@@ -107,6 +106,15 @@ for (let k = 1; k <= 5; k++) { await page.click(`.line[data-k="${k}"] .play`); a
 check('quiz button available after 5 lines', await page.locator('#quizBtn').isVisible());
 await page.click('#missionBtn'); await page.waitForTimeout(4000); await page.click('.m-manual');
 check('quiz button stays hidden during mission', !(await page.locator('#quizBtn').isVisible()));
+await page.click('#missionBtn');
+// 輕量版：還沒開始時可切換，總數變 30
+await page.goto(BASE + '/?d=46'); await page.waitForSelector('.line');
+await page.click('#missionBtn'); await page.click('.m-mode');
+check('lite mode has 30 reps and skips stage 2', (await t('.m-count')).includes('/ 30') && (await page.locator('.m-stages li').count()) === 3);
+await page.click('#missionBtn');
+await page.goto(BASE + '/?d=47&mission=lite'); await page.waitForSelector('.line');
+await page.click('#missionBtn');
+check('?mission=lite starts lite', (await t('.m-count')).includes('/ 30'));
 await page.click('#missionBtn');
 // 原音卡住（不回應）時，仍可按「念完了」前進
 await page.route('**/audio/**', () => {});
@@ -119,7 +127,7 @@ await page.goto(BASE + '/archive.html');
 await page.waitForSelector('.grid a');
 check('archive lists 365', (await page.locator('.grid a').count()) === 365);
 check('archive has thumbnails', (await page.locator('.grid a .thumb img').count()) === 365);
-check('archive marks done scene', (await page.locator('.grid a.is-done').count()) === 1);
+check('archive marks done scenes (lesson + mission)', (await page.locator('.grid a.is-done').count()) === 2);
 check('archive banners have bg', (await page.locator('.banner[style*="bg/"]').count()) >= 12);
 await browser.close();
 if (fails.length) { console.error('FAILED:', fails); process.exit(1); }

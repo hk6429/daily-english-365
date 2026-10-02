@@ -2,7 +2,7 @@ import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './d
 import { bgFor, setPageBg } from './cats.js';
 import { loadDone, markDone, doneDate, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
 import { buildQuiz } from './quiz.js';
-import { STAGES, REPS, TOTAL, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
+import { STAGES, plan, total, initial, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const pad = n => String(n).padStart(3, '0');
@@ -160,6 +160,7 @@ function renderDone() {
   y.hidden = !(s === 0 && list.length > 0 && !yesterdayDone && state.day === todayIndex());
   if (!y.hidden) y.innerHTML = `昨天沒練到？<a href="?d=${Math.max(1, todayIndex() - 1)}">補一課</a>，連續天數會接回來。`;
   if (done) $('#stamp').classList.add('show'); else $('#stamp').classList.remove('show');
+  $('#stampSay').classList.toggle('show', loadMission(x.id).done);
 }
 
 function renderReview() {
@@ -246,8 +247,8 @@ async function playAll() {
   for (let k = 1; k <= 5 && state.playing; k++) {
     const l = scene().lines[k - 1];
     if (state.role && l.speaker === state.role) {
-      // 角色扮演：這句換你說。給中譯提示，留一段時間開口（估算：每字 0.45 秒＋1.2 秒）
-      const ms = Math.max(2500, l.en.split(/\s+/).length * 450 + 1200);
+      // 角色扮演：這句換你說。給中譯提示，留一段時間開口（估算：每字 0.65 秒＋1.5 秒）
+      const ms = Math.max(3500, l.en.split(/\s+/).length * 650 + 1500);
       playToken++; // 與 playLine 一樣佔一個 token，讓後面的檢查一致
       await yourTurn(k, ms);
       if (playToken !== myToken + (k - 1) || !state.playing) return;
@@ -259,7 +260,7 @@ async function playAll() {
     if (playToken !== myToken + (k - 1)) return; // 中途被停止或換句
     if (!state.playing) return;
     lastDur = Date.now() - t0;
-    if (state.shadow) { await shadowTurn(k, lastDur + 800); if (!state.playing) return; }
+    if (state.shadow) { await shadowTurn(k, Math.round(lastDur * 1.5) + 800); if (!state.playing) return; }
     else if (k < 5) await sleep(1000);
     if (!state.playing) return;
   }
@@ -365,8 +366,8 @@ const MSG = {
   4: '不看字、不放原音，把這句背出來。',
 };
 const FOOT = {
-  1: '原音播完才能按「念完了」：跟著原音同步念，念完一次按一次。',
-  2: '看著英文自己念；念不順就按「再聽一次」。',
+  1: '五句輪流念：原音播完才能按「念完了」，跟著原音同步念。',
+  2: '五句輪流念：第一輪先播原音，之後看著英文自己念；念不順就按「再聽一次」。',
   3: '憑耳朵記憶念出來；按「念完了」會揭曉英文並播原音讓你對照。',
   4: '卡住可以按「提示」；按「念完了」會揭曉英文並播原音讓你對照。',
 };
@@ -375,7 +376,7 @@ const hintText = (l, h) => h >= 2 ? `${esc(l.zh)}<br>${esc(l.en.split(' ').slice
 
 function renderMissionBtn() {
   const b = $('#missionBtn'); if (missionOpen()) return;
-  b.textContent = loadMission(scene().id).done ? '✓ 今日口說任務完成' : MISSION_LABEL;
+  b.textContent = loadMission(scene().id).done ? '✓ 口說任務完成' : MISSION_LABEL;
 }
 function closeMission() {
   const box = $('#mission'); if (box.hidden) return;
@@ -390,6 +391,7 @@ function closeMission() {
 function openMission() {
   closeQuiz(); stopAll();
   ms.st = loadMission(scene().id); ms.check = false; ms.hint = 0;
+  if (!ms.st.done && progress(ms.st) === 0 && new URLSearchParams(location.search).get('mission') === 'lite') ms.st = initial(true); // 老師可用 ?mission=lite 讓全班做輕量版
   $('#lines').hidden = true; $('.controls').hidden = true; $('#shadowHint').hidden = true; $('#roleHint').hidden = true;
   $('#keyPhrase').hidden = true; $('#quizBtn').hidden = true; $('#mission').hidden = false;
   const b = $('#missionBtn'); b.setAttribute('aria-expanded', 'true'); b.textContent = '離開口說任務（進度會保留）';
@@ -409,13 +411,15 @@ function renderMission(autoplay) {
   const box = $('#mission'); const st = ms.st; const x = scene();
   const S = STAGES[st.stage - 1]; const l = x.lines[st.k - 1];
   const roles = x.roles || {}; const who = roles[l.speaker] ? `${l.speaker} · ${roles[l.speaker]}` : l.speaker;
-  const stages = STAGES.map(s => `<li data-s="${s.n}" class="${st.done || s.n < st.stage ? 'ok' : s.n === st.stage ? 'on' : ''}">${st.done || s.n < st.stage ? '✓' : s.n}</li>`).join('');
+  const P = plan(st.lite), N = total(st.lite), pct = Math.round(progress(st) / N * 100);
+  const stages = STAGES.filter(s => P.stages.includes(s.n)).map(s => `<li data-s="${s.n}" class="${st.done || s.n < st.stage ? 'ok' : s.n === st.stage ? 'on' : ''}">${st.done || s.n < st.stage ? '✓' : s.n}</li>`).join('');
   if (st.done) {
-    box.innerHTML = `<ol class="m-stages">${stages}</ol><p class="m-done">✓ 今日口說任務完成</p><p class="m-sub">四關 ${TOTAL} 次開口全數完成，明天見！</p>`;
+    box.innerHTML = `<ol class="m-stages">${stages}</ol><div class="m-seal" aria-hidden="true">說</div><p class="m-done">✓ 口說任務完成</p><p class="m-sub">${N} 次開口全數完成，也算完成這一課！</p>`;
     return;
   }
-  const dots = st.stage < 4 ? '●'.repeat(st.n) + '○'.repeat(REPS - st.n) : '';
-  const where = st.stage < 4 ? `第 ${st.k} 句　${dots}` : `第 ${st.n + 1} / ${REPS} 輪　第 ${st.k} 句`;
+  const dots = '●'.repeat(st.k - 1) + '○'.repeat(5 - st.k + 1); // 這一輪念到第幾句
+  const where = `第 ${st.n + 1} / ${P.reps} 輪　${dots}`;
+  const mode = progress(st) === 0 ? `<button class="m-mode" type="button">${st.lite ? '改完整版（100 次，約 12 分鐘）' : '時間不多？改輕量版（30 次，約 4 分鐘）'}</button>` : '';
   const showEn = S.en || ms.check, showZh = S.zh || (ms.check && st.stage === 4);
   const hint = !ms.check && st.stage === 4 && ms.hint ? `<div class="m-hint">${hintText(l, ms.hint)}</div>` : '';
   const act = ms.check
@@ -428,12 +432,17 @@ function renderMission(autoplay) {
       ${showEn ? `<div class="m-en">${esc(l.en)}</div>` : '<div class="m-en masked">‧‧‧‧‧‧</div>'}
       ${showZh ? `<div class="m-zh">${esc(l.zh)}</div>` : ''}${hint}</div>
     <p class="m-where">${where}</p>
-    <p class="m-count">總進度 ${progress(st)} / ${TOTAL}</p>
-    <div class="m-bar"><i style="width:${progress(st)}%"></i></div>
+    <p class="m-count">總進度 ${progress(st)} / ${N}　第 ${st.k} 句</p>
+    <div class="m-bar"><i style="width:${pct}%"></i></div>
     <p class="m-msg" aria-live="polite">${ms.check ? '對照一下：剛剛念的跟原音一樣嗎？' : MSG[st.stage]}</p>
     <div class="m-act">${act}</div>
-    <p class="hint-inline">${ms.check ? '念對了才計一次；沒念對就再念一次，不扣進度。' : FOOT[st.stage]}</p>`;
-  const next = () => { stopAll(); ms.check = false; ms.hint = 0; ms.st = advance(ms.st); saveMission(x.id, ms.st); renderMission(true); renderMissionBtn(); };
+    <p class="hint-inline">${ms.check ? '念對了才計一次；沒念對就再念一次，不扣進度。' : FOOT[st.stage]}</p>${mode}`;
+  const next = () => {
+    stopAll(); ms.check = false; ms.hint = 0; ms.st = advance(ms.st); saveMission(x.id, ms.st);
+    if (ms.st.done) { markDone(x.id, doneDate(loadDone(), state.day === todayIndex() - 1)); renderDone(); renderReview(); } // 口說任務全過也算完成這一課
+    renderMission(true); renderMissionBtn();
+  };
+  const md = $('.m-mode', box); if (md) md.onclick = () => { stopAll(); ms.st = initial(!st.lite); saveMission(x.id, ms.st); renderMission(true); };
   const hear = $('.m-hear', box); if (hear) hear.onclick = () => { stopAll(); playLine(st.k); };
   const tip = $('.m-tip', box); if (tip) tip.onclick = () => { ms.hint++; renderMission(false); };
   const again = $('.m-again', box); if (again) again.onclick = () => { stopAll(); ms.check = false; renderMission(false); };
@@ -461,7 +470,7 @@ $('#shadow').onclick = e => {
   state.shadow = !state.shadow;
   e.currentTarget.setAttribute('aria-pressed', String(state.shadow));
   $('#shadowHint').hidden = !state.shadow;
-  $('#shadowHint').textContent = '跟讀模式：每句播完會留同樣長度的空檔，請跟著大聲唸一次，念完會揭曉英文讓你對照。';
+  $('#shadowHint').textContent = '跟讀模式：每句播完會留一段比原句長一點的空檔，請照著原音大聲唸一次，念完會揭曉英文讓你對照。';
 };
 $('#role').onclick = e => {
   state.role = state.role === null ? 'B' : state.role === 'B' ? 'A' : null;
