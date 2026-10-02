@@ -161,3 +161,11 @@ footer{margin-top:28px;font-size:12px;color:var(--ink3);text-align:center;backgr
 .stamp.say{right:86px;transform:rotate(8deg) scale(0)}.stamp.say.show{transform:rotate(8deg) scale(1)}
 .m-seal{width:72px;height:72px;margin:6px auto 0;border:3px solid var(--cinnabar);border-radius:8px;color:var(--cinnabar);font:700 40px/66px "Noto Serif TC",serif;text-align:center;transform:rotate(-8deg)}
 .m-mode{display:block;margin:8px auto 0;background:none;border:0;color:var(--indigo);text-decoration:underline;font-size:14px;cursor:pointer}
+.badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:0 16px 12px}
+.badge{border:2px solid var(--cinnabar);color:var(--cinnabar);border-radius:6px;padding:2px 8px;font:700 14px "Noto Serif TC",serif;background:rgba(255,255,255,.6)}
+.badge.pop{animation:badgePop .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes badgePop{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1)}}
+.badge-next{font-size:13px;color:var(--ink3)}
+.share-bar button{background:var(--cinnabar);border-color:var(--cinnabar)}
+.grid a:not(.is-done) .thumb img{filter:grayscale(1);opacity:.55}
+.banner .meter{display:block;height:5px;border-radius:3px;background:rgba(28,28,28,.12);margin-top:6px;overflow:hidden;width:160px}.banner .meter i{display:block;height:100%;background:var(--cinnabar)}

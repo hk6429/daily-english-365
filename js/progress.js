@@ -21,14 +21,20 @@ export function markDone(id, today = taipeiDateKey()) {
 export function isDoneScene(list, id) { return list.some(x => x.id === id); }
 export function isDoneToday(list, id, today = taipeiDateKey()) { return list.some(x => x.d === today && x.id === id); }
 
-// 連續天數：從今天（或昨天，今天還沒練也不歸零）往回數連續有紀錄的日子
-export function streak(list, today = taipeiDateKey()) {
+// 連續天數＋保護卡：從第一筆紀錄逐日走到今天；每連續練滿 7 天得 1 張保護卡（最多存 2 張），
+// 漏練一天自動用掉 1 張、連續不歸零；今天還沒練不算漏。
+export function streakInfo(list, today = taipeiDateKey()) {
   const days = new Set(list.map(x => x.d));
-  let cur = days.has(today) ? today : shiftDateKey(today, -1);
-  let n = 0;
-  while (days.has(cur)) { n++; cur = shiftDateKey(cur, -1); }
-  return n;
+  if (!days.size) return { streak: 0, freezes: 0, used: 0 };
+  let cur = [...days].sort()[0], run = 0, freezes = 0, used = 0;
+  while (cur <= today) {
+    if (days.has(cur)) { run++; if (run % 7 === 0 && freezes < 2) freezes++; }
+    else if (cur !== today) { if (run > 0 && freezes > 0) { freezes--; used++; } else run = 0; }
+    cur = shiftDateKey(cur, 1);
+  }
+  return { streak: run, freezes, used };
 }
+export const streak = (list, today = taipeiDateKey()) => streakInfo(list, today).streak;
 
 export function practicedDays(list) { return new Set(list.map(x => x.d)).size; }
 
@@ -50,3 +56,18 @@ export function doneDate(list, isYesterdayLesson, today = taipeiDateKey()) {
   const y = shiftDateKey(today, -1);
   return isYesterdayLesson && !list.some(x => x.d === y) ? y : today;
 }
+
+// 里程碑：累計練習天數、累計開口次數（口說任務每計一次 +1）
+const BADGES = [
+  { label: '七日', days: 7 }, { label: '廿一', days: 21 }, { label: '五十', days: 50 }, { label: '百日', days: 100 }, { label: '一年', days: 365 },
+  { label: '開口五百', voice: 500 }, { label: '開口一千', voice: 1000 }, { label: '開口五千', voice: 5000 },
+];
+const got = (b, days, voice) => (b.days ? days >= b.days : voice >= b.voice);
+export const earnedBadges = (days, voice) => BADGES.filter(b => got(b, days, voice));
+export function nextBadge(days, voice) {
+  const b = BADGES.find(x => x.days && !got(x, days, voice)) || BADGES.find(x => !got(x, days, voice));
+  return b ? { label: b.label, left: b.days ? `還差 ${b.days - days} 天` : `還差開口 ${b.voice - voice} 次` } : null;
+}
+const VKEY = 'de365.voice';
+export function loadVoice() { try { return Math.max(0, parseInt(localStorage.getItem(VKEY), 10) || 0); } catch { return 0; } }
+export function addVoice() { try { localStorage.setItem(VKEY, String(loadVoice() + 1)); } catch {} }

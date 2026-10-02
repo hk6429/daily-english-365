@@ -49,6 +49,11 @@ await page.click('#doneBtn');
 check('done button marks', (await t('#doneBtn')).includes('已完成'));
 check('stats show 1 day / streak 1', (await t('#stats')).includes('已練 1 天') && (await t('#stats')).includes('連續 1 天'));
 check('stamp shown', await page.locator('#stamp.show').count() === 1);
+check('next badge goal shown', (await t('#badges')).includes('七日'));
+check('share button after done', await page.locator('#shareBtn').isVisible());
+await page.evaluate(() => { navigator.canShare = undefined; });
+const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 10000 }), page.click('#shareBtn')]);
+check('share card downloads png', dl.suggestedFilename().endsWith('.png'));
 await page.goto(BASE + '/?d=42');
 await page.waitForSelector('.line');
 check('?d=42 label', (await t('#dayLabel')).includes('第 42 天'));
@@ -129,6 +134,17 @@ check('archive lists 365', (await page.locator('.grid a').count()) === 365);
 check('archive has thumbnails', (await page.locator('.grid a .thumb img').count()) === 365);
 check('archive marks done scenes (lesson + mission)', (await page.locator('.grid a.is-done').count()) === 2);
 check('archive banners have bg', (await page.locator('.banner[style*="bg/"]').count()) >= 12);
+check('archive hides unowned titles', (await page.locator('.grid a:not(.is-done) b', { hasText: '？？？' }).count()) === 363);
+check('archive shows collected count', (await t('#collected')).includes('2 / 365'));
+// 保護卡：連練 7 天後漏 1 天 → 連續保住、提示用了保護卡
+await page.evaluate(async () => {
+  const { taipeiDateKey, shiftDateKey } = await import('/js/day.js');
+  const t = taipeiDateKey();
+  localStorage.setItem('de365.done', JSON.stringify(Array.from({ length: 7 }, (_, i) => ({ d: shiftDateKey(t, -8 + i), id: 300 + i }))));
+});
+await page.goto(BASE + '/'); await page.waitForSelector('.line');
+check('freeze keeps streak', (await t('#stats')).includes('連續 7 天') && (await t('#missed')).includes('保護卡'));
+check('seven-day badge earned', (await page.locator('#badges .badge', { hasText: '七日' }).count()) === 1);
 await browser.close();
 if (fails.length) { console.error('FAILED:', fails); process.exit(1); }
 console.log('smoke ok');

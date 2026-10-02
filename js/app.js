@@ -1,6 +1,7 @@
 import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene } from './day.js';
 import { bgFor, setPageBg } from './cats.js';
-import { loadDone, markDone, doneDate, isDoneToday, isDoneScene, streak, practicedDays, reviewDue } from './progress.js';
+import { loadDone, markDone, doneDate, isDoneToday, isDoneScene, streakInfo, practicedDays, reviewDue, earnedBadges, nextBadge, loadVoice, addVoice } from './progress.js';
+import { shareCard } from './share.js';
 import { buildQuiz } from './quiz.js';
 import { STAGES, plan, total, initial, advance, needsAudio, progress, loadMission, saveMission } from './mission.js';
 
@@ -153,15 +154,35 @@ function renderDone() {
   btn.classList.toggle('is-done', done);
   btn.disabled = !done && !heard;
   btn.textContent = done ? '✓ 已完成' : heard ? '完成這一課' : '聽完 5 句後可完成';
-  const s = streak(list);
-  $('#stats').innerHTML = `已練 <b>${practicedDays(list)}</b> 天 · 連續 <b>${s}</b> 天`;
+  const { streak: s, freezes } = streakInfo(list); const days = practicedDays(list), voice = loadVoice();
+  $('#stats').innerHTML = `已練 <b>${days}</b> 天 · 連續 <b>${s}</b> 天${freezes ? ` · 保護卡 <b>${freezes}</b>` : ''}`;
   const y = $('#missed');
+  const today = taipeiDateKey();
   const yesterdayDone = list.some(v => v.d === taipeiDateKey(new Date(Date.now() - 86400000)));
-  y.hidden = !(s === 0 && list.length > 0 && !yesterdayDone && state.day === todayIndex());
-  if (!y.hidden) y.innerHTML = `昨天沒練到？<a href="?d=${Math.max(1, todayIndex() - 1)}">補一課</a>，連續天數會接回來。`;
+  const backfill = `<a href="?d=${Math.max(1, todayIndex() - 1)}">補一課</a>`;
+  y.hidden = !(list.length > 0 && !yesterdayDone && !list.some(v => v.d === today) && state.day === todayIndex());
+  if (!y.hidden) y.innerHTML = s > 0 ? `昨天沒練到，保護卡先幫你保住連續 ${s} 天；${backfill}就能把卡省下來。` : `昨天沒練到？${backfill}，連續天數會接回來。`;
+  renderBadges(days, voice);
+  $('#shareBtn').hidden = !done;
   if (done) $('#stamp').classList.add('show'); else $('#stamp').classList.remove('show');
   $('#stampSay').classList.toggle('show', loadMission(x.id).done);
 }
+
+// 里程碑：已得的印章＋下一枚目標；新得的那枚彈一下
+function renderBadges(days, voice) {
+  const got = earnedBadges(days, voice).map(b => b.label); const nb = nextBadge(days, voice);
+  let seen = []; try { seen = JSON.parse(localStorage.getItem('de365.badges') || '[]'); } catch {}
+  const box = $('#badges');
+  box.hidden = !got.length && !nb;
+  box.innerHTML = got.map(l => `<span class="badge${seen.includes(l) ? '' : ' pop'}">${esc(l)}</span>`).join('')
+    + (nb ? `<span class="badge-next">下一枚「${esc(nb.label)}」${esc(nb.left)}</span>` : '<span class="badge-next">全部收齊！</span>');
+  try { localStorage.setItem('de365.badges', JSON.stringify(got)); } catch {}
+}
+$('#shareBtn').onclick = () => {
+  const x = scene(); const list = loadDone();
+  shareCard({ id3: pad(x.id), day: state.day, date: taipeiDateKey(), titleZh: x.title_zh, titleEn: x.title_en,
+    streak: streakInfo(list).streak, days: practicedDays(list), voice: loadVoice(), said: loadMission(x.id).done });
+};
 
 function renderReview() {
   const due = reviewDue(loadDone());
@@ -438,7 +459,7 @@ function renderMission(autoplay) {
     <div class="m-act">${act}</div>
     <p class="hint-inline">${ms.check ? '念對了才計一次；沒念對就再念一次，不扣進度。' : FOOT[st.stage]}</p>${mode}`;
   const next = () => {
-    stopAll(); ms.check = false; ms.hint = 0; ms.st = advance(ms.st); saveMission(x.id, ms.st);
+    stopAll(); ms.check = false; ms.hint = 0; ms.st = advance(ms.st); saveMission(x.id, ms.st); addVoice();
     if (ms.st.done) { markDone(x.id, doneDate(loadDone(), state.day === todayIndex() - 1)); renderDone(); renderReview(); } // 口說任務全過也算完成這一課
     renderMission(true); renderMissionBtn();
   };

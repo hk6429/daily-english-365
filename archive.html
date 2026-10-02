@@ -12,7 +12,7 @@
     <h1>英語<span>日日</span>聽</h1>
     <nav><a href="./">回今天</a></nav>
   </header>
-  <p class="hint">365 個情境依主題分組，點任一張卡片即可練習。每天輪到不同主題，「第 N 天」是它在一年中出現的日子；紅框＝已完成。</p>
+  <p class="hint">潑墨圖鑑：365 個情境依主題分組。練完一課，那張插畫才會上色、揭曉名稱；點任一張卡片即可練習。<b id="collected"></b></p>
   <div id="groups"></div>
 </div>
 <script type="module">
@@ -27,9 +27,11 @@ const done = loadDone();
 const groups = new Map();
 for (const x of scenes) { if (!groups.has(x.category)) groups.set(x.category, []); groups.get(x.category).push(x); }
 const root = document.getElementById('groups');
+let total = 0;
 for (const [cat, list] of groups) {
   const g = document.createElement('section'); g.className = 'group';
-  g.innerHTML = `<div class="banner"><h3>${cat}<small>${list.length} 個情境</small></h3></div><div class="grid"></div>`;
+  const got = list.filter(x => isDoneScene(done, x.id)).length; total += got;
+  g.innerHTML = `<div class="banner"><h3>${cat}<small>已收 ${got} / ${list.length}</small><span class="meter"><i style="width:${Math.round(got / list.length * 100)}%"></i></span></h3></div><div class="grid"></div>`;
   g.querySelector('.banner').style.backgroundImage = `url("${bgFor(cat)}")`;
   const grid = g.querySelector('.grid');
   for (const x of list) {
@@ -38,11 +40,13 @@ for (const [cat, list] of groups) {
     a.className = (day === today ? 'today ' : '') + (isDoneScene(done, x.id) ? 'is-done' : '');
     const id3 = String(x.id).padStart(3, '0');
     a.innerHTML = `<span class="thumb"><img loading="lazy" alt="" src="img/${id3}.webp" onerror="this.parentNode.classList.add('missing');this.remove()"></span><span class="txt"><small>第 ${day} 天</small><b></b><i></i></span>`;
-    a.querySelector('b').textContent = x.title_zh; a.querySelector('i').textContent = x.title_en;
+    const own = isDoneScene(done, x.id); // 沒練過就保留「先聽再看」的懸念
+    a.querySelector('b').textContent = own ? x.title_zh : '？？？'; a.querySelector('i').textContent = own ? x.title_en : '練完揭曉';
     grid.appendChild(a);
   }
   root.appendChild(g);
 }
+document.getElementById('collected').textContent = `目前已收集 ${total} / ${scenes.length}。`;
 </script>
 <script src="js/vendor/gc-config.js"></script>
 <script async src="js/vendor/count.js"></script>
