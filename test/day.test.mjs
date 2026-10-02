@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { todayIndex, parseDay, taipeiDateKey, buildOrder, dayOfScene, daysBetween, shiftDateKey } from '../js/day.js';
-import { streak, reviewDue } from '../js/progress.js';
+import { streak, reviewDue, doneDate } from '../js/progress.js';
 
 test('day of year in Taipei', () => {
   assert.equal(todayIndex(new Date('2026-01-01T00:30:00+08:00')), 1);
@@ -49,4 +49,12 @@ test('streak counts through yesterday when today not done', () => {
 test('reviewDue picks 1/3/7/21 day gaps', () => {
   const list = [{ d: '2026-09-28', id: 1 }, { d: '2026-09-26', id: 2 }, { d: '2026-09-22', id: 3 }, { d: '2026-09-08', id: 4 }, { d: '2026-09-27', id: 5 }, { d: '2026-09-29', id: 1 }];
   assert.deepEqual(reviewDue(list, '2026-09-29').map(x => x.id), [2, 3, 4]);
+});
+
+test('doneDate: 補昨天那課且昨天沒紀錄 → 記昨天，連續天數接得回來', () => {
+  const list = [{ d: '2026-09-27', id: 1 }, { d: '2026-09-28', id: 2 }];
+  assert.equal(doneDate(list, true, '2026-09-30'), '2026-09-29');
+  assert.equal(streak([...list, { d: '2026-09-29', id: 3 }], '2026-09-30'), 3);
+  assert.equal(doneDate(list, false, '2026-09-30'), '2026-09-30');
+  assert.equal(doneDate([...list, { d: '2026-09-29', id: 9 }], true, '2026-09-30'), '2026-09-30');
 });

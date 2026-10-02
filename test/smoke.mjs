@@ -88,7 +88,13 @@ await page.evaluate(async () => {
 await page.reload(); await page.waitForSelector('.line');
 await page.click('#missionBtn');
 check('stage 4 hides text and replay', (await page.locator('#mission .m-en.masked').count()) === 1 && (await page.locator('#mission .m-hear').count()) === 0);
+await page.click('.m-tip');
+check('stage 4 hint shows chinese', (await page.locator('#mission .m-hint').count()) === 1);
 await page.click('.m-manual');
+check('stage 4 self-check reveals english', (await page.locator('#mission .m-en.masked').count()) === 0 && (await page.locator('.m-ok').count()) === 1);
+await page.click('.m-again');
+check('retry masks again without counting', (await page.locator('#mission .m-en.masked').count()) === 1 && (await t('.m-count')).includes('總進度 99 /'));
+await page.click('.m-manual'); await page.click('.m-ok', { timeout: 8000 });
 await page.waitForSelector('.m-done', { timeout: 5000 });
 check('mission complete badge', (await t('.m-done')).includes('今日口說任務完成'));
 await page.click('#missionBtn');

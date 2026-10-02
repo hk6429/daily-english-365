@@ -12,7 +12,7 @@
     "zh": "可以避開高速公路嗎？"
    }
   ],
-  "tip": "回應請求用 No problem，回應道謝才用 You're welcome。"
+  "tip": "No problem 可回應請求，也常用來回應道謝；You're welcome 只用在回應道謝。"
  },
  {
   "id": 2,
@@ -177,7 +177,7 @@
     "zh": "需要幫您檢查一下機油嗎？"
    }
   ],
-  "tip": "Would you like X cleaned? 是 have＋受詞＋過去分詞。"
+  "tip": "Would you like X cleaned? 是 would like＋受詞＋過去分詞，表示請人代勞。"
  },
  {
   "id": 13,

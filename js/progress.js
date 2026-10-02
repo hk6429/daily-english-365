@@ -44,3 +44,9 @@ export function reviewDue(list, today = taipeiDateKey()) {
   }
   return out.sort((a, b) => a.gap - b.gap);
 }
+
+// 完成紀錄記在哪天：補的是昨天那課、且昨天沒有紀錄 → 記昨天，讓「補一課」真的接回連續天數
+export function doneDate(list, isYesterdayLesson, today = taipeiDateKey()) {
+  const y = shiftDateKey(today, -1);
+  return isYesterdayLesson && !list.some(x => x.d === y) ? y : today;
+}
